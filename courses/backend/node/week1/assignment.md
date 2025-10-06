@@ -198,7 +198,3 @@ Your usage of Knex should be getting a bit more advanced now. You will move from
 
 Check out the [Knex cheatsheet](https://devhints.io/knex)!
 
-## Hand in homework
-
-Need to brush up on the homework hand-in process?
-Check [this resource](https://github.com/HackYourFuture-CPH/Git/blob/main/homework-submission.md) to remember how to hand in the homework correctly!
