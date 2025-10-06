@@ -3,8 +3,8 @@
 Create a new, separate folder somewhere on your machine:
 
 ```shell
-mkdir nodejs-week2
-code nodejs-week2 # to open the folder in VS Code
+mkdir nodejs-week1
+code nodejs-week1 # to open the folder in VS Code
 ```
 
 You can also reuse some other folder. Main thing to watch out for is that the folder you decide to use should ideally be empty.
