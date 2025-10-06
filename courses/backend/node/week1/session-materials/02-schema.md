@@ -2,10 +2,10 @@
 
 This week we will work with 2 tables:
 
-- A `users` table similar to week 1 but now with an added `token` column.
+- A `users` table.
 - A `snippets` table containing (code) snippets that belong to a user.
 
-Create a new database/schema `hyf_node_week2` containing the following tables:
+Create a new database/schema `hyf_node_week1` containing the following tables:
 
 ```sql
 CREATE TABLE `users` (
