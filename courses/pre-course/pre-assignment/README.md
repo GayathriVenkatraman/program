@@ -5,10 +5,10 @@ Here you can find a short list of resources to try out and get a small head-star
 ## HTML and CSS Intro
 
 If you don't know where to start, you can try some of these free online tutorials:
+
 - [freeCodeCamp](https://www.freecodecamp.org/)
 - [SCRIMBA](https://scrimba.com/g/ghtml)
 - [sololearn](https://sololearn.com/) (mobile-friendly)
-
 
 These are just suggestions - there are lots of other free online courses available online and it all depends on your personal preference.
 
@@ -29,7 +29,7 @@ If you prefer theory and reading up before taking a plunge into the coding world
 - [Front End Developer Handbook](https://frontendmasters.com/books/front-end-handbook/2019/) (yes, the 2019 version is still relevant and no newer versions exist).
 
 ## Frontend Developer Roadmap
-If you're curious about what technologies are relevant in the field of Frontend Development - take a look at [this roadmap](https://roadmap.sh/frontend). It's totally fine if you don't recognize over 90% of the words - but return to this map as you keep learning and slowly you might be able to see your own path.
 
+If you're curious about what technologies are relevant in the field of Frontend Development - take a look at [this roadmap](https://roadmap.sh/frontend). It's totally fine if you don't recognize over 90% of the words - but return to this map as you keep learning and slowly you might be able to see your own path.
 
 Don't worry if everything doesn't immediately make sense, that's what we can help with later. But do make sure that you understand the difference between HTML, CSS and JavaScript and what they are used for: [HTML, CSS, JavaScript Explained](https://youtu.be/gT0Lh1eYk78).
