@@ -1,4 +1,4 @@
-# Session plan (Week 2)
+# Node (Week 2)
 
 In this session we will focus on connecting to a database, building an API, and using Postman to test our API endpoints. We will also cover how to structure our code for better maintainability and scalability.
 
@@ -11,18 +11,21 @@ In this session we will focus on connecting to a database, building an API, and 
 ## Session Learning goals
 
 By the end of this session, you will be able to:
-TODO - Format as `verb`
+TODO - Format as `verb` for API section
 
-- [ ] Database interaction
-  - [ ] Connecting to mysql using Knex
-    - [ ] Environment variables
-  - [ ] Executing queries using knex
+- [ ] Learn how to manage advanced database interactions in your service
+  - [ ] Set up a connection to your mysql database using Knex
+  - [ ] Configure environment variables
+  - [ ] Execute `select`, `create`, `delete` and `update` queries using Knex
 - [ ] API
   - [ ] REST
   - [ ] CRUD
     - [ ] Router verb `GET`, `POST`, `DELETE`, `PUT`
     - [ ] POST mention express.json middleware
-  - [ ] Postman
+  - [ ] Configure Postman for advanced backend development
+    - [ ] Set up multiple environments
+    - [ ] Manage secrets
+    - [ ] Create basic test suites
 
 TODO - Move this content somewhere else
 
