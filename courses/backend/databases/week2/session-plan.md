@@ -9,14 +9,24 @@
 
 ## Setup DB and start the example API
 
-- A `tasks.sqlite3` database is provided. It contains the SQL statements from [tasks.sql](../week1/session-materials/tasks.sql)
-- In case you want to recreate it, run the following command in your terminal:
+An example API is provided to demonstrate concepts and exercises, along with a `tasks.sqlite3` database.
+It contains the SQL statements from [tasks.sql](../week1/session-materials/tasks.sql)
+In case you want to recreate it, run `sqlite3 tasks.sqlite3 < tasks.sql`
+
+### Mentor Instructions
+
+Share your screen and setup the session materials:
 
 ```shell
-cd example-api
-sqlite3 tasks.sqlite3 < tasks.sql
-npm run dev
+  cd example-api
+  npm install
+  npm run dev
 ```
+
+### Trainee Instructions
+
+- Trainees should follow the instructions on their [hyf-assignment-template](https://github.com/HackYourFuture-CPH/hyf-assignment-template/tree/main/courses/backend/databases) repository.
+- The materials for this session are located in `courses/backend/databases/`
 
 ## Aggregate Functions
 
