@@ -11,3 +11,5 @@ It's important to note that this documentation lists all of the courses that we 
 ## [Frontend](/courses/frontend/README.md)
 
 ## [Backend](/courses/backend/README.md)
+
+## [Cloud & AI](/courses/cloud&ai/README.md)
