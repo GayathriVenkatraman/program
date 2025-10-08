@@ -4,7 +4,7 @@
 
 Functions and conditions are some of the basic building blocks of javascript. Functions ensure that we don't repeat ourselves when writing code. Conditions ensures that we can handle different cases when programming.
 
-If you struggle to do this weeks assignment, read up on [JavaScript basics](readme.md#recap-logical-operators).
+If you struggle to do this weeks assignment, read up on [JavaScript basics](README.md#recap-logical-operators).
 
 ## Javascript warmup
 
@@ -49,7 +49,7 @@ Log out the two fullname variables.
 
 #### Formal fullname
 
-On the flight website the user has the possibility to **check a checkbox** that **indicates** if the user wants to be **addressed formally**. Lets also change `getFullName` to include support for formal name.
+On the flight website the user has the possibility to **check a checkbox** that **indicates** if the user wants to be **addressed formally**. Let's also change `getFullName` to include support for formal name.
 
 Create an extra parameter `useFormalName` that is a boolean. If it is true the function should add a `Lord` in front of the name.
 

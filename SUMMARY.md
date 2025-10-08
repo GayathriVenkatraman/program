@@ -7,6 +7,7 @@
 - [Courses Overview](courses/README.md)
 
 - [Pre-Course](courses/pre-course/README.md)
+  - [Pre-Assignment](courses/pre-course/pre-assignment/README.md)
   - [Self Study](courses/pre-course/self-study/README.md)
 
 - [Foundation](courses/foundation/README.md)
@@ -79,6 +80,7 @@
       - [Session Plan](courses/foundation/career-training/week3/session-plan.md)
   - [Foundation Project](courses/foundation/final-project/README.md)
     - [Project Brief](courses/foundation/final-project/project-brief.md)
+    - [Session Plan](courses/foundation/final-project/session-plan.md)
 
 - [Frontend](courses/frontend/README.md)
   - [Advanced JavaScript](courses/frontend/advanced-javascript/README.md)
@@ -127,4 +129,5 @@
 
 ## Guidelines
 
+- [Code of Conduct](guidelines/code-of-conduct.md)
 - [Using Generative AI at HackYourFuture](guidelines/ai-usage.md)
