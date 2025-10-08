@@ -37,8 +37,8 @@
 
 1. [Server](./session-materials/01-server.md): Setup project
 2. [DB schema](./session-materials/02-schema.md): Setup MySQL database schema
-3. [API](./session-materials/03-api.md): Snippets API exercises
-   - [POST endpoint](./session-materials/04-post-endpoint.md)
+3. [API](./session-materials/03-routing.md): Snippets API exercises
+   - [POST endpoint](./session-materials/03-routing.md)
    - [GET endpoints](./session-materials/05-get-endpoints.md)
    - [Authentication](./session-materials/06-auth.md)
 
