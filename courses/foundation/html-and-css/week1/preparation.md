@@ -12,7 +12,7 @@ If you are new to Figma, watch this [10 min intro for developers](https://youtu.
 
 ### The Code
 
-We have provided some initial code and images for you here: [Code & Images](../order-form-task/). Feel free to use these as a starting point.
+We have provided some initial code and images for you here: [Code](../order-form-task/) & [Images](../order-form-task/images). Feel free to use these as a starting point.
 
 Make sure that your code is:
 
