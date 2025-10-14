@@ -149,17 +149,182 @@ Using the running API, try these attacks:
 
 ## Deployment Overview
 
-### Production Deployment
+### Development vs Production: Understanding the Journey
 
-- Show how to migrate data from local SQLite database to PostgreSQL in render.com
-- Environment variables for database connections
-- Use existing HYF template: <https://github.com/HackYourFuture-CPH/hyf-project-template/tree/main/api>
+![Local vs Prod environment](session-materials/local-vs-prod-environments.png)
+
+> ![NOTE]
+> The diagram illustrates the difference between local development and production environments.
+
+**Why do we care about different environments?**
+
+- We use them to test and develop our applications in a safe space without affecting real users or data.
+- They help us identify and fix issues before deployment.
+
+**Refreshing what we refer when we say "the cloud"**
+
+- A remote server (computer) running 24/7 somewhere else
+- Multiple users can connect simultaneously
+- Databases run on these servers
+- Your data needs to be accessible from anywhere
+
+#### Why We Need to Migrate
+
+**SQLite vs PostgreSQL**
+
+| Aspect              | SQLite (Dev)            | PostgreSQL (Production)       |
+| ------------------- | ----------------------- | ----------------------------- |
+| Location            | Local file              | Remote server                 |
+| Use case            | Development, small apps | Production, real applications |
+| Type of information | Testing, prototyping    | Real user data, critical info |
+| Scaling             | Limited                 | Excellent                     |
+
+#### Demo time!
+
+> ![NOTE]
+> Guide the trainees through the steps, explaining each part.
+
+We're going to recreate our local SQLite database to a remote PostgreSQL database on Render.com
+
+**Step 1: Create Postgres DB on Render**
+
+Follow the steps from the hyf-project-template: https://github.com/HackYourFuture-CPH/hyf-project-template/tree/main/api#deploying
+
+**Step 2: Recreate Database using DBeaver**
+
+We'll use DBeaver to connect to the remote PostgreSQL database and run SQL commands to recreate our schema and data.
+
+1. Connect to your PostgreSQL database on Render:
+   - Open DBeaver
+   - New Connection (Ctrl + Shift + N) → PostgreSQL
+   - Fill in connection details from Render's "Connection Info" page
+   - Test connection
+
+2. Create a new SQL script:
+   - Right-click on your PostgreSQL connection → SQL Editor → New SQL Script
+   - Copy the provided PostgreSQL-compatible SQL (see `tasks-postgres.sql`)
+3. Execute the script:
+   - Paste the entire SQL content
+   - Click **Execute SQL Script** (Not "Execute SQL Statement")
+   - Should see an output saying the number of queries executed and the updated rows
+
+4. Verify:
+   - Disconnect and reconnect to refresh
+   - Expand Tables to see: `user`, `task`, `status`, `user_task`
+   - Right-click any table → View Data to verify records
+
+**Step 3: Environment Variables**
+
+Show them the concept of configuration for different environments:
+
+**Understanding Environment Variables**
+
+Environment variables allow us to configure our application differently based on where it's running (development vs production) without changing code.
+
+**Create a `.env` file in the `example-api` folder:**
+
+```bash
+# .env file for local development
+NODE_ENV=development
+
+# For production testing (get this from Render)
+DATABASE_URL=postgresql://user:password@host:5432/database
+```
+
+> [!IMPORTANT]
+> Never commit `.env` files to git! They contain sensitive credentials. Always add `.env` to your `.gitignore` file.
+
+**Database Configuration Code:**
+
+Show the students how the code switches between databases:
+
+```javascript
+// example-api/index.js
+
+// Development: local SQLite
+const developmentConfig = {
+  client: "sqlite3",
+  //...
+};
+
+// Production: remote PostgreSQL
+const productionConfig = {
+  client: "pg",
+  //...
+};
+```
+
+**Step 4: Test Both Environments**
+
+Now we'll test our API with both databases to see the differences.
+
+**Testing Development (SQLite):**
+
+```bash
+npm run dev
+```
+
+Open your browser:
+
+- <http://localhost:3000/api/users>
+
+**What's happening:**
+
+- Reading from local `tasks.sqlite3` file
+- Perfect for development and testing
+
+**Testing Production (PostgreSQL):**
+
+```bash
+# Update .env to use production
+# DATABASE_URL=your-render-database-url
+
+npm run prod
+```
+
+Open your browser to the same endpoints:
+
+- <http://localhost:3000/api/users>
+
+**What's happening:**
+
+- Reading from remote PostgreSQL on Render
+- Slightly slower (network latency)
+- Same data, different database engine
+
+> [!TIP]
+> You can show the diagram again to illustrate how you are connecting to different databases based on environment.
+
+#### Key Concepts to Emphasize
+
+**Environment Variables**
+
+- Never hardcode database credentials
+- Different configs for dev/staging/production
+- `.env` file locally, Render UI for production
+- Always add `.env` to `.gitignore`
+
+**Migration Best Practices**
+
+- Always backup before migrating
+- Monitor after deployment
+- Keep development and production schemas in sync
+
+**Alternative: Knex Migrations (Optional)**
+
+> [!TIP]
+> For production projects, you'll likely use migration tools like Knex.js to version-control your schema changes. This is beyond today's scope but worth exploring for your projects.
+
+#### Questions to Explore
+
+- What happens if the remote database goes down?
+- How do we update the database after the first setup?
+- Can multiple developers work with the same production database?
 
 ## Summary & Q&A
 
 ### Key takeaways
 
 - SQL aggregates are your friends for calculations: reporting, dashboard stats
-- Security: Never trust user input, always validate!
-- Use transactions for multi-step operations
+- Security: Never trust user input, always validate.
 - Choose the right database for your use case
