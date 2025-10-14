@@ -32,7 +32,7 @@
 
 ### DEMO: ERD Task Management System
 
-- Mentor leads ERD creation with student input using Excalidraw/Draw.io
+- Mentor leads ERD creation with trainees input using Excalidraw/Draw.io
 - Ask trainees to suggest entities, attributes, and relationships
 
 **Scenario**: Design a simple task management system with these requirements:
