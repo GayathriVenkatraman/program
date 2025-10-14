@@ -6,4 +6,3 @@
 > In this directory you'll be working on tasks in an existing project, making your assignments a little more realistic and fun!
 
 Complete the week 4 tasks described in the Space Galactica App.
-
