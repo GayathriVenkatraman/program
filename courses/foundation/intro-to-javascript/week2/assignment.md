@@ -1,37 +1,10 @@
 # Assignment
 
-## Get git ready to work on the assignment
-
-Using the `hyf-assignments` repo. In the terminal run `git status`
-
-If there are changes that have not been committed, figure out what to do with those changes
-
-- Should they be committed to another branch?
-- Should they be committed to `main`?
-- Should they be discarded?
-
-When you have figured out what to do with the changes and fixed those. Write `git status` again. If it says `nothing to commit, working tree clean`. Then you are ready to create the branch for this weeks assignment.
-
-### Creating the branch
-
-Using the `hyf-assignments` repo write this command
-
-`git checkout main` - You are now on the `main` branch
-
-`git checkout -b javascript-javascript1-week2`
-
-This will create and checkout the branch so you are ready make commits to it
-
-[This video](https://www.youtube.com/watch?v=JcT4wmK1VcA) can help. On slack use the #git-support channel to ask questions about git
-
 ## Why should I even do this assignment?
 
 Functions and conditions are some of the basic building blocks of javascript. Functions ensure that we don't repeat ourselves when writing code. Conditions ensures that we can handle different cases when programming.
 
-If you struggle to do this weeks assignment there are a couple of things to do:
-
-- Watch the class recording. If it for some reason is missing. Then watch these: [part 1](https://www.youtube.com/watch?v=P9BQLgRm7zs), [part 2](https://www.youtube.com/watch?v=qFI5QnjN2GQ)
-- Read up on [JavaScript basics](readme.md#recap-logical-operators)
+If you struggle to do this weeks assignment, read up on [JavaScript basics](README.md#recap-logical-operators).
 
 ## Javascript warmup
 
@@ -76,7 +49,7 @@ Log out the two fullname variables.
 
 #### Formal fullname
 
-On the flight website the user has the possibility to **check a checkbox** that **indicates** if the user wants to be **addressed formally**. Lets also change `getFullName` to include support for formal name.
+On the flight website the user has the possibility to **check a checkbox** that **indicates** if the user wants to be **addressed formally**. Let's also change `getFullName` to include support for formal name.
 
 Create an extra parameter `useFormalName` that is a boolean. If it is true the function should add a `Lord` in front of the name.
 
@@ -95,7 +68,7 @@ But what if the person is a woman? Describe how you would fix the `getFullName` 
 
 ### Event application
 
-Another customer has contacted us. He works for a secret company that rimes with foogle. The customer works on their calendar application. They need some functionality to help with writing what weekday an event is held.
+Another customer has contacted us. They work for a secret company that rhymes with foogle. The customer works on their calendar application. They need some functionality to help with writing what weekday an event is held.
 
 You specify how many days from today an event is being held. The function then figures out what weekday the event is being held. Here is an example:
 
@@ -145,7 +118,7 @@ function getNumberOfStudents() {
 }
 ```
 
-#### addStudentToClass function
+#### `addStudentToClass` function
 
 The `addStudentToClass` should add the `studentName` to the `class07Students` array.
 
@@ -156,7 +129,7 @@ But there are some other requirements:
 - We are very fond of our Queen in Denmark, so if the Queen is added to the class she should always get a space. Even if the class has been filled out.
 - You cannot add an empty string to a class
 
-#### getNumberOfStudents function
+#### `getNumberOfStudents` function
 
 `getNumberOfStudents` should simply return the number of students in the class.
 
@@ -178,7 +151,7 @@ To see your code applied on a webapp, go here: <https://codepen.io/hackyourfutur
 
 Let's solve this problem with some functions.
 
-#### addCandy function
+#### `addCandy` function
 
 Create a function called `addCandy`. It has two parameters:
 
@@ -213,16 +186,3 @@ Try use the function by adding some pieces of candy and checking if you can buy 
 Hint: Use a for loop to calculate the total price of the candy pieces.
 
 _Optional_ Use a [while loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while) instead of a for loop.
-
-## Step 4: Hand in Assignment
-
-Watch [this video](https://www.youtube.com/watch?v=JcT4wmK1VcA) for a more detailed go-through of how to hand in assignments!
-
-- Use the branch called `javascript-javascript1-week2`
-- Add all your changes to this branch in the `javascript-javascript1-week2` folder.
-- Create a pull request using the `javascript-javascript1-week2` branch and give your PR the same name `javascript-javascript1-week2`
-- Wait for mentor feedback
-- Implement feedback, `add`, `commit` and `push` the changes
-- Now you can merge the changes into `main`
-- When merged you can **share the github link** to your classes slack channel if you are **proud of what you did** 💪
-- Now celebrate 🎉🎉🎉

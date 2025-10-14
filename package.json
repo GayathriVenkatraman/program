@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "markdownlint-cli": "^0.45.0",
+    "markdownlint-rule-search-replace": "^1.2.0",
     "prettier": "^3.6.2"
   },
   "type": "module",
@@ -17,6 +18,8 @@
     "lint:validate-links": "./lint validate-links",
     "lint:validate-links:watch": "node support/dist/watch.js ./lint validate-links",
     "lint:watch": "node support/dist/watch.js ./lint",
-    "generateProgrammeOverview": "node support/src/programmeOverview/generate.js"
+    "generate:learninggoals": "node support/src/documentationHelpers/generateLearningGoals.js",
+    "generate:gitbook-summary": "node support/src/documentationHelpers/generateGitBookSummary.js",
+    "generate:contributors": "node support/src/documentationHelpers/generateContributors.mjs"
   }
 }

@@ -11,9 +11,11 @@ It will be based on the classic Memory Game, where a player needs to flip all th
 
 Here are the features and details of the the app that need to be implemented. They have been listed in an order that might be useful to follow, but feel free to tackle the steps in the order that you see best fit.
 
-You are strongly encouraged to add your own features, details, design and flare thoughout the steps, as long as these requirements are still met.
+You are strongly encouraged to add your own features, details, design and flare throughout the steps, as long as these requirements are still met.
 
-### The Flippable Card
+### Week 1 Milestone
+
+#### The Flippable Card
 
 You are provided with a card picture and a card backside image which you can use, [which you can find here](./assets/card/), or feel free to choose your own.
 
@@ -26,7 +28,7 @@ Your app needs to:
 It can look and be animated in any way you like, but here's some inspiration:
 ![screenshot](./assets/memory-game-card-flip.gif)
 
-### The Card Grid
+#### The Card Grid
 
 Next, you need to set up the cards in a grid, so they are displayed in a way suitable for the game to be played. You'll need some more pictures now!
 
@@ -43,7 +45,7 @@ Tips:
 Here's some inspiration:
 ![screenshot](./assets/memory-game-grid.png)
 
-### Counters and Timers
+#### Counters and Timers
 
 Now you need to add some of the core game functionality:
 
@@ -55,7 +57,9 @@ Tips:
 
 1. Revealing a card is not the same as a click! Your counter should incrememt with reveals.
 
-### Storing and Retrieving Your Cards
+### Week 2 Milestone
+
+#### Storing and Retrieving Your Cards
 
 Up until now, your cards have been hardcoded in your app code. Instead, these should be stored in a database and fetched via an API which the frontend can use to retrieve and display them.
 
@@ -69,18 +73,20 @@ Tips:
 1. After these changes, your game should appear to the player to function just as it did before.
 2. Refer to your exercises from previous modules if you need a reminder on creating databases and APIs.
 
-### The Game Logic
+#### The Game Logic
 
-The final step is to add the game logic, so it beomces a playable game!
+The final step is to add the game logic, so it becomes a playable game!
 
 - [ ] Only two cards should be able to be flipped at a time
 - [ ] If the cards match, they should disappear
 - [ ] Once all cards have disappeared, the player wins and the game is over
 - [ ] After winning, the player should be able to restart the game and play again
 
-### Your own ideas!
+### Week 3 Milestone - Your own ideas!
 
-Now your game is working, it's time to introduce your own feature! Think of an improvement or change to the game and implement it.
+Now your game is working, it's time to introduce your own features! Think of some improvements or changes to the game and implement it.
+
+You should choose 3 features/improvements as a minimum to showcase as part of your project. But, you are welcome to add more and further polish your app to a high standard until you are super proud of it!
 
 Some ideas for inspiration:
 
@@ -92,3 +98,4 @@ Some ideas for inspiration:
 - [ ] Implement some options that the user can tweak, such as grid size
 - [ ] Let the player choose a name, and save their score in the database
 - [ ] Implement a leaderboard for the top 10 scores
+- [ ] ... and many more!

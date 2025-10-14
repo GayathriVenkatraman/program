@@ -11,7 +11,7 @@ type ParsedFile = ParseResult & { readonly filename: string };
 const findAllFiles = async (): Promise<string[]> => {
   return await new Promise((resolve, reject) => {
     exec(
-      "find . -mindepth 1 -name node_modules -prune -o -name legacy -prune -o -name .git -prune -o -print0",
+      "find . -mindepth 1 -name node_modules -prune -o -name .git -prune -o -print0",
       (error, stdout, stderr) => {
         if (error) reject(error);
         if (stderr) reject(new Error(`'find' outputted on stderr: ${stderr}`));
@@ -28,7 +28,7 @@ const findAllFiles = async (): Promise<string[]> => {
 };
 
 const findMarkdownFiles = (files: string[]): string[] => {
-  return files.filter((f) => f.toLocaleLowerCase().endsWith(".md"));
+  return files.filter((f) => f.endsWith(".md"));
 };
 
 const scanForLinks = async (filenames: string[]): Promise<ParsedFile[]> => {
@@ -58,9 +58,6 @@ const isExternalLink = (t: string) => externalLinkPattern.test(t);
 const main = async () => {
   const gitFiles = await findAllFiles();
 
-  // For now, we assume that there are no case clashes
-  const lowercaseGitFiles = gitFiles.map((s) => s.toLocaleLowerCase());
-
   const markdownFilenames = findMarkdownFiles(gitFiles);
   const parsedFiles = await scanForLinks(markdownFilenames);
 
@@ -81,7 +78,7 @@ const main = async () => {
       if (!isExternalLink(img.src)) {
         const resolved = path.join(dirname(parsedFile.filename), img.src);
 
-        const exists = lowercaseGitFiles.includes(resolved.toLocaleLowerCase());
+        const exists = gitFiles.includes(resolved);
 
         if (!exists) {
           showError(
@@ -111,12 +108,12 @@ const main = async () => {
           resolved = normalize(path.join(dirname(parsedFile.filename), target));
         }
 
-        const isFile = lowercaseGitFiles.includes(resolved.toLocaleLowerCase());
+        const isFile = gitFiles.includes(resolved);
 
         const resolvedWithTrailingSlash = resolved.endsWith("/")
-          ? resolved.toLocaleLowerCase()
-          : `${resolved.toLocaleLowerCase()}/`;
-        const isDirectory = lowercaseGitFiles.some((s) =>
+          ? resolved
+          : `${resolved}/`;
+        const isDirectory = gitFiles.some((s) =>
           s.startsWith(resolvedWithTrailingSlash),
         );
 

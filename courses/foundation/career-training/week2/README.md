@@ -11,18 +11,18 @@ We will focus on:
 
 Participants then split into **breakout groups** to review and give feedback on fictional CVs and LinkedIn profiles, using real-life examples to reflect on how effectively these platforms represent their professional value.
 
-These articles, videos and tasks are not a suggestion, but mandatory. They require less time than your regular homeworks, but are just as important. We expect you to use the remainder of your 30 hours on finishing all the assignments you haven't yet completed.
+These articles, videos and tasks are not a suggestion, but mandatory. They require less time than your regular assignments, but are just as important. We expect you to use the remainder of your 30 hours on finishing all the assignments you haven't yet completed.
 
 ## Learning Goals
 
 At the end of the session, participants should be able to:
 
-- [ ] Identify how their CV and LinkedIn play together.
-- [ ] Have an understanding about how recruiters review a CV and what they look for.
-- [ ] Being able to critically review a CV and LinkedIn page and identify main errors and pitfalls.
+- [ ] Identify how their CV and LinkedIn play together.
+- [ ] Have an understanding about how recruiters review a CV and what they look for.
+- [ ] Being able to critically review a CV and LinkedIn page and identify main errors and pitfalls.
 
 ## Materials
 
 - [Preparation](preparation.md)
-- [Lesson Plan](lesson-plan.md)
+- [Session Plan](session-plan.md) (for mentors)
 - [Assignment](assignment.md)

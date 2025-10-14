@@ -14,7 +14,7 @@ These are some examples of previously created materials by mentors that you can 
 
 - Function as a variable - function can be called inside another function, like we saw with the homemade `forEach`
   - [Code inspiration](#calling-a-function-within-a-function)
-- Callback function and asyncronicity - shows a practical example of function that gets called by another function (e.g. `setTimeout` or `addEventListener`)
+- Callback function and asynchronicity - shows a practical example of function that gets called by another function (e.g. `setTimeout` or `addEventListener`)
   - [Code inspiration](#callback-functions)
 - [Exercise 1](#1-click-counter), [exercises 2](#2-delay-clicker), [exercise 3](#3-page-onload), [exercises 4](#4-mouse-position)
 
@@ -23,11 +23,11 @@ The trainees should after the session **feel comfortable with callback functions
 Also hammer in the point of the difference between:
 
 ```js
-document.querySelector("button").addEventListner("click", logOuttext);
-document.querySelector("button").addEventListner("click", logOuttext());
+document.querySelector("button").addEventListener("click", logOuttext);
+document.querySelector("button").addEventListener("click", logOuttext());
 ```
 
-Here's a good [practical example of callbacks](https://github.com/HackYourFuture-CPH/JavaScript/blob/class08/JavaScript2/Week5/classwork/extra_examples.md)
+Here's a good [practical example of callbacks](https://github.com/HackYourFuture-CPH/JavaScript/blob/class08/JavaScript2/Week5/classwork/extra_examples.md) (TODO move this to this repo)
 
 This is super good at explaining function logic
 ![Function graphic](./session-materials/function-graphic.jpg)
@@ -35,7 +35,7 @@ This is super good at explaining function logic
 ### Calling a function within a function
 
 ```js
-// Here we create a funtion that as a parameter takes a function!! Super weird right!?
+// Here we create a function that as a parameter takes a function!! Super weird right!?
 // Functions works just like any other type in js.
 function functionRunner(functionToRun) {
   console.log(typeof functionToRun);
@@ -50,7 +50,7 @@ functionRunner(function () {
 // We don't see anything, why??
 functionRunner(Math.random);
 
-// Lets rewrite functionRunner to log out the return of a function
+// Let's rewrite functionRunner to log out the return of a function
 function functionRunnerImproved(functionToRun) {
   console.log(typeof functionToRun);
   // Here we are calling the function that is provided as an argument when calling functionRunner
@@ -72,7 +72,7 @@ someone types into an input element or we have just gotten some data from a serv
 When these events happen, we usually want to add some functionality.
 e.g. when a user clicks the like button (event), we want to increment the like counter and color the like button blue.
 Or when someone clicks "Close cookies" (event) we want to remove the cookie div.
-Lets first try to create some js that waits for 2 seconds and the console.logs out "2 seconds has elapsed!"
+Let's first try to create some js that waits for 2 seconds and the console.logs out "2 seconds has elapsed!"
 In javascript we use the word eventlistener to listen
 */
 
@@ -87,19 +87,34 @@ const fourSecondLog = function () {
 };
 
 setTimeout(fourSecondLog, 4000);
+```
 
-// Now let's try and log out "button clicked!" when a button is clicked.
-// To check if a button gets clicked we use a what is called an eventlistener.
-// Imagine a person listening to the click of a button and everytime he hears a click he yells out "CLICKED".
+### Event Listeners
+
+```javascript
+// Now let's keep track of how many times a button is clicked.
+// To do something whenever a button gets clicked, we use what is called an event listener.
+// Imagine that the button is noisy. There's someone listening out for the click sound,
+// and every time they hear it, they add 1 to a counter.
+
 const buttonElement = document.querySelector("button");
+let counter = 0;
+
 buttonElement.addEventListener("click", function () {
-  console.log("Button clicked!");
+  counter = counter + 1;
+  console.log(`Button clicked ${counter} times so far`);
 });
 
+// or the same thing but assigning the event listener to a const:
+
+const buttonElement = document.querySelector("button");
+let counter = 0;
+
 const buttonClicked = function () {
-  console.log("Button clicked as a variable!");
+  counter = counter + 1;
+  console.log(`Button clicked ${counter} times so far`);
 };
-// Cool man! Lets try and add that function as a variable.
+
 buttonElement.addEventListener("click", buttonClicked);
 
 //Callbacks
@@ -107,7 +122,7 @@ buttonElement.addEventListener("click", buttonClicked);
 // Well actually you have already made callbacks!
 // When you give a function to an event listener or a timer or when fetching data you are using a callback function
 
-// Lets create a callback function when someone writes in a input element
+// Let's create a callback function when someone writes in a input element
 const callback = function () {
   console.log("Someone is writing!!");
 };
@@ -163,7 +178,7 @@ Create a handler, that prints the x,y coordinate of the mouse event.
 
 Say we want to create an online tool where businesses can see where their users' mouse is most of the time. Businesses can now figure out if they have designed their website correctly.
 
-Lets create some js that will get the average `x` and `y` position of a user after 30 seconds.
+Let's create some js that will get the average `x` and `y` position of a user after 30 seconds.
 
 > [!TIP]
 > Before starting with this exercise, create a plan for how you will implement this! Maybe together with your mentor.

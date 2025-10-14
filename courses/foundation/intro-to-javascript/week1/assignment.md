@@ -6,44 +6,11 @@
 
 1. Watch: [What is programming?](https://www.khanacademy.org/computing/computer-programming/programming/intro-to-programming/v/programming-intro). Just watch the 2 min video, you do not have to do the entire JavaScript course (It could be useful later on though).
 
-### Get git ready to work on the assignment
-
-Using the `your hyf-assignments` repo. In the terminal run `git status`
-
-If there are changes that have not been committed, figure out what to do with those changes
-
-- Should they be committed to another branch?
-- Should they be committed to `main`?
-- Should they be discarded?
-
-When you have figured out what to do with the changes and fixed those. Write `git status` again. If it says `nothing to commit, working tree clean`. Then you are ready to create the branch for this weeks assignment.
-
-#### Creating the branch
-
-Using the `your hyf-assignments` repo write this command
-
-`git checkout main` - You are now on the `main` branch
-
-`git checkout -b javascript-javascript1-week1`
-
-This will create and checkout the branch so you are ready make commits to it
-
-[This video](https://www.youtube.com/watch?v=JcT4wmK1VcA) can help. On slack use the #git-support channel to ask questions about git
-
-## Why should I do this assignment?
-
-> One must be able to crawl before understanding the true nature of Javascript - Albert Einstein
-
-This assignment will get you started developing in javascript. What you learn the first 3 modules of javascript will be building blocks for creating great javascript web applications.
-
-If you struggle to do this weeks assignment there are a couple of things to do:
-
-- Watch the class recording. If it for some reason is missing. Then watch these: [part 1](https://www.youtube.com/watch?v=uhTRC33cpp0), [part 2](https://www.youtube.com/watch?v=mVgyjr9MV5U)
-- Read up on [JavaScript basics](readme.md#variables)
+If you struggle to do this weeks assignment, read up on [JavaScript basics](README.md#variables).
 
 ## Step 2: Javascript warm up part one
 
-Lets get started with some warm up exercises: On freeCodeCamp.com do the [Basic JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript) exercises up and until the **"Manipulate Arrays With push()"** exercise (there are some topics we did not cover but you can do it).
+Let's get started with some warm up exercises: On freeCodeCamp.com do the [Basic JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript) exercises up and until the **"Manipulate Arrays With push()"** exercise (there are some topics we did not cover but you can do it).
 
 Please add your freeCodeCamp username as answer for this exercise!
 
@@ -55,7 +22,7 @@ Enough warm up, let's get to the real problems! We will assume a real world busi
 
 ---
 
-Lets imagine that we have just started a cool new tech startup called **Smart-ease**. And let's imagine we even have this cool website url: `smart-ease.io` Now we are in business!
+Let's imagine that we have just started a cool new tech startup called **Smart-ease**. And let's imagine we even have this cool website url: `smart-ease.io` Now we are in business!
 
 At **Smart-ease** we focus on solving real world problems. We venture into the world to help people, and by helping people, we create a sustainable business.
 
@@ -84,7 +51,7 @@ or
 
 ### Housey pricey (A house price estimator)
 
-> Two of your friends are considering buying a house, but cannot figure out what the right price should be. Your friends know the width, the height and the depth of the house and the garden size. Lets help them figure out if they paid too much:
+> Two of your friends are considering buying a house, but cannot figure out what the right price should be. Your friends know the width, the height and the depth of the house and the garden size. Let's help them figure out if they paid too much:
 
 We have made our own formula for calculating the price of a house. This formula is VERY simplified and not at all close to the real calculation which can get [quite complicated](https://www.kaggle.com/erick5/predicting-house-prices-with-machine-learning):
 
@@ -99,9 +66,9 @@ Figure out if Peter and Julia are paying too much or too little using Javascript
 
 ### Ez Namey (Startup name generator) _Optional_
 
-> At a meetup you overhear a conversation between two developers. It went something like this: "Man I wish picking a startup name was easier! You need to be creative, funny and interesting, it's nearly impossible!" Another problem to solve, awesome!
+> At a meetup you overhear a conversation between two developers. It went something like this: "I wish picking a startup name was easier! You need to be creative, funny and interesting, it's nearly impossible!" Another problem to solve, awesome!
 
-Lets help people who struggle finding a startup name by creating some code!
+Let's help people who struggle finding a startup name by creating some code!
 
 Create two arrays called `firstWords`, `secondWords`. The arrays should have 10 elements containing strings of possible startup names. Some examples could be: "Easy", "Awesome", "Corporate".
 
@@ -118,74 +85,6 @@ const randomNumber = Math.floor(Math.random() * 10);
 
 ---
 
-4 projects from one startup, that's incredible! Lets hope one or more of these projects actually becomes popular!
+4 projects from one startup, that's incredible! Let's hope one or more of these projects actually becomes popular!
 
 To be continued...
-
-## Step 4: Hand in Assignment
-
-We are going to be handing in the assignment using something called a **pull request (now PR)**. The reason for that is that **most companies use PRs** when they work with code. So you might as well get used to it!
-
-Watch [this video](https://www.youtube.com/watch?v=JcT4wmK1VcA) to go through the same process as is documented here
-
-**Okay, let's go!**
-
----
-
-Use the `hyf-assignments` repo and find the folder on your computer that contains this repo
-
----
-
-Using the branch called `javascript-javascript1-week1`
-
----
-
-To add your files go to the folder `javascript/javascript1/week1`. Here you **add all the files relevant for the assignment**. Remember to **separate the code into meaningful commits**. You can now push the commits
-
-```shell
-git add <file_name>
-git commit -m "Implemented task 1"
-git push origin javascript-javascript1-week1
-```
-
----
-
-Go into the `your hyf-assignments` repo on <https://github.com/> click on the `Pull requests` tab and then click the `New pull request` button
-
-![Create new pull request](assets/create-new-pull-request.png)
-
-Where it says compare, choose the `javascript-javascript1-week1` branch. Just keep the PR title as it is (javascript-javascript1-week1). You can leave a comment if you want. Now click `Create pull request`.
-
-![Create new pull request](assets/open-a-pull-request.png)
-
-You have now handed in the assignment, but you are not quite done yet
-
----
-
-A mentor will look through your code and give you some feedback.
-
-![Pull request comment](assets/pull-request-comment.png)
-
-Based on the feedback, implement improvements to the assignment. Then add, commit and push these improvements.
-
-```shell
-git add <file_name>
-git commit -m "Implemented feedback"
-git push origin javascript-javascript1-week1
-```
-
----
-
-Now you can merge the changes. Congrats, you are completely done with the assignment 🎉🎉🎉
-
-![Merge the pull request](assets/merge-pull-request.png)
-
-Now it should look like this:
-
-![Pull request done](assets/pull-request-done.png)
-
-When merged you can **share the github link** to your classes slack channel if you are **proud of what you did** 💪
-
----
-
-And that's it, you are done 🎉

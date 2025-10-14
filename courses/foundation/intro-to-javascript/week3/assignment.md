@@ -6,14 +6,11 @@
 
 Objects can be used for **representing data** and it can **help structure your code**. An object can e.g. represent a user that has a first name, surname, profile picture and a list of friends. It is constantly used in javascript and **essential to learning the language**.
 
-If you struggle to do this weeks assignment there are a couple of things to do:
-
-- Watch the class recording. If it for some reason is missing. Then watch these: [part 1](https://www.youtube.com/watch?v=idfGCqAItGI), [part 2](https://www.youtube.com/watch?v=cNRFY0RW5L8)
-- Read up on [objects and arrays](readme.md#objects)
+If you struggle to do this weeks assignment, read up on [objects and arrays](README.md#objects).
 
 ## Javascript warmup
 
-Its warmup time!
+It's warmup time!
 
 ![Warm up](https://media.giphy.com/media/Cfw4WE617UgUw/giphy.gif)
 
@@ -84,7 +81,7 @@ const seriesDurations = [
 ];
 ```
 
-How much time of my life have I been watching series on tv? Lets find out! Calculate **how much time a tv series** have taken as a **percentage of an average lifespan** of 80 years.
+How much time of my life have I been watching series on tv? Let's find out! Calculate **how much time a tv series** have taken as a **percentage of an average lifespan** of 80 years.
 
 Firstly change the `seriesDurations` array found above to include your favourite series. Find the duration of a series here: <https://tiii.me/>
 
@@ -123,7 +120,7 @@ Smart-ease is going back to the basics. As always Smart-ease starts by helping p
 
 ### NOnoN0nOYes (Note taking app)
 
-> You are sitting at a meeting. A person is presenting some interesting thought that you want to write down. You check your bag, but realise that you forgot to bring your notepad. Hmm you check the internet for an online solution. But you need to signup for them all, too bad... Maybe this could be a worthwhile problem so solve. Lets create a simple and easy to use notepad 📝
+> You are sitting at a meeting. A person is presenting some interesting thought that you want to write down. You check your bag, but realise that you forgot to bring your notepad. Hmm you check the internet for an online solution. But you need to signup for them all, too bad... Maybe this could be a worthwhile problem so solve. Let's create a simple and easy to use notepad 📝
 
 #### Save a note
 
@@ -151,7 +148,8 @@ console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do lau
 
 #### Get a note
 
-**Now a user can save a note**, but what if a user wants to **see a specific note**, but only remembers the id? Lets create that functionality for him:
+**Now a user can save a note**, but what if a user wants to **see a specific note**, but only remembers the id? Let's create that functionality:
+
 Create a function called `getNote`. The function has one parameter called `id`. When calling this function with an id it should return the relevant note object that corresponds to the id. If no id is specified or if the id is not a number, log out an error string.
 Hint: Use a for loop.
 
@@ -166,7 +164,8 @@ console.log(firstNote); // {content: 'Pick up groceries', id: 1}
 
 #### Log out notes
 
-Now a user can both save and get a note. What if the user just wants to **read all his notes?** Lets also create that functionality:
+Now a user can both save and get a note. What if the user just wants to **read all their notes?** Let's also create that functionality:
+
 Create a function `logOutNotesFormatted`. When calling the function it should log this string out for every note:
 "The note with id: 1, has the following note text: "some example note"."
 
@@ -193,11 +192,11 @@ Try an [**interactive version 💻 of your code**](https://codepen.io/dalsHughes
 
 > After a long day you come home to relax. The first thing you do is find your phone and start watching some youtube. Then check facebook, and then reading some news. Suddenly a hour has passed. What happened to all that time you think to yourself. Maybe we can create some program to help with this problem! What if we could help users manage their smart phone usage?
 
-Its going to work like this: A user can add smartphone activities. Then he can see a status on how his smartphone usage is going.
+It's going to work like this: A user can add smartphone activities. Then they can see a status on how their smartphone usage is going.
 
 #### Adding an activity
 
-Lets create the first part of the functionality that is **adding activities.**
+Let's create the first part of the functionality that is **adding activities.**
 
 Create a variable called `activities` that stores all activities of the day. What type of variable would you think would make sense?
 Create a function called `addActivity`. It should have three parameters: `date`, `activity` and `duration`. The `date` should be a string, the `activity` a string and the `duration` a number. To save the activity push an object that contains the date, the activity and the duration to the activities variable.
@@ -217,7 +216,7 @@ activities should now look like this
 */
 ```
 
-Just adding activities won't help the user very much, we need to **add some functionality** to show the user how **his smart phone usage is going.**
+Just adding activities won't help the user very much, we need to **add some functionality** to show the user how **their smart phone usage is going.**
 
 #### Show my status
 
@@ -232,9 +231,9 @@ Now what happens if we call `showStatus` and `activities` is empty? We need to t
 
 #### Usage limit
 
-A user asks us if it is possible to **set a limit for his smartphone usage.** "Off course it is" we promptly reply!
+A user asks us if it is possible to **set a limit for their smartphone usage.** "Off course it is" we promptly reply!
 We need to store that limit somewhere, but where and what type should this be?
-So how should it work? When `showStatus` is called and the users usage is above the limit he set. Log out the following string: "You have reached your limit, no more smartphoning for you!"
+So how should it work? When `showStatus` is called and the user's usage is above the limit that they set, log out the following string: "You have reached your limit, no more smartphoning for you!"
 
 Try and add some activities and call `showStatus`
 
@@ -244,7 +243,7 @@ Come up with one feature you think would be helpful for this program.
 
 Optional
 
-- Lets improve the `addActivity`, so that we don't need to specify the date, but the function automatically figures out what the date is. Check out this link: <https://stackoverflow.com/a/34015511>
+- Let's improve the `addActivity`, so that we don't need to specify the date, but the function automatically figures out what the date is. Check out this link: <https://stackoverflow.com/a/34015511>
 - Improve the `showStatus` function by only showing the number of activities for that specific day.
 - Create a function for calculating the activity a user has spent the most time on.
 

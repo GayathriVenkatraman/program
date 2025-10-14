@@ -105,7 +105,7 @@ const mentors = [
 console.log(mentors);
 ```
 
-## ForEach
+## `forEach`
 
 ```js
 mentors.forEach(function (mentor) {
@@ -118,7 +118,7 @@ mentors.forEach(function (mentor) {
 });
 ```
 
-### ForEach homemade
+### `forEach` homemade
 
 ```js
 function forEachHomemade(array, functionToExecute) {
@@ -129,7 +129,7 @@ function forEachHomemade(array, functionToExecute) {
 }
 ```
 
-## Map
+## `map`
 
 ```js
 // We are mapping/transforming the mentors array. Same size, different items.
@@ -142,11 +142,11 @@ const mentorNamesFormatted = mentors.map(function (mentor) {
 });
 
 const mentorSummary = mentors.map(function (mentor) {
-  return `Mentors name is: ${mentor.name}. He has ${mentor.yearsOfExperience} years of experience`;
+  return `Mentors name is: ${mentor.name}. They have ${mentor.yearsOfExperience} years of experience`;
 });
 ```
 
-### Map homemade
+### `map` homemade
 
 ```js
 function mapHomemade(array, functionToExecute) {
@@ -162,7 +162,7 @@ function mapHomemade(array, functionToExecute) {
 }
 ```
 
-## Filter
+## `filter`
 
 ```js
 // We are mapping/transforming the mentors array. Same size, different items.
@@ -174,7 +174,7 @@ const experiencedMentors = mentors.filter(function (mentor) {
   }
 
   // can also be written as
-  // reuturn mentor.yearsOfExperience > 7
+  // return mentor.yearsOfExperience > 7
   // Explain why!
 });
 
@@ -184,7 +184,7 @@ const mentorsThatStartWithA = mentors.filter(function (mentor) {
 });
 ```
 
-### Filter homemade
+### `filter` homemade
 
 ```js
 function FilterHomemade(array, functionToExecute) {
@@ -214,7 +214,7 @@ const circleArea1 = (radius) => {
   return radius * 2 * Math.pi;
 };
 
-// If there is only one parameter, we can remove the paranthesis
+// If there is only one parameter, we can remove the parenthesis
 const circleArea2 = (radius) => {
   return radius * 2 * Math.pi;
 };
@@ -232,7 +232,7 @@ function filterMentorList(courseID) {
 
   let listHtml = "";
   listHtml += "<div> Fowad</div>";
-  listHtml += "<div> Susane</div>";
+  listHtml += "<div> Susanne</div>";
   listHtml += "<div> Sara</div>";
   resultHtml.innerHTML = listHtml;
 
@@ -256,12 +256,12 @@ function filterMentorList(courseID) {
   const resultHtml = document.getElementById("result");
   let listHtml = "";
 
-  let filteresListByCourseId = mentors.filter(function (mentor) {
+  let filtersListByCourseId = mentors.filter(function (mentor) {
     const sub = mentor.subject;
     return sub.indexOf(courseID) >= 0;
   });
 
-  filteresListByCourseId.forEach(function (mentor) {
+  filtersListByCourseId.forEach(function (mentor) {
     listHtml += `<div>  ${mentor.name}  - ${mentor.age}  </div>`;
   });
 
