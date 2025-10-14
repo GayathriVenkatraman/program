@@ -4,28 +4,22 @@
 - Use the same task database throughout all examples for consistency
 - Use problem-based approach: show issues, guide students to solutions
 
-> [!NOTE]
-> Trainees should have their `tasks.sqlite3` database from Week 1 ready to use with a GUI tool. [Tools setup - Week 1](../week1/preparation.md#tools-setup)
-
-## Setup DB and start the example API
-
-An example API is provided to demonstrate concepts and exercises, along with a `tasks.sqlite3` database.
-It contains the SQL statements from [tasks.sql](../week1/session-materials/tasks.sql)
-In case you want to recreate it, run `sqlite3 tasks.sqlite3 < tasks.sql`
+## Requirements: Setup DB and start the example API
 
 ### Mentor Instructions
 
+You need to have the example API running to demonstrate concepts and exercises.
 Share your screen and setup the session materials:
 
 ```shell
-  cd example-api
-  npm install
-  npm run dev
+git clone https://github.com/HackYourFuture-CPH/hyf-assignment-template.git
+cd courses/backend/databases/
 ```
 
 ### Trainee Instructions
 
-- Trainees should follow the instructions on their [hyf-assignment-template](https://github.com/HackYourFuture-CPH/hyf-assignment-template/tree/main/courses/backend/databases) repository.
+- They should have their `tasks.sqlite3` database from Week 1 ready to use with a GUI tool. [Tools setup - Week 1](../week1/preparation.md#tools-setup)
+- They should follow the same instructions but on their own fork of the assignment repo.
 - The materials for this session are located in `courses/backend/databases/`
 
 ## Aggregate Functions
@@ -151,7 +145,7 @@ Using the running API, try these attacks:
 
 ### Development vs Production: Understanding the Journey
 
-![Local vs Prod environment](session-materials/local-vs-prod-environments.png)
+![Local vs Prod environment](./session-materials/local-vs-prod-environments.png)
 
 > ![NOTE]
 > The diagram illustrates the difference between local development and production environments.
