@@ -85,7 +85,7 @@ These are some examples of previously created materials by mentors that you can 
 
 ### Exercise 1: Assignments repository
 
-**Objective:** Create a repository on your GitHub by clicking "Use this template" from [hyf-assignment-template](https://github.com/HackYourFuture-CPH/hyf-assignment-template). Then you will add the session exercises from the previous week, to the `html-css/week1` folder, by first checking out to a new branch called `html-and-css`. Create a PR introducing those changes to `main`. Finally, have the person on your right review this PR before you agree to merge it to `main`.
+**Objective:** Create a repository on your GitHub following the instructions from [hyf-assignment-template](https://github.com/HackYourFuture-CPH/hyf-assignment-template). Then you will add the session exercises from the previous week, to the `html-css/week1` folder, by first checking out to a new branch called `html-and-css`. Create a PR  to your own repo introducing those changes to `main`. Finally, have the person on your right review this PR before you agree to merge it to `main`.
 
 - Use descriptive `commit` messages
 - Make a commit for each folder/exercise you add (makes it easier to track changes/updates)
