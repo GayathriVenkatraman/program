@@ -9,14 +9,10 @@
 
 import * as fs from "node:fs/promises";
 
-type Contributor = {
-  readonly login: string;
-  readonly html_url: string;
-  readonly avatar_url: string;
-  readonly contributions: number | null;
-  readonly type: string | null;
-  // and more
-};
+import { Octokit } from "octokit";
+const listContributors = (o: Octokit) =>
+  o.request("GET /repos/{owner}/{repo}/contributors");
+type Contributor = Awaited<ReturnType<typeof listContributors>>["data"][number];
 
 const fetch = global.fetch;
 
@@ -104,7 +100,7 @@ function filterAndSortContributors(
 ): Contributor[] {
   let list = items.filter((c) => {
     const excluded =
-      EXCLUDE_LOGINS.includes(c.login.toLowerCase()) || isBotLogin(c.login);
+      EXCLUDE_LOGINS.includes(c.login!.toLowerCase()) || isBotLogin(c.login!);
     const isUser = (c.type || "User") === "User";
     return isUser && !excluded;
   });
@@ -113,7 +109,7 @@ function filterAndSortContributors(
   list.sort((a, b) => {
     const byContrib = (b.contributions || 0) - (a.contributions || 0);
     if (byContrib !== 0) return byContrib;
-    return a.login.localeCompare(b.login, "en");
+    return a.login!.localeCompare(b.login!, "en");
   });
 
   return list;
@@ -141,7 +137,7 @@ Total: **${total}** contributor${total === 1 ? "" : "s"}
     const avatarCells = row.map(
       (c) =>
         `[![${c.login}](${withAvatarSize(
-          c.avatar_url,
+          c.avatar_url!,
           AVATAR_SIZE,
         )})](${c.html_url})`,
     );
