@@ -4,7 +4,7 @@ Thanks to these wonderful volunteers and contributors for improving the HackYour
 
 <!-- To update the contributor list, run "npm run generate:contributors" -->
 <!-- prettier-ignore-start -->
-<!-- BEGIN generateContributors -->
+<!-- BEGIN generate:contributors -->
 
 Total: **16** contributors
 
@@ -20,7 +20,7 @@ Total: **16** contributors
 | --- | --- | --- | --- |
 | [@MercedesUbeira](https://github.com/MercedesUbeira) | [@shpomp](https://github.com/shpomp) | [@saloumeh-67](https://github.com/saloumeh-67) | [@urbanogilson](https://github.com/urbanogilson) |
 
-<!-- END generateContributors -->
+<!-- END generate:contributors -->
 <!-- prettier-ignore-end -->
 
 There are many people who help test, review and guide the development of our program behind the scenes without committing directly. Let's share a thanks for those people too 👏!

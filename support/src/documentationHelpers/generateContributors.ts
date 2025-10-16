@@ -156,7 +156,11 @@ async function main() {
     const raw = await fetchContributors(REPO);
     const contributors = filterAndSortContributors(raw);
     const md = renderMarkdown(contributors);
-    await updateFileSection(md, "./contributing/contributors.md");
+    await updateFileSection(
+      md,
+      "./contributing/contributors.md",
+      "generate:contributors",
+    );
   } catch (err: any) {
     console.error("Error:", err.message);
     process.exit(1);

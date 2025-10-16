@@ -3,14 +3,16 @@ import * as fs from "node:fs/promises";
 export default async function updateFileSection(
   contentToInsert: string,
   filename: string,
+  markerName: string,
 ): Promise<void> {
   const oldContent = await fs.readFile(filename, "utf-8");
 
-  const matches = [
-    ...oldContent.matchAll(
-      /(<!-- BEGIN generateContributors -->).*?(<!-- END generateContributors -->)/gs,
-    ),
-  ];
+  const pattern = new RegExp(
+    `(<!-- BEGIN ${markerName} -->).*?(<!-- END ${markerName} -->)`,
+    "gs",
+  );
+
+  const matches = [...oldContent.matchAll(pattern)];
 
   if (matches.length !== 1)
     throw new Error(
