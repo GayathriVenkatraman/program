@@ -16,18 +16,18 @@ By the end of this course, students will be able to:
 
 | Name                                                                               | Weeks |
 | ---------------------------------------------------------------------------------- | ----- |
-| [Collaboration via GitHub](/shared-modules/collaboration-via-github/README.md)     | 0     |
-| [Using AI in Development](/shared-modules/using-ai-in-development/README.md)       | 0     |
-| [AWS Fundamentals](./aws-fundamentals/README.md)                                   | 1 & 2     |
-| [Database & Storage Services](./database-storage-services/README.md)               | 3 & 4     |
-| [Building 3 Tier Web Apps on AWS](./building-3-tier-web-apps/README.md)            | 5     |
-| [Serverless on AWS](./serverless-aws/README.md)                                    | 6 & 7     |
-| [AI/ML Services](./ai-ml-services/README.md)                                       | 8 & 9     |
-| [Build AI/ML Applications](./build-ai-ml-applications/README.md)                   | 10 & 11     |
-| [Advanced Team Processes](/shared-modules/advanced-team-processes/README.md)       | -     |
-| [Final project](./final-project/README.md)                                         | -     |
+| [Collaboration via GitHub](/shared-modules/collaboration-via-github/README.md)     | 1     |
+| [Using AI in Development](/shared-modules/using-ai-in-development/README.md)       | 1     |
+| [AWS Fundamentals](./aws-fundamentals/README.md)                                   | 2     |
+| [Database & Storage Services](./database-storage-services/README.md)               | 2     |
+| [Building 3 Tier Web Apps on AWS](./building-3-tier-web-apps/README.md)            | 2     |
+| [Serverless on AWS](./serverless-aws/README.md)                                    | 2     |
+| [AI/ML Services](./ai-ml-services/README.md)                                       | 2     |
+| [Build AI/ML Applications](./build-ai-ml-applications/README.md)                   | 2     |
+| [Advanced Team Processes](/shared-modules/advanced-team-processes/README.md)       | 1     |
+| [Final project](./final-project/README.md)                                         | 0     |
 
-Total: 13 weeks
+Total: 12 weeks
 
 ## Prerequisites
 
