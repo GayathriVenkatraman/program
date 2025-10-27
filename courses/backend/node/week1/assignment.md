@@ -1,41 +1,12 @@
 # Assignment
 
-This homework, just like the previous week, will result in 2 pull requests:
+As usual, create a PR in your HYF assignments repository.
 
-- A pull request for the **Warmup** - in your regular hyf-homework repository
-- A pull request for the additional **Meal sharing endpoints** - in the meal-sharing repository
+In the repository, create a `nodejs-week1` branch from `main` to work on the homework (`git checkout -b nodejs-week1` )
 
-In both repositories, create a `nodejs-week1` branch from `main` to work on the homework (`git checkout -b nodejs-week1` )
+## Setup
 
-## Warmup
-
-For the warmup you're going to build a search engine. The search engine will have 3 routes:
-
-- `GET /search`
-- `GET /documents/:id`
-- `POST /search`
-
-The purpose of the search engine is to search and find documents from a file called `documents.json`. Example contents:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Used Apple Airpods",
-    "price": "50",
-    "description": "Battery life is not great"
-  },
-  {
-    "id": 2,
-    "type": "doc",
-    "value": "hello world"
-  }
-]
-```
-
-### Setup
-
-Go to `nodejs/week1` in your `hyf-homework` repo:
+Go to `nodejs/week1` in your `hyf-assignment` repo:
 
 ```shell
 npm init -y
@@ -69,104 +40,49 @@ app.listen(port, () => {
 });
 ```
 
-You also need to create a `documents.json` file.
+## Part 1: Add more snippets and tags
 
-### `GET /search`
+You will continue working with the schema used in the session. This week you will build more endpoints, developing some [CRUD operations](https://www.freecodecamp.org/news/crud-operations-explained/) to be able to add more data via your backend.
 
-This endpoint will accept a query parameter called `q`, short for _query_. A bit confusing to have a query parameter called q(uery) but hang in there 💪
+### Excercise goal
 
-- If `q` is not provided, the endpoint should return all documents.
-- If `q` is provided, the endpoint should return the documents with some field that matches the value of `q`.
+We have users and users post snippets. We need to be able to post those snippets to the database and also edit or delete the snippets via backend endpoints.
 
-Example response if we call `GET /search?q=hello`:
+We also need some categorisation mechanics. Let's add a **tags** table, that will store tags available to be added to our snippets, so it is easier to search them. Each snippet can have many tags and each tag can belong to many snippets.
 
-```json
-[
-  {
-    "id": 2,
-    "type": "doc",
-    "value": "hello world"
-  }
-]
-```
-
-### `GET /documents/:id`
-
-This endpoint is simple: find and respond with the document matching the `id` parameter. If there is no such document, respond with a 404 Not Found.
-You can assume that the document IDs are unique so there's no need to handle duplicates.
-
-### `POST /search`
-
-This endpoint is sort of like `GET /search`.
-
-It also accepts a query parameter called `q` and it should behave just like `GET /search`.
-But it also accepts a field called `fields` in the JSON request body. `fields` is an object where it will be possible to filter by specific fields.
-
-Example request:
-
-```text
-POST /search
-{
-    "fields": {
-        "price": "50"
-    }
-}
-```
-
-Response to the example request:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Used Apple Airpods",
-    "price": "50",
-    "description": "Battery life is not great"
-  }
-]
-```
-
-If both `q` (query parameter) and `fields` (in body) are provided, we should respond with status 400 Bad Request and explain that both can't be provided.
-
-## Meal sharing endpoints
-
-You will continue working in the meal-sharing repository for this homework. This week you will build more endpoints, developing some [CRUD operations](https://www.freecodecamp.org/news/crud-operations-explained/) for your future meal sharing website backend functionality.
+_Note: you need to modify the snippets column in the database on top of adding new tables to achieve this._
 
 ### Routes
 
-In last week's homework you added routes in `/api/src/index.js`. You can just leave them there as they are.
+For this week's assignment, we will have two categories of routes: snippets and tags.
 
-For this week's homework, we will add two categories of routes: meals and reservations.
+- The routes for snippets will go into `/api/src/routers/snippets.js`
+- The tags routes will live in `/api/src/routers/tags.js`
 
-- The routes for meals will go into `/api/src/routers/meals.js`
-- The reservation routes will live in `/api/src/routers/reservations.js`
-
-This means that we will end up having two Routers: a meals router and a reservations router.
+This means that we will end up having two Routers: a snippets and tags router.
 You can [read more about Express Routers](https://expressjs.com/en/guide/routing.html).
 
-You can reference the file `/api/src/routers/nested.js` for an example, and see how it is used in `/api/src/index.js`.
+#### Snippets
 
-#### Meals
+| Route               | HTTP method | Description                        |
+| ------------------- | ----------- | ---------------------------------- |
+| `/api/snippets`     | GET         | Returns all snippets               |
+| `/api/snippets`     | POST        | Adds a new snippet to the database |
+| `/api/snippets/:id` | GET         | Returns the snippet by `id`        |
+| `/api/snippets/:id` | PUT         | Updates the snippet by `id`        |
+| `/api/snippets/:id` | DELETE      | Deletes the snippet by `id`        |
 
-| Route            | HTTP method | Description                     |
-| ---------------- | ----------- | ------------------------------- |
-| `/api/meals`     | GET         | Returns all meals               |
-| `/api/meals`     | POST        | Adds a new meal to the database |
-| `/api/meals/:id` | GET         | Returns the meal by `id`        |
-| `/api/meals/:id` | PUT         | Updates the meal by `id`        |
-| `/api/meals/:id` | DELETE      | Deletes the meal by `id`        |
+#### Tags
 
-#### Reservations
+Now that you have built the basic set of endpoints for **snippets**, you can get some more practice and expand your app backend by creating the same for **tags**:
 
-Now that you have built the basic set of endpoints for **meals**, you can get some more practice and expand your app backend by creating the same for **reservations**:
-
-| Route                   | HTTP method | Description                            |
-| ----------------------- | ----------- | -------------------------------------- |
-| `/api/reservations`     | GET         | Returns all reservations               |
-| `/api/reservations`     | POST        | Adds a new reservation to the database |
-| `/api/reservations/:id` | GET         | Returns a reservation by `id`          |
-| `/api/reservations/:id` | PUT         | Updates the reservation by `id`        |
-| `/api/reservations/:id` | DELETE      | Deletes the reservation by `id`        |
+| Route           | HTTP method | Description                    |
+| --------------- | ----------- | ------------------------------ |
+| `/api/tags`     | GET         | Returns all tags               |
+| `/api/tags`     | POST        | Adds a new tag to the database |
+| `/api/tags/:id` | GET         | Returns a tag by `id`          |
+| `/api/tags/:id` | PUT         | Updates the tag by `id`        |
+| `/api/tags/:id` | DELETE      | Deletes the tag by `id`        |
 
 ##### Requests
 
@@ -182,7 +98,7 @@ The `GET`, `PUT` and `DELETE` routes that include an `/:id` in the path should m
 
 You are free to decide on the response for a successful `POST`, `PUT` and `DELETE` request. Some ideas:
 
-- Respond with an acknowledgement message: `{ "message": "Deleted meal" }`
+- Respond with an acknowledgement message: `{ "message": "Deleted snippet" }`
 - Respond with data from the row itself like with `GET`
 
 And lastly, if the `POST` request is successful, the response status code should be 201 Created, as that would indicate something was _created_.
@@ -197,3 +113,68 @@ Your usage of Knex should be getting a bit more advanced now. You will move from
 - `.del` (for deletion)
 
 Check out the [Knex cheatsheet](https://devhints.io/knex)!
+
+## Part 2: search engine
+
+For the excercise you're going to build a search engine. The search engine will have 3 routes:
+
+- `GET /search`
+- `GET /snippets/:id`
+- `POST /search`
+
+### `GET /search`
+
+This endpoint will accept a query parameter called `q`, short for _query_. A bit confusing to have a query parameter called q(uery) but hang in there 💪
+
+- If `q` is not provided, the endpoint should return all documents.
+- If `q` is provided, the endpoint should return the documents with some field that matches the value of `q`.
+
+Example response if we call `GET /search?q=react`:
+
+```json
+[
+  {
+    "id": 2,
+    "title": "React Hooks",
+    "contents": "Explaining useState and useEffect with examples."
+  }
+]
+```
+
+### `GET /snippets/:id`
+
+This endpoint is simple: find and respond with the snippet matching the `id` parameter. If there is no such snippet, respond with a 404 Not Found.
+You can assume that the snippet IDs are unique so there's no need to handle duplicates.
+
+### `POST /search`
+
+This endpoint is sort of like `GET /search`.
+
+It also accepts a query parameter called `q` and it should behave just like `GET /search`.
+But it also accepts a field called `fields` in the JSON request body. `fields` is an object where it will be possible to filter by specific fields.
+
+Example request:
+
+```text
+POST /search
+{
+    "fields": {
+        "tags": "React"
+    }
+}
+```
+
+Response to the example request:
+
+```json
+[
+  {
+    "id": 1,
+    "title": "React Hooks",
+    "contents": "Explaining useState and useEffect with examples.",
+    "tags": ["React"]
+  }
+]
+```
+
+If both `q` (query parameter) and `fields` (in body) are provided, we should respond with status 400 Bad Request and explain that both can't be provided.
