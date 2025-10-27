@@ -2,10 +2,34 @@
 
 Everyone is welcome to fork/clone the repo and contribute to improving the program.
 
-If you would like to take a more active role in contributing as a volunteer of HYF Denmark, join #curriculum-crew on Slack to get involved.
-Write in there to introduce yourself, and a staff member will onboard you and set you up with permissions.
+If you would like to take a more active role in contributing to this program as a volunteer of HYF Denmark, drop an introduction in #mentorroom and a staff member will help onboard you. If you're not already a mentor, sign up your interest at [hackyourfuture.dk/volunteer](https://hackyourfuture.dk/volunteer).
 
 ## How to contribute
+
+### 1. Sharing feedback
+
+After taking in a Sunday session, we strongly encourage mentors to evaluate how it went using the feedback form bookmarked in #mentorroom on Slack.
+
+### 2. Suggestions and improvements
+
+If you come across issues or ideas for improvements along the way, please create a pull request (or a [GitHub issue](https://github.com/HackYourFuture-CPH/program/issues), if you're not sure how to implement it) and share in #mentorroom for visibility and feedback.
+
+You are welcome to browse the list of [open issues](https://github.com/HackYourFuture-CPH/program/issues) as well, and pick any up that you think you can contribute to. All of the help is appreciated!
+
+### 3. Questions, bigger ideas and more
+
+If you're unsure about something in the program, have an idea for a bigger improvement, new module or something else, start a conversation in #mentorroom as a first step for getting answers and feedback from other mentors and staff members.
+
+## How permissions work
+
+Permissions are managed through GitHub teams, their roles on this repo, and branch rules.
+
+- _HYF Staff_ members have the admin role (to do things like changing repo settings, inviting new contributors).
+- Members of the _Curriculum Crew_ team on GitHub have the write role (to do things like cloning, pushing branches, approving PRs - any volunteer is welcome here!).
+- One approval by anyone in _Curriculum Crew_ or _HYF Staff_ are required on a PR before merging is allowed.
+- Merging to Main can be performed by any _HYF Staff_ member.
+
+## Setting up and using your local environment
 
 This project is a collection of structured README files. To maintain consistency and quality, we use a linter and suggest some recommended editor extensions.
 
@@ -49,22 +73,3 @@ To automatically fix some issues:
 
 > [!TIP]
 > On **Windows** you cannot run bash scripts natively. In this case, open the folder in your Git Bash shell and run the commands from in there.
-
-### Existing issues
-
-Very briefly: check the project board "Todo" column, choose one ideally near the top, assign it, clone the repo, do it, make a PR, get feedback, profit.
-
-### New ideas
-
-Very briefly: Create an issue on this repo, get some feedback, and we'll prioritize them together at the next meeting.
-
-Note: You are always welcome to open issues/create PRs for new ideas, whenever you like. It's an open source project. If we are currently working together towards a project goal, then it would be most helpful to prioritize tasks for that first, though.
-
-## How permissions work
-
-Permissions are managed through GitHub teams, their roles on this repo, and branch rules.
-
-- _HYF Staff_ members have the admin role (to do things like changing repo settings, inviting new contributors).
-- Members of the _Curriculum Crew_ team on GitHub have the write role (to do things like cloning, pushing branches, approving PRs - any volunteer is welcome here!).
-- Two approvals by anyone in _Curriculum Crew_ or _HYF Staff_ are required on a PR before merging is allowed.
-- Merging to Main can be performed by any _HYF Staff_ member.
