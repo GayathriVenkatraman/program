@@ -1,4 +1,4 @@
-# Session plan (Week 1)
+# Express (Week 1)
 
 In this session we will focus on Express.js, which is an application framework for building webservers in an easy manner. Although we could write everything from scratch in Node, we don’t want to. In many situations a webserver is generic enough for us and we gain a lot by using something that just works and makes our lives as developers easier – as long as what we are trying to do is within the scope of Express.
 

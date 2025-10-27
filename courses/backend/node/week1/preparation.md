@@ -1,6 +1,6 @@
 # Preparation
 
-- Refreshment on [intro to backend from Foundation](../../../foundation/intro-to-backend/README.md)
+- Refreshment on [intro to backend from Foundation](/courses/foundation/intro-to-backend/README.md)
 - <https://fullstackopen.com/en/part3/node_js_and_express#express> (10 min)
 - Setup your Node to the [latest stable version (LTS)](https://stackoverflow.com/questions/10075990/upgrading-node-js-to-the-latest-version)
 

@@ -9,7 +9,7 @@ app.get("/data", (_req, res) => {
   res.send({ data: 2 });
 });
 
-////// which one is being called when?
+// Which one is being called when?
 
 app.get("/data/:id", (req, res) => {
   console.log("Parametrized URL");
