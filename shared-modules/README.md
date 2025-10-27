@@ -5,6 +5,6 @@ Some modules are taught across multiple courses, when the content does not chang
 | Name                                                                 |
 | -------------------------------------------------------------------- |
 | [Collaboration via GitHub](./collaboration-via-github/README.md)     |
-| [Advanced Team Processes](./advanced-team-processes/README.md)       |
+| [Agile Teamwork](./agile-teamwork/README.md)                         |
 | [Specialist Career Training](./specialist-career-training/README.md) |
 | [Using AI in Development](./using-ai-in-development/README.md)       |

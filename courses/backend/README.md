@@ -11,7 +11,7 @@ This specialism course is focused on setting you up to land a Backend Developer 
 | [Advanced JavaScript](./advanced-javascript/README.md)                             | 4               |
 | [Databases](./databases/README.md)                                                 | 2               |
 | [Node.js](./node/README.md)                                                        | 2               |
-| [Advanced Team Processes](/shared-modules/advanced-team-processes/README.md)       | 1               |
+| [Agile Teamwork](/shared-modules/agile-teamwork/README.md)                         | 1               |
 | [Specialist Career Training](/shared-modules/specialist-career-training/README.md) | 3 (2 in person) |
 | [Final project](./final-project/README.md)                                         | 5               |
 

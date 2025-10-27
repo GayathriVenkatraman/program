@@ -1,4 +1,4 @@
-# Advanced Team Processes
+# Agile Teamwork
 
 This module aims to build on your project management and team collaboration skills by teaching you more about how developers work in teams in the industry, and what Agile and SCRUM looks like in day-to-day work.
 
@@ -19,4 +19,4 @@ This module aims to build on your project management and team collaboration skil
 
 ## Prerequisites
 
-- [Team Processes Intro](/courses/foundation/team-processes-intro/)
+- [Intro to Agile](/courses/foundation/intro-to-agile/)

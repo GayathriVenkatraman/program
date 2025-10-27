@@ -37,8 +37,8 @@
           "location": "courses/foundation/intro-to-frontend"
         },
         {
-          "name": "Team Processes",
-          "location": "courses/foundation/team-processes-intro"
+          "name": "Intro to Agile",
+          "location": "courses/foundation/intro-to-agile"
         },
         {
           "name": "Career Training",
@@ -75,8 +75,8 @@
           "location": "courses/backend/node"
         },
         {
-          "name": "Advanced Team Processes",
-          "location": "shared-modules/advanced-team-processes"
+          "name": "Agile Teamwork",
+          "location": "shared-modules/agile-teamwork"
         },
         {
           "name": "Specialist Career Training",
@@ -109,8 +109,8 @@
           "location": "courses/frontend/react"
         },
         {
-          "name": "Advanced Team Processes",
-          "location": "shared-modules/advanced-team-processes"
+          "name": "Agile Teamwork",
+          "location": "shared-modules/agile-teamwork"
         },
         {
           "name": "Specialist Career Training",

@@ -14,7 +14,7 @@ Here you'll learn the fundamentals for how the web works, the basics of programm
 | [Databases](./databases/README.md)                       | 1               |
 | [Intro to Backend](./intro-to-backend/README.md)         | 1               |
 | [Intro to Frontend](./intro-to-frontend/README.md)       | 1               |
-| [Team Processes Intro](./team-processes-intro/README.md) | 1               |
+| [Intro to Agile](./intro-to-agile/README.md)             | 1               |
 | [Career Training](./career-training/README.md)           | 3 (1 in person) |
 | [Final project](./final-project/README.md)               | 3               |
 
@@ -126,7 +126,7 @@ Total: 16 weeks
 - [ ] Displaying external data
   - [ ] Fetch (No promise explanation! Focus on usage)
 
-### [Team Processes](/courses/foundation/team-processes-intro)
+### [Intro to Agile](/courses/foundation/intro-to-agile)
 
 - [ ] What is project management and why is it important
 - [ ] Understand the main principles and values of Agile
