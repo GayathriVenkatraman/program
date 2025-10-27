@@ -1,4 +1,4 @@
-# Team Processes Intro
+# Intro to Agile
 
 This module aims to introduce you to the basic principles of managing a project well and collaborating with others on tasks. Most of these concepts come from the software development world, but they inform good practices that you can use across many different types of jobs and teams.
 
