@@ -1,27 +1,14 @@
 # Assignment
 
 In this assignment, you'll practice working with the task management database you created in the session.
-The idea is for you to create a database from scratch, insert and update data writing queries, practice querying relationships, and finally modify the database schema to add new functionality.
+You will be inserting and updating data, writing queries, querying relationships, and finally modify the database schema to add new functionality.
 
 ## Getting Started
 
 > [!TIP]
 > If problems arise, remember you can ask on Slack for help.
-> We encourage you to create the DB from scratch, but you can also use the provided database, [tasks.sqlite3](./session-materials/tasks.sqlite3) which has the same content as the one created in the session.
 
-[tasks.sql](./session-materials/tasks.sql) contains SQL statements to create a database.
-
-To create a database called `tasks.sqlite3` executing the SQL statements in `tasks.sql`, run the following command in your terminal:
-
-```shell
-sqlite3 tasks.sqlite3 < session-materials/tasks.sql
-```
-
-> [!NOTE]
-> Remember you can delete the `tasks.sqlite3` file and run the command again to recreate it from scratch.
-
-The script will also insert some sample data for you to work with, including users, tasks, and statuses.
-And the database schema will look like this:
+After the session, you should have ended up with a working `tasks.sqlite3` in your assignment repo. It should mirror the following structure:
 
 ```mermaid
 erDiagram
@@ -53,6 +40,8 @@ erDiagram
   TASK ||--o{ USER_TASK : is_assigned
   STATUS ||--o{ TASK : has
 ```
+
+You will use this database to complete the following assignment tasks.
 
 ## Part 1: Basic CRUD Operations
 
