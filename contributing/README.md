@@ -14,7 +14,7 @@ After taking part in a Sunday session, we strongly encourage mentors to evaluate
 
 If you come across issues or ideas for improvements along the way, please create a pull request (or a [GitHub issue](https://github.com/HackYourFuture-CPH/program/issues), if you're not sure how to implement it) and share in #mentorroom for visibility and feedback.
 
-You are welcome to browse the list of [open issues](https://github.com/HackYourFuture-CPH/program/issues) as well, and pick any up that you think you can contribute to. All of the help is appreciated!
+You are welcome to browse the list of [open issues](https://github.com/HackYourFuture-CPH/program/issues) as well, and pick any up that you think you can contribute to. All help is appreciated!
 
 ### 3. Questions, bigger ideas and more
 
