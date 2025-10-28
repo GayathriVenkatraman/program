@@ -248,8 +248,7 @@ It's good to know there are several types of JOINs: ![SQL Joins](./session-mater
 
 ### EXERCISE 3: Practice more advanced queries (15 minutes)
 
-> ![TIP]
-> Provide the trainees with the sample inserts in [tasks.sql](session-materials/tasks.sql) to have more data in their database.
+Point the trainees to the sample data `tasks-sample-data.sql` in their assignment repo. They should run these commands to insert the data required for the following exercises.
 
 **Trainees practice writing these queries using the sample data:**
 
