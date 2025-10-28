@@ -18,7 +18,7 @@ You are welcome to browse the list of [open issues](https://github.com/HackYourF
 
 ### 3. Questions, bigger ideas and more
 
-If you're unsure about something in the program, have an idea for a bigger improvement, new module or something else, start a conversation in #mentorroom as a first step for getting answers and feedback from other mentors and staff members.
+If you're unsure about something in the program, or you have an idea for a bigger improvement, a new module, or something else, then please start a conversation in #mentorroom as a first step for getting answers and feedback from other mentors and staff members.
 
 ## How permissions work
 
