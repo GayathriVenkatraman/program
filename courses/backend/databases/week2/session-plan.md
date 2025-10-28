@@ -155,7 +155,7 @@ Using the running API, try these attacks:
 - We use them to test and develop our applications in a safe space without affecting real users or data.
 - They help us identify and fix issues before deployment.
 
-#### Refreshing what we refer when we say "the cloud"
+#### A recap of what we mean when we say "the cloud"
 
 - A remote server (computer) running 24/7 somewhere else
 - Multiple users can connect simultaneously
