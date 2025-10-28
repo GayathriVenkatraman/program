@@ -1,6 +1,6 @@
 # Session plan
 
-## Session Outline
+## Session outline
 
 - Express
   - What is Express (10 mins)

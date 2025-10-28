@@ -23,8 +23,9 @@ TODO - Format as `verb` for API section
     - [ ] Router verb `GET`, `POST`, `DELETE`, `PUT`
     - [ ] POST mention express.json middleware
   - [ ] Configure Postman for advanced backend development
+    - [ ] Creating collections and saving requests
     - [ ] Set up multiple environments
-    - [ ] Manage secrets
+    - [ ] Managing secrets
     - [ ] Create basic test suites
 
 TODO - Move this content somewhere else
