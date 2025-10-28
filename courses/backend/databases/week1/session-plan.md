@@ -16,11 +16,20 @@
 5. Practice querying relationships
 6. Let the trainees practice designing a database based on [articles_example.json](session-materials/articles_example.json)
 
-> [!NOTE]
-> Teaching Format:
->
-> - **DEMO** = Mentor shows on screen, trainees observe
-> - **EXERCISE** = Trainees work on their own machines
+## Mentor teaching notes
+
+### Teaching formats
+
+- **DEMO** = Mentor shows on screen, trainees observe
+- **EXERCISE** = Trainees work on their own machines
+
+### Exercises solution
+
+The demos and exercises in this session build on top of each other, and a working solution is required for the assignment and going into Week 2. If, for whatever reason, you need a final working solution for yourself or to help a trainee, you can run the following:
+
+```shell
+sqlite3 tasks.sqlite3 < session-materials/tasks-solution.sql
+```
 
 ## Entity-Relationship Modeling
 

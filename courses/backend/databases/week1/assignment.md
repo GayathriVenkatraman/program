@@ -1,6 +1,6 @@
 # Assignment
 
-In this assignment, you'll practice working with the task management database we worked in the session.
+In this assignment, you'll practice working with the task management database you created in the session.
 The idea is for you to create a database from scratch, insert and update data writing queries, practice querying relationships, and finally modify the database schema to add new functionality.
 
 ## Getting Started

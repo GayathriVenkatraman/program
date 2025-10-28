@@ -195,7 +195,7 @@ We'll use DBeaver to connect to the remote PostgreSQL database and run SQL comma
 
 2. Create a new SQL script:
    - Right-click on your PostgreSQL connection → SQL Editor → New SQL Script
-   - Copy the provided PostgreSQL-compatible SQL (see `tasks-postgres.sql`)
+   - Copy the provided PostgreSQL-compatible SQL (see `tasks-postgres.sql` in the assignment repo)
 3. Execute the script:
    - Paste the entire SQL content
    - Click **Execute SQL Script** (Not "Execute SQL Statement")
