@@ -19,8 +19,7 @@ cd courses/backend/databases/
 ### Trainee Instructions
 
 - They should have their `tasks.sqlite3` database from Week 1 ready to use with a GUI tool. [Tools setup - Week 1](../week1/preparation.md#tools-setup)
-- They should follow the same instructions but on their own fork of the assignment repo.
-- The materials for this session are located in `courses/backend/databases/`
+- They should follow the same instructions but on their own fork of the assignment repo, inside the `courses/backend/databases/` directory.
 
 ## Aggregate Functions
 
@@ -95,8 +94,6 @@ LIMIT 1;
 ```
 
 </details>
-
----
 
 ## Database Security
 
