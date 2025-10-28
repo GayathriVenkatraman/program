@@ -16,4 +16,3 @@ By the end of this session, you will be able to:
 - [ ] Implement routing in Express to handle different HTTP requests and endpoints.
 - [ ] Use logging and debugging tools to monitor and troubleshoot Node.js applications.
 - [ ] Apply middleware functions in Express to process requests and responses.
-- [ ] Use Postman to test and debug APIs you have built.

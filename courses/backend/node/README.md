@@ -16,6 +16,6 @@ By the end of this module, you will be able to:
 - [ ] Build web servers with Express.js
 - [ ] Design and implement APIs using HTTP methods following REST principles
 - [ ] Use middlewares for authentication, logging, and validation
-- [ ] Test APIs using Postman
 - [ ] Use logging and debugging tools to monitor and troubleshoot applications
 - [ ] Connect to databases and implement CRUD operations
+- [ ] Test APIs using Postman

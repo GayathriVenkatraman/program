@@ -7,6 +7,8 @@ Once again, you will deliver 2 pull requests:
 
 In both repositories, create a `nodejs-week2` branch from `main` to work on the homework (`git checkout -b nodejs-week2` ).
 
+TODO - We should add a task to practice postman too. Maybe add all their final endpoints to their collection.
+
 ## Warmup
 
 For the warmup you will be handed a Contacts API with a single endpoint:
