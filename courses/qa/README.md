@@ -1,6 +1,6 @@
 # Quality Assurance
 
-Our QA Tech Track offers a comprehensive 12-week training program designed to equip aspiring quality assurance professionals with both practical skills and industry-aligned knowledge.
+Our QA Tech Track offers a comprehensive 15-week training program designed to equip aspiring quality assurance professionals with both practical skills and industry-aligned knowledge.
 
 ## Modules
 
