@@ -242,5 +242,5 @@ Now we will modify the program so you can order multiple pizzas and decide wheth
 2. Create a new variable to store whether or not the order is for takeaway
 3. Now write a formula to calculate the total price of your pizza order, and save it in a variable called totalPrice
 4. Modify the log statement for the chef so it includes whether or not the order is for takeaway, and now show the total price of the order:<br/>
-  `New pizza order (takeaway: <takeaway or not?>): <amount of pizzas> <name of pizza>. Total cost for the order is: <total price>`
+   `New pizza order (takeaway: <takeaway or not?>): <amount of pizzas> <name of pizza>. Total cost for the order is: <total price>`
 5. Try to change the price of the pizza and then check if the total price is calculated correctly
