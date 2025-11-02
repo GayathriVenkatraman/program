@@ -216,6 +216,7 @@ const pizzaPriceDiscounted = pizzaprice - 10;
 const users = ["peter", "Johnny", "Børge"];
 
 const lastUser = users[3];
+console.log(lastUser);
 ```
 
 ### Pizza project
