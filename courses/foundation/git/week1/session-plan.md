@@ -135,13 +135,13 @@ These are some examples of previously created materials by mentors that you can 
 5. Add more text to the `my-assignment.txt` file
 6. Add and commit the changes in the `my-assignment.txt` file
 7. Push your changes to GitHub
-8. On GitHub, create a pull request from the exercise branch to `main`
+8. On GitHub, create a pull request (on your own fork) from the exercise branch to `main`
 9. On your computer add some more text to the `my-assignment.txt` file
 10. On your computer, add and commit the changes in the `my-assignment.txt` file
 11. Push the changes to GitHub
 12. On GitHub, check what happened to the pull request you created in step 8.
-13. If you are on an individual assignment repository approach, merge the PR and proceed to the next step. If you are on a central assignment repository approach, DO NOT merge the PR, and skip the next step.
-14. Go to the `main` branch and update `main` by "downloading" the new commits from GitHub: `git pull origin main`.
+13. Merge the pull request.
+14. Locally, go to the `main` branch and update `main` by "downloading" the new commits from GitHub: `git pull origin main`.
 
 ### Exercise 4
 
