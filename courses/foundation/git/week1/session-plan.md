@@ -76,13 +76,20 @@ These are some examples of previously created materials by mentors that you can 
     1. Create a branch
     2. Make a commit
     3. push changes to remote
-    4. Create a pull request
-    5. Update local `main`
 
-12. Useful VS Code extensions
+12. Pull Requests
+    1. Create a pull request
+    2. Reviewing a pull request (commenting, approving, requesting changes)
+    3. Merging a pull request
+    4. Updating local `main`
 
-- GitLens - Git supercharged
-- GitHub Pull Requests
+13. Useful VS Code extensions
+    - GitLens - Git supercharged
+    - GitHub Pull Requests
+
+14. Forks
+    - Your "copy" of a source repository
+    - How forks are useful for collaboration
 
 ### Exercise 1: Assignments repository
 
