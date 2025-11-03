@@ -83,13 +83,13 @@ These are some examples of previously created materials by mentors that you can 
     3. Merging a pull request
     4. Updating local `main`
 
-13. Useful VS Code extensions
-    - GitLens - Git supercharged
-    - GitHub Pull Requests
-
-14. Forks
+13. Forks
     - Your "copy" of a source repository
     - How forks are useful for collaboration
+
+14. Useful VS Code extensions
+    - GitLens - Git supercharged
+    - GitHub Pull Requests
 
 ### Exercise 1:
 
