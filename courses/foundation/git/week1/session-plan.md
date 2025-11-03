@@ -67,6 +67,7 @@ These are some examples of previously created materials by mentors that you can 
 
 9.  Demonstration to making a commit
     - what happens after each `git add` and `git commit`
+    - show how to `git add` all changes, or specific files
     - show `git status` and `git log`
 
 10. Explain what happens after `git push`
