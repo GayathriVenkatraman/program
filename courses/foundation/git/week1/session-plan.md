@@ -91,7 +91,7 @@ These are some examples of previously created materials by mentors that you can 
     - GitLens - Git supercharged
     - GitHub Pull Requests
 
-### Exercise 1:
+### Exercise 1
 
 **Objective:** The goal is to set up your assignment repository fork and create your first PR (Pull Request).
 
