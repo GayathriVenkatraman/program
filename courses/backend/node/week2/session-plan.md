@@ -2,20 +2,38 @@
 
 ## Session outline
 
-- Database interaction
-  - Connecting to mysql using knex
-  - Executing queries
-    - `select`, `create`. You could let the students figure out how `delete` and `update` works
-  - [Code inspiration](#phonebook-database) especially focus on the promise and query part
+- Database interaction with Knex
+  - What is Knex and why are we using it
+  - Raw vs Query Builder methods
+  - Configuring Knex
+  - A refresher on CRUD
+    - `select`, `create`, `delete` and `update` with Knex
+    - [Code inspiration](#phonebook-database) especially focus on the promise and query part
 - API
   - REST
-  - CRUD
-    - Router verb `GET`, `POST`, `DELETE`, `PUT`
-      - Especially focus on post with `app.use(express.urlencoded({ extended: true }));` and `app.use(express.json());`
-  - [Code inspiration](#phonebook-api)
-- Postman
-  - `POST`, `DELETE`, `PUT` requests
-- Exercise finish concerts api
+    - `POST`, `DELETE`, `PUT` requests
+- Advanced Postman use cases
+  - Collections, environments, secrets, test suites
+
+Exercises overview:
+1. Postman (written below)
+
+
+## Database interaction with Knex
+Trainees have used Knex before. In foundation, they used it with the .raw() command to execute SQL easily. And they also used it last week when learning about Express. 
+
+This part of the module should explain Knex in a lot more technical detail. The following implementation is how we expect to see trainees using database interaction from this point forward.
+
+1. Explain what Knex is in more detail, and why we are using it here
+2. Compare using .raw() to the Query Builder methods
+
+### Live coding
+Run through the [phonebook example](./session-materials/phonebook/). The code is already written, but feel free to clear some of the functions so you can write them together in the session.
+
+1. Walk through `database.js` and explain the setup
+2. Create the database following the instructions in `database.js`
+3. Run through `phonebook.js` function by function, pointing to the documentation which explains all the query builder methods.
+4. After writing each function, test it by running it via the main function.
 
 ## Code inspiration
 
@@ -31,6 +49,8 @@ Try and implement this functionality from the bottom while explaining.
 ## Postman
 
 Postman can be used for quickly testing your APIs, but can also be configured in more advanced ways to support your development workflow. Here, you'll learn about four ways to level up your Postman game.
+
+Note: These exericses could be demod by the mentor, or left to the trainees to do on their own machines. Or a mix of both, whatever feels natural.
 
 ### 1. Creating collections and saving requests
 

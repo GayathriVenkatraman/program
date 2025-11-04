@@ -2,30 +2,29 @@
 
 ## Session outline
 
-- Express
-  - What is Express (10 mins)
-    - [Live coding: setup a server](./session-materials/01-server.md)
-    - [Excercise: create a local project and database schema](./session-materials/02-schema.md)
-  - Routing in Express (20 mins)
-    - `app.use`
-    - `app.get`
-    - [Live coding: routing](#appget-vs-appuse)
-    - [Excercise: Setup routing](./session-materials/03-routing.md) (10 mins)
-  - URL parameters in Express (30 mins)
-    - [Explanation and live coding](#query-parameters-vs-url-parameters)
-    - [Excercise: connect to the database](./session-materials/04-database-connection.md)
-    - [Excercise: GET endpoints](./session-materials/05-get-endpoints.md)
-  - Route order (15 mins)
-    - [Live coding: why route order matters](#route-order)
-    - Logging and debugging
-  - Middleware (15 mins)
-    - [`next` method](https://expressjs.com/en/guide/using-middleware.html)
-    - Modifying `request` and `response`
-    - <https://fullstackopen.com/en/part3/node_js_and_express#express>
-    - [Live coding: basic middleware example](#middleware)
-  - Authentication (30 mins)
-    - [Authentication explanation](#authentication-explanation)
-    - [Excercise: implement authentication](./session-materials/06-auth.md)
+- What is Express (10 mins)
+  - [Live coding: setup a server](./session-materials/01-server.md)
+  - [Excercise: create a local project and database schema](./session-materials/02-schema.md)
+- Routing in Express (20 mins)
+  - `app.use`
+  - `app.get`
+  - [Live coding: routing](#appget-vs-appuse)
+  - [Excercise: Setup routing](./session-materials/03-routing.md) (10 mins)
+- URL parameters in Express (30 mins)
+  - [Explanation and live coding](#query-parameters-vs-url-parameters)
+  - [Excercise: connect to the database](./session-materials/04-database-connection.md)
+  - [Excercise: GET endpoints](./session-materials/05-get-endpoints.md)
+- Route order (15 mins)
+  - [Live coding: why route order matters](#route-order)
+  - Logging and debugging
+- Middleware (15 mins)
+  - [`next` method](https://expressjs.com/en/guide/using-middleware.html)
+  - Modifying `request` and `response`
+  - <https://fullstackopen.com/en/part3/node_js_and_express#express>
+  - [Live coding: basic middleware example](#middleware)
+- Authentication (30 mins)
+  - [Authentication explanation](#authentication-explanation)
+  - [Excercise: implement authentication](./session-materials/06-auth.md)
 
 ## Exercises
 
