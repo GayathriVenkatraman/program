@@ -9,15 +9,10 @@
   - A refresher on CRUD
     - `select`, `create`, `delete` and `update` with Knex
     - [Code inspiration](#phonebook-database) especially focus on the promise and query part
-- API
-  - REST
-    - `POST`, `DELETE`, `PUT` requests
+- Express API continued
+  - `POST`, `DELETE`, `PUT` requests
 - Advanced Postman use cases
   - Collections, environments, secrets, test suites
-
-Exercises overview:
-1. Postman (written below)
-
 
 ## Database interaction with Knex
 Trainees have used Knex before. In foundation, they used it with the .raw() command to execute SQL easily. And they also used it last week when learning about Express. 
@@ -34,17 +29,6 @@ Run through the [phonebook example](./session-materials/phonebook/). The code is
 2. Create the database following the instructions in `database.js`
 3. Run through `phonebook.js` function by function, pointing to the documentation which explains all the query builder methods.
 4. After writing each function, test it by running it via the main function.
-
-## Code inspiration
-
-### Phonebook database
-
-- Go to the `teacher-live-coding` [repo](https://github.com/HackYourFuture-CPH/teacher-live-coding), to the relevant folder
-- Copy the `.env.example` and rename the copied file to `.env`
-- Run `npm install`
-- Start the application by running `nodemon ./src/backend/phonebook-database-queries.js`
-
-Try and implement this functionality from the bottom while explaining.
 
 ## Postman
 
