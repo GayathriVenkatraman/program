@@ -4,6 +4,12 @@ set -eu
 
 validate-links() {
     echo "validate-links: RUN"
+    # If the support/dist directory does not exist, build it
+    if [ ! -d "support/dist" ]; then
+      echo "Building project before running linting scripts"
+      npm run build
+    fi
+
     if npm exec -- node support/dist/validateLinks.js ; then
       echo validate-links: PASS
     else
