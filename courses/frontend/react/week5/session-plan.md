@@ -18,7 +18,7 @@
 - Discuss when to use SSR (dynamic data, personalization, etc.)
 - Discuss when to use SSG (static content, blogs, documentation, etc.)
 
-#### Server Components
+#### Server Components for SSR
 
 - Explain how [Server Components](https://react.dev/reference/rsc/server-components) can speed up load times by directly sending HTML to the browser
 - Introduce the `"use server"` directive, allowing React components to be rendered on the server
@@ -186,7 +186,7 @@
 - Does it show the time?
 - [Refer to the docs when in doubt](https://nextjs.org/docs/app/getting-started/updating-data#creating-server-functions)
 
-#### API Routes
+#### Trying out API Routes
 
 - Create a Hello World API route at `/api/hello` that returns the following JSON
 
