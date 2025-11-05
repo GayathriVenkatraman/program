@@ -6,7 +6,8 @@ validate-links() {
     echo "validate-links: RUN"
     # If the support/dist directory does not exist, build it
     if [ ! -d "support/dist" ]; then
-      ./node_modules/.bin/tsc -p support/tsconfig.json
+      echo "Building project before running linting scripts"
+      npm run build
     fi
 
     if npm exec -- node support/dist/validateLinks.js ; then
