@@ -6,6 +6,10 @@ These are some examples of previously created materials by mentors that you can 
 
 - [Introduction to Generative AI](https://docs.google.com/presentation/d/1nj1H-6Oz6ZDRRwfq9u_m3k8y5RosHdPU/edit?slide=id.p1#slide=id.p1) (by [@hosseinzahed](https://github.com/hosseinzahed))
 
+- [AI Risks and Ethics (slides)](https://docs.google.com/presentation/d/1I20KMYhkZJJAUad6mFgAOT5CVeHV-eKSI4VRF1QEuiQ/edit?usp=sharing) (by [@axelsorensen](https://www.linkedin.com/in/axel-sorensen/))
+
+- [Kahoot Quiz](https://play.kahoot.it/v2/?quizId=fc4f12d6-7f17-48e4-b755-5c567a6e2d0c) - Interactive quiz comparing trainees' best guesses on the most likely next token to that of an LLM, demonstrating bias (feel free to edit and shorten) (by [@axelsorensen](https://www.linkedin.com/in/axel-sorensen/))
+
 ## Part 0: Review AI HYF AI Guidelines (10 mins)
 
 - Run through the [HYF AI Guideline](https://github.com/HackYourFuture-CPH/programme/blob/main/guidelines/ai-usage.md) and see if anyone has any questions to clarify.

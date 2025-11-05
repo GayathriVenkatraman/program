@@ -110,7 +110,7 @@ Bonus: Use Emmet to scaffold quickly
 - Main:
   - Contain two `section`s:
     - A featured article with a heading and a paragraph (use [Cupcake Ipsum](https://cupcakeipsum.com/) if tired or the `lorem10` ipsum)
-    - Second Section that lists recent posts (use `ul>li*4>a`, add `#.#` for the `href` attribute)
+    - Second Section that lists recent posts (use `ul>li*4>a`, add `#` for the `href` attribute)
 - Aside with a small bio or a list of favourite links
 - Footer with copyright disclaimer and current year
 
