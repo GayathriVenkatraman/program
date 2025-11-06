@@ -4,7 +4,7 @@ This module covers AWS artificial intelligence and machine learning services, te
 
 ## Machine Learning
 
-| Week | Topic                                                                  |
-| ---- | ---------------------------------------------------------------------- |
-| 1.   | [Introduction to Machine Learning on AWS](./week1/README.md)           |
-| 2.   | [Machine Learning Workshop](./week2/README.md)                         |
+| Week | Topic                                                        |
+| ---- | ------------------------------------------------------------ |
+| 1.   | [Introduction to Machine Learning on AWS](./week1/README.md) |
+| 2.   | [Machine Learning Workshop](./week2/README.md)               |

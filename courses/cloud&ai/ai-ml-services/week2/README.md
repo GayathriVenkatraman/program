@@ -4,8 +4,8 @@ This module allows trainees to have hands-on experience building generative ai a
 
 ## Machine Learning
 
-| Week | Topic | Content | Description |
-| ---- | ----- | ------- | ----------- |
+| Week | Topic    | Content                                                                    | Description                                               |
+| ---- | -------- | -------------------------------------------------------------------------- | --------------------------------------------------------- |
 | 2.   | Workshop | [Building Gen AI Apps](https://catalog.workshops.aws/building-gen-ai-apps) | Hands-on workshop for building generative AI applications |
 
 ## Learning goals

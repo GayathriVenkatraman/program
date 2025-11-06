@@ -13,15 +13,15 @@ By the end of this course, trainees will be able to:
 
 ## Modules
 
-| Name                                                                               | Weeks |
-| ---------------------------------------------------------------------------------- | ----- |
-| [AWS Fundamentals](./aws-fundamentals/README.md)                                   | 2     |
-| [Database & Storage Services](./database-storage-services/README.md)               | 2     |
-| [Building 3 Tier Web Apps on AWS](./building-3-tier-web-apps/README.md)            | 1     |
-| [Serverless on AWS](./serverless-aws/README.md)                                    | 2     |
-| [AI/ML Services](./ai-ml-services/README.md)                                       | 2     |
-| [Build AI/ML Applications](./build-ai-ml-applications/README.md)                   | 2     |
-| [Final project](./final-project/README.md)                                         | 4     |
+| Name                                                                    | Weeks |
+| ----------------------------------------------------------------------- | ----- |
+| [AWS Fundamentals](./aws-fundamentals/README.md)                        | 2     |
+| [Database & Storage Services](./database-storage-services/README.md)    | 2     |
+| [Building 3 Tier Web Apps on AWS](./building-3-tier-web-apps/README.md) | 1     |
+| [Serverless on AWS](./serverless-aws/README.md)                         | 2     |
+| [AI/ML Services](./ai-ml-services/README.md)                            | 2     |
+| [Build AI/ML Applications](./build-ai-ml-applications/README.md)        | 2     |
+| [Final project](./final-project/README.md)                              | 4     |
 
 Total: 15 weeks
 

@@ -4,10 +4,10 @@ This module focuses on building complete AI/ML applications using AWS services, 
 
 ## Agentic AI
 
-| Week | Topic | Content | Description |
-| ---- | ----- | ------- | ----------- |
-| 2.   | Introduction to Agentic AI on AWS | [Introduction to Agentic AI on AWS](https://skillbuilder.aws/learn/DNBD5MT8ZD/introduction-to-agentic-ai-on-aws/WAKAFK6UFY) | AI agents and autonomous systems |
-| 2.   | Workshop | [Building AI Applications Workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/d829683a-bb19-4275-a6d0-e7d4195bb8fe/en-US) | Hands-on workshop for complete AI applications |
+| Week | Topic                             | Content                                                                                                                                | Description                                    |
+| ---- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| 2.   | Introduction to Agentic AI on AWS | [Introduction to Agentic AI on AWS](https://skillbuilder.aws/learn/DNBD5MT8ZD/introduction-to-agentic-ai-on-aws/WAKAFK6UFY)            | AI agents and autonomous systems               |
+| 2.   | Workshop                          | [Building AI Applications Workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/d829683a-bb19-4275-a6d0-e7d4195bb8fe/en-US) | Hands-on workshop for complete AI applications |
 
 ## Learning goals
 
