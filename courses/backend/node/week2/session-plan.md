@@ -43,22 +43,25 @@ TODO: Add a section with live coding somewhere below to explain error handling? 
 
 ## Advanced Postman
 
-Postman can be used for quickly testing your APIs, but can also be configured in more advanced ways to support your development workflow. Here, you'll learn about four ways to level up your Postman game.
+Postman can be used for quickly testing APIs, but it can also be configured in more advanced ways to support the development workflow. Here are four ways trainees can level up their Postman game.
 
 ### 1. Creating collections and saving requests
 
-Collections let you group related requests into a reusable library. This makes it easy to organize, run, and share sets of API calls. Read more on the [Official docs](https://learning.postman.com/docs/collections/collections-overview/).
+Collections let you group related requests into a reusable library. This makes it easy to organize, run, and share sets of API calls.
+
+Read more on the [Official docs](https://learning.postman.com/docs/collections/collections-overview/).
 
 #### Exercise 1
 
-Create a collection for your Snippets API. Add an unauthenticated `GET /api/snippets` request, and save it to the collection.
+Create a collection for the Snippets API. Add an unauthenticated `GET /api/snippets` request, and save it to the collection.
 
 1. In Postman, click **New → Collection**, and give it a meaningful name and description.
 2. On the collection, click the **+** icon and create the GET request. Give it a meaningful name and **Save** it to the collection, once it's working.
 
 ### 2. Set Up Multiple Environments
 
-Environments in Postman let you define sets of variables (e.g. base URLs, tokens) for different contexts. That could be your local environment, staging, and production. Switching environments changes the variable values used in your requests.
+Environments in Postman let you define sets of variables (e.g. base URLs, tokens) for different contexts. That could be a local environment, staging, and production. Switching environments changes the variable values used in your requests.
+
 Read more on the [Official docs](https://learning.postman.com/docs/sending-requests/variables/managing-environments/).
 
 #### Exercise 2
@@ -75,7 +78,9 @@ In the future, when you come to deploy your app to the web, you can create a new
 
 ### 3. Managing Secrets
 
-You'll often need to use sensitive data in your requests, namely secrets (API keys, passwords, tokens). These should not be hard-coded in your requests for security reasons! Postman provides a **Vault** and sensitive variable settings to securely store and reuse secrets. Read more on the [Official docs](https://learning.postman.com/docs/sending-requests/postman-vault/postman-vault-secrets/).
+You'll often need to use sensitive data in requests, namely secrets (API keys, passwords, tokens). These should not be hard-coded in the requests for security reasons! Postman provides a **Vault** and sensitive variable settings to securely store and reuse secrets.
+
+Read more on the [Official docs](https://learning.postman.com/docs/sending-requests/postman-vault/postman-vault-secrets/).
 
 #### Exercise 3
 
@@ -90,7 +95,9 @@ Now you can safely and securely test APIs using secrets. Test to make sure the r
 
 ### 4. Create Basic Test Suites
 
-Postman allows you to write test scripts (in JavaScript) that validate your API responses — checking status codes, payloads, and performance. These tests can be grouped into collections and run automatically. They are a handy way to validate that your API is working correctly, and continues to work correctly as you make changes. Read more on the [Official docs](https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-scripts/).
+Postman allows you to write test scripts (in JavaScript) that validate your API responses — checking status codes, payloads, and performance. These tests can be grouped into collections and run automatically. They are a handy way to validate that your API is working correctly, and continues to work correctly as changes are made.
+
+Read more on the [Official docs](https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-scripts/).
 
 #### Exercise 4
 
