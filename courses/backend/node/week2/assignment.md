@@ -21,8 +21,6 @@ But this `sort` query parameter will introduce a security issue, an SQL injectio
 
 ### Setup
 
-TODO - Review assignment to work with sqlite.
-
 1. Go to/create a `node/week2` directory in your `hyf-assignment` repo.
 2. Create yourself a new node application
 3. Create a database called `phonebook` with a `contacts` table, with the following schema and data:
