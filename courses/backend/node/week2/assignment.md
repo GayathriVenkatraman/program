@@ -91,7 +91,6 @@ contactsAPIRouter.get("/", async (req, res) => {
 });
 ```
 
-
 ## The tasks
 
 ### Task 1 - Solve the SQL injection
@@ -105,18 +104,21 @@ After having demonstrated the SQL injection vulnerability, your task is then to 
 ### Task 2 - Improve your API
 
 Create two additional endpoints to enable the following functionality:
+
 1. Create new contacts
 2. Delete an existing contact
 
 ### Task 3 - Error handling
 
 Update your endpoints with appropriate error handling. You should, at least, handle the following cases:
+
 1. Successful requests
 2. Incorrect requests (e.g. an incorrectly formatted sort request)
 3. Server issues (e.g. a missing database table, or an offline database)
 4. A catch all for any other errors
 
 Remember to:
+
 1. Return the appropriate HTTP code
 2. Avoid sending any implementation or internal data to the client
 3. Log an appropriate message so you can debug issues that occur in your service
