@@ -26,12 +26,10 @@ This part of the module should explain Knex in a lot more technical detail. The 
 
 ### Live coding
 
-Run through the [phonebook example](./session-materials/phonebook/). The code is already written, but feel free to clear some of the functions so you can write them together in the session.
+Run through the [phonebook example](./session-materials/phonebook/). The functions are already written, but feel free to clear them and write them together in the session.
 
-1. Walk through `database.js` and explain the setup
-2. Create the database following the instructions in `database.js`
-3. Run through `phonebook.js` function by function, pointing to the documentation which explains all the query builder methods.
-4. After writing each function, test it by running it via the main function.
+1. Set up [`database.js`](./session-materials/phonebook/database.js)
+2. Walk through [`phonebook.js`](./session-materials/phonebook/phonebook.js)
 
 ## Snippets API continued
 
