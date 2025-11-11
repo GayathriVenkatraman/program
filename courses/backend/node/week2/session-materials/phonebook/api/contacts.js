@@ -11,7 +11,9 @@ router.post("/", async (request, response) => {
     response.status(201).json(insertedContact); // 201 Created
   } catch (error) {
     console.error("Error inserting contact:", error); // Server side error, for developers
-    response.status(500).json({ message: "Something went wrong on the server." }); // Client side error, for users. Avoid leaking database info.
+    response
+      .status(500)
+      .json({ message: "Something went wrong on the server." }); // Client side error, for users. Avoid leaking database info.
   }
 });
 

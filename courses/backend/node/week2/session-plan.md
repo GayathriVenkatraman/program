@@ -24,7 +24,7 @@ This part of the module should explain Knex in a lot more technical detail. The 
    - You also lose the safety of Knex's security precautions regarding SQL injetion
    - Using the Query Builder methods like `.select()` help us write safer, more readable DB queries that work even if we change our database type.
 
-### Live coding
+### Live coding - Database interaction
 
 Run through the [phonebook example](./session-materials/phonebook/). The functions are already written, but feel free to clear them and write them together in the session.
 
@@ -51,7 +51,6 @@ For further reading, check the following resources:
 - [What is REST: a simple explanation for beginners](https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-1-introduction-b4a072f8740f)
 - [@NoerGitKat (lots of web app clones/examples to learn from)](https://github.com/NoerGitKat)
 
-
 ### Snippets API continued
 
 Now we can pick up where we left the exercises last week. Help the trainees complete the remaining endpoints:
@@ -69,19 +68,23 @@ Error handling is important so we have visibility of issues that occur in applic
 Here are some of the most commonly used:
 
 #### 2XX - Success
+
 `200 OK` - The request succeeded, e.g. a webpage loads as it should.
 `201 Created` - A new resource was made, e.g. a new user account.
 
 #### 3XX - Redirection
+
 `301 Moved Permanently` - The URL has changed, e.g. redirect from oldsite.com to newsite.com.
 `302 Found` - A temporary redirect, e.g. redirecting Spanish visitors to the Spanish version of the website.
 
 #### 4XX - Client Errors
+
 `400 Bad Request` - The request was invalid, e.g. form data missing or incorrect.
 `401 Unauthorized` - You need to log in e.g. trying to access user features when logged out.
 `404 Not Found` - Nothing at that URL e.g. a missing page or resource.
 
 #### 5XX - Client Errors
+
 `500 Internal Server Error` - Generic server issue, e.g. something goes wrong in the backend.
 `503 Service Unavailable` - Server is down or busy e.g. backend API is not running.
 
@@ -89,18 +92,19 @@ Read more at [HTTP Status cheatsheet](https://devhints.io/http-status).
 
 ### Client vs Server
 
-Server-side errors should be designed for developers. Detailed errors help debugging and ultimately fixing issues easier. 
+Server-side errors should be designed for developers. Detailed errors help debugging and ultimately fixing issues easier.
 e.g. If a database table is missing, record the missing table name in your logs.
 
-Client-side errors should be designed for users, including the correct HTTP status code. 
+Client-side errors should be designed for users, including the correct HTTP status code.
 e.g. In the missing database table case, simply return a `500 Internal Server Error` and a useful page to the user to explain how to continue.
 
 It's important to hide specific error details from the user for multiple reasons:
+
 1. Security - Revealing database names and other internal details can give attackers too many clues about your system which can make your app more vulnerable to exploitation.
 2. Privacy - Many internal errors can include sensitive data (e.g. user IDs, personal information) that shouldn't be exposed.
 3. User Experience - Some technical errors would confuse most users, so stick with simple, friendly messages that can help the user continue.
 
-### Live coding
+### Live coding - Error handling
 
 Walk through [`api/contacts.js`](./session-materials/phonebook/api/contacts.js) to explain the try/catch pattern, appropriate server and client side error handling, correct usage of HTTP codes and why the knex code is insecure.
 

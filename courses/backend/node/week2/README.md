@@ -24,4 +24,3 @@ By the end of this session, you will be able to:
   - [ ] Set up multiple environments
   - [ ] Managing secrets
   - [ ] Create basic test suites
-  
