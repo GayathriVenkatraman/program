@@ -31,11 +31,30 @@ Run through the [phonebook example](./session-materials/phonebook/). The functio
 1. Set up [`database.js`](./session-materials/phonebook/database.js)
 2. Walk through [`phonebook.js`](./session-materials/phonebook/phonebook.js)
 
-## Snippets API continued
+## Implementing REST with Express
+
+### REST refresher
+
+Building software is like building houses: architecture is everything. The design of each part is just as important as the utility of it. REST is a specific architectural style for web applications. It serves to organise code in **predictable** ways.
+
+The most important features of REST are:
+
+- An application has a `frontend` (client) and a `backend` (server). This is called [separation of concerns](https://medium.com/machine-words/separation-of-concerns-1d735b703a60): each section has its specific job to do. The frontend deals with presenting data in a user friendly way, the backend deals with all the logic and data manipulation
+- The server is `stateless`, which means that it doesn't store any data about a client session. Whenever a client sends a request to the server, each request from the client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. This makes it possible to handle requests from millions of users.
+- Server responses can be temporarily stored on the client (a browser) using a process called `caching`: storing files like images or webpages in the browser to load the next time you enter a website (instead of getting them from the server, which generally takes longer to do).
+- Client-server communication is done through `Hypertext Transfer Protocol (HTTP)`, which serves as the style (the how) of communication.
+
+It's important to know about REST because it teaches us how web applications are designed and holds us to a standard that makes development and usage predictable.
+
+For further reading, check the following resources:
+
+- [What is REST: a simple explanation for beginners](https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-1-introduction-b4a072f8740f)
+- [@NoerGitKat (lots of web app clones/examples to learn from)](https://github.com/NoerGitKat)
+
+
+### Snippets API continued
 
 Now we can pick up where we left the exercises last week. Help the trainees complete the remaining endpoints:
-
-TODO: Add a section with live coding somewhere below to explain error handling? include that in one/all of the exercises?
 
 1. [POST endpoint exercise](./session-materials/07-post-endpoint.md)
 2. [PUT endpoint exercise](./session-materials/08-put-endpoint.md)
