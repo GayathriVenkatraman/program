@@ -18,9 +18,14 @@
 - Discuss when to use SSR (dynamic data, personalization, etc.)
 - Discuss when to use SSG (static content, blogs, documentation, etc.)
 
+#### Server Components for SSR
+
+- Explain how [Server Components](https://react.dev/reference/rsc/server-components) can speed up load times by directly sending HTML to the browser
+- Introduce the `"use server"` directive, allowing React components to be rendered on the server
+
 ### When to Use Client vs. Server Components?
 
-- Explain how Next.js distinguishes client and server components
+- Re-iterate how Next.js distinguishes client and server components (`"use server"` and `"use client"`)
 - Illustrate how these fit into the SSR and SSG concepts
 
 ### Introduction to Next.js App Router
@@ -64,23 +69,53 @@
 - Explain how to access various router properties (push, replace, etc.)
 - Demonstrate programmatic navigation using `router.push` and `router.replace`
 
-### Optional Advanced: Server Functions (or Server Actions) & API Routes
+### Advanced: Server Functions & API Routes
 
-TODO: …
+#### Server Functions
+
+- Explain Server Functions _(previously "Server Actions")_ as a mechanism to run JavaScript code on the server that hosts the website
+- Discuss how this is different from running JavaScript in the user's browser
+- Reference [the React docs for Server Functions](https://react.dev/reference/rsc/server-functions) demonstrating how to use them
+
+#### Server Components
+
+- Discuss how Server Components allow the use of Server Functions inside the component
+- Explain that client components can use Server Functions by importing them from a file with the `"use server"` directive
+
+#### Server Actions
+
+- Introduce "Server Actions" as a specific type of Server Function
+- Provide context by mentioning plain old `<form>`s on the internet that can be sent to a server for processing (we could call them "server functions"!)
+- Explain how attaching a Server _Function_ to a (form) `action` makes it a Server _Action_
+
+#### API Routes
+
+- Explain how Next.js supports Server Actions and Server Components as React features
+- Introduce API routes as a concept from the backend side of web development
+- Provide an overview of [Route Handlers](https://nextjs.org/docs/app/getting-started/route-handlers) and how they allow to create an API route that returns JSON
+- [_(The concept of APIs is covered in detail in the backend specialization)_](/courses/backend/node/README.md)
 
 ## Vercel
 
 ### Introducing Vercel & Good Use Cases
 
-TODO: …
+- Introduce Vercel as the company behind Next.js, as well as a provider of cloud infrastructure
+- Explain how Vercel's hosting options allow developers to host Next.js applications with very little effort
+- Highlight that hosting on Vercel is a good fit for a prototype or portfolio website built with React and/or Next.js
 
 ### Connecting a GitHub Repository With Vercel
 
-TODO: …
+- Demonstrate in the browser how a **public** GitHub repository from ones account can be connected to Vercel and deployed with the click of a button
+- Illustrate one way to get started with Vercel by installing the Vercel CLI globally `npm -g vercel`
+- Show logging in to Vercel using `vercel login` and using ones GitHub account
+- Show how one can deploy a local folder with a Next.js app using the `vercel deploy` CLI command
 
 ### Limitations of Vercel
 
-TODO: …
+- Mention that Vercel probably works best for hosting Next.js applications or static websites
+- Discuss how other frameworks are supported, but that the focus is likely on Next.js
+- Mention that knowledge about DNS, domains, npm, dependencies etc. is not required, but useful when managing a site on Vercel
+- Highlight that Vercel is well-suited for production applications, but that prices can apparently vary a lot based on usage
 
 ## Exercises
 
@@ -151,7 +186,7 @@ TODO: …
 - Does it show the time?
 - [Refer to the docs when in doubt](https://nextjs.org/docs/app/getting-started/updating-data#creating-server-functions)
 
-#### API Routes
+#### Trying out API Routes
 
 - Create a Hello World API route at `/api/hello` that returns the following JSON
 
