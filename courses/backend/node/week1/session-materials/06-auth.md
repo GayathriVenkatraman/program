@@ -116,4 +116,4 @@ It is left as an optional exercise to add the following routes:
 - `PUT /api/snippets/:id` to update a snippet
 - `DELETE /api/snippets/:id` to delete a snippet
 
-Also, it could be a good idea to deny the request if the user making the request is not confirmed
+Also, it could be a good idea to deny the request if the user making the request is not confirmed.

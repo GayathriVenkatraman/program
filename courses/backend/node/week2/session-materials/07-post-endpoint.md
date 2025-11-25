@@ -1,33 +1,19 @@
-# API
+# POST endpoint
 
 ## `POST /api/snippets`
 
 Let's start with a simplified version of the `POST /api/snippets` route. First we add the POST route to `api/snippets.js`:
 
 ```js
-// Contents of api/snippets.js
-
-import express from "express";
-import knex from "../database.js";
-
-const router = express.Router();
-
-// GET /api/snippets
-router.get("/", async (request, response) => {
-  // TODO
-});
+// ...
 
 // POST /api/snippets
 router.post("/", async (request, response) => {
   // TODO
 });
 
-// TODO: GET /api/snippets/:id
-
-export default router;
+// ...
 ```
-
----
 
 To be able to insert a row into the `snippets` table, we need to have data in the `users` table. Create a user and note what the user ID is.
 
@@ -42,9 +28,9 @@ POST /api/snippets
 }
 ```
 
----
+### Exercise: Implement the POST endpoint
 
-**Task:** when we now make a request like
+When we now make a request like:
 
 ```text
 POST /api/snippets
@@ -57,7 +43,4 @@ POST /api/snippets
 
 you should insert a new row into the `snippets` table with the data from the request body.
 
-Hints:
-
-- [Insert with Knex](https://knexjs.org/guide/query-builder.html#insert)
-- When creating a snippet we also need to specify a `user_id`. For now, you can just pass in the `user_id` in the request body (alongside the other snippet data)
+When creating a snippet we also need to specify a `user_id`. For now, you can just pass in the `user_id` in the request body (alongside the other snippet data).

@@ -13,7 +13,7 @@ In this session we will focus on Express.js, which is an application framework f
 By the end of this session, you will be able to:
 
 - [ ] Explain what Express is and describe why it is used for building backend applications.
-- [ ] Implement routing in Express to handle different HTTP requests and endpoints.
+- [ ] Implement routing in Express to handle `GET` HTTP requests, endpoints and parameters.
 - [ ] Use logging and debugging tools to monitor and troubleshoot Node.js applications.
 - [ ] Apply middleware functions in Express to process requests and responses.
-- [ ] Use Postman to test and debug APIs you have built.
+- [ ] Understand the importance of Authentication and various methods for implementing it.
