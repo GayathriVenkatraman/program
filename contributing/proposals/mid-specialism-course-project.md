@@ -13,13 +13,13 @@ The new Program does not currently include this meal sharing project. We are now
 We'd like to include a similar "big" individual project like the meal sharing in the specialism courses. I'm calling it the "mid specialism course" project for now (catching name, right?!).
 
 Some starting points:
-
 1. It should be the same "theme" across all specialisms, but the implementation requirements differ.
 2. Each specialism has it's own scope based specifically on the course's content. See examples below.
-3. It should be organised similarly as the mealsharing project, in that it should:
-   1. Run across 4-5 weeks in the specialism course
-   2. Be built alongside assignments in existing modules (React, Node, Databases)
-   3. Be an individual project
+3. It should be organised  similarly as the mealsharing project, in that it should:
+    1. Run across 4-5 weeks in the specialism course
+    2. Be built alongside assignments in existing modules (React, Node, Databases)
+    3. Be an individual project
+
 
 ## Main learning goal ideas
 
@@ -27,10 +27,13 @@ Some starting points:
 2. Feel ready to run a similar process for the final project
 3. Practice (potentially) more complex deployment processes
 4. Put the specialism knowledge and skills into "real life" practice during the course
+5. Transforming requirements into functional code
+6. Overcoming technical difficulties, finding solutions indepednently, and reaching out for help appropriately
+7. Planning and time management to deliver on time
 
 ## How it could look
 
-The main concept is to keep a consistent theme across specialisms, but course-specific deliverables. This gives us flexibility if we change or create new specialisms, since they are not dependent on the same implementation details.
+The main concept is to keep a consistent theme across specialisms, but course-specific deliverables. This gives us flexibility if we change or create new specialisms, since they are not dependent on the same implementation details..
 
 By keeping the projects entirely specialism bounded (e.g. backend only build the backend, rather then a full stack app), we can keep maintainence of boiler plate/starting codebases to a minimal.
 
@@ -53,7 +56,6 @@ Build _only_ the frontend part of the app. Backend data could be provided either
 Build _only_ backend related parts of the app. There would be no end to end app being delivered/deployed. They would focus on building a suitable database and API endpoints, along with documentation.
 
 #### Example deliverables (backend)
-
 1. Trello board with organised/completed tasks
 2. A standalone backend codebase
 3. A database schema/working database
