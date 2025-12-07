@@ -1,6 +1,6 @@
-# `Session Name` (Week `X`)
+# TEST AUTOMATION, Week 4
 
-This session is about `description goes here`
+In this session, trainees will learn the importance of web accessibility and how to test it both manually and through automation. We will cover WCAG standards, perform basic manual accessibility checks (keyboard navigation and screen reader basics), and automate accessibility testing using Playwright with Axe-core. This week also focuses on analyzing and reporting accessibility defects effectively.
 
 ## Contents
 
@@ -10,9 +10,10 @@ This session is about `description goes here`
 
 ## Session Learning Goals
 
-> [!TIP]
-> Learning goals specific to this session. These should be a subset of the module's learning goals, and expanded on in more detail if possible.
-
 By the end of this session, you will be able to:
 
-- [ ] `[action verb] [specific skill/knowledge]`
+- [ ] Understand what Web Accessibility is and why it matters (WCAG principles).
+- [ ] Perform manual accessibility checks: Keyboard navigation, Screen reader basics.
+- [ ] Automate accessibility checks using Playwright and Axe-core.
+- [ ] Analyze accessibility violations and report defects clearly.
+- [ ] Use Playwright to run basic accessibility checks on a sample site and identify violations.

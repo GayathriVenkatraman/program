@@ -1,6 +1,6 @@
-# `Session Name` (Week `X`)
+# TEST AUTOMATION, Week 2
 
-This session is about `description goes here`
+In this session, trainees will learn the fundamentals of UI test automation using Playwright with TypeScript. We will cover why automation is important, how to set up the Playwright and Node.js environment, and basic TypeScript concepts for testers. This week focuses on writing and running your first Playwright test, understanding selectors and assertions, and executing tests in headed and headless modes.
 
 ## Contents
 
@@ -10,9 +10,12 @@ This session is about `description goes here`
 
 ## Session Learning Goals
 
-> [!TIP]
-> Learning goals specific to this session. These should be a subset of the module's learning goals, and expanded on in more detail if possible.
-
 By the end of this session, you will be able to:
 
-- [ ] `[action verb] [specific skill/knowledge]`
+- [ ] Understand why test automation is essential in modern QA.
+- [ ] Set up Playwright and Node.js environment for automation.
+- [ ] Learn basic TypeScript concepts relevant for testers.
+- [ ] Write and run your first Playwright test.
+- [ ] Understand selectors and assertions in Playwright.
+- [ ] Execute tests in headed and headless modes.
+- [ ] Automate a simple login flow using Playwright.
