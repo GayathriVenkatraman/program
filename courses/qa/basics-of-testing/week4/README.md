@@ -1,6 +1,6 @@
-# `Session Name` (Week `X`)
+# BASICS OF TESTING, Week 4
 
-This session is about `description goes here`
+In this session, trainees will learn how to design effective test cases and manage test data. We will cover what a test case is, its structure, and examples of good vs bad test cases. This week also introduces test design techniques such as Equivalence Partitioning and Boundary Value Analysis, which help create efficient and comprehensive test coverage.
 
 ## Contents
 
@@ -10,9 +10,11 @@ This session is about `description goes here`
 
 ## Session Learning Goals
 
-> [!TIP]
-> Learning goals specific to this session. These should be a subset of the module's learning goals, and expanded on in more detail if possible.
-
 By the end of this session, you will be able to:
 
-- [ ] `[action verb] [specific skill/knowledge]`
+- [ ] What is a Test Case – Understand its purpose and importance in testing.
+- [ ] Test Case Structure – Learn the essential components and see examples.
+- [ ] Good vs Bad Test Cases – Identify characteristics of well-written test cases.
+- [ ] Test Data Management – Understand how to organize and maintain test data.
+- [ ] Test Design Techniques – Apply Equivalence Partitioning and Boundary Value Analysis.
+- [ ] Write Test Cases – Practice writing test cases for login and registration functionality.
