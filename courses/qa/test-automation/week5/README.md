@@ -12,10 +12,10 @@ In this session, trainees will learn the fundamentals of front-end performance t
 
 By the end of this session, you will be able to:
 
-- [ ]  Understand key front-end performance metrics:
-    - [ ] First Contentful Paint (FCP)
-    - [ ] Largest Contentful Paint (LCP)
-    - [ ] Total Blocking Time (TBT)
+- [ ] Understand key front-end performance metrics:
+  - [ ] First Contentful Paint (FCP)
+  - [ ] Largest Contentful Paint (LCP)
+  - [ ] Total Blocking Time (TBT)
 - [ ] Learn what Google Lighthouse is and why it matters for QA.
 - [ ] Run and interpret Lighthouse reports for: Performance, SEO & Best Practices
 - [ ] Automate Lighthouse audits using CLI or Node.js module.

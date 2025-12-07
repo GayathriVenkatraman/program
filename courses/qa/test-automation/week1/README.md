@@ -14,9 +14,9 @@ By the end of this session, you will be able to:
 
 - [ ] Understand client–server architecture and how web apps communicate.
 - [ ] Explore web elements: DOM, HTML, CSS, and JavaScript basics.
-- [ ]  Use Browser DevTools for testing:
-     - [ ] Elements tab for inspecting and modifying DOM/CSS.
-     - [ ] Console tab for debugging JavaScript errors.
-     - [ ] Network tab for analyzing requests and responses.
+- [ ] Use Browser DevTools for testing:
+  - [ ] Elements tab for inspecting and modifying DOM/CSS.
+  - [ ] Console tab for debugging JavaScript errors.
+  - [ ] Network tab for analyzing requests and responses.
 - [ ] Identify common front-end issues QA can detect.
 - [ ] Practice inspecting elements and debugging console/network issues on a sample site.

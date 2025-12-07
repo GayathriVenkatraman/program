@@ -4,13 +4,13 @@ Here you can find course content and the assignments for the Test automation mod
 
 ## Contents
 
-| Week | Topic                                       | Preparation                         | Assignment                        | Session Plan                          |
-| ---- | ------------------------------------------- | ----------------------------------- | --------------------------------- | ------------------------------------- |
-| 1.   | Web Testing with DevTools                   | [Preparation](week1/preparation.md) | [Assignment](week1/assignment.md) | [Session Plan](week1/session-plan.md) |
-| 2.   | Introduction to Test Automation with Playwright (TypeScript)                        | [Preparation](week2/preparation.md) | [Assignment](week2/assignment.md) | [Session Plan](week2/session-plan.md) |
-| 3.   | Building Automation Structure & Page Object Model (POM)           | [Preparation](week3/preparation.md) | [Assignment](week3/assignment.md) | [Session Plan](week3/session-plan.md) |
-| 4.   | Accessibility Testing Fundamentals & Playwright                          | [Preparation](week4/preparation.md) | [Assignment](week4/assignment.md) | [Session Plan](week4/session-plan.md) |
-| 4.   | Accessibility Testing Fundamentals & Playwright                          | [Preparation](week5/preparation.md) | [Assignment](week5/assignment.md) | [Session Plan](week5/session-plan.md) |
+| Week | Topic                                                        | Preparation                         | Assignment                        | Session Plan                          |
+| ---- | ------------------------------------------------------------ | ----------------------------------- | --------------------------------- | ------------------------------------- |
+| 1.   | Web Testing with DevTools                                    | [Preparation](week1/preparation.md) | [Assignment](week1/assignment.md) | [Session Plan](week1/session-plan.md) |
+| 2.   | Introduction to Test Automation with Playwright (TypeScript) | [Preparation](week2/preparation.md) | [Assignment](week2/assignment.md) | [Session Plan](week2/session-plan.md) |
+| 3.   | Building Automation Structure & Page Object Model (POM)      | [Preparation](week3/preparation.md) | [Assignment](week3/assignment.md) | [Session Plan](week3/session-plan.md) |
+| 4.   | Accessibility Testing Fundamentals & Playwright              | [Preparation](week4/preparation.md) | [Assignment](week4/assignment.md) | [Session Plan](week4/session-plan.md) |
+| 4.   | Accessibility Testing Fundamentals & Playwright              | [Preparation](week5/preparation.md) | [Assignment](week5/assignment.md) | [Session Plan](week5/session-plan.md) |
 
 ## Module Learning Goals
 
