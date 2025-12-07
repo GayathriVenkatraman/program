@@ -4,12 +4,13 @@ Our QA Tech Track offers a comprehensive 15-week training program designed to eq
 
 ## Modules
 
-| Name                                                         | Weeks |
-| ------------------------------------------------------------ | ----- |
-| [Basics Of Testing](/courses/qa/basics-of-testing/README.md) | 5     |
-| [Test Automation](/courses/qa/test-automation/README.md)     | 5     |
-| [Test Management](/courses/qa/test-management/README.md)     | 4     |
-| [Career Training](/courses/qa/career-training/README.md)     | 1     |
+| Name                                                           | Weeks |
+| -------------------------------------------------------------- | ----- |
+| [Basics Of Testing](/courses/qa/basics-of-testing/README.md)   | 4     |
+| [Test Automation](/courses/qa/test-automation/README.md)       | 5     |
+| [Test Management](/courses/qa/test-management/README.md)       | 3     |
+| [Final Demo Project](/courses/qa/final-demo-project/README.md) | 2     |
+| [Career Training](/courses/qa/career-training/README.md)       | 1     |
 
 Total: 15 weeks
 
@@ -47,10 +48,13 @@ Total: 15 weeks
 - [ ] Reporting and communication of QA status
 - [ ] Demo Project Preparation
 
-### [Career Training](/courses/qa/career-training)
+### [Final Demo Project](/courses/qa/final-demo-project)
 
 - [ ] Final Demo Project
 - [ ] Key Deliverables - QA Summary Report, Team Presentation
+
+### [Career Training](/courses/qa/career-training)
+
 - [ ] Understand where to look for suitable jobs and internships.
 - [ ] Understand what you should do in order to be an attractive candidate on the Danish - job market.
 - [ ] Learn how to identify and communicate your competencies.

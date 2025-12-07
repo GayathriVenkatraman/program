@@ -1,6 +1,6 @@
 # TEST MANAGEMENT
 
-Here you can find course content and assignments for the Practical Test Planning, Agile & Project Management module. This module focuses on applying QA skills in an Agile environment, emphasizing effective planning, documentation, and communication for regular QA work. (Management focus and specific Test Management tools have been removed.)
+Here you can find course content and assignments for the Practical Test Planning, Agile & Project Management module. This module focuses on applying QA skills in an Agile environment, emphasizing effective planning, documentation, and communication for regular QA work.
 
 ## Contents
 
