@@ -75,12 +75,12 @@
           "location": "courses/backend/node"
         },
         {
-          "name": "Agile Teamwork",
-          "location": "shared-modules/agile-teamwork"
-        },
-        {
           "name": "Specialist Career Training",
           "location": "shared-modules/specialist-career-training"
+        },
+        {
+          "name": "Agile Teamwork",
+          "location": "shared-modules/agile-teamwork"
         },
         {
           "name": "Final Backend Project",
@@ -109,12 +109,12 @@
           "location": "courses/frontend/react"
         },
         {
-          "name": "Agile Teamwork",
-          "location": "shared-modules/agile-teamwork"
-        },
-        {
           "name": "Specialist Career Training",
           "location": "shared-modules/specialist-career-training"
+        },
+        {
+          "name": "Agile Teamwork",
+          "location": "shared-modules/agile-teamwork"
         },
         {
           "name": "Final Frontend Project",
