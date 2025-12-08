@@ -122,7 +122,7 @@ console.log(getCharacterFrequencies("happy"));
 */
 ```
 
-The expected output above allows for a relatively simple solution mechanism. Think about object property accessors.
+The expected output above allows for a relatively simple solution mechanism. Hint: Think about using object property accessors.
 For a bigger challenge, you can try to write the same function for a different expected output as seen below. It will require implementing some additional logic.
 
 ```js
