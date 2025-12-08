@@ -10,8 +10,8 @@ This specialism course is focused on setting you up to land a Frontend Developer
 | [Using AI in Development](/shared-modules/using-ai-in-development/README.md)       | 1               |
 | [Advanced JavaScript](./advanced-javascript/README.md)                             | 4               |
 | [React](./react/README.md)                                                         | 5               |
+| [Specialist Career Training](/shared-modules/specialist-career-training/README.md) | 2               |
 | [Agile Teamwork](/shared-modules/agile-teamwork/README.md)                         | 1               |
-| [Specialist Career Training](/shared-modules/specialist-career-training/README.md) | 3 (2 in person) |
 | [Final project](./final-project/README.md)                                         | 5               |
 
 Total: 19 weeks
