@@ -1,6 +1,6 @@
-# `Session Name` (Week `X`)
+# TEST MANAGEMENT, Week 2
 
-This session is about `description goes here`
+In this session, trainees will learn how QA integrates into Agile development processes. We will cover Agile principles, Scrum roles, artifacts, and ceremonies, and explore QA’s responsibilities during sprint planning and estimation. This week emphasizes analyzing User Stories and Acceptance Criteria (AC) to create effective test cases and maintaining continuous testing and feedback throughout the sprint.
 
 ## Contents
 
@@ -10,9 +10,11 @@ This session is about `description goes here`
 
 ## Session Learning Goals
 
-> [!TIP]
-> Learning goals specific to this session. These should be a subset of the module's learning goals, and expanded on in more detail if possible.
-
 By the end of this session, you will be able to:
 
-- [ ] `[action verb] [specific skill/knowledge]`
+- [ ] Understand Agile principles and Scrum framework (roles, artifacts, ceremonies).
+- [ ] Identify QA’s role in Agile teams, including sprint planning and estimation.
+- [ ] Analyze User Stories and Acceptance Criteria to derive test scenarios.
+- [ ] Create detailed manual test cases based on ACs.
+- [ ] Track test case status during a simulated sprint.
+- [ ] Apply continuous testing and feedback practices in Agile workflows.

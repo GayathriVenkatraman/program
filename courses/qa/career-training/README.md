@@ -1,27 +1,22 @@
-# `Module Name`
+# Career Training
 
-This module is about `description goes here`
+Welcome to your Career Sessions!
 
-## Contents
+In this session, trainees will focus on preparing for their next steps after completing the QA program. We will cover HYF HR recommendations for creating an effective CV, explore networking opportunities in the QA and tech industry, and conclude with a certificate ceremony to celebrate achievements.
 
-| Week | Topic                                | Preparation                           | Session Plan                                          | Assignment                          |
-| ---- | ------------------------------------ | ------------------------------------- | ----------------------------------------------------- | ----------------------------------- |
-| 1.   | [`Session Title`](./week1/README.md) | [Preparation](./week1/preparation.md) | [Session Plan](./week1/session-plan.md) (for mentors) | [Assignment](./week1/assignment.md) |
+| Week | Topic                                                | Preparation                           | Session Plan                            | Assignment               |
+| ---- | ---------------------------------------------------- | ------------------------------------- | --------------------------------------- | ------------------------ |
+| 1.   | [Intro to The Danish Job Market](./week1/README.md). | [Preparation](./week1/preparation.md) | [Session Plan](./week1/session-plan.md) | (There is no assignment) |
 
-## Module Learning Goals
+## Learning Goals
 
-> [!TIP]
-> Learning goals should be a list of outcomes, rather than a list of topics. For example, instead of "Synchronous vs Asynchronous", write something like "Explain the difference between sync and async code execution in JavaScript"
+By the end of the three Career Sessions, you should be able to:
 
-By the end of this module, you will be able to:
-
-- [ ] `[action verb] [specific skill/knowledge]`
-
-## Prerequisites
-
-> [!TIP]
-> Some modules build on the learning goals of other modules. If that is the case, link them below. If there are no prerequesites, feel free to remove this section. Note that it is assumed that all foundation modules are a prerequisite of a specialisation course and its modules, so in that case you don't have to write them all out here :-)
-
-You should have completed or understand the learning goals in the following modules before proceeding:
-
-- [`Module Name`](https://example.com)
+- [ ] Understand where to look for suitable jobs and internships.
+- [ ] Understand what you should do in order to be an attractive candidate on the Danish - job market.
+- [ ] Learn how to identify and communicate your competencies.
+- [ ] Understand what HYF can do to support you on your job hunt.
+- [ ] Know how to assemble an effective CV.
+- [ ] Know how to make your LinkedIn page attractive to recruiters.
+- [ ] Learn how to perform well in a screening interview.
+- [ ] How to handle Job Rejection and Job Anxiety

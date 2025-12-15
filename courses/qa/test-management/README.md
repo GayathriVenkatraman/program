@@ -1,27 +1,24 @@
-# `Module Name`
+# TEST MANAGEMENT
 
-This module is about `description goes here`
+Here you can find course content and assignments for the Practical Test Planning, Agile & Project Management module. This module focuses on applying QA skills in an Agile environment, emphasizing effective planning, documentation, and communication for regular QA work.
 
 ## Contents
 
-| Week | Topic                                | Preparation                           | Session Plan                                          | Assignment                          |
-| ---- | ------------------------------------ | ------------------------------------- | ----------------------------------------------------- | ----------------------------------- |
-| 1.   | [`Session Title`](./week1/README.md) | [Preparation](./week1/preparation.md) | [Session Plan](./week1/session-plan.md) (for mentors) | [Assignment](./week1/assignment.md) |
+| Week | Topic                                     | Preparation                         | Assignment                        | Session Plan                          |
+| ---- | ----------------------------------------- | ----------------------------------- | --------------------------------- | ------------------------------------- |
+| 1.   | Test Planning, Strategy & Scope           | [Preparation](week1/preparation.md) | [Assignment](week1/assignment.md) | [Session Plan](week1/session-plan.md) |
+| 2.   | Agile Testing & Working with User Stories | [Preparation](week2/preparation.md) | [Assignment](week2/assignment.md) | [Session Plan](week2/session-plan.md) |
+| 3.   | QA Metrics, Reporting & Demo Project Prep | [Preparation](week3/preparation.md) | [Assignment](week3/assignment.md) | [Session Plan](week3/session-plan.md) |
 
 ## Module Learning Goals
 
-> [!TIP]
-> Learning goals should be a list of outcomes, rather than a list of topics. For example, instead of "Synchronous vs Asynchronous", write something like "Explain the difference between sync and async code execution in JavaScript"
-
 By the end of this module, you will be able to:
 
-- [ ] `[action verb] [specific skill/knowledge]`
-
-## Prerequisites
-
-> [!TIP]
-> Some modules build on the learning goals of other modules. If that is the case, link them below. If there are no prerequesites, feel free to remove this section. Note that it is assumed that all foundation modules are a prerequisite of a specialisation course and its modules, so in that case you don't have to write them all out here :-)
-
-You should have completed or understand the learning goals in the following modules before proceeding:
-
-- [`Module Name`](https://example.com)
+- [ ] Understand the purpose and structure of a Test Plan and Test Strategy.
+- [ ] Define scope, objectives, risks, and environments for testing.
+- [ ] Apply practical test case management (grouping, linking, status updates).
+- [ ] Implement requirement traceability (requirements → test cases → bugs).
+- [ ] Understand Agile principles, Scrum roles, artifacts, and ceremonies.
+- [ ] Analyze User Stories and Acceptance Criteria to create effective test cases.
+- [ ] Track QA progress and communicate status effectively using QA metrics.
+- [ ] Prepare for a demo project by planning scope and team responsibilities.
