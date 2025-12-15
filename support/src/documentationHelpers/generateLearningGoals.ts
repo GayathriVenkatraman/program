@@ -24,7 +24,8 @@ function extractLearningGoals(content: string): {
   readonly found: boolean;
   readonly goals: readonly string[];
 } {
-  const sectionRegex = /#+\s*(?:Module\s+)?Learning goals\s*\n([\s\S]*?)(?=\n#+\s|$)/i;
+  const sectionRegex =
+    /#+\s*(?:Module\s+)?Learning goals\s*\n([\s\S]*?)(?=\n#+\s|$)/i;
   const match = content.match(sectionRegex);
 
   if (!match) return { found: false, goals: [] };
