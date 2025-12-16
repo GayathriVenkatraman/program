@@ -69,6 +69,8 @@
       - [Assignment](courses/foundation/intro-to-agile/week1/assignment.md)
   - [Career Training](courses/foundation/career-training/README.md)
     - [Week 1](courses/foundation/career-training/week1/README.md)
+      - [Session Materials](courses/foundation/career-training/week1/session-materials/)
+        - [HYF CV Guide](courses/foundation/career-training/week1/session-materials/cv-guide.md)
       - [Preparation](courses/foundation/career-training/week1/preparation.md)
       - [Session Plan](courses/foundation/career-training/week1/session-plan.md)
       - [Assignment](courses/foundation/career-training/week1/assignment.md)
