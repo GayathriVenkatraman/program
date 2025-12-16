@@ -1,25 +1,16 @@
 # Career Training (Week 2)
 
-In this interactive online session, we explore how **CVs and LinkedIn profiles** complement each other in the eyes of recruiters and hiring managers - particularly within the tech industry.
+This session is for practicing for a screening interview and receiving feedback from peers and volunteers. 
 
-We will focus on:
+You've made a lot of progress on your CVs and LinkedIn profiles so far, and now you get the opportunity to practice a screening interview. Watch out in your teams' slack channel, where you will receive a case to prepare for.
 
-- The **distinct role** each platform plays in showcasing your professional identity:
-  - The **CV** as your structured, tailored overview for specific roles
-  - **LinkedIn** as your living, network-driven professional brand
-- What **recruiters typically look for** on each platform, including consistency across them, clarity of skills and achievements, and active engagement.
-
-Participants then split into **breakout groups** to review and give feedback on fictional CVs and LinkedIn profiles, using real-life examples to reflect on how effectively these platforms represent their professional value.
-
-These articles, videos and tasks are not a suggestion, but mandatory. They require less time than your regular assignments, but are just as important. We expect you to use the remainder of your 30 hours on finishing all the assignments you haven't yet completed.
+We will also bring a camera so that you can get updated photos for your LinkedIn and CV - so wear the clothing you would like to have on your professional profile!
 
 ## Learning Goals
 
-At the end of the session, participants should be able to:
+By the end of this session, you will be able to:
 
-- [ ] Identify how their CV and LinkedIn play together.
-- [ ] Have an understanding about how recruiters review a CV and what they look for.
-- [ ] Being able to critically review a CV and LinkedIn page and identify main errors and pitfalls.
+- [ ] TODO
 
 ## Materials
 

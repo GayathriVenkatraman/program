@@ -4,20 +4,17 @@
 
 Equip trainees with a realistic understanding of the job search process and what is expected beyond technical proficiency. Clarify how HYF can support them, and where its boundaries lie. Set the foundation for professional self-presentation and awareness of the Danish job market structure.
 
+Guide trainees to understand how their CV and LinkedIn profile should work in harmony to present a complete and professional image to recruiters. Provide tools, examples, and hands-on practice in critiquing and improving their online presence.
+
 ## Your Preparation (Before Session)
 
 ### 1. Familiarize Yourself with Materials
 
 Thoroughly read the [same preparation](preparation.md) as the trainees.
 
-Regarding understanding Unions, contact PROSA for a short presentation.
-
-> [!NOTE]
-> It is NOT your job to be an expert on the matter of unions, A-kasser and employment contracts! A representative from PROSA are usually happy to provide trainees with an overview of these.
-
 ### 2. Review Responses to the "Career Status" Survey
 
-Before the session, check submissions in the team Slack channel or survey tool.
+Before the session, check submissions in the team Slack channel or [survey tool](https://docs.google.com/forms/d/1paMG5mM5FfpXHvRYnz4FLFHhGJF6xwKgfztY2Kw90CY/edit).
 
 Use these responses to:
 

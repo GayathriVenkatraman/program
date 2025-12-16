@@ -2,6 +2,8 @@
 
 ## Do
 
+### 1. Respond to survey
+
 Fill out the "Career Status" survey posted in your teams' Slack channel.
 
 ## Read
@@ -10,8 +12,15 @@ Fill out the "Career Status" survey posted in your teams' Slack channel.
 
 The differences between Soft Skills and Hard Skills - and why both are important.
 
+Soft skills refer to interpersonal, cognitive, and behavioral attributes such as communication, teamwork, adaptability, and problem solving. Hard skills involve the technical competencies and domain specific knowledge required to perform job related tasks, for example proficiency in programming languages, data analysis techniques, or system architecture.
+
 1. [Asana: Hard Skills vs. Soft Skills](https://asana.com/resources/hard-skills-vs-soft-skills)
 1. [EdgePoint: Hard Skills vs. Soft Skills](https://www.edgepointlearning.com/blog/hard-skills-vs-soft-skills/)
+
+### Writing your CV
+
+1. [How to write a your profile text for your CV](https://www.prospects.ac.uk/careers-advice/cvs-and-cover-letters/writing-a-personal-statement-for-your-cv)
+1. [IDA’s Guide to CV’s in the Danish Job Market](https://english.ida.dk/cv)
 
 ### Working in Denmark
 
@@ -23,4 +32,4 @@ The differences between Soft Skills and Hard Skills - and why both are important
 
 1. [Danish Workplace Culture – 8 Essentials to Denmark’s Balanced Worklife](https://swaplanguage.com/blog/understanding-danish-workplace-culture/)
 2. Compare your own culture(s) with Danish culture by using the [Country Comparison tool](https://www.theculturefactor.com/country-comparison-tool).
-   - Pay attention to and write down any surprises or observations you find in your comparison and feel free to bring them to the session :)
+   - Pay attention to and write down any surprises or observations you find in your comparison. Bring a few examples to the session.
