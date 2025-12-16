@@ -8,3 +8,4 @@
 1. Write a short profile text about yourself - about 400-500 characters and add it to your CV.
 1. Update your current CV fully - all professional experience as well as soft and hard skills.
 1. Canva has [thousands of free and GOOD CV templates](https://www.canva.com/resumes/templates/) - find and use one that you like.
+1. Make sure your make an ATS compatible/compliant CV - there are many free ATS CV checkers online.'
