@@ -75,7 +75,6 @@
     - [Week 2](courses/foundation/career-training/week2/README.md)
       - [Preparation](courses/foundation/career-training/week2/preparation.md)
       - [Session Plan](courses/foundation/career-training/week2/session-plan.md)
-      - [Assignment](courses/foundation/career-training/week2/assignment.md)
   - [Foundation Project](courses/foundation/final-project/README.md)
     - [Project Brief](courses/foundation/final-project/project-brief.md)
     - [Session Plan](courses/foundation/final-project/session-plan.md)

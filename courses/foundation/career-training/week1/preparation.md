@@ -2,7 +2,7 @@
 
 ## Do
 
-### 1. Respond to survey
+### Respond to survey
 
 Fill out the "Career Status" survey posted in your teams' Slack channel.
 
