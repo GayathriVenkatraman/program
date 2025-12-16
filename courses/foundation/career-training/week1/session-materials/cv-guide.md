@@ -1,6 +1,6 @@
 # HYF CV Guide
 
-![YourCurriculum](assets/cv.png)
+![Header Image](assets/cv.png)
 
 Securing an interview requires a polished resume that highlights your work experience, qualifications, and technical skills. Your resume needs to effectively communicate that you have the skills and experience required for the position. As a web developer, you aren’t expected to be a graphic design expert, but a well designed resume can make a big difference. Most recruiters only spend a few seconds on their initial resume scan.
 
@@ -40,7 +40,7 @@ While there are no exact ways of doing a resume, there are some best practices w
 
 There are seven main sections you need to incorporate in your resume. Each one is critical and serves its own purpose when you're applying for an internship:
 
-![cvsections](assets/cv-sections.jpg)
+![CV Sections](assets/cv-sections.jpg)
 
 1. Your photo and contact information
 2. Your BIO text
@@ -84,35 +84,43 @@ Besides adding the company name, your position and date (assuming that the exper
 
 Be sure to also include your final project in this section (with links to the deployed website, or [Feats page](https://www.feats.co/search?q=%22hackyourfuture%22)) as they are probably your most web development related experiences! Here some examples:
 
-**HackYourSocial at HackYourFuture | Jan 2022 | Link**
+#### HackYourSocial at HackYourFuture | Jan 2022 | Link
+
 Created a clean, and mobile-friendly web app using NodeJS, ReactJS, Redux and MongoDB to help travelers connect with each other and exchange tips. Implemented fetching of data through APIs and geolocation, authentication & authorization and client server model.
 
-**Kaospilot Toolbox at HackYourFuture | Jun 2023 | Link**
+#### Kaospilot Toolbox at HackYourFuture | Jun 2023 | Link
+
 Responsive Full-stack app developed for client Kaospilot using the MERN stack that allows users to search, filter and sort through a variety of facilitation tools developed by Kaospilot and other educational institutions, as well as user authentication and an admin console to add new tools.
 
 ### 5. Your education (including HackYourFuture)
 
 The educational section of your resume is still an important aspect, however, you shouldn’t go into too much detail. The more experience you have, the less you need to focus on your education section. You need to list your school, college or university degree obtained, and dates you attended in your education section. As for your HackYourFuture Education, simply add a short description and links to the curriculum. Here some examples:
 
-**HackYourFuture, Frontend Development | Jan 2021 - Aug 2021 | [Curriculum](https://program.hackyourfuture.dk)**
+#### HackYourFuture, Frontend Development | Jan 2021 - Aug 2021 | [Curriculum](https://program.hackyourfuture.dk)
+
 8-month program with modules on HTML, CSS, JavaScript and ReactJS.
 
-**Backend Development at HackYourFuture | Jan 2023 - Aug 2023**
+#### Backend Development at HackYourFuture | Jan 2023 - Aug 2023
+
 A 34-week course designed to cover all aspects of backend development including HTML, CSS, JavaScript, NodeJS, ExpressJS and MySQL. Check [the curriculum here](https://program.hackyourfuture.dk).
 
 ### 6. Your (additional) projects
 
 Companies hiring interns from the HackYourFuture program know that you don’t have years of experience working as a web developer. However, they want to know you work hard, that you are eager to grow, that you have an eye for detail (especially if you want to be a frontend or full stack developer) and that you never stop learning. A way to show just that is by adding the most challenging and beautiful projects you’ve worked on during and after the program. Be sure to provide a link to the deployed version of the project and another link to the source code. Here some beautiful examples:
 
-**Weather app | Jan 2021 | [Demo](https://raw.githack.com/Nazeh/weather-app/master/dist/index.html) | [Source](https://github.com/Nazeh/weather-app)**
+#### Weather app | Jan 2021 | [Demo](https://raw.githack.com/Nazeh/weather-app/master/dist/index.html) | [Source](https://github.com/Nazeh/weather-app)
+
 Clean, and mobile-friendly web app built using plain JS, Webpack, and Babel. Implemented fetching of Open-weather, and geolocation data.
 
-**Todo app | Jan 2021 | [Demo](https://tv2z-app.herokuapp.com/) | [Source](https://github.com/salih18/MERN-Todo-App)**
+#### Todo app | Jan 2021 | [Demo](https://tv2z-app.herokuapp.com/) | [Source](https://github.com/salih18/MERN-Todo-App)
+
 Simple (but great looking) to do app built with Reactjs, Nodejs and Expressjs allowing users to register and save their data, tag their activities and more.
 
-**YouTube UI Clone | Jan 2021 | [Demo](https://nazeh.github.io/youtube_video_player_page/) | [Source](https://github.com/Nazeh/youtube_video_player_page)**
+#### YouTube UI Clone | Jan 2021 | [Demo](https://nazeh.github.io/youtube_video_player_page/) | [Source](https://github.com/Nazeh/youtube_video_player_page)
 
-**_(!)Be sure that the quality of the projects shared in this section are representative of your skills as a developer! Recruiters will judge your work, so be sure there projects show the best you can do! Needless to say, be also sure that each project follows the best practices on GitHub, like including a readme file, etc_**
+{% hint style="warning" %}
+Be sure that the quality of the projects shared in this section are representative of your skills as a developer! Recruiters will judge your work, so be sure there projects show the best you can do! Needless to say, be also sure that each project follows the best practices on GitHub, like including a readme file, etc.
+{% endhint %}
 
 ### 7. Other information including languages and hobbies
 
@@ -130,16 +138,26 @@ To make your job easier, we’ve created a set of templates with sections tailor
 
 [Check out the templates here](https://docs.google.com/presentation/d/1hcKvyIOLnXtDXqEu554_xaC7EzuRAPNTqYbIDMAvoQA/copy) and don’t forget to check the following video that explains how to repurpose the templates for your own use:
 
-[![Video](assets/video.jpg)]([link to your URL](https://www.youtube.com/watch?v=DE28v--Zh58&ab_channel=FedericoFusco))
+[![Templates Video](assets/video.jpg)](https://www.youtube.com/watch?v=DE28v--Zh58&ab_channel=FedericoFusco)
 
 ## 4. Submitting your CV to the HYF team
 
 Once your CV is ready, set the editing rights in Google Slides to "Anyone with the link":
 
-![permission](assets/permission.gif)
+![Sharing Permissions](assets/permission.gif)
 
 And then submit the URL to the HYF team via Slack. We will then give you feedback (if needed) to be sure you end with a good CV that gets you interviews.
 
-**_IMPORTANT:_** Once you submitted your CV, please be sure to **_continue to update it in the same file_** with new projects and experiences. That way we can be sure that every time you need feedback we can work from an up-to-date version.
+{% hint style="info" %}
 
-**_EVEN MORE IMPORTANT:_** During and after HackYourFuture, it is crucial that you keep us informed with your progress and what you are up to. Also know that the HYF team is always available to connect with your case worker or contact person in the Kommune or at your Job Center, if necessary. If so, just reach out to us on Slack!
+### IMPORTANT
+
+Once you submitted your CV, please be sure to **_continue to update it in the same file_** with new projects and experiences. That way we can be sure that every time you need feedback we can work from an up-to-date version.
+{% endhint %}
+
+{% hint style="info" %}
+
+### EVEN MORE IMPORTANT
+
+During and after HackYourFuture, it is crucial that you keep us informed with your progress and what you are up to. Also know that the HYF team is always available to connect with your case worker or contact person in the Kommune or at your Job Center, if necessary. If so, just reach out to us on Slack!
+{% endhint %}
