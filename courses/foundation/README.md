@@ -18,7 +18,7 @@ Here you'll learn the fundamentals for how the web works, the basics of programm
 | [Career Training](./career-training/README.md)                     | 2               |
 | [Final project](./final-project/README.md)                         | 3               |
 
-Total: 16 weeks
+Total: 17 weeks
 
 ## Learning goals overview
 
