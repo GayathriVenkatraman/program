@@ -4,10 +4,10 @@ Welcome to your Career Sessions!
 
 In this repository you can find all the info and material from your Career Sessions, what to prepare for each session and resources that can be used to support you and the community in finding a job in tech. The goal of this series of sessions is to optimally prepare you for the job hunt in Denmark's IT industry following your graduation from our program by helping you identify and communicate your specific competencies and skills.
 
-| Week | Topic                                                                                                                                                                | Preparation                           | Session Plan                            | Assignment                          |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------------- | ----------------------------------- |
-| 1.   | [Jobhunting in Denmark](./week1/README.md). Introduction to the Danish job market, job search, and what a strong profile looks like, including your CV and LinkedIn. | [Preparation](./week1/preparation.md) | [Session Plan](./week1/session-plan.md) | (There is no assignment)            |
-| 2.   | [Mock Screening Interview](./week2/README.md). Practice the first part of the interview process and gain some feedback.                                              | [Preparation](./week2/preparation.md) | [Session Plan](./week2/session-plan.md) | [Assignment](./week2/assignment.md) |
+| Week | Topic                                                                                                                                                                | Preparation                           | Session Plan                            | Assignment               |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------------- | ------------------------ |
+| 1.   | [Jobhunting in Denmark](./week1/README.md). Introduction to the Danish job market, job search, and what a strong profile looks like, including your CV and LinkedIn. | [Preparation](./week1/preparation.md) | [Session Plan](./week1/session-plan.md) | (There is no assignment) |
+| 2.   | [Mock Screening Interview](./week2/README.md). Practice the first part of the interview process and gain some feedback.                                              | [Preparation](./week2/preparation.md) | [Session Plan](./week2/session-plan.md) | (No assignment)          |
 
 ## Learning Goals
 
