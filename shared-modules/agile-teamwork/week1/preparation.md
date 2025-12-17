@@ -5,7 +5,7 @@ To participate effectively, you must review key concepts from the Foundation mod
 
 ## Part 1. Review key topics from [the Foundation module](../../../courses/foundation/intro-to-agile/week1/preparation.md)
 
-Before the class, make sure you remember the following concepts:
+Before the session, make sure you remember the following concepts:
 
 - Agile Manifesto and core Agile values
 - Differences between Waterfall and Agile
@@ -133,4 +133,4 @@ Even as a junior developer, you must be able to:
 ## Key idea
 
 This module simulates real teamwork in a real development cycle.
-Preparation is needed so we spend the session building, planning, syncing, and reviewing — not learning basic theory.
+Preparation is needed so we spend the session building, planning, syncing, and reviewing — not learning the theory.
