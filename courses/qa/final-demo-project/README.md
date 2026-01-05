@@ -2,6 +2,10 @@
 
 Welcome to your final project! Here you can learn more about the goals and requirements of this final module.
 
+## Module Learning Goals
+
+- [ ] Todo
+
 ## Key Activities
 
 - [ ] Analyze requirements and define testing scope.

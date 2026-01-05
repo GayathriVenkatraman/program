@@ -16,42 +16,44 @@ Total: 15 weeks
 
 ## Learning goals overview
 
-<!-- To update this section, use "npm run generate:learning-goals Foundation" -->
+<!-- To update this section, use "npm run generate:learning-goals "Quality Assurance" -->
 <!-- prettier-ignore-start -->
 <!-- BEGIN generate:learning-goals -->
 
-### [Basics Of Testing](/courses/qa/basics-of-testing)
+### [Basics of Testing](/courses/qa/basics-of-testing)
 
-- [ ] Introduction to QA and Software Development
-- [ ] Testing Fundamentals
-- [ ] Understand Bug lifecycle and Defect Reporting
-- [ ] Understand Test Design Basics
-- [ ] Spend a lot of time with hands-on practice
-- [ ] Learn to work efficiently with your team members
+- [ ] Understand what QA is and why it matters
+- [ ] Learn SDLC models (Waterfall vs Agile) and QA’s role in them
+- [ ] Explore functional vs non-functional testing and levels of testing
+- [ ] Understand defect life cycle, severity vs priority, and how to report bugs
+- [ ] Get familiar with JIRA for defect tracking
+- [ ] Learn test case design and techniques like Equivalence Partitioning & Boundary Value Analysis
+- [ ] Practice writing clear bug reports and effective test cases
 
 ### [Test Automation](/courses/qa/test-automation)
 
-- [ ] Web Testing with DevTools
-- [ ] Practice using Network tabs, inspect elements, console using Browser DevTools
-- [ ] Introduction to Test Automation with playwright
-- [ ] Successfully install and configure Playwright
-- [ ] Build automation structure and Page Object Model
-- [ ] Learn about Accessibility Testing Fundamentals & Playwright
-- [ ] Understand the Performance & Modern Tooling (Lighthouse)
+- [ ] Understand web application architecture and common testing challenges.
+- [ ] Perform cross-browser and responsive design testing.
+- [ ] Learn UI automation fundamentals using modern tools (e.g., Selenium or Playwright).
+- [ ] Implement advanced automation practices like Page Object Model and CI/CD integration.
+- [ ] Conduct accessibility testing using tools like Axe or Lighthouse.
+- [ ] Perform basic performance testing and interpret key metrics.
+- [ ] Apply best practices for maintaining automated test suites.
 
 ### [Test Management](/courses/qa/test-management)
 
-- [ ] Understand about Test Planning, Strategy and defining test scope
-- [ ] Know what is Agile Principles, Acceptance Criteria
-- [ ] Write detailed manual test cases based on ACs
-- [ ] Understand QA metrics for a feature
-- [ ] Reporting and communication of QA status
-- [ ] Demo Project Preparation
+- [ ] Understand the purpose and structure of a Test Plan and Test Strategy.
+- [ ] Define scope, objectives, risks, and environments for testing.
+- [ ] Apply practical test case management (grouping, linking, status updates).
+- [ ] Implement requirement traceability (requirements → test cases → bugs).
+- [ ] Understand Agile principles, Scrum roles, artifacts, and ceremonies.
+- [ ] Analyze User Stories and Acceptance Criteria to create effective test cases.
+- [ ] Track QA progress and communicate status effectively using QA metrics.
+- [ ] Prepare for a demo project by planning scope and team responsibilities.
 
 ### [Final Demo Project](/courses/qa/final-demo-project)
 
-- [ ] Final Demo Project
-- [ ] Key Deliverables - QA Summary Report, Team Presentation
+- [ ] Todo
 
 ### [Career Training](/courses/qa/career-training)
 
@@ -63,5 +65,6 @@ Total: 15 weeks
 - [ ] Know how to make your LinkedIn page attractive to recruiters.
 - [ ] Learn how to perform well in a screening interview.
 - [ ] How to handle Job Rejection and Job Anxiety
-- [ ] Managing your own tasks within a tight deadline
-- [ ] Understanding how and when to ask for help at the right time
+
+<!-- END generate:learning-goals -->
+<!-- prettier-ignore-end -->

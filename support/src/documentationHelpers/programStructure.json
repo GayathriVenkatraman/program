@@ -121,6 +121,32 @@
           "location": "courses/frontend/final-project"
         }
       ]
+    },
+    {
+      "name": "Quality Assurance",
+      "location": "courses/qa",
+      "modules": [
+        {
+          "name": "Basics of Testing",
+          "location": "courses/qa/basics-of-testing"
+        },
+        {
+          "name": "Test Automation",
+          "location": "courses/qa/test-automation"
+        },
+        {
+          "name": "Test Management",
+          "location": "courses/qa/test-management"
+        },
+        {
+          "name": "Final Demo Project",
+          "location": "courses/qa/final-demo-project"
+        },
+        {
+          "name": "Career Training",
+          "location": "courses/qa/career-training"
+        }
+      ]
     }
   ]
 }
