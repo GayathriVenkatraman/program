@@ -131,13 +131,13 @@ Use AI to help you uncover the bug in the [Exercise 5]() code, understand why it
 
 TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/04-bug-fixing.py)
 
-#### Implementation - Documentation generation
+### Implementation - Documentation generation
 
 AI is not only useful in generating code, but also documentation. 
 
 TODO add some prompting examples here
 
-##### Exercise 6
+#### Exercise 6
 
 Use AI to draw a diagram to explain how the code in [Exercise 6]() works. Confirm that it is correct, and fix any mistakes.
 
