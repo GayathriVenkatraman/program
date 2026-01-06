@@ -88,7 +88,9 @@ TODO add some prompting examples here, as well as good follow up prompts
 
 #### Exercise 2
 
-Use AI to help explain the code in Exercise 2. Ask follow up questions until you have a good grasp of what every function and line of code is achieving.
+Use AI to help explain the code in [Exercise 2](). Ask follow up questions until you have a good grasp of what every function and line of code is achieving.
+
+TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/01-code-explanation.py)
 
 ### Implementation - Learning new approaches
 While writing code, you may come across a roadblock where you're not entirely sure how to implement something. 
@@ -97,7 +99,9 @@ TODO add some prompting examples here
 
 #### Exercise 3
 
-Use AI to give you some suggestions on possible solutions to Exercise 3.
+Use AI to give you some suggestions on possible solutions to [Exercise 3]().
+
+TODO write the exercise and supporting code
 
 ### Implementation - Code refactoring
 
@@ -107,7 +111,9 @@ TODO add some prompting examples here
 
 #### Exercise 4
 
-Use AI to help you refactor the code in Exercise 4.
+Use AI to help you refactor the code in [Exercise 4]().
+
+TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/03-code-refactoring.ts)
 
 ### Implementation - Bug fixing
 
@@ -117,7 +123,9 @@ TODO add some prompting examples here
 
 #### Exercise 5
 
-Use AI to help you uncover the bug in the Exercise 5 code, understand why it's happening, and fix it.
+Use AI to help you uncover the bug in the [Exercise 5]() code, understand why it's happening, and fix it.
+
+TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/04-bug-fixing.py)
 
 #### Implementation - Documentation generation
 
@@ -127,7 +135,9 @@ TODO add some prompting examples here
 
 ##### Exercise 6
 
-Use AI to draw a diagram to explain how the code in Exercise 6 works. Confirm that it is correct, and fix any mistakes.
+Use AI to draw a diagram to explain how the code in [Exercise 6]() works. Confirm that it is correct, and fix any mistakes.
+
+TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/05-document-generation.py)
 
 ### Code review - Feedback assistance
 
@@ -137,7 +147,9 @@ TODO add some prompting examples here
 
 #### Exercise 7
 
-Use AI to get some structured feedback on improving the code in Exercise 7, and make the changes.
+Use AI to get some structured feedback on improving the code in [Exercise 7](), and make the changes.
+
+TODO write the exercise and supporting code
 
 ## AI in the workplace
 
