@@ -13,10 +13,10 @@
 7. Deployment - Shipping it to users
 8. Monitoring - Making sure things keep working as intended
 
-After the overview, go through some specific phases to highlight key ways AI can support them. Of course there are many possiblilities in every phase (and we should encourage trainees to explore them themselves!), but the below are mostly aimed to inspire and give some concrete examples that trainees can start using today.
+After the overview, go through some specific phases to highlight key ways AI can support them. Of course there are many possiblilities in every phase (and we should encourage trainees to explore them themselves!), but the below are mostly aimed to inspire and give some concrete examples in a few of the phases that trainees can start using today.
 
-### 0. Personal development
-#### Learning
+### Personal development - Learning
+
 Outside of HYF or work, spending time learning and practicing new development skills is important. This could be learning new programming languages, frameworks, tools or concepts.
 
 Here's some examples:
@@ -66,7 +66,7 @@ For each week, include:
 4. How this new thing differs from what I already know
 ```
 
-##### Exericse 1
+#### Exericse 1
 
 Use each of the three prompts above using your own personal learning goals, and evaluate what you like and don't like about the output of the AI. Bonus: Try tweaking a prompt template to shape the output more to your own personal needs.
 
@@ -81,36 +81,63 @@ If AI writes code you can’t explain:
 That is the moment where learning happens, so don't miss out by skipping ahead!
 {% endhint %}
 
-### 3. Design
-#### Code explanation
-While preparing the ideas for a solution, you likely need to understand existing code.
+### Design - Code explanation
+While preparing ideas for a particular solution in the Design phase, you'll likely come across the challenge of needing to understand existing code.
 
 TODO add some prompting examples here, as well as good follow up prompts
 
-##### Exercise 2
+#### Exercise 2
 
-Get AI to help explain the code in Exercise 2. Ask follow up questions until you have a good grasp of what every function and line of code is achieving.
+Use AI to help explain the code in Exercise 2. Ask follow up questions until you have a good grasp of what every function and line of code is achieving.
 
-### 4. Implementation
-#### Learning new approaches
-##### Exercise 3
+### Implementation - Learning new approaches
+While writing code, you may come across a roadblock where you're not entirely sure how to implement something. 
 
-#### Code refactoring
-##### Exercise 4
+TODO add some prompting examples here
 
-#### Bug fixing
-##### Exercise 5
+#### Exercise 3
 
-#### Documentation generation
+Use AI to give you some suggestions on possible solutions to Exercise 3.
+
+### Implementation - Code refactoring
+
+After you write a solution, you may wonder if there's a neater or better way to structure the code.
+
+TODO add some prompting examples here
+
+#### Exercise 4
+
+Use AI to help you refactor the code in Exercise 4.
+
+### Implementation - Bug fixing
+
+Before your solution is finished, you'll need to make sure it's bug free.
+
+TODO add some prompting examples here
+
+#### Exercise 5
+
+Use AI to help you uncover the bug in the Exercise 5 code, understand why it's happening, and fix it.
+
+#### Implementation - Documentation generation
+
+AI is not only useful in generating code, but also documentation. 
+
+TODO add some prompting examples here
+
 ##### Exercise 6
-Exercise 3: Learning new approaches
-Exercise 4: Code refactoring
-Exercise 5: Bug fixing
-Exercise 6: Documentation generation
 
-### 6. Code review
-Exercise 7: Code review assistance
+Use AI to draw a diagram to explain how the code in Exercise 6 works. Confirm that it is correct, and fix any mistakes.
 
+### Code review - Feedback assistance
+
+When your code is ready, it will be time for getting feedback from other developers. Before you do that, save some time and get some initial feedback from AI on improving your code.
+
+TODO add some prompting examples here
+
+#### Exercise 7
+
+Use AI to get some structured feedback on improving the code in Exercise 7, and make the changes.
 
 ## AI in the workplace
 
@@ -133,13 +160,13 @@ We don't know the future for sure, that's what makes it exciting. There are some
 #### Tips
 
 1. Stay in the loop of AI developments
-- Follow key organisations in the space (OpenAI, Anthropic, Microsoft/Github, Google/Gemini)
-- Join in conversations with other developers online and offline to see what they're experiencing
-- Follow AI related news
+    - Follow key organisations in the space (OpenAI, Anthropic, Microsoft/Github, Google/Gemini)
+    - Join in conversations with other developers online and offline to see what they're experiencing
+    - Follow AI related news
 
 2. Learn and practice with new tools/features
-- Try out new AI features and capabilities as they are released
-- Use AI tools in your real projects to practice
+    - Try out new AI features and capabilities as they are released
+    - Use AI tools in your real projects to practice
 
 3. Integrate useful parts into your own workflow
-- Whatever you find works well, integrate it into your own daily working practices
+    - Whatever you find works well, integrate it into your own daily working practices
