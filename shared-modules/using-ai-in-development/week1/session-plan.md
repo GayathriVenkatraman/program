@@ -25,7 +25,7 @@ Outside of HYF or work, spending time learning and practicing new development sk
 
 Here's some examples:
 
-1. "Explaining by comparison" prompt
+#### 1. "Explaining by comparison" prompt
 
 Learn quickly by mapping new knowledge to things you already understand.
 
@@ -40,7 +40,7 @@ Show me how to write the same functionality in <new language> and explain:
 3. What would surprise a developer coming from <language I already know>
 ```
 
-2. The "Code Tutor" prompt
+#### 2. The "Code Tutor" prompt
 
 Learn a new language/framework/tool through practice, and getting feedback to improve.
 
@@ -56,7 +56,7 @@ Review this as if I were a junior developer:
 4. Create a mini summary of why I should study next, based on my weaknesses and mistakes
 ```
 
-3. The "Learning plan" prompt
+#### 3. The "Learning plan" prompt
 
 If you have a big topic ahead of you, get help to create a learning path to help you stay on track and avoid becoming overwhelemed.
 
