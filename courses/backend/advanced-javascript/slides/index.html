@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced JavaScript - Introduction</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css"
+    />
+    <style>
+      :root {
+        --r-background-color: #1a1a2e;
+        --r-main-color: #eee;
+        --r-heading-color: #16c79a;
+        --r-link-color: #16c79a;
+      }
+      .reveal h1,
+      .reveal h2,
+      .reveal h3 {
+        text-transform: none;
+      }
+      .reveal pre {
+        font-size: 0.55em;
+        width: 100%;
+      }
+      .reveal table {
+        font-size: 0.7em;
+      }
+      .reveal .highlight {
+        color: #16c79a;
+      }
+      .reveal .dim {
+        color: #888;
+      }
+      .reveal blockquote {
+        background: rgba(22, 199, 154, 0.1);
+        border-left: 4px solid #16c79a;
+        padding: 1em;
+        font-style: normal;
+        width: 90%;
+      }
+      .reveal .emoji {
+        font-size: 3em;
+      }
+      .reveal .small {
+        font-size: 0.6em;
+      }
+      .layers-diagram {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        font-size: 1.5em;
+        margin: 1em 0;
+      }
+      .layers-diagram .arrow {
+        color: #16c79a;
+      }
+      .layer-box {
+        padding: 0.5em 1em;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .layer-box.active {
+        background: rgba(22, 199, 154, 0.3);
+        border: 2px solid #16c79a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Title Slide -->
+        <section>
+          <h1>Advanced JavaScript</h1>
+          <p>From visual output to data pipelines</p>
+          <p class="dim small">Your journey into backend development</p>
+        </section>
+
+        <!-- Section: Welcome to Backend -->
+        <section>
+          <section>
+            <h2>Welcome to Backend Development</h2>
+            <p class="emoji">&#127861;</p>
+          </section>
+
+          <section>
+            <h3>Frontend vs Backend</h3>
+            <p><span class="highlight">Frontend:</span> Write code, refresh browser, see buttons and colors</p>
+            <p><span class="highlight">Backend:</span> Write code, run it... see text in a terminal</p>
+            <p class=" dim">Where did my pixels go?</p>
+          </section>
+
+          <section>
+            <h3>Here's the thing...</h3>
+            <p>Terminals existed <em>before</em> graphical interfaces</p>
+            <p>The command line isn't a step backward</p>
+            <p><span class="highlight">It's where serious computing has always happened</span></p>
+          </section>
+
+          <section>
+            <h3>Get comfortable with it</h3>
+            <pre><code class="language-bash">$ node index.js
+Server running on port 3000
+GET /api/teas - 200 OK (12ms)
+GET /api/teas/42 - 200 OK (3ms)
+POST /api/orders - 201 Created (45ms)</code></pre>
+            <p>This is your new feedback loop</p>
+          </section>
+        </section>
+
+        <!-- Section: What does a backend do? -->
+        <section>
+          <section>
+            <h2>What Does a Backend Actually Do?</h2>
+          </section>
+
+          <section>
+            <h3>Think about Instagram</h3>
+            <p>You open the app...</p>
+            <p>Do you download all 500 million posts?</p>
+            <p class=" highlight">Of course not.</p>
+          </section>
+
+          <section>
+            <h3>Instead, your app asks:</h3>
+            <blockquote>
+              "Give me the next 10 posts for this user"
+            </blockquote>
+            <p>That's a backend call.</p>
+          </section>
+
+          <section>
+            <h3>The Backend...</h3>
+            <ol>
+              <li>Receives the request</li>
+              <li>Checks if you're <em>allowed</em> to see those posts</li>
+              <li>Queries the database for the right 10</li>
+              <li>Formats them for the app</li>
+              <li>Sends back <em>just that slice</em></li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>Backend Output</h3>
+            <p style="font-size: 1.3em;">
+              <span class="highlight">Consumable slices</span> of data<br />in a <span class="highlight">structured manner</span>
+            </p>
+          </section>
+        </section>
+
+        <!-- Section: What is Data? -->
+        <section>
+          <section>
+            <h2>What is Data?</h2>
+            <p>Before we manipulate it, let's understand it</p>
+          </section>
+
+          <section>
+            <h3>Data is structured information</h3>
+            <p>The <em>same</em> information can look different</p>
+            <p>Let's look at 3 teas from our tea shop...</p>
+          </section>
+
+          <section>
+            <h3>As a Table</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>name</th>
+                  <th>origin</th>
+                  <th>pricePerGram</th>
+                  <th>organic</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Sencha</td>
+                  <td>Japan</td>
+                  <td>0.12</td>
+                  <td>true</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Earl Grey</td>
+                  <td>India</td>
+                  <td>0.08</td>
+                  <td>false</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Dragon Well</td>
+                  <td>China</td>
+                  <td>0.25</td>
+                  <td>true</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class=" small">Familiar. Easy to read. Not great for computers.</p>
+          </section>
+
+          <section>
+            <h3>As CSV</h3>
+            <pre><code class="language-plaintext">id,name,origin,pricePerGram,organic
+1,Sencha,Japan,0.12,true
+2,Earl Grey,India,0.08,false
+3,Dragon Well,China,0.25,true</code></pre>
+            <p class=" small">Compact. Good for spreadsheets and imports.</p>
+          </section>
+
+          <section>
+            <h3>As JSON</h3>
+            <pre><code class="language-json">[
+  { "id": 1, "name": "Sencha", "origin": "Japan", "pricePerGram": 0.12, "organic": true },
+  { "id": 2, "name": "Earl Grey", "origin": "India", "pricePerGram": 0.08, "organic": false },
+  { "id": 3, "name": "Dragon Well", "origin": "China", "pricePerGram": 0.25, "organic": true }
+]</code></pre>
+            <p class=" small">JavaScript's native format. This is what we'll use.</p>
+          </section>
+
+          <section>
+            <h3>As JSONL (JSON Lines)</h3>
+            <pre><code class="language-json">{"id":1,"name":"Sencha","origin":"Japan","pricePerGram":0.12,"organic":true}
+{"id":2,"name":"Earl Grey","origin":"India","pricePerGram":0.08,"organic":false}
+{"id":3,"name":"Dragon Well","origin":"China","pricePerGram":0.25,"organic":true}</code></pre>
+            <p class=" small">One object per line. Great for streaming large datasets.</p>
+          </section>
+
+          <section>
+            <h3>Same Data, Different Formats</h3>
+            <p>The information is identical</p>
+            <p>Only the <span class="highlight">representation</span> changes</p>
+            <p class=" dim">We'll primarily work with JSON</p>
+          </section>
+        </section>
+
+        <!-- Section: Three Layers -->
+        <section>
+          <section>
+            <h2>The Three Layers</h2>
+            <div class="layers-diagram">
+              <div class="layer-box">Data</div>
+              <span class="arrow">&rarr;</span>
+              <div class="layer-box">Logic</div>
+              <span class="arrow">&rarr;</span>
+              <div class="layer-box">Rendering</div>
+            </div>
+          </section>
+
+          <section>
+            <h3>Data Layer</h3>
+            <div class="layers-diagram">
+              <div class="layer-box active">Data</div>
+              <span class="arrow">&rarr;</span>
+              <div class="layer-box">Logic</div>
+              <span class="arrow">&rarr;</span>
+              <div class="layer-box">Rendering</div>
+            </div>
+            <p>The <span class="highlight">raw truth</span></p>
+            <p class="dim">Databases, files, external services</p>
+            <p>Where information lives</p>
+          </section>
+
+          <section>
+            <h3>Logic Layer</h3>
+            <div class="layers-diagram">
+              <div class="layer-box">Data</div>
+              <span class="arrow">&rarr;</span>
+              <div class="layer-box active">Logic</div>
+              <span class="arrow">&rarr;</span>
+              <div class="layer-box">Rendering</div>
+            </div>
+            <p>The <span class="highlight">brain</span></p>
+            <p class="dim">What to fetch, who's allowed, how to transform</p>
+            <p style="font-size: 1.3em;">This is where backends live.</p>
+          </section>
+
+          <section>
+            <h3>Rendering Layer</h3>
+            <div class="layers-diagram">
+              <div class="layer-box">Data</div>
+              <span class="arrow">&rarr;</span>
+              <div class="layer-box">Logic</div>
+              <span class="arrow">&rarr;</span>
+              <div class="layer-box active">Rendering</div>
+            </div>
+            <p>The <span class="highlight">face</span></p>
+            <p class="dim">HTML, mobile UI, PDF</p>
+            <p>Whatever users actually see</p>
+          </section>
+
+          <section>
+            <h3>Example: "Show me organic teas"</h3>
+            <p>User clicks "Organic only" on the tea shop</p>
+          </section>
+
+          <section>
+            <h3>The Flow</h3>
+            <ol>
+              <li><strong>Rendering</strong> sends filter choice to server</li>
+              <li><strong>Logic</strong> receives request, queries database</li>
+              <li><strong>Data</strong> returns matching teas</li>
+              <li><strong>Logic</strong> transforms to the shape frontend expects</li>
+              <li><strong>Rendering</strong> displays tea cards</li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>The Backend's Role</h3>
+            <p>Sits in the middle</p>
+            <p class="highlight">Orchestrating the flow between stored data and user-facing output</p>
+          </section>
+        </section>
+
+        <!-- Section: The Tea Shop -->
+        <section>
+          <section>
+            <h2>Our Example: The Tea Shop</h2>
+            <p class="emoji">&#127861;</p>
+          </section>
+
+          <section>
+            <h3>Same Context, 4 Weeks</h3>
+            <p>You're building a backend for a tea e-commerce site</p>
+          </section>
+
+          <section>
+            <h3>Our Data</h3>
+            <ul>
+              <li><strong>Teas</strong> - varieties, origins, prices, brewing instructions</li>
+              <li><strong>Equipment</strong> - teapots, cups, infusers</li>
+              <li><strong>Orders</strong> - customer purchases</li>
+              <li><strong>Customers</strong> - people who buy</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Not Abstract Exercises</h3>
+            <p>You're solving problems a real backend would solve</p>
+            <p class="highlight">Same tea shop, growing complexity, 4 weeks</p>
+          </section>
+        </section>
+
+        <!-- Section: Course Overview -->
+        <section>
+          <section>
+            <h2>The Next 4 Weeks</h2>
+          </section>
+
+          <section>
+            <h3>Week 1: Array Methods</h3>
+            <p class="dim">The application layer's daily bread</p>
+            <p>filter, map, reduce</p>
+            <p>Transform data between "as stored" and "as served"</p>
+          </section>
+
+          <section>
+            <h3>Week 1: Real Example</h3>
+            <blockquote>
+              You search for "green tea". Database returns 200 matches. But you only want organic ones, sorted by price, showing just name and price.
+            </blockquote>
+            <p><code>filter</code> &rarr; <code>sort</code> &rarr; <code>map</code></p>
+            <p class="dim">Three lines of code. Happens on every request.</p>
+          </section>
+
+          <section>
+            <h3>Week 2: Callbacks & Async</h3>
+            <p class="dim">Why backends can't run top-to-bottom</p>
+            <p>Databases are slow. Networks are slow.</p>
+            <p class="highlight">"Do this slow thing, here's what to do when you're done"</p>
+          </section>
+
+          <section>
+            <h3>Week 2: Real Example</h3>
+            <blockquote>
+              A cafe orders 50 teas. Check inventory, calculate shipping, charge card, send email. If each step takes 500ms and you wait frozen... that's 2 seconds. Meanwhile 100 other customers can't browse.
+            </blockquote>
+            <p>Callbacks let you handle other requests while waiting</p>
+          </section>
+
+          <section>
+            <h3>Week 3: Promises & APIs</h3>
+            <p class="dim">Speaking to other services</p>
+            <p>Backends rarely work alone</p>
+            <p class="highlight">Payment providers, email services, external APIs</p>
+          </section>
+
+          <section>
+            <h3>Week 3: Real Example</h3>
+            <blockquote>
+              Customer checks out. Call Stripe for payment, PostNord for shipping, inventory service to reserve stock. Three external calls, any could fail.
+            </blockquote>
+            <p>"Do all three, if any fails, handle it gracefully"</p>
+            <p class="dim">Try writing that with nested callbacks...</p>
+          </section>
+
+          <section>
+            <h3>Week 4: Classes</h3>
+            <p class="dim">Modeling your domain</p>
+            <p>A tea isn't just a floating object</p>
+            <p class="highlight">It has behaviors: validate itself, calculate weight, check stock</p>
+          </section>
+
+          <section>
+            <h3>Week 4: Real Example</h3>
+            <blockquote>
+              Every time you handle a tea: Is price valid? Stock above zero? Steep time reasonable? You write these checks 50 times across your codebase.
+            </blockquote>
+            <p>With a <code>Tea</code> class, you write them once</p>
+            <p class="dim">The logic lives with the data it protects</p>
+          </section>
+        </section>
+
+        <!-- Final Slide -->
+        <section>
+          <h2>Let's Begin</h2>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        plugins: [RevealHighlight, RevealNotes],
+        // Presentation settings
+        width: 1280,
+        height: 720,
+        margin: 0.1,
+        // Transition
+        transition: "slide",
+        // Controls
+        controls: true,
+        progress: true,
+        center: true,
+      });
+    </script>
+  </body>
+</html>
