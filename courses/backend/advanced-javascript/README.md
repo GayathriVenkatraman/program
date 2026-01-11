@@ -12,7 +12,7 @@ We'll build on a single example throughout: a **tea shop e-commerce** system. Th
 
 Frontend development is visual. You write code, refresh the browser, and see buttons, colors, and layouts. The feedback loop is immediate and satisfying.
 
-Backend development is different. There's no visual output. Your code runs on a server somewhere, processing requests, querying databases, and returning data. The output isn't pixels on a screen—it's structured data sent over a network.
+Backend development is different. There's no visual output. Your code runs on a server somewhere, processing requests, querying databases, and returning data. The output isn't pixels on a screen - it's structured data sent over a network.
 
 This can feel abstract at first. But here's the thing: **terminals existed before graphical interfaces**. The command line isn't a step backward - it's where serious computing has always happened. Get comfortable with it.
 
@@ -86,7 +86,7 @@ Data → Logic → Rendering
 
 - **Data Layer:** The raw truth. Databases, files, external services. This is where information lives.
 - **Logic Layer:** The brain. What to fetch, who's allowed, how to transform. **This is where backends live.**
-- **Rendering Layer:** The face. HTML, mobile UI, PDF—whatever users actually see.
+- **Rendering Layer:** The face. HTML, mobile UI, PDF - whatever users actually see.
 
 ### Example: Filtering Teas
 
@@ -113,25 +113,25 @@ The backend sits in the middle, orchestrating the flow between stored data and u
 
 Each week builds on the previous. By the end, you'll have the JavaScript fundamentals needed to build real backend systems.
 
-### Week 1: Array Methods — The application layer's daily bread
+### Week 1: Array Methods - The application layer's daily bread
 
 The database gives you raw rows. You filter out unauthorized items, map to a cleaner shape, reduce to calculate totals. This is the transformation step between "data as stored" and "data as served."
 
-> You search for "green tea" on a tea shop. The database returns 200 matches. But you only want organic ones, sorted by price, showing just name and price—not the 15 other fields stored internally. That's `filter`, then `sort`, then `map`. Three lines of code, happens on every single request.
+> You search for "green tea" on a tea shop. The database returns 200 matches. But you only want organic ones, sorted by price, showing just name and price - not the 15 other fields stored internally. That's `filter`, then `sort`, then `map`. Three lines of code, happens on every single request.
 
-### Week 2: Callbacks & Async — Why backends can't run top-to-bottom
+### Week 2: Callbacks & Async - Why backends can't run top-to-bottom
 
 Databases are slow. File systems are slow. Network calls are slow. Callbacks are how JavaScript says "go do this slow thing, and here's what to do when you're done."
 
 > A café orders 50 teas from your shop. Your backend needs to: check inventory, calculate shipping, charge their card, send confirmation email. If each step took 500ms and you waited frozen, that's 2 seconds. Meanwhile 100 other customers are trying to browse. Callbacks let you say "start charging the card, and while you wait, go handle those other customers."
 
-### Week 3: Promises & API Consumption — Speaking to other services
+### Week 3: Promises & API Consumption - Speaking to other services
 
 Real backends rarely work alone. They call databases, payment providers, email services, other APIs. Promises manage these conversations cleanly with proper error handling.
 
-> Customer wants to checkout. Your backend calls Stripe for payment, calls PostNord for shipping rates, calls your inventory service to reserve stock. Three external calls, any could fail. Promises let you say "do all three, wait for all to succeed, and if any fails, here's how to handle it." Try writing that with nested callbacks—you'll see why promises exist.
+> Customer wants to checkout. Your backend calls Stripe for payment, calls PostNord for shipping rates, calls your inventory service to reserve stock. Three external calls, any could fail. Promises let you say "do all three, wait for all to succeed, and if any fails, here's how to handle it." Try writing that with nested callbacks - you'll see why promises exist.
 
-### Week 4: Classes — Modeling your domain
+### Week 4: Classes - Modeling your domain
 
 A tea isn't just a JavaScript object floating around. It has behaviors: validate itself, calculate shipping weight, check stock. Classes model your business domain.
 
@@ -148,7 +148,7 @@ Throughout this course, we'll work with data from a fictional tea shop. You'll e
 - **Orders**: Customer purchases with items and totals
 - **Customers**: People who buy from the shop
 
-This consistent context means you're not learning abstract concepts in isolation—you're solving real problems a real backend would need to solve.
+This consistent context means you're not learning abstract concepts in isolation - you're solving real problems a real backend would need to solve.
 
 ---
 
