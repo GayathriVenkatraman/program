@@ -9,3 +9,16 @@ In this class, trainees will learn how to use [React](https://react.dev/) to bui
 | 3.   | [Hooks and Fetching Data](./week3/README.md)        | [Preparation](./week3/preparation.md) | [Assignment](./week3/assignment.md) | [Session plan](./week3/session-plan.md) |
 | 4.   | [Context, Routing & Libraries](./week4/README.md)   | [Preparation](./week4/preparation.md) | [Assignment](./week4/assignment.md) | [Session plan](./week4/session-plan.md) |
 | 5.   | [Hello Next.js & Vercel](./week5/README.md)         | [Preparation](./week5/preparation.md) | [Assignment](./week5/assignment.md) | [Session plan](./week5/session-plan.md) |
+
+# Module Learning Goals
+
+By the end of this module, you will be able to:
+
+- [ ] Understand when and why to use React to build modern web applications
+- [ ] Build user interfaces using reusable, component-based architecture
+- [] Manage data and interactivity using props, state, and hooks
+- [ ] Handle user input, forms, and events in React applications
+- [ ] Load and display data from external APIs
+- [ ] Structure complex, multi-page applications with routing and shared state
+- [ ] Understand what a Component Library is, along with the pros and cons
+- [ ] Build, deploy, and share a production-ready React app using Next.js
