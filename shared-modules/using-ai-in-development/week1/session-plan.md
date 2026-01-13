@@ -103,7 +103,7 @@ TODO add some prompting examples here
 
 #### Exercise 3
 
-Use AI to give you some suggestions on possible solutions to [Exercise 3]().
+Use AI to give you some suggestions on possible solutions to [Exercise 3](TODO create and insert link here).
 
 TODO write the exercise and supporting code
 
@@ -115,7 +115,7 @@ TODO add some prompting examples here
 
 #### Exercise 4
 
-Use AI to help you refactor the code in [Exercise 4]().
+Use AI to help you refactor the code in [Exercise 4](TODO create and insert link here).
 
 TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/03-code-refactoring.ts)
 
@@ -127,7 +127,7 @@ TODO add some prompting examples here
 
 #### Exercise 5
 
-Use AI to help you uncover the bug in the [Exercise 5]() code, understand why it's happening, and fix it.
+Use AI to help you uncover the bug in the [Exercise 5](TODO create and insert link here) code, understand why it's happening, and fix it.
 
 TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/04-bug-fixing.py)
 
@@ -139,7 +139,7 @@ TODO add some prompting examples here
 
 #### Exercise 6
 
-Use AI to draw a diagram to explain how the code in [Exercise 6]() works. Confirm that it is correct, and fix any mistakes.
+Use AI to draw a diagram to explain how the code in [Exercise 6](TODO create and insert link here) works. Confirm that it is correct, and fix any mistakes.
 
 TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/05-document-generation.py)
 
@@ -151,7 +151,7 @@ TODO add some prompting examples here
 
 #### Exercise 7
 
-Use AI to get some structured feedback on improving the code in [Exercise 7](), and make the changes.
+Use AI to get some structured feedback on improving the code in [Exercise 7](TODO create and insert link here), and make the changes.
 
 TODO write the exercise and supporting code
 
