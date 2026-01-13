@@ -7,6 +7,7 @@ Start by giving a brief overview of a usual workflow, and then dive into specifi
 ## AI in the development workflow
 
 ### Workflow overview
+
 0. Personal development - Reading, learning, practicing new software development skills
 1. Problem definition - Understanding what we're trying to solve
 2. Planning - Deciding what to build
@@ -78,14 +79,15 @@ Use each of the three prompts above using your own personal learning goals, and 
 **Top tip**
 If AI writes code you can’t explain:
 
-* Slow down
-* Ask why
-* Rewrite it yourself until you understand
+- Slow down
+- Ask why
+- Rewrite it yourself until you understand
 
 That is the moment where learning happens, so don't miss out by skipping ahead!
 {% endhint %}
 
 ### Design - Code explanation
+
 While preparing ideas for a particular solution in the Design phase, you'll likely come across the challenge of needing to understand existing code.
 
 TODO add some prompting examples here, as well as good follow up prompts
@@ -97,6 +99,7 @@ Use AI to help explain the code in [Exercise 2](TODO create and insert link here
 TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/01-code-explanation.py)
 
 ### Implementation - Learning new approaches
+
 While writing code, you may come across a roadblock where you're not entirely sure how to implement something.
 
 TODO add some prompting examples here
@@ -184,13 +187,13 @@ We don't know the future for sure, that's what makes it exciting. There are some
 #### Tips
 
 1. Stay in the loop of AI developments
-    * Follow key organisations in the space (OpenAI, Anthropic, Microsoft/Github, Google/Gemini)
-    * Join in conversations with other developers online and offline to see what they're experiencing
-    * Follow AI related news
+   - Follow key organisations in the space (OpenAI, Anthropic, Microsoft/Github, Google/Gemini)
+   - Join in conversations with other developers online and offline to see what they're experiencing
+   - Follow AI related news
 
 2. Learn and practice with new tools/features
-    * Try out new AI features and capabilities as they are released
-    * Use AI tools in your real projects to practice
+   - Try out new AI features and capabilities as they are released
+   - Use AI tools in your real projects to practice
 
 3. Integrate useful parts into your own workflow
-    * Whatever you find works well, integrate it into your own daily working practices
+   - Whatever you find works well, integrate it into your own daily working practices
