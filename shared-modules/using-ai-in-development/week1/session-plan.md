@@ -2,7 +2,7 @@
 
 The idea behind this session is to teach how AI can be used in the day-to-day development workflows of a developer.
 
-Start by giving a brief overview of a usual workflow, and then dive into specific parts of it and how AI can help there, with specific prompts and exercises to practice.
+Start by giving a brief overview of a usual workflow, and then dive into specific parts of it and how AI can help there, with specific prompts and exercises to practice. The suggestion is that mentors talk through specific use cases, and demo the prompts in the session. The exercises are designed for the trainees to practice themselves on their own machines.
 
 ## AI in the development workflow
 
