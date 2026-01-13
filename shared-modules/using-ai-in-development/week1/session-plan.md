@@ -54,7 +54,7 @@ Review this as if I were a junior developer:
 1. Point out any issues, bugs or bad practices
 2. Suggest better practices or patterns
 3. Explain what each change means and why it matters
-4. Create a mini summary of why I should study next, based on my weaknesses and mistakes
+4. Create a mini summary of what I should study next, based on my weaknesses and mistakes
 ```
 
 #### 3. The "Learning plan" prompt
