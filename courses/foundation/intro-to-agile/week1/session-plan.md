@@ -37,6 +37,8 @@ You and your friends managed to save 15 undamaged items after the fire. You also
 
 **Your task:** Rank the 15 items in order of importance for your survival while waiting to be rescued.
 
+Use this link to order items: <https://lost-at-sea.netlify.app/>
+
 ### The 15 Items
 
 - A sextant
@@ -103,17 +105,12 @@ Interrupt loudly and urgently:
 
 ### Stage 3: Reveal Solution & Debrief (10 minutes)
 
-#### Reveal the Expert Rankings
+At this stage check the answers from the teams and compare it with the Expert ranking.
 
-**Navigate to:** [https://siderdk.github.io/lostAtSea/](https://siderdk.github.io/lostAtSea/)
-
-You can display this page for everyone to see. The webpage shows:
-
-- The expert rankings from the US Coast Guard
-- The reasoning for each ranking
-- Automatic score calculator
-
-If your score is lower than your team's you contributed to their survival, and vice versa :D
+1. Go to [Check answers per team](https://lost-at-sea.netlify.app/answer_check)
+2. Fill in number of teams
+3. Ask each team to provide their answers
+4. Check the results and show their chance to be found by rescue team :D
 
 #### Lead Discussion
 
