@@ -16,3 +16,12 @@ This specialism course is focused on setting you up to land a Backend Developer 
 | [Final project](./final-project/README.md)                                         | 5     |
 
 Total: 18 weeks
+
+## Learning Goals Overview
+
+<!-- To update this section, use "npm run generate:learning-goals Frontend" -->
+<!-- prettier-ignore-start -->
+<!-- BEGIN generate:learning-goals -->
+
+<!-- END generate:learning-goals -->
+<!-- prettier-ignore-end -->
