@@ -1,11 +1,16 @@
 # Backend Requirements
 
-## Technical Requirements
+This document describes all requirements that you _must_ complete as part of finishing your project. You are strongly encouraged to implement your own ideas to showcase the range of your technical abilities - now is the time to push yourself! Don't forget to implement the requirements below, first, though.
 
-These technical requirements are designed to showcase all the skills you've learned along the program.
+## Product Requirements
+
+Users must be able to:
 
 TODO
 
+## Technical Requirements
+
+TODO
 
 ## Organisational Requirements
 
@@ -19,6 +24,16 @@ TODO
 
 ## Deliverables
 
-These are all of the required items you need to deliver to complete the project.
+To submit your finished project, you will need:
 
-TODO
+- [ ] A deployed and working API accessible via a public URL
+- [ ] Deployed and viewable API docs describing all of your functionality
+- [ ] A PostMan collection and test script(s) to demo your API
+- [ ] Code versioned using git along with meaningful commit messages
+- [ ] Code pushed to a public GitHub repo on your profile
+- [ ] A README in the root of your repo including:
+    - [ ] A project description
+    - [ ] How to run it locally
+    - [ ] A link to your deployed API, docs and PostMan deliverables
+    - [ ] Key technical summary & decisions
+    - [ ] Known limitations & future improvements
