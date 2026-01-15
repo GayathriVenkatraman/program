@@ -32,8 +32,8 @@ To submit your finished project, you will need:
 - [ ] Code versioned using git along with meaningful commit messages
 - [ ] Code pushed to a public GitHub repo on your profile
 - [ ] A README in the root of your repo including:
-    - [ ] A project description
-    - [ ] How to run it locally
-    - [ ] A link to your deployed API, docs and PostMan deliverables
-    - [ ] Key technical summary & decisions
-    - [ ] Known limitations & future improvements
+  - [ ] A project description
+  - [ ] How to run it locally
+  - [ ] A link to your deployed API, docs and PostMan deliverables
+  - [ ] Key technical summary & decisions
+  - [ ] Known limitations & future improvements

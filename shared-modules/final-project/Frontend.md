@@ -19,26 +19,26 @@ Users must be able to:
 ## Technical Requirements
 
 - [ ] User mangement
-    - [ ] Basic access control (e.g. logged in and logged out users have appropriate access)
-    - [ ] Session management (e.g. to maintain user state during their use of the app)
+  - [ ] Basic access control (e.g. logged in and logged out users have appropriate access)
+  - [ ] Session management (e.g. to maintain user state during their use of the app)
 
 - [ ] Data
-    - [ ] Use 1 (or more) external APIs to support your apps dynamic features
-    - [ ] Store appropriate data persistently (e.g. via an API and/or local storage)
+  - [ ] Use 1 (or more) external APIs to support your apps dynamic features
+  - [ ] Store appropriate data persistently (e.g. via an API and/or local storage)
 
 - [ ] Security and error handling
-    - [ ] Input sanitisation - Ensure all user input is cleaned to prevent security vulnerabilities
-    - [ ] Form validation - Validate user input to make sure they fit appropriate criteria (e.g. strong passwords)
-    - [ ] Error handling - Sufficient handling of issues and errors to avoid the app breaking
+  - [ ] Input sanitisation - Ensure all user input is cleaned to prevent security vulnerabilities
+  - [ ] Form validation - Validate user input to make sure they fit appropriate criteria (e.g. strong passwords)
+  - [ ] Error handling - Sufficient handling of issues and errors to avoid the app breaking
 
 - [ ] Architecture
-    - [ ] Component-based architecture
-    - [ ] Handle routing of multiple pages with React Router
+  - [ ] Component-based architecture
+  - [ ] Handle routing of multiple pages with React Router
 
 - [ ] UX and Design
-    - [ ] Responsive design (e.g. a layout that adapts to different screen sizes graciously)
-    - [ ] Consistent styling approach (e.g. component-specific styles, CSS modules)
-    - [ ] Basic accessibility (e.g. semantic HTML, alt-text, keyboard navigation on forms)
+  - [ ] Responsive design (e.g. a layout that adapts to different screen sizes graciously)
+  - [ ] Consistent styling approach (e.g. component-specific styles, CSS modules)
+  - [ ] Basic accessibility (e.g. semantic HTML, alt-text, keyboard navigation on forms)
 
 ## Organisational Requirements
 
@@ -58,8 +58,8 @@ To submit your finished project, you will need:
 - [ ] Code versioned using git along with meaningful commit messages
 - [ ] Code pushed to a public GitHub repo on your profile
 - [ ] A README in the root of your repo including:
-    - [ ] A project description
-    - [ ] How to run it locally
-    - [ ] A link to your deployed app
-    - [ ] Key technical summary & decisions
-    - [ ] Known limitations & future improvements
+  - [ ] A project description
+  - [ ] How to run it locally
+  - [ ] A link to your deployed app
+  - [ ] Key technical summary & decisions
+  - [ ] Known limitations & future improvements

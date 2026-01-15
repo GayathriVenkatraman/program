@@ -1,4 +1,5 @@
 # Final Project
+
 This module contains information about the final module of the program, where you will take everything you have learned so far and work together as a team to build a final project together.
 
 This module usually runs for 4-5 weeks.
@@ -13,7 +14,7 @@ Alternatively, when possible, we can run them as:
 
 ## Learning Goals
 
-These goals are required regardless of how the final project is organised. 
+These goals are required regardless of how the final project is organised.
 
 By the end of this session, you will be able to:
 
@@ -25,7 +26,7 @@ By the end of this session, you will be able to:
 - [ ] Interpret a problem statement and specs/wireframes/prototypes into buildable requirements
 - [ ] Break down bigger problems into smaller, actionable written tasks
 - [ ] Work in iterative sprints and achieve deadlines
-- [ ] Ask for help effectively and at the right time (e.g. describing problems to mentors, asking online, and knowing the power *and* limitations of using AI)
+- [ ] Ask for help effectively and at the right time (e.g. describing problems to mentors, asking online, and knowing the power _and_ limitations of using AI)
 - [ ] Deploy a completed project you are proud to showcase on your portfolio
 
 ## Requirements
