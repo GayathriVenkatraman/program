@@ -16,7 +16,7 @@ By the end of this module, you will be able to:
 
 - [ ] Understand when and why to use React to build modern web applications
 - [ ] Build user interfaces using reusable, component-based architecture
-- [] Manage data and interactivity using props, state, and hooks
+- [ ] Manage data and interactivity using props, state, and hooks
 - [ ] Handle user input, forms, and events in React applications
 - [ ] Load and display data from external APIs
 - [ ] Structure complex, multi-page applications with routing and shared state
