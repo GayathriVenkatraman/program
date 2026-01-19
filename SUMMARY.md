@@ -121,6 +121,12 @@
       - [Session Plan](courses/frontend/react/week5/session-plan.md)
       - [Assignment](courses/frontend/react/week5/assignment.md)
   - [Final Frontend Project](courses/frontend/final-project/README.md)
+    - [Requirements](courses/frontend/final-project/frontend-requirements.md)
+    - [Session Plan](courses/frontend/final-project/session-plan.md)
+
+  - [Foundation Project](courses/foundation/final-project/README.md)
+    - [Project Brief](courses/foundation/final-project/project-brief.md)
+    - [Session Plan](courses/foundation/final-project/session-plan.md)
 
 - [Backend](courses/backend/README.md)
   - [Advanced JavaScript](courses/backend/advanced-javascript/README.md)
@@ -154,6 +160,8 @@
       - [Session Plan](courses/backend/node/week2/session-plan.md)
       - [Assignment](courses/backend/node/week2/assignment.md)
   - [Final Backend Project](courses/backend/final-project/README.md)
+    - [Requirements](courses/backend/final-project/backend-requirements.md)
+    - [Session Plan](courses/backend/final-project/session-plan.md)
 
 - [Common Modules](shared-modules/README.md)
   - [Collaboration via GitHub](shared-modules/collaboration-via-github/README.md)
@@ -172,9 +180,6 @@
       - [Session Plan](shared-modules/using-ai-in-development/week1/session-plan.md)
       - [Assignment](shared-modules/using-ai-in-development/week1/assignment.md)
   - [Specialist Career Training](shared-modules/specialist-career-training/README.md)
-  - [Specialism Final Projects](shared-modules/final-project/README.md)
-    - [Frontend Course Requirements](shared-modules/final-project/Frontend.md)
-    - [Backend Course Requirements](shared-modules/final-project/Backend.md)
 
 ## Guidelines
 
