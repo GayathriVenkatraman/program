@@ -2,8 +2,8 @@
 
 ## Session Materials
 
-- [Database Diagram](assets/database-diagram.jpg) - The diagram of the database to be created in this session
-- [Sample Tasks database](assets/tasks.sqlite3) - Pre-created SQLite database with the contents of [this SQL file](assets/session-data.sql)
+- [Database Diagram](session-materials/database-diagram.jpg) - The diagram of the database to be created in this session
+- [Sample Tasks database](session-materials/tasks.sqlite3) - Pre-created SQLite database with the contents of [this SQL file](session-materials/session-data.sql)
 
 ## Session Outline
 
@@ -132,7 +132,7 @@ The next step is creating a database to have a playground for learning SQL. Also
 6. Click **Test Connection** to verify everything works
 7. Click **Finish**
 
-[Guide with screenshot and additional DBeaver information](./assets/dbeaver-ui.md).
+[Guide with screenshot and additional DBeaver information](./session-materials/dbeaver-ui.md).
 
 You can find more information in the [DBeaver documentation for Sqlite](https://dbeaver.com/docs/dbeaver/Database-driver-SQLite/).
 
@@ -160,7 +160,7 @@ So we just created our database. Before we create tables, let's understand the k
 
 After executing the SQL file, you should see a database like the diagram this one.
 
-![Database Diagram](assets/database-diagram.jpg)
+![Database Diagram](session-materials/database-diagram.jpg)
 
 #### Exercise 1
 

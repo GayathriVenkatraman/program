@@ -49,6 +49,8 @@
     - [Assignment](courses/foundation/intro-to-web-architecture/assignment.md)
   - [Databases](courses/foundation/databases/README.md)
     - [Week 1](courses/foundation/databases/week1/README.md)
+      - [Session Materials](courses/foundation/databases/week1/session-materials/)
+        - [DBeaver UI](courses/foundation/databases/week1/session-materials/dbeaver-ui.md)
       - [Preparation](courses/foundation/databases/week1/preparation.md)
       - [Session Plan](courses/foundation/databases/week1/session-plan.md)
       - [Assignment](courses/foundation/databases/week1/assignment.md)
