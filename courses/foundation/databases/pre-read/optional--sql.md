@@ -27,33 +27,13 @@ SELECT course_id, AVG(grade) FROM enrollments GROUP BY course_id;
 - `WHERE` filters rows **before** grouping.
 - `HAVING` filters groups **after** the `GROUP BY`.
 
-  -- Group and filter groups
-  SELECT customer_id, SUM(total) AS total_spent
-  FROM orders
-  GROUP BY customer_id
-  HAVING SUM(total) > 1000;
-
-## JOIN
-
-- Combines data from multiple tables.
-
-**Example:**
-Example:
-
 ```sql
--- Filter rows first
-SELECT * FROM orders WHERE total > 100;
-SELECT students.name, enrollments.grade
-FROM students
-JOIN enrollments ON students.student_id = enrollments.student_id;
+  -- Group and filter groups
+SELECT customer_id, SUM(total) AS total_spent
+FROM orders
+GROUP BY customer_id
+HAVING SUM(total) > 1000;
 ```
-
-- JOIN lets you fetch combined info from several tables in one query.
-
-### Compare JOIN WHERE vs Cartesian Product
-
-- Without JOIN, `SELECT * FROM A, B` creates a giant mess (every row paired with every other row — Cartesian product).
-- JOIN links only matching rows based on a condition.
 
 ## Data Definition and Manipulation
 

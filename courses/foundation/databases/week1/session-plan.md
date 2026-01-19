@@ -297,6 +297,25 @@ Now that your database is set up, you're ready to practice SQL queries. Below ar
 > [!NOTE] Interested in more options?
 > Refer back to [intro to sql cheatsheet](../pre-read/intro-sql.md) and practice some more complex queries!
 
+### JOIN
+
+JOIN allows to combine data from multiple tables. To join tables, you can use **foreign keys**!
+
+**Example:**
+
+```sql
+-- Find task and it's status name
+SELECT task.title, status.name
+FROM task
+JOIN status
+ON task.status_id = status.id;
+```
+
+#### Exercise 3
+
+1. Select all tasks which have status `In progress`.
+2. Display list of tasks with the user names of the users attached to the tasks.
+
 ### INSERT - Adding Data
 
 The INSERT statement is used to add new records to a table.
@@ -402,7 +421,7 @@ Now, let's practice these operations together:
    SELECT * FROM task WHERE title = 'Prepare presentation';
    ```
 
-#### Exercise 3
+#### Exercise 4
 
 Combine all the queries you learned!
 
