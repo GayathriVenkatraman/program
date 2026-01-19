@@ -132,6 +132,8 @@ The next step is creating a database to have a playground for learning SQL. Also
 6. Click **Test Connection** to verify everything works
 7. Click **Finish**
 
+[Guide with screenshot and additional DBeaver information](./assets/dbeaver-ui.md).
+
 You can find more information in the [DBeaver documentation for Sqlite](https://dbeaver.com/docs/dbeaver/Database-driver-SQLite/).
 
 ### Step 2: Understanding Database Structure
