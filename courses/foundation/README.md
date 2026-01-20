@@ -20,7 +20,7 @@ Here you'll learn the fundamentals for how the web works, the basics of programm
 
 Total: 17 weeks
 
-## Learning goals overview
+## Learning Goals Overview
 
 <!-- To update this section, use "npm run generate:learning-goals Foundation" -->
 <!-- prettier-ignore-start -->
