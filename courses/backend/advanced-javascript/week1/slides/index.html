@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 1 - Array Methods</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css" />
+    <style>
+      :root {
+        --r-background-color: #1a1a2e;
+        --r-main-color: #eee;
+        --r-heading-color: #16c79a;
+        --r-link-color: #16c79a;
+      }
+      .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+      .reveal pre { font-size: 0.55em; width: 100%; }
+      .reveal .highlight { color: #16c79a; }
+      .reveal .dim { color: #888; }
+      .reveal blockquote {
+        background: rgba(22, 199, 154, 0.1);
+        border-left: 4px solid #16c79a;
+        padding: 1em;
+        font-style: normal;
+        width: 90%;
+      }
+      .reveal .emoji { font-size: 3em; }
+      .reveal .small { font-size: 0.6em; }
+      .layers-diagram {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        font-size: 1.5em;
+        margin: 1em 0;
+      }
+      .layers-diagram .arrow { color: #16c79a; }
+      .layer-box {
+        padding: 0.5em 1em;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .layer-box.active {
+        background: rgba(22, 199, 154, 0.3);
+        border: 2px solid #16c79a;
+      }
+      .shape-demo {
+        font-size: 2.5em;
+        letter-spacing: 0.3em;
+        margin: 0.5em 0;
+      }
+      .method-box {
+        background: rgba(22, 199, 154, 0.15);
+        border-radius: 8px;
+        padding: 0.5em 1em;
+        margin: 0.5em;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Title -->
+        <section>
+          <h1>Array Methods</h1>
+          <p>The application layer's daily bread</p>
+          <p class="dim small">Week 1</p>
+        </section>
+
+        <!-- Section: Why Array Methods -->
+        <section>
+          <section>
+            <h2>Why Array Methods?</h2>
+          </section>
+
+          <section>
+            <h3>Backend Reality</h3>
+            <p>Data comes in one shape...</p>
+            <p>...and needs to go out in another</p>
+            <p class="highlight">This happens on every single request</p>
+          </section>
+
+          <section>
+            <h3>Example: Tea Search</h3>
+            <blockquote>
+              User searches "green tea". Database returns 200 matches.<br>
+              But they want: organic only, sorted by price, just name and price.
+            </blockquote>
+            <p><code>filter</code> &rarr; <code>sort</code> &rarr; <code>map</code></p>
+          </section>
+
+          <section>
+            <h3>Array Methods Are Your Toolkit</h3>
+            <p>Transform data between:</p>
+            <p><span class="highlight">"as stored"</span> and <span class="highlight">"as served"</span></p>
+          </section>
+        </section>
+
+        <!-- Section: The Three Methods -->
+        <section>
+          <section>
+            <h2>Three Methods to Learn</h2>
+            <div style="margin-top: 1em;">
+              <span class="method-box">forEach</span>
+              <span class="method-box">map</span>
+              <span class="method-box">filter</span>
+            </div>
+          </section>
+        </section>
+
+        <!-- Section: forEach -->
+        <section>
+          <section>
+            <h2>forEach</h2>
+            <p>"Walk through and do something"</p>
+          </section>
+
+          <section>
+            <h3>The Mental Model</h3>
+            <p><span class="highlight">N inputs</span> &rarr; <span class="highlight">no output</span></p>
+            <p>Side effects only: logging, rendering, sending</p>
+          </section>
+
+          <section>
+            <h3>Example</h3>
+            <pre><code class="language-javascript">const teas = ["Sencha", "Earl Grey", "Matcha"];
+
+teas.forEach(function(tea) {
+  console.log(tea);
+});
+// Sencha
+// Earl Grey
+// Matcha</code></pre>
+            <p class="dim">No return value. Just does something for each item.</p>
+          </section>
+
+          <section>
+            <h3>When to Use</h3>
+            <ul>
+              <li>Logging items</li>
+              <li>Rendering elements to DOM</li>
+              <li>Sending notifications</li>
+            </ul>
+            <p class="highlight" style="margin-top: 1em;">When you don't need a result back</p>
+          </section>
+        </section>
+
+        <!-- Section: map -->
+        <section>
+          <section>
+            <h2>map</h2>
+            <p>"Transform each item"</p>
+          </section>
+
+          <section>
+            <h3>The Mental Model</h3>
+            <p><span class="highlight">N inputs</span> &rarr; <span class="highlight">N outputs</span></p>
+            <p>Same count, different shape</p>
+          </section>
+
+          <section>
+            <h3>Visual</h3>
+            <div class="shape-demo">[ 🟥 🟦 🟩 🟨 ]</div>
+            <p>&darr; map &darr;</p>
+            <div class="shape-demo">[ 🔺 🔷 🔻 🔶 ]</div>
+            <p class="dim">Colors stay. Shapes change.</p>
+          </section>
+
+          <section>
+            <h3>Example</h3>
+            <pre><code class="language-javascript">const teas = [
+  { name: "Sencha", pricePerGram: 0.12 },
+  { name: "Matcha", pricePerGram: 0.45 }
+];
+
+const names = teas.map(function(tea) {
+  return tea.name;
+});
+// ["Sencha", "Matcha"]</code></pre>
+            <p class="dim">2 objects in, 2 strings out.</p>
+          </section>
+
+          <section>
+            <h3>Another Example</h3>
+            <pre><code class="language-javascript">const prices = teas.map(function(tea) {
+  return tea.pricePerGram * 100;  // price per 100g
+});
+// [12, 45]</code></pre>
+            <p>Transform the data, keep the count.</p>
+          </section>
+
+          <section>
+            <h3>When to Use</h3>
+            <ul>
+              <li>Extract one property from objects</li>
+              <li>Transform values (calculate, format)</li>
+              <li>Reshape data for API response</li>
+            </ul>
+            <p class="highlight" style="margin-top: 1em;">When every item needs to become something else</p>
+          </section>
+        </section>
+
+        <!-- Section: filter -->
+        <section>
+          <section>
+            <h2>filter</h2>
+            <p>"Keep only what matches"</p>
+          </section>
+
+          <section>
+            <h3>The Mental Model</h3>
+            <p><span class="highlight">N inputs</span> &rarr; <span class="highlight">M outputs</span> (M &le; N)</p>
+            <p>Same shape, fewer items</p>
+          </section>
+
+          <section>
+            <h3>Visual</h3>
+            <div class="shape-demo">[ 🟥 🟦 🟩 🟨 ]</div>
+            <p>&darr; filter (warm colors) &darr;</p>
+            <div class="shape-demo">[ 🟥 🟨 ]</div>
+            <p class="dim">Shapes stay. Count changes.</p>
+          </section>
+
+          <section>
+            <h3>Example</h3>
+            <pre><code class="language-javascript">const teas = [
+  { name: "Sencha", organic: true },
+  { name: "Earl Grey", organic: false },
+  { name: "Matcha", organic: true }
+];
+
+const organic = teas.filter(function(tea) {
+  return tea.organic;
+});
+// [{ name: "Sencha", ... }, { name: "Matcha", ... }]</code></pre>
+            <p class="dim">3 in, 2 out. Objects unchanged.</p>
+          </section>
+
+          <section>
+            <h3>When to Use</h3>
+            <ul>
+              <li>Select items matching criteria</li>
+              <li>Remove unwanted data</li>
+              <li>Search results</li>
+            </ul>
+            <p class="highlight" style="margin-top: 1em;">When you need fewer items, not different items</p>
+          </section>
+        </section>
+
+        <!-- Section: map vs filter -->
+        <section>
+          <section>
+            <h2>map vs filter</h2>
+            <p>The key difference</p>
+          </section>
+
+          <section>
+            <h3>map</h3>
+            <p>Changes <em>what</em> items are</p>
+            <p class="dim">Objects &rarr; strings, numbers &rarr; formatted, etc.</p>
+            <p class="highlight">Count stays the same</p>
+          </section>
+
+          <section>
+            <h3>filter</h3>
+            <p>Changes <em>which</em> items you keep</p>
+            <p class="dim">All teas &rarr; only organic teas</p>
+            <p class="highlight">Items stay the same</p>
+          </section>
+
+          <section>
+            <h3>Combining Them</h3>
+            <pre><code class="language-javascript">// Get names of organic teas
+const organicNames = teas
+  .filter(function(tea) { return tea.organic; })
+  .map(function(tea) { return tea.name; });
+
+// ["Sencha", "Matcha"]</code></pre>
+            <p>First reduce count, then transform.</p>
+          </section>
+        </section>
+
+        <!-- Section: Where in the Three Layers -->
+        <section>
+          <section>
+            <h2>Where Do These Live?</h2>
+            <div class="layers-diagram">
+              <div class="layer-box">Data</div>
+              <span class="arrow">&rarr;</span>
+              <div class="layer-box active">Logic</div>
+              <span class="arrow">&rarr;</span>
+              <div class="layer-box">Rendering</div>
+            </div>
+          </section>
+
+          <section>
+            <h3>In the Logic Layer</h3>
+            <p><span class="highlight">map</span> - transform data for output</p>
+            <p><span class="highlight">filter</span> - select relevant data</p>
+            <p class="dim" style="margin-top: 1em;">These prepare data between storage and display</p>
+          </section>
+
+          <section>
+            <h3>forEach is Different</h3>
+            <p>Often appears in the <span class="highlight">Rendering</span> layer</p>
+            <p class="dim">Logging, DOM updates, side effects</p>
+            <p style="margin-top: 1em;">No output = end of the pipeline</p>
+          </section>
+        </section>
+
+        <!-- Section: Arrow Functions -->
+        <section>
+          <section>
+            <h2>Arrow Functions</h2>
+            <p>A cleaner way to write</p>
+          </section>
+
+          <section>
+            <h3>Traditional vs Arrow</h3>
+            <pre><code class="language-javascript">// Traditional
+teas.map(function(tea) {
+  return tea.name;
+});
+
+// Arrow
+teas.map((tea) => {
+  return tea.name;
+});
+
+// Arrow (implicit return)
+teas.map(tea => tea.name);</code></pre>
+          </section>
+
+          <section>
+            <h3>Implicit Return</h3>
+            <p>No curly braces = automatic return</p>
+            <pre><code class="language-javascript">// These are identical:
+teas.filter(tea => tea.organic);
+teas.filter(tea => { return tea.organic; });</code></pre>
+          </section>
+
+          <section>
+            <h3>When You Need Braces</h3>
+            <pre><code class="language-javascript">// Multiple statements need braces + return
+teas.map(tea => {
+  const price = tea.pricePerGram * 100;
+  return `${tea.name}: ${price} DKK`;
+});</code></pre>
+          </section>
+        </section>
+
+        <!-- Section: Tea Shop Examples -->
+        <section>
+          <section>
+            <h2>Tea Shop Examples</h2>
+            <p class="emoji">🍵</p>
+          </section>
+
+          <section>
+            <h3>Get All Japanese Teas</h3>
+            <pre><code class="language-javascript">const japaneseTeas = teas.filter(
+  tea => tea.origin === "Japan"
+);</code></pre>
+          </section>
+
+          <section>
+            <h3>Get Tea Names Only</h3>
+            <pre><code class="language-javascript">const names = teas.map(tea => tea.name);
+// ["Sencha", "Earl Grey", "Dragon Well", ...]</code></pre>
+          </section>
+
+          <section>
+            <h3>Organic Japanese Tea Names</h3>
+            <pre><code class="language-javascript">const result = teas
+  .filter(tea => tea.origin === "Japan")
+  .filter(tea => tea.organic)
+  .map(tea => tea.name);
+// ["Sencha", "Matcha"]</code></pre>
+          </section>
+        </section>
+
+        <!-- Summary -->
+        <section>
+          <section>
+            <h2>Summary</h2>
+          </section>
+
+          <section>
+            <h3>The Three Methods</h3>
+            <p><span class="highlight">forEach</span> - N &rarr; nothing (side effects)</p>
+            <p><span class="highlight">map</span> - N &rarr; N (transform)</p>
+            <p><span class="highlight">filter</span> - N &rarr; M (select)</p>
+          </section>
+
+          <section>
+            <h3>Questions to Ask</h3>
+            <p>Do I need a result? <span class="dim">&rarr; not forEach</span></p>
+            <p>Same count, different shape? <span class="dim">&rarr; map</span></p>
+            <p>Fewer items, same shape? <span class="dim">&rarr; filter</span></p>
+          </section>
+
+          <section>
+            <h2>Time to Practice</h2>
+            <p class="emoji">🍵</p>
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        plugins: [RevealHighlight, RevealNotes],
+        width: 1280,
+        height: 720,
+        margin: 0.1,
+        transition: "slide",
+        controls: true,
+        progress: true,
+        center: true,
+      });
+    </script>
+  </body>
+</html>
