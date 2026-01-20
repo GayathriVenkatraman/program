@@ -91,6 +91,25 @@ Use cases:
   **GROUP BY is needed when:**
 - You want one row per group (like "count of students per course").
 
+### JOIN
+
+- Combines data from multiple tables.
+
+**Example:**
+
+```sql
+SELECT students.name, enrollments.grade
+FROM students
+JOIN enrollments ON students.student_id = enrollments.student_id;
+```
+
+- JOIN lets you fetch combined info from several tables in one query.
+- Without JOIN, `SELECT * FROM A, B` creates a giant mess (every row paired with every other row — Cartesian product).
+- JOIN links only matching rows based on a condition\*.
+- Good idea is to JOIN on the **foreign key**!
+
+\*_there are different types of JOIN. [Read more different types of JOIN in this article (out of scope)](https://www.w3schools.com/sql/sql_join.asp)._
+
 ## CRUD: Create, Update, Delete - Data Manipulation queries
 
 ### INSERT INTO

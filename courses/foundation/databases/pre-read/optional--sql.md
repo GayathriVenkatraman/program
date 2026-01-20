@@ -27,33 +27,67 @@ SELECT course_id, AVG(grade) FROM enrollments GROUP BY course_id;
 - `WHERE` filters rows **before** grouping.
 - `HAVING` filters groups **after** the `GROUP BY`.
 
-  -- Group and filter groups
-  SELECT customer_id, SUM(total) AS total_spent
-  FROM orders
-  GROUP BY customer_id
-  HAVING SUM(total) > 1000;
-
-## JOIN
-
-- Combines data from multiple tables.
-
-**Example:**
-Example:
-
 ```sql
--- Filter rows first
-SELECT * FROM orders WHERE total > 100;
-SELECT students.name, enrollments.grade
-FROM students
-JOIN enrollments ON students.student_id = enrollments.student_id;
+  -- Group and filter groups
+SELECT customer_id, SUM(total) AS total_spent
+FROM orders
+GROUP BY customer_id
+HAVING SUM(total) > 1000;
 ```
 
-- JOIN lets you fetch combined info from several tables in one query.
+## Aliases
 
-### Compare JOIN WHERE vs Cartesian Product
+Aliases in SQL can serve two purposes:
 
-- Without JOIN, `SELECT * FROM A, B` creates a giant mess (every row paired with every other row — Cartesian product).
-- JOIN links only matching rows based on a condition.
+### 1. Aliases on tables for easier access to values
+
+When writing complex joins or other types of convoluted queries, especially when naming of the tables is very detailed, creating an alias on the table name can make your query writing time faster.
+
+**Example:**
+
+```sql
+SELECT course.name, enrollments.date, enrollments.term
+FROM course
+JOIN enrollments
+ON course.id = enrollments.course_id
+WHERE enrollments.date > '2025-11-01'
+```
+
+the above query using aliases can be shortened like so:
+
+```sql
+SELECT c.name, e.date, e.term
+FROM course c -- using alias on table "course": alias = "c"
+JOIN enrollments e -- using alias on table "enrollments"
+ON c.id = e.course_id -- using aliases to access values
+WHERE e.date > '2025-11-01'
+```
+
+Two queries above are exactly the same in terms of functionality. Aliases were used only to avoid retyping long words like "enrollments" over and over.
+
+#### 2. Aliases on values for cleaner display
+
+You can also add aliases to selected values for cleaner display of the query output. To do that, you must use keyword `as`.
+
+```sql
+SELECT c.name as COURSE_NAME, e.date as ENROLLMENT_DATE, e.term as TERM
+FROM course c -- using alias on table "course": alias = "c"
+JOIN enrollments e -- using alias on table "enrollments"
+ON c.id = e.course_id -- using aliases to access values
+WHERE e.date > '2025-11-01'
+```
+
+the output of your query will be provided with column names in the output table like so:
+
+```sql
+COURSE_NAME | ENROLLMENT_DATE | TERM
+```
+
+instead of:
+
+```sql
+c.name | e.date | e.term
+```
 
 ## Data Definition and Manipulation
 
