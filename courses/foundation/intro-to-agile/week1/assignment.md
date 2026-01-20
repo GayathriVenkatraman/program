@@ -14,9 +14,9 @@ Now it's time to practice planning a project and prioritising tasks on your own!
 
 - You're only _planning_ a project here, so expect the "In Progress" and "Done" columns to be empty for now.
 - There's no right answer for e.g. how many tasks you prioritise into the first sprint, but check out these guiding tips to stay on the right track:
-  **Now** - Tasks to complete in the first sprint (e.g. first week). These will likely be set up tasks and end in the first working version of your portfolio.
-  **Next** - Tasks to complete in the next sprint (e.g. next week). These will likely be adding/finishing the main features of your portfolio.
-  **Later** - Tasks to be prioritised at a later date (e.g. some time in the future). These could be optional ideas, improvements or new features to explore later.
+  - **Now** - Tasks to complete in the first sprint (e.g. first week). These will likely be set up tasks and end in the first working version of your portfolio.
+  - **Next** - Tasks to complete in the next sprint (e.g. next week). These will likely be adding/finishing the main features of your portfolio.
+  - **Later** - Tasks to be prioritised at a later date (e.g. some time in the future). These could be optional ideas, improvements or new features to explore later.
 
 ## Submission
 
