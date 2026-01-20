@@ -13,7 +13,7 @@ This specialism course is focused on setting you up to land a Backend Developer 
 | [Node.js](./node/README.md)                                                        | 2     |
 | [Specialist Career Training](/shared-modules/specialist-career-training/README.md) | 2     |
 | [Agile Teamwork](/shared-modules/agile-teamwork/README.md)                         | 1     |
-| [Final project](./final-project/README.md)                                         | 5     |
+| [Final Project](./final-project/README.md)                                         | 5     |
 
 Total: 18 weeks
 
@@ -81,7 +81,7 @@ Total: 18 weeks
 - [ ] Understand how these skills and practices impact and support agility
 - [ ] Be able to organise a very well structured project in collaboration with other developers for the final project
 
-### [Final Backend Project](/courses/backend/final-project)
+### [Final Project](/courses/backend/final-project)
 
 > ⚠️ "Learning goals" section is empty in `courses/backend/final-project`
 

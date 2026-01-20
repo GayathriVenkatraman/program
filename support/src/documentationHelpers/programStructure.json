@@ -83,7 +83,7 @@
           "location": "shared-modules/agile-teamwork"
         },
         {
-          "name": "Final Backend Project",
+          "name": "Final Project",
           "location": "courses/backend/final-project"
         }
       ]
@@ -117,7 +117,7 @@
           "location": "shared-modules/agile-teamwork"
         },
         {
-          "name": "Final Frontend Project",
+          "name": "Final Project",
           "location": "courses/frontend/final-project"
         }
       ]
