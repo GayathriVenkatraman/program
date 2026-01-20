@@ -124,10 +124,6 @@
     - [Requirements](courses/frontend/final-project/frontend-requirements.md)
     - [Session Plan](courses/frontend/final-project/session-plan.md)
 
-  - [Foundation Project](courses/foundation/final-project/README.md)
-    - [Project Brief](courses/foundation/final-project/project-brief.md)
-    - [Session Plan](courses/foundation/final-project/session-plan.md)
-
 - [Backend](courses/backend/README.md)
   - [Advanced JavaScript](courses/backend/advanced-javascript/README.md)
   - [Databases](courses/backend/databases/README.md)
