@@ -12,7 +12,7 @@ These are some examples of previously created materials by mentors that you can 
 
 ## Part 0: Review AI HYF AI Guidelines (10 mins)
 
-- Run through the [HYF AI Guideline](https://github.com/HackYourFuture-CPH/programme/blob/main/guidelines/ai-usage.md) and see if anyone has any questions to clarify.
+- Run through the [HYF AI Guideline](https://program.hackyourfuture.dk/trainee/agreements/ai-usage) and see if anyone has any questions to clarify.
 
 It is really important that everyone is in alignment of how AI can and should be used as part of the HYF programme. Answer all relevant questions from the trainees before moving on.
 
