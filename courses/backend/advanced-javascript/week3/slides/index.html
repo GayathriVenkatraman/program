@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 3 - Promises & async/await</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css" />
+    <style>
+      :root {
+        --r-background-color: #1a1a2e;
+        --r-main-color: #eee;
+        --r-heading-color: #16c79a;
+        --r-link-color: #16c79a;
+      }
+      .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+      .reveal pre { font-size: 0.55em; width: 100%; }
+      .reveal .highlight { color: #16c79a; }
+      .reveal .dim { color: #888; }
+      .reveal .red { color: #e74c3c; }
+      .reveal blockquote {
+        background: rgba(22, 199, 154, 0.1);
+        border-left: 4px solid #16c79a;
+        padding: 1em;
+        font-style: normal;
+        width: 90%;
+      }
+      .reveal .emoji { font-size: 3em; }
+      .reveal .small { font-size: 0.6em; }
+      .comparison {
+        display: flex;
+        gap: 1em;
+      }
+      .comparison > div {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Title -->
+        <section>
+          <h1>Promises & async/await</h1>
+          <p>Escaping callback hell</p>
+          <p class="dim small">Week 3</p>
+        </section>
+
+        <!-- Section: The Problem -->
+        <section>
+          <section>
+            <h2>The Problem</h2>
+            <p>Remember last week?</p>
+          </section>
+
+          <section>
+            <h3>Callback Hell</h3>
+            <pre><code class="language-javascript">validateOrder(order, (err, valid) => {
+  if (err) return handleError(err);
+  calculateTotal(order, (err, total) => {
+    if (err) return handleError(err);
+    checkStock(order, (err, stock) => {
+      if (err) return handleError(err);
+      processPayment(total, (err, receipt) => {
+        if (err) return handleError(err);
+        // Finally done... 😫
+      });
+    });
+  });
+});</code></pre>
+          </section>
+
+          <section>
+            <h3>The Problems</h3>
+            <p>Code grows <span class="red">sideways</span> instead of down</p>
+            <p>Error handling is <span class="red">repetitive</span></p>
+            <p>Hard to <span class="red">read and maintain</span></p>
+            <p class="highlight" style="margin-top: 1em;">There has to be a better way...</p>
+          </section>
+        </section>
+
+        <!-- Section: What is a Promise -->
+        <section>
+          <section>
+            <h2>What is a Promise?</h2>
+          </section>
+
+          <section>
+            <h3>The Cafe Analogy</h3>
+            <blockquote>
+              You order coffee and get a receipt ticket.<br><br>
+              The ticket is a <span class="highlight">promise</span> - you'll get coffee eventually.<br><br>
+              Two outcomes: you get coffee ✓ or they're out ✗
+            </blockquote>
+          </section>
+
+          <section>
+            <h3>Promise States</h3>
+            <p><span class="dim">Pending</span> → waiting for result</p>
+            <p><span class="highlight">Fulfilled</span> → success! (resolved)</p>
+            <p><span class="red">Rejected</span> → failure! (error)</p>
+          </section>
+
+          <section>
+            <h3>A Promise Object</h3>
+            <pre><code class="language-javascript">const coffeeOrder = orderCoffee("latte");
+// coffeeOrder is a Promise
+// The coffee isn't ready yet!
+
+coffeeOrder
+  .then(coffee => console.log("Got my", coffee))
+  .catch(error => console.log("No coffee:", error));</code></pre>
+          </section>
+        </section>
+
+        <!-- Section: Consuming Promises -->
+        <section>
+          <section>
+            <h2>Consuming Promises</h2>
+            <p>.then() and .catch()</p>
+          </section>
+
+          <section>
+            <h3>fetch() Returns a Promise</h3>
+            <pre><code class="language-javascript">const API_BASE = "https://tea-api-hyf.fly.dev/api/v1";
+
+const promise = fetch(`${API_BASE}/teas`);
+// promise is pending...
+// The request is happening in the background</code></pre>
+          </section>
+
+          <section>
+            <h3>.then() for Success</h3>
+            <pre><code class="language-javascript">fetch(`${API_BASE}/teas`)
+  .then(response => {
+    console.log("Got response!", response.status);
+  });</code></pre>
+            <p class="dim">.then() runs when the Promise resolves</p>
+          </section>
+
+          <section>
+            <h3>.catch() for Errors</h3>
+            <pre><code class="language-javascript">fetch(`${API_BASE}/teas`)
+  .then(response => response.json())
+  .then(teas => console.log(teas))
+  .catch(error => {
+    console.error("Something went wrong:", error);
+  });</code></pre>
+            <p class="dim">.catch() runs when the Promise rejects</p>
+          </section>
+
+          <section>
+            <h3>The Key Insight</h3>
+            <blockquote>
+              .then() returns a <span class="highlight">new Promise</span><br><br>
+              That's what makes chaining possible!
+            </blockquote>
+          </section>
+        </section>
+
+        <!-- Section: Chaining -->
+        <section>
+          <section>
+            <h2>Chaining Promises</h2>
+            <p>The magic of .then()</p>
+          </section>
+
+          <section>
+            <h3>Flat, Not Nested</h3>
+            <pre><code class="language-javascript">fetch(`${API_BASE}/teas/1`)
+  .then(response => response.json())
+  .then(tea => {
+    console.log("Got tea:", tea.name);
+    return fetch(`${API_BASE}/inventory/${tea.id}`);
+  })
+  .then(response => response.json())
+  .then(inventory => {
+    console.log("Stock:", inventory.stockCount);
+  })
+  .catch(error => {
+    // Catches errors from ANY step!
+    console.error("Failed:", error);
+  });</code></pre>
+          </section>
+
+          <section>
+            <h3>Compare: Callbacks vs Promises</h3>
+            <div class="comparison">
+              <div>
+                <p class="red">Callbacks</p>
+                <pre><code class="language-javascript">step1((err, a) => {
+  step2(a, (err, b) => {
+    step3(b, (err, c) => {
+      // nested...
+    });
+  });
+});</code></pre>
+              </div>
+              <div>
+                <p class="highlight">Promises</p>
+                <pre><code class="language-javascript">step1()
+  .then(a => step2(a))
+  .then(b => step3(b))
+  .then(c => {
+    // flat!
+  })
+  .catch(handleError);</code></pre>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- Section: Creating Promises -->
+        <section>
+          <section>
+            <h2>Creating Promises</h2>
+            <p>new Promise()</p>
+          </section>
+
+          <section>
+            <h3>The Constructor</h3>
+            <pre><code class="language-javascript">const myPromise = new Promise((resolve, reject) => {
+  // Do something async...
+  // Call resolve(value) for success
+  // Call reject(error) for failure
+});</code></pre>
+          </section>
+
+          <section>
+            <h3>Example: wait()</h3>
+            <pre><code class="language-javascript">function wait(ms) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, ms);
+  });
+}
+
+wait(2000).then(() => {
+  console.log("2 seconds passed!");
+});</code></pre>
+          </section>
+
+          <section>
+            <h3>Example: With Reject</h3>
+            <pre><code class="language-javascript">function findTea(id) {
+  return new Promise((resolve, reject) => {
+    const tea = teas.find(t => t.id === id);
+    if (tea) {
+      resolve(tea);
+    } else {
+      reject(new Error(`Tea ${id} not found`));
+    }
+  });
+}
+
+findTea(99)
+  .then(tea => console.log(tea.name))
+  .catch(err => console.error(err.message));</code></pre>
+          </section>
+        </section>
+
+        <!-- Section: async/await -->
+        <section>
+          <section>
+            <h2>async/await</h2>
+            <p>Even cleaner syntax</p>
+          </section>
+
+          <section>
+            <h3>The Magic Keywords</h3>
+            <p><span class="highlight">async</span> - makes a function return a Promise</p>
+            <p><span class="highlight">await</span> - pauses until Promise resolves</p>
+          </section>
+
+          <section>
+            <h3>Before: .then() chains</h3>
+            <pre><code class="language-javascript">function getTea(id) {
+  return fetch(`${API_BASE}/teas/${id}`)
+    .then(response => response.json())
+    .then(tea => {
+      console.log(tea.name);
+      return tea;
+    });
+}</code></pre>
+          </section>
+
+          <section>
+            <h3>After: async/await</h3>
+            <pre><code class="language-javascript">async function getTea(id) {
+  const response = await fetch(`${API_BASE}/teas/${id}`);
+  const tea = await response.json();
+  console.log(tea.name);
+  return tea;
+}</code></pre>
+            <p class="highlight">Reads like synchronous code!</p>
+          </section>
+
+          <section>
+            <h3>Error Handling: try/catch</h3>
+            <pre><code class="language-javascript">async function getTea(id) {
+  try {
+    const response = await fetch(`${API_BASE}/teas/${id}`);
+    const tea = await response.json();
+    return tea;
+  } catch (error) {
+    console.error("Failed:", error.message);
+    return null;
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h3>Common Mistake</h3>
+            <pre><code class="language-javascript">// WRONG - forgot await!
+async function getTea(id) {
+  const response = fetch(`${API_BASE}/teas/${id}`);
+  // response is a Promise, not the actual response!
+  const tea = response.json(); // Error!
+}
+
+// RIGHT
+async function getTea(id) {
+  const response = await fetch(`${API_BASE}/teas/${id}`);
+  const tea = await response.json();
+}</code></pre>
+          </section>
+        </section>
+
+        <!-- Section: Promise.all -->
+        <section>
+          <section>
+            <h2>Promise.all</h2>
+            <p>Parallel operations</p>
+          </section>
+
+          <section>
+            <h3>Sequential = Slow</h3>
+            <pre><code class="language-javascript">// One after another - slow!
+const tea1 = await fetch(`${API_BASE}/teas/1`).then(r => r.json());
+const tea2 = await fetch(`${API_BASE}/teas/2`).then(r => r.json());
+const tea3 = await fetch(`${API_BASE}/teas/3`).then(r => r.json());
+// Total time: tea1 + tea2 + tea3</code></pre>
+          </section>
+
+          <section>
+            <h3>Parallel = Fast</h3>
+            <pre><code class="language-javascript">// All at once - fast!
+const [tea1, tea2, tea3] = await Promise.all([
+  fetch(`${API_BASE}/teas/1`).then(r => r.json()),
+  fetch(`${API_BASE}/teas/2`).then(r => r.json()),
+  fetch(`${API_BASE}/teas/3`).then(r => r.json()),
+]);
+// Total time: max(tea1, tea2, tea3)</code></pre>
+          </section>
+
+          <section>
+            <h3>When to Use</h3>
+            <p>Use <span class="highlight">Promise.all</span> when requests don't depend on each other</p>
+            <p>Use <span class="highlight">sequential await</span> when they do</p>
+          </section>
+        </section>
+
+        <!-- Summary -->
+        <section>
+          <section>
+            <h2>Summary</h2>
+          </section>
+
+          <section>
+            <h3>The Journey</h3>
+            <p><span class="red">Callbacks</span> → nested, messy</p>
+            <p><span class="highlight">Promises</span> → chainable, flat</p>
+            <p><span class="highlight">async/await</span> → reads like sync code</p>
+          </section>
+
+          <section>
+            <h3>Key Concepts</h3>
+            <p><span class="highlight">.then()</span> - handle success</p>
+            <p><span class="highlight">.catch()</span> - handle errors</p>
+            <p><span class="highlight">async</span> - function returns Promise</p>
+            <p><span class="highlight">await</span> - pause for Promise</p>
+            <p><span class="highlight">Promise.all</span> - parallel execution</p>
+          </section>
+
+          <section>
+            <h3>Next Week</h3>
+            <p>Organizing code with <span class="highlight">Classes</span></p>
+            <pre><code class="language-javascript">class Tea {
+  constructor(name, origin) {
+    this.name = name;
+    this.origin = origin;
+  }
+
+  describe() {
+    return `${this.name} from ${this.origin}`;
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Time to Practice</h2>
+            <p class="emoji">🍵</p>
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        plugins: [RevealHighlight, RevealNotes],
+        width: 1280,
+        height: 720,
+        margin: 0.1,
+        transition: "slide",
+        controls: true,
+        progress: true,
+        center: true,
+      });
+    </script>
+  </body>
+</html>
