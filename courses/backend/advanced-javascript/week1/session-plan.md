@@ -97,6 +97,17 @@ We intentionally introduce CS terminology to prepare trainees for professional e
 
 ## Teaching Tips
 
+### Managing exercises with mixed skill levels
+
+The exercises are intentionally numerous - students progress at different speeds. Here's how to manage this:
+
+1. **Let students work on Part 1** - observe how far each gets individually
+2. **Solve one exercise in plenum** - pick one that weaker students struggled with but stronger students just finished. This way everyone benefits
+3. **Move on to Part 2** - weaker students skip remaining Part 1 exercises (they can revisit later)
+4. **Repeat** for each part
+
+Exercises marked with ⭐ are optional stretch goals. If your fastest students finish all exercises while others haven't solved the first one, that part needs an additional challenge - let us know, or create a PR with a creative challenging exercise!
+
 ### Use the tea data consistently
 All examples should use the tea shop data. This builds familiarity and shows how the same dataset can be queried different ways.
 

@@ -99,7 +99,7 @@ Get the names of all green teas.
 ### Exercise 12
 Get display prices (format: `"Sencha - 12 DKK/100g"`) for organic teas only.
 
-### Exercise 13
+### Exercise 13 ⭐
 Get Japanese teas sorted by price (lowest first).
 ```js
 // Hint: .sort((a, b) => a.pricePerGram - b.pricePerGram)
@@ -128,7 +128,7 @@ teas.map(function(tea) {
 teas.map(tea => tea.name);
 ```
 
-### Exercise 16
+### Exercise 16 ⭐
 When do you need explicit return (curly braces)?
 
 Rewrite exercise 6 both ways:
@@ -139,7 +139,7 @@ Rewrite exercise 6 both ways:
 
 ## Part 6: Challenge
 
-### Exercise 17
+### Exercise 17 ⭐⭐
 Build a `filterTeas(teas, criteria)` function that accepts a filter object:
 
 ```js

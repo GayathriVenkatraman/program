@@ -26,7 +26,7 @@ Your solution should be 2-3 lines using chained array methods.
 
 ---
 
-## Exercise 2: Inventory Report
+## Exercise 2: Inventory Report ⭐
 
 Build a function that generates an inventory report:
 
@@ -81,7 +81,7 @@ Expected output format:
 
 ---
 
-## Exercise 4: Teas by Origin
+## Exercise 4: Teas by Origin ⭐⭐
 
 Create a function that groups teas by their origin country:
 
