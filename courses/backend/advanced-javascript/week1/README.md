@@ -22,6 +22,7 @@ By the end of this session, you will be able to:
 - [ ] Combine multiple array methods through chaining
 - [ ] Use arrow function syntax with implicit and explicit returns
 - [ ] Recognize which methods belong in the Logic layer vs Rendering layer
+- [ ] Know how to find and learn about other array methods such as `.find()`, `.some()`, `.reduce()`
 
 ```js
 // Example: Get names of organic Japanese teas

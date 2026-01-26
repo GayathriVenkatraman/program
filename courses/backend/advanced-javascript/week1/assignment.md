@@ -126,6 +126,39 @@ Hint: Use `.toLowerCase()` and `.includes()` for case-insensitive search.
 
 ---
 
+## Optional: reduce
+
+These exercises use `reduce`. Try them if you want a challenge!
+
+### Exercise 6: Total Inventory Value (Optional)
+
+Calculate the total value of all tea inventory using `reduce`:
+
+```js
+const totalValue = teas.reduce((sum, tea) => {
+  // add pricePerGram * stockCount to sum
+}, 0);
+
+console.log("Total inventory value:", totalValue);
+```
+
+Hint: `reduce` builds up a single value by processing each item. The `0` is your starting value.
+
+### Exercise 7: Count by Type (Optional)
+
+Use `reduce` to count how many teas of each type exist:
+
+```js
+const countByType = teas.reduce((counts, tea) => {
+  // increment counts[tea.type]
+}, {});
+
+console.log(countByType);
+// Expected: { green: 6, black: 5, herbal: 4, oolong: 3, white: 2 }
+```
+
+---
+
 ## Submission
 
 Create a file called `assignment.js` with your solutions. Each exercise should be a function that can be called and tested.

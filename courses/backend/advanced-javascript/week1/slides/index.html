@@ -383,6 +383,50 @@ teas.map(tea => {
           </section>
         </section>
 
+        <!-- Section: Preview of reduce -->
+        <section>
+          <section>
+            <h2>What About reduce?</h2>
+            <p>Another powerful array method</p>
+          </section>
+
+          <section>
+            <h3>The Mental Model</h3>
+            <p><span class="highlight">N inputs</span> &rarr; <span class="highlight">1 output</span></p>
+            <p>Many items become one value</p>
+          </section>
+
+          <section>
+            <h3>Visual</h3>
+            <div class="shape-demo">[ 🟥 🟦 🟩 🟨 ]</div>
+            <p>&darr; reduce &darr;</p>
+            <div class="shape-demo">🟣</div>
+            <p class="dim">Many become one.</p>
+          </section>
+
+          <section>
+            <h3>Example</h3>
+            <pre><code class="language-javascript">const teas = [
+  { name: "Sencha", stockCount: 150 },
+  { name: "Matcha", stockCount: 30 },
+  { name: "Earl Grey", stockCount: 200 }
+];
+
+const totalStock = teas.reduce((sum, tea) => {
+  return sum + tea.stockCount;
+}, 0);
+// 380</code></pre>
+            <p class="dim">3 objects in, 1 number out.</p>
+          </section>
+
+          <section>
+            <h3>We'll Learn This in Week 2</h3>
+            <p><code>reduce</code> is the most powerful array method</p>
+            <p class="dim">It needs a solid foundation in map/filter first</p>
+            <p class="highlight" style="margin-top: 1em;">Optional exercises in this week's assignment!</p>
+          </section>
+        </section>
+
         <!-- Summary -->
         <section>
           <section>
