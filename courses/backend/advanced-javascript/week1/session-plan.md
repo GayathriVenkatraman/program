@@ -15,7 +15,7 @@ By the end of this session, trainees should:
 
 ---
 
-## Jargon Goals
+## Glossary Goals
 
 We intentionally introduce CS terminology to prepare trainees for professional environments. Here's what we introduce and why:
 

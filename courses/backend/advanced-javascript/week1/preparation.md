@@ -31,7 +31,7 @@ const names = teas.map(tea => tea.name);
 
 That's called an **arrow function**. We'll get there - but first, let's understand what's happening with the regular function syntax.
 
-> 📚 **Jargon: Declarative vs Imperative**
+> 📚 **Glossary: Declarative vs Imperative**
 > **Imperative** code describes *how* to do something (step by step).
 > **Declarative** code describes *what* you want (the result).
 > Array methods are declarative - you say "give me the names" not "create empty array, loop, push each name."
@@ -50,7 +50,7 @@ teas.map(function(tea) {
 //       this function is passed TO map
 ```
 
-> 📚 **Jargon: Higher-Order Function**
+> 📚 **Glossary: Higher-Order Function**
 > A function that takes another function as an argument (or returns a function).
 > All array methods like `map`, `filter`, `forEach` are higher-order functions.
 
@@ -77,7 +77,7 @@ Other examples of side effects:
 
 `forEach` is designed for side effects. That's why it doesn't return anything - its job is to *do* something for each item, not to produce a new array.
 
-> 📚 **Jargon: Side Effect**
+> 📚 **Glossary: Side Effect**
 > When a function modifies something outside its own scope: changing a variable, logging to console, updating the DOM, writing to a database.
 > `forEach` is typically used *for* its side effects (like logging).
 
@@ -127,7 +127,7 @@ const organic = teas.filter(function(tea) {
 // Keep only items where predicate returns true
 ```
 
-> 📚 **Jargon: Predicate**
+> 📚 **Glossary: Predicate**
 > A function that returns `true` or `false`. Used to test a condition.
 > The function you pass to `filter` is a predicate - it decides which items to keep.
 
@@ -159,7 +159,7 @@ const result = teas
 
 Same logic, less noise. That's why arrow functions are popular for array methods.
 
-> 📚 **Jargon: Pipeline**
+> 📚 **Glossary: Pipeline**
 > A sequence of operations where each step's output becomes the next step's input.
 > Chaining array methods creates a data pipeline.
 
