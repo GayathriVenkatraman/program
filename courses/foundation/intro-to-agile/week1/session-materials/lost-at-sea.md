@@ -4,7 +4,7 @@ If the online link does not work, you can run the exercise yourself.
 
 ## Steps
 
-1. **Fork the repository**  
+1. **Fork the repository**
    Go to [lost-at-sea-exercise](https://github.com/pronich/lost-at-sea-exercise) and click **Fork**. This creates a copy in your GitHub account.
 
 2. **Deploy on Vercel**
