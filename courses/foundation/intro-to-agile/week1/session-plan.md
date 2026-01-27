@@ -37,7 +37,7 @@ You and your friends managed to save 15 undamaged items after the fire. You also
 
 **Your task:** Rank the 15 items in order of importance for your survival while waiting to be rescued.
 
-Use this link to order items: <https://lost-at-sea.netlify.app/>
+Use this link to order items: [Lost at Sea](https://lost-at-sea.netlify.app/)
 
 ### The 15 Items
 
