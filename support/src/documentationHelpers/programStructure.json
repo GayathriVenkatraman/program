@@ -127,15 +127,15 @@
       "location": "courses/qa",
       "modules": [
         {
-          "name": "Basics of Testing",
+          "name": "QA Foundations & Software Development Basics",
           "location": "courses/qa/basics-of-testing"
         },
         {
-          "name": "Test Automation",
+          "name": "Web Testing, UI Automation & Modern QA Tools",
           "location": "courses/qa/test-automation"
         },
         {
-          "name": "Test Management",
+          "name": "Practical Test Planning, Agile & Project Management",
           "location": "courses/qa/test-management"
         },
         {
