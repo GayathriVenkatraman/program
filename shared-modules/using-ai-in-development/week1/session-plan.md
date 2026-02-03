@@ -232,7 +232,24 @@ Use AI to draw a diagram to explain how the code in [Exercise 6](session-materia
 
 When your code is ready, it will be time for getting feedback from other developers. Before you do that, save some time and get some initial feedback from AI on improving your code.
 
-TODO add some prompting examples here
+#### 1. "First pass review" prompt
+
+Get a quick, structured overview of potential improvements before asking colleagues for a full review.
+
+```prompt
+Review this code and give me concise feedback organised by category:
+
+<paste code here>
+
+Categories to cover:
+- Readability
+- Performance
+- Security
+- Best practices
+- Potential bugs
+
+For each issue, give a brief pointer (one sentence max) rather than a detailed explanation.
+```
 
 #### Exercise 7
 
