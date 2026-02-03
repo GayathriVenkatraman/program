@@ -199,9 +199,30 @@ Use AI to help you uncover the bug in the [Exercise 5](session-materials/exercis
 
 ### Implementation - Documentation generation
 
-AI is not only useful in generating code, but also documentation.
+AI is not only useful in generating code, but also documentation. There are many types of documentation AI can help you generate, for example:
+- Function and code comments
+- README files
+- API documentation
+- Architecture diagrams
+- User guides
 
-TODO add some prompting examples here
+#### 1. "Add a code comment" prompt
+
+```prompt
+Generate a clear, concise comment to this function explaining what it does, its parameters, and what it returns:
+
+<paste code here>
+```
+
+#### 2. "Generate a diagram" prompt
+
+```prompt
+Create an ASCII diagram that visualises how this code works:
+
+<paste code here>
+
+Show the flow of data and the key steps.
+```
 
 #### Exercise 6
 
