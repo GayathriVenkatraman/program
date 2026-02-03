@@ -1,8 +1,8 @@
 # Assignment
 
-In the previous AI module, you created an initial version of your portfolio. In this assignment, you'll use AI to review, improve, and document your work.
+## Part A: Review and Improve Portfolio
 
-## Part A: Review and Improve
+In the previous AI module, you created an initial version of your portfolio. In this assignment, you'll use AI to review, improve, and document your work.
 
 1. **Get a code review** - Use AI to review your portfolio code. Ask for feedback on readability, best practices, potential bugs, and security.
 
