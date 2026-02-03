@@ -239,7 +239,7 @@ Get a quick, structured overview of potential improvements before asking colleag
 ```prompt
 Review this code and give me concise feedback organised by category:
 
-<paste code here>
+<paste code here/path to files>
 
 Categories to cover:
 - Readability
@@ -253,9 +253,9 @@ For each issue, give a brief pointer (one sentence max) rather than a detailed e
 
 #### Exercise 7
 
-Use AI to get some structured feedback on improving the code in [Exercise 7](TODO create and insert link here), and make the changes.
+Getting feedback is useful before you submit your assignments, but to check out how it can look, choose a previous assignment you've submitted and ask AI for feedback on it.
 
-TODO write the exercise and supporting code
+Review the suggestions - which ones are useful, and which ones would you ignore?
 
 ### Agent mode
 
