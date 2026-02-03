@@ -148,7 +148,25 @@ Use AI to give you some suggestions on possible solutions to [Exercise 3](sessio
 
 After you write a solution, you may wonder if there's a neater or better way to structure the code.
 
-TODO add some prompting examples here
+#### 1. "Refactor my code" prompt
+
+Refactoring can mean different things depending on what you want to improve. Some common goals include:
+- Improved readability
+- Better naming
+- Extracting reusable functions
+- Reducing duplication
+- Simplifying complex logic
+- Following a specific pattern or convention
+
+```prompt
+Refactor this code to <specific goal>:
+
+<paste code here>
+
+For each change you suggest:
+1. Explain what you changed
+2. Explain why it's an improvement
+```
 
 #### Exercise 4
 
