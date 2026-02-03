@@ -259,7 +259,19 @@ Review the suggestions - which ones are useful, and which ones would you ignore?
 
 ### Agent mode
 
-TODO explain a little what agent mode is and how it differs to "edit" mode. Maybe warn that it will use up a lot more of your usage credits. Reminder of our [AI usage guidelines](https://program.hackyourfuture.dk/guidelines/ai-usage), and for HYF assignments and projects
+So far we've been using AI in "chat" or "edit" mode - you ask a question or request a change, and AI responds. Agent mode is different: you give AI a goal, and it autonomously plans and executes multiple steps to achieve it, including running commands, creating files, and making decisions along the way.
+
+**Chat/Edit mode**: You control each step, AI assists one task at a time.
+
+**Agent mode**: AI takes control, executing multiple steps autonomously to reach a goal.
+
+GitHub Copilot has an agent mode you can try - instead of asking for a single edit, you can ask it to complete a larger task and it will work through the steps itself.
+
+{% hint style="warning" %}
+**Before using agent mode:**
+- Agent mode uses significantly more of your AI usage credits than chat mode.
+- Remember our [AI usage guidelines](https://program.hackyourfuture.dk/guidelines/ai-usage) - for HYF assignments and projects, you must understand and be able to explain any code you submit.
+{% endhint %}
 
 #### Exercise 8
 
