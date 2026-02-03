@@ -176,7 +176,22 @@ Use AI to help you refactor the code to be more readable in [Exercise 4](session
 
 Before your solution is finished, you'll need to make sure it's bug free.
 
-TODO add some prompting examples here
+#### 1. "Find and fix the bug" prompt
+
+When your code isn't working as expected, ask AI to help identify, explain, and fix the issue.
+
+```prompt
+This code is producing unexpected results:
+
+<paste code here>
+
+Expected output: <what you expected>
+Actual output: <what you got>
+
+1. What is the bug?
+2. Why is this happening?
+3. What options do I have for fixing it?
+```
 
 #### Exercise 5
 
