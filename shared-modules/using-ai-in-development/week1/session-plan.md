@@ -170,9 +170,7 @@ For each change you suggest:
 
 #### Exercise 4
 
-Use AI to help you refactor the code in [Exercise 4](TODO create and insert link here).
-
-TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/03-code-refactoring.ts)
+Use AI to help you refactor the code to be more readable in [Exercise 4](session-materials/exercise4.js).
 
 ### Implementation - Bug fixing
 
