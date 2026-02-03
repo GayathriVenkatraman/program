@@ -270,12 +270,20 @@ GitHub Copilot has an agent mode you can try - instead of asking for a single ed
 {% hint style="warning" %}
 **Before using agent mode:**
 - Agent mode uses significantly more of your AI usage credits than chat mode.
-- Remember our [AI usage guidelines](https://program.hackyourfuture.dk/guidelines/ai-usage) - for HYF assignments and projects, you must understand and be able to explain any code you submit.
+- Remember our [AI usage guidelines](https://program.hackyourfuture.dk/guidelines/ai-usage) - for HYF assignments and projects, you must understand and be able to explain any code you submit. Therefore, Agent mode is something more suitable to practice using outside of your HYF work.
 {% endhint %}
 
 #### Exercise 8
 
-TODO this should be a small exercise to show how the agent flow works. Could be something similar to [this](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/19-copilot-agent.md). Suggest instead that trainees explore using agent mode further on their own personal projects we do not allow generating full coding solutions.
+Try this small task in both modes to see the difference:
+
+**Task**: Add a `titleCase` function to [Exercise 8](session-materials/exercise8.js) that converts a sentence to title case (e.g., "hello world" → "Hello World").
+
+1. **Chat mode**: Ask Copilot "How would I add a titleCase function to this file?" - notice it explains what to do, but you have to make the changes yourself.
+
+2. **Agent mode**: Ask Copilot "Add a titleCase function to exercise8.js that converts sentences to title case, and add an example in main()" - watch as it reads the file, adds the function, updates the exports, and modifies main() autonomously.
+
+Notice how agent mode takes multiple steps without asking for permission at each stage. This is powerful but means you need to carefully review everything it produces.
 
 ## AI in the workplace
 
