@@ -226,9 +226,7 @@ Show the flow of data and the key steps.
 
 #### Exercise 6
 
-Use AI to draw a diagram to explain how the code in [Exercise 6](TODO create and insert link here) works. Confirm that it is correct, and fix any mistakes.
-
-TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/05-document-generation.py)
+Use AI to draw a diagram to explain how the code in [Exercise 6](session-materials/exercise6.js) works. This code should look familiar to you, since it implements the same functionality as you saw in Exercise 2, but this code has been refactored to be easier to read. Confirm that the diagrams are correct and match your understanding of the code - do you spot any mistakes?
 
 ### Code review - Feedback assistance
 
