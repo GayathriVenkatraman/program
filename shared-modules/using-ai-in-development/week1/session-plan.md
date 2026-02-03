@@ -124,7 +124,21 @@ Use AI to help explain the code in [Exercise 2](session-materials/exercise2.js).
 
 While writing code, you may come across a roadblock where you're not entirely sure how to implement something.
 
-TODO add some prompting examples here
+#### 1. "Explore approaches" prompt
+
+When you're stuck on how to implement something, ask for multiple options to consider.
+
+```prompt
+I need to implement <describe what you're trying to achieve>.
+
+<optional: paste relevant code snippet for context>
+
+What are 2-3 different approaches I could take? For each approach:
+1. Briefly explain how it works
+2. List the pros and cons
+3. When would this approach be the best choice
+4. Highlight any common mistakes to avoid
+```
 
 #### Exercise 3
 
