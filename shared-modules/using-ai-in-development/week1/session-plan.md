@@ -321,7 +321,7 @@ We don't know the future for sure, that's what makes it exciting. There are some
 4. Understanding the "why"
 5. Super fast industry shifts
 
-#### Tips
+#### Tips and final takeaways
 
 1. Stay in the loop of AI developments
    - Follow key organisations in the space (OpenAI, Anthropic, Microsoft/Github, Google/Gemini)
