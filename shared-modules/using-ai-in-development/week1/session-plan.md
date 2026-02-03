@@ -90,7 +90,31 @@ That is the moment where learning happens, so don't miss out by skipping ahead!
 
 While preparing ideas for a particular solution in the Design phase, you'll likely come across the challenge of needing to understand existing code.
 
-TODO add some prompting examples here, as well as good follow up prompts
+#### 1. "Code explanation" prompt
+
+When you encounter unfamiliar code, start by asking for a high-level explanation.
+
+```prompt
+Explain what this code does at a high level:
+
+<paste code here>
+
+Focus on:
+1. The overall purpose
+2. The main components and how they interact
+3. Any important patterns or techniques being used
+```
+
+#### 2. "Dig deeper" follow-up prompt
+
+Once you understand the big picture, ask targeted follow-up questions to clarify specifics.
+
+```prompt
+In the code above, I don't understand <specific part>. Can you explain:
+1. What this specific section is doing step by step
+2. Why it's written this way instead of <alternative approach>
+3. What would happen if this part was removed or changed
+```
 
 #### Exercise 2
 
