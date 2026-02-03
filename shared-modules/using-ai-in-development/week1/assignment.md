@@ -19,12 +19,14 @@ In the previous AI module, you created an initial version of your portfolio. In 
 Choose 3 ethical issues or risks associated with the use of AI in development (refer to the session material if you need a reminder).
 
 For each one, describe:
+
 - What the issue/risk is, in your own words
 - How you will personally mitigate it in your own use of AI
 
 ## Submission
 
 Submit your updated portfolio code, along with a `reflection.md` file containing:
+
 - Your list of improvements from Part A
 - Your diagram from Part A
 - Your 3 learnings from Part A

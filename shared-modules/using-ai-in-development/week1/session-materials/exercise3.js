@@ -6,7 +6,10 @@ function parseQuery(queryString) {
 
 function buildUrl(base, params) {
   const query = Object.entries(params)
-    .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+    .map(
+      ([key, value]) =>
+        `${encodeURIComponent(key)}=${encodeURIComponent(value)}`,
+    )
     .join("&");
   return `${base}?${query}`;
 }

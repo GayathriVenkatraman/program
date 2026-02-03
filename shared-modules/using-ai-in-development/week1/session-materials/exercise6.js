@@ -59,7 +59,10 @@ function main() {
   console.log(orders);
 
   console.log("\n--- deduplicateBy ---");
-  const uniqueOrders = deduplicateBy(orders, (order) => order.customer + order.product);
+  const uniqueOrders = deduplicateBy(
+    orders,
+    (order) => order.customer + order.product,
+  );
   console.log(uniqueOrders);
 
   console.log("\n--- groupAndAggregate ---");
@@ -73,7 +76,9 @@ function main() {
   console.log("\n--- validate ---");
   const newOrder = { id: 6, customer: "", product: "Eraser", amount: -2 };
   const validationResult = validate(newOrder, {
-    customer: [{ test: (value) => value && value.length > 0, message: "required" }],
+    customer: [
+      { test: (value) => value && value.length > 0, message: "required" },
+    ],
     amount: [{ test: (value) => value > 0, message: "must be positive" }],
   });
   console.log(validationResult);

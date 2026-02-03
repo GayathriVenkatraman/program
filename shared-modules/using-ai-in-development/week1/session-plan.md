@@ -151,6 +151,7 @@ After you write a solution, you may wonder if there's a neater or better way to 
 #### 1. "Refactor my code" prompt
 
 Refactoring can mean different things depending on what you want to improve. Some common goals include:
+
 - Improved readability
 - Better naming
 - Extracting reusable functions
@@ -200,6 +201,7 @@ Use AI to help you uncover the bug in the [Exercise 5](session-materials/exercis
 ### Implementation - Documentation generation
 
 AI is not only useful in generating code, but also documentation. There are many types of documentation AI can help you generate, for example:
+
 - Function and code comments
 - README files
 - API documentation
@@ -269,9 +271,10 @@ GitHub Copilot has an agent mode you can try - instead of asking for a single ed
 
 {% hint style="warning" %}
 **Before using agent mode:**
+
 - Agent mode uses significantly more of your AI usage credits than chat mode.
 - Remember our [AI usage guidelines](https://program.hackyourfuture.dk/guidelines/ai-usage) - for HYF assignments and projects, you must understand and be able to explain any code you submit. Therefore, Agent mode is something more suitable to practice using outside of your HYF work.
-{% endhint %}
+  {% endhint %}
 
 #### Exercise 8
 
