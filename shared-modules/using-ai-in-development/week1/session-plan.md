@@ -289,7 +289,25 @@ Notice how agent mode takes multiple steps without asking for permission at each
 
 ### Ethics, legal and risk considerations
 
-TODO these follow on from the foundation content, but should be give more software dev specific examples, like the risk of pasting protected IP code or customer data into third party AI tools.
+Building on what you learned in the foundation module, here are some specific risks to consider as a developer:
+
+**Confidential code and data**
+Never paste proprietary code, API keys, or customer data into AI tools - it may be stored or used for training. Example: pasting a database query containing real user emails.
+
+**Intellectual property**
+Code you paste into AI tools may belong to your employer. Check your company's policy before sharing any work code with external AI services.
+
+**License compliance**
+AI may generate code copied from open source projects with licenses that are incompatible with your project. Always verify you have the right to use generated code.
+
+**Security vulnerabilities**
+AI-generated code can contain security flaws like SQL injection or missing input validation. Review all generated code with the same scrutiny as code from any other source.
+
+**Accuracy and hallucinations**
+AI can confidently produce incorrect code, non-existent APIs, or outdated syntax. Always test and verify - don't assume it works because it looks right.
+
+**Company policies**
+Many employers have specific rules about which AI tools are approved for use with work code. Check before using any AI tool on company projects.
 
 ### The future of AI in development
 
