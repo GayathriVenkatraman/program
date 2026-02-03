@@ -118,9 +118,7 @@ In the code above, I don't understand <specific part>. Can you explain:
 
 #### Exercise 2
 
-Use AI to help explain the code in [Exercise 2](TODO create and insert link here). Ask follow up questions until you have a good grasp of what every function and line of code is achieving.
-
-TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/01-code-explanation.py)
+Use AI to help explain the code in [Exercise 2](session-materials/exercise2.js). Ask follow up questions until you have a good grasp of what every function and line of code is achieving.
 
 ### Implementation - Learning new approaches
 
