@@ -259,7 +259,7 @@ Review the suggestions - which ones are useful, and which ones would you ignore?
 
 ### Agent mode
 
-So far we've been using AI in "chat" or "edit" mode - you ask a question or request a change, and AI responds. Agent mode is different: you give AI a goal, and it autonomously plans and executes multiple steps to achieve it, including running commands, creating files, and making decisions along the way.
+So far we've been using AI in "chat" or "edit" mode - you ask a question or request a change, and AI responds. Agent mode is different: you give AI a goal, and it autonomously plans and executes multiple steps to achieve it, including running commands, creating files, talking with external systems and making decisions along the way.
 
 **Chat/Edit mode**: You control each step, AI assists one task at a time.
 
