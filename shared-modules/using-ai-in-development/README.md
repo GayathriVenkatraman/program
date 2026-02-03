@@ -6,7 +6,7 @@ This module aims to help you understand the role, techniques and risks of using 
 
 | Week | Topic                                    | Preparation                           | Session Plan                                          | Assignment                          |
 | ---- | ---------------------------------------- | ------------------------------------- | ----------------------------------------------------- | ----------------------------------- |
-| 1.   | [TODO, Session Title](./week1/README.md) | [Preparation](./week1/preparation.md) | [Session Plan](./week1/session-plan.md) (for mentors) | [Assignment](./week1/assignment.md) |
+| 1.   | [AI in the Development Workflow](./week1/README.md) | [Preparation](./week1/preparation.md) | [Session Plan](./week1/session-plan.md) (for mentors) | [Assignment](./week1/assignment.md) |
 
 ## Module Learning Goals
 
