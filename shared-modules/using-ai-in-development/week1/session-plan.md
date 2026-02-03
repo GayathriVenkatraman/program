@@ -142,9 +142,7 @@ What are 2-3 different approaches I could take? For each approach:
 
 #### Exercise 3
 
-Use AI to give you some suggestions on possible solutions to [Exercise 3](TODO create and insert link here).
-
-TODO write the exercise and supporting code
+Use AI to give you some suggestions on possible solutions to [Exercise 3](session-materials/exercise3.js).
 
 ### Implementation - Code refactoring
 
