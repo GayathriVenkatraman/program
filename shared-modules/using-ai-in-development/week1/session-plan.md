@@ -195,9 +195,7 @@ Actual output: <what you got>
 
 #### Exercise 5
 
-Use AI to help you uncover the bug in the [Exercise 5](TODO create and insert link here) code, understand why it's happening, and fix it.
-
-TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/04-bug-fixing.py)
+Use AI to help you uncover the bug in the [Exercise 5](session-materials/exercise5.js) code, understand why it's happening, and fix it.
 
 ### Implementation - Documentation generation
 
