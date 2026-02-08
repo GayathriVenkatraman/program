@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 4 - Classes & OOP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css" />
+    <style>
+      :root {
+        --r-background-color: #1a1a2e;
+        --r-main-color: #eee;
+        --r-heading-color: #16c79a;
+        --r-link-color: #16c79a;
+      }
+      .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+      .reveal pre { font-size: 0.55em; width: 100%; }
+      .reveal .highlight { color: #16c79a; }
+      .reveal .dim { color: #888; }
+      .reveal .red { color: #e74c3c; }
+      .reveal blockquote {
+        background: rgba(22, 199, 154, 0.1);
+        border-left: 4px solid #16c79a;
+        padding: 1em;
+        font-style: normal;
+        width: 90%;
+      }
+      .reveal .emoji { font-size: 3em; }
+      .reveal .small { font-size: 0.6em; }
+      .comparison {
+        display: flex;
+        gap: 1em;
+      }
+      .comparison > div {
+        flex: 1;
+      }
+      .method-box {
+        background: rgba(22, 199, 154, 0.15);
+        border-radius: 8px;
+        padding: 0.5em 1em;
+        margin: 0.5em;
+        display: inline-block;
+      }
+      .journey-step {
+        display: inline-block;
+        padding: 0.3em 0.6em;
+        border-radius: 6px;
+        margin: 0.2em;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .journey-step.active {
+        background: rgba(22, 199, 154, 0.3);
+        border: 2px solid #16c79a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Title -->
+        <section>
+          <h1>Classes & OOP</h1>
+          <p>Organizing code with blueprints</p>
+          <p class="dim small">Week 4</p>
+        </section>
+
+        <!-- Section: The Problem -->
+        <section>
+          <section>
+            <h2>The Problem</h2>
+            <p>Scattered data, scattered logic</p>
+          </section>
+
+          <section>
+            <h3>Plain Objects Everywhere</h3>
+            <pre><code class="language-javascript">const tea1 = { name: "Sencha", pricePerGram: 0.12 };
+const tea2 = { name: "Earl Grey", pricePerGram: 0.08 };
+const tea3 = { naem: "Matcha", price: 0.45 };
+//               ^^^^ typo!     ^^^^^ wrong name!</code></pre>
+            <p class="red">No structure. No validation. No consistency.</p>
+          </section>
+
+          <section>
+            <h3>Logic Scattered Everywhere</h3>
+            <pre><code class="language-javascript">// Price calculation - repeated in 5 places
+const price1 = tea1.pricePerGram * 100;
+const price2 = tea2.pricePerGram * 100;
+
+// Validation - a separate function
+function validateTea(tea) {
+  if (!tea.name) throw new Error("Name required");
+}
+
+// Formatting - another separate function
+function describeTea(tea) {
+  return `${tea.name} from ${tea.origin}`;
+}</code></pre>
+          </section>
+
+          <section>
+            <h3>What If...</h3>
+            <blockquote>
+              What if the object could validate itself?<br><br>
+              What if the object could calculate its own price?<br><br>
+              What if the object could describe itself?
+            </blockquote>
+          </section>
+        </section>
+
+        <!-- Section: Class Basics -->
+        <section>
+          <section>
+            <h2>Classes</h2>
+            <p>Blueprints for objects</p>
+          </section>
+
+          <section>
+            <h3>A Class</h3>
+            <pre><code class="language-javascript">class Tea {
+  constructor(name, pricePerGram, origin) {
+    this.name = name;
+    this.pricePerGram = pricePerGram;
+    this.origin = origin;
+  }
+}</code></pre>
+            <p><span class="highlight">class</span> - declares a blueprint</p>
+            <p><span class="highlight">constructor</span> - initializes each object</p>
+            <p><span class="highlight">this</span> - the object being created</p>
+          </section>
+
+          <section>
+            <h3>Creating Instances with new</h3>
+            <pre><code class="language-javascript">const sencha = new Tea("Sencha", 0.12, "Japan");
+const earl = new Tea("Earl Grey", 0.08, "India");
+
+console.log(sencha.name);  // "Sencha"
+console.log(earl.origin);   // "India"</code></pre>
+            <p>One <span class="highlight">class</span> (blueprint) &rarr; many <span class="highlight">instances</span> (objects)</p>
+          </section>
+
+          <section>
+            <h3>Blueprint vs Building</h3>
+            <p class="emoji">📐 &rarr; 🏠 🏠 🏠</p>
+            <p><span class="dim">One blueprint</span> &rarr; <span class="highlight">Many buildings</span></p>
+            <p class="small dim">Same structure, different details</p>
+          </section>
+        </section>
+
+        <!-- Section: Methods -->
+        <section>
+          <section>
+            <h2>Methods</h2>
+            <p>Behavior lives with data</p>
+          </section>
+
+          <section>
+            <h3>Adding Methods</h3>
+            <pre><code class="language-javascript">class Tea {
+  constructor(name, pricePerGram, origin) {
+    this.name = name;
+    this.pricePerGram = pricePerGram;
+    this.origin = origin;
+  }
+
+  priceFor(grams) {
+    return this.pricePerGram * grams;
+  }
+
+  describe() {
+    return `${this.name} from ${this.origin}`;
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h3>Calling Methods</h3>
+            <pre><code class="language-javascript">const sencha = new Tea("Sencha", 0.12, "Japan");
+
+sencha.priceFor(100);  // 12
+sencha.describe();     // "Sencha from Japan"</code></pre>
+            <p>The tea knows how to calculate its own price</p>
+            <p class="dim">No separate functions needed</p>
+          </section>
+
+          <section>
+            <h3>Before vs After</h3>
+            <div class="comparison">
+              <div>
+                <p class="red">Without classes</p>
+                <pre><code class="language-javascript">const tea = {
+  name: "Sencha",
+  pricePerGram: 0.12
+};
+
+function priceFor(tea, g) {
+  return tea.pricePerGram * g;
+}
+
+priceFor(tea, 100);</code></pre>
+              </div>
+              <div>
+                <p class="highlight">With classes</p>
+                <pre><code class="language-javascript">class Tea {
+  constructor(name, ppg) {
+    this.name = name;
+    this.pricePerGram = ppg;
+  }
+  priceFor(grams) {
+    return this.pricePerGram * grams;
+  }
+}
+new Tea("Sencha", 0.12)
+  .priceFor(100);</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h3>Composition</h3>
+            <pre><code class="language-javascript">class OrderItem {
+  constructor(tea, grams) {
+    this.tea = tea;      // Tea instance
+    this.grams = grams;
+  }
+
+  lineTotal() {
+    return this.tea.priceFor(this.grams);
+  }
+}
+
+const sencha = new Tea("Sencha", 0.12, "Japan");
+const item = new OrderItem(sencha, 200);
+item.lineTotal(); // 24</code></pre>
+            <p class="dim">Classes using other classes</p>
+          </section>
+        </section>
+
+        <!-- Section: this and State -->
+        <section>
+          <section>
+            <h2>this &amp; State</h2>
+            <p>Reading and changing data</p>
+          </section>
+
+          <section>
+            <h3>this = The Current Object</h3>
+            <pre><code class="language-javascript">class Inventory {
+  constructor(tea, stockCount) {
+    this.tea = tea;
+    this.stockCount = stockCount;
+  }
+
+  sell(grams) {
+    this.stockCount -= grams;  // modifies state
+  }
+
+  restock(grams) {
+    this.stockCount += grams;  // modifies state
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h3>Each Instance Has Its Own State</h3>
+            <pre><code class="language-javascript">const senchaStock = new Inventory(sencha, 150);
+const matchaStock = new Inventory(matcha, 30);
+
+senchaStock.sell(50);
+console.log(senchaStock.stockCount); // 100
+console.log(matchaStock.stockCount); // 30 (unchanged)</code></pre>
+            <p>Selling Sencha doesn't affect Matcha</p>
+          </section>
+
+          <section>
+            <h3>Order Status</h3>
+            <pre><code class="language-javascript">class Order {
+  constructor() {
+    this.items = [];
+    this.status = "pending";
+  }
+
+  addItem(item) {
+    this.items.push(item);
+  }
+
+  confirm() {
+    this.status = "confirmed";
+  }
+
+  getTotal() {
+    return this.items.reduce(
+      (sum, item) => sum + item.lineTotal(), 0
+    );
+  }
+}</code></pre>
+          </section>
+        </section>
+
+        <!-- Section: Composition -->
+        <section>
+          <section>
+            <h2>Classes Working Together</h2>
+            <p>Composition</p>
+          </section>
+
+          <section>
+            <h3>Each Class Has a Job</h3>
+            <p><span class="method-box">Tea</span> knows its name, price, origin</p>
+            <p><span class="method-box">OrderItem</span> knows tea + quantity</p>
+            <p><span class="method-box">Order</span> manages a list of items</p>
+            <p><span class="method-box">Customer</span> tracks orders</p>
+          </section>
+
+          <section>
+            <h3>Building an Order</h3>
+            <pre><code class="language-javascript">const sencha = new Tea("Sencha", 0.12, "Japan");
+const matcha = new Tea("Matcha", 0.45, "Japan");
+
+const order = new Order();
+order.addItem(new OrderItem(sencha, 100));
+order.addItem(new OrderItem(matcha, 50));
+
+console.log(order.getTotal()); // 34.5</code></pre>
+          </section>
+
+          <section>
+            <h3>Array Methods + Classes</h3>
+            <pre><code class="language-javascript">// Week 1 skills inside class methods!
+class TeaCatalog {
+  constructor(teas) {
+    this.teas = teas;
+  }
+
+  filterByType(type) {
+    return this.teas.filter(t => t.type === type);
+  }
+
+  search(query) {
+    return this.teas.filter(t =>
+      t.name.toLowerCase().includes(query.toLowerCase())
+    );
+  }
+}</code></pre>
+            <p class="dim">.filter() and .map() from Week 1 &mdash; inside classes!</p>
+          </section>
+        </section>
+
+        <!-- Section: Static Methods -->
+        <section>
+          <section>
+            <h2>Static Methods</h2>
+            <p>Methods on the class itself</p>
+          </section>
+
+          <section>
+            <h3>Instance vs Static</h3>
+            <p><span class="highlight">Instance method:</span> called on an object</p>
+            <pre><code class="language-javascript">sencha.priceFor(100);  // on the instance</code></pre>
+            <p><span class="highlight">Static method:</span> called on the class</p>
+            <pre><code class="language-javascript">Tea.fromObject(data);  // on the class</code></pre>
+          </section>
+
+          <section>
+            <h3>Factory Method</h3>
+            <pre><code class="language-javascript">class Tea {
+  // ...
+
+  static fromObject(obj) {
+    return new Tea(
+      obj.name, obj.pricePerGram, obj.origin
+    );
+  }
+}
+
+// Convert API/database data to class instances:
+const teaInstances = teas.map(Tea.fromObject);</code></pre>
+            <p class="dim">Very common on backends</p>
+          </section>
+
+          <section>
+            <h3>Utility Methods</h3>
+            <pre><code class="language-javascript">class Tea {
+  // ...
+
+  static findCheapest(teas) {
+    return teas.reduce((min, t) =>
+      t.pricePerGram < min.pricePerGram ? t : min
+    );
+  }
+}
+
+Tea.findCheapest(teaInstances).name;
+// "English Breakfast"</code></pre>
+          </section>
+        </section>
+
+        <!-- Section: Inheritance (brief) -->
+        <section>
+          <section>
+            <h2>Inheritance</h2>
+            <p>Specializing a class</p>
+          </section>
+
+          <section>
+            <h3>extends and super()</h3>
+            <pre><code class="language-javascript">class PremiumTea extends Tea {
+  constructor(name, pricePerGram, origin, grade) {
+    super(name, pricePerGram, origin);
+    this.grade = grade;
+  }
+
+  priceFor(grams) {
+    return super.priceFor(grams) * 1.5;
+  }
+}
+
+const gyokuro = new PremiumTea("Gyokuro", 0.56, "Japan", "A");
+gyokuro.priceFor(100); // 84</code></pre>
+          </section>
+
+          <section>
+            <h3>When to Use</h3>
+            <p>"Is-a" relationship: PremiumTea <em>is a</em> Tea</p>
+            <p class="dim" style="margin-top: 1em;">But most of the time, prefer <span class="highlight">composition</span></p>
+            <p class="dim">An Order <em>has</em> OrderItems (not "is an" OrderItem)</p>
+          </section>
+        </section>
+
+        <!-- Section: Course Journey -->
+        <section>
+          <section>
+            <h2>The Course Journey</h2>
+          </section>
+
+          <section>
+            <h3>Four Weeks</h3>
+            <p>
+              <span class="journey-step">W1: Array Methods</span>
+              <span class="journey-step">W2: Callbacks</span>
+            </p>
+            <p>
+              <span class="journey-step">W3: Promises</span>
+              <span class="journey-step active">W4: Classes</span>
+            </p>
+            <p class="dim" style="margin-top: 1em;">Transform data &rarr; Handle timing &rarr; Fetch from APIs &rarr; Organize code</p>
+          </section>
+
+          <section>
+            <h3>It All Connects</h3>
+            <pre><code class="language-javascript">class TeaShop {
+  async fetchAndStore() {
+    // Week 3: fetch from API
+    const response = await fetch(`${API}/teas`);
+    const data = await response.json();
+
+    // Week 4: convert to class instances
+    this.teas = data.map(Tea.fromObject);
+
+    // Week 1: filter and transform
+    const organic = this.teas
+      .filter(t => t.organic)
+      .map(t => t.describe());
+
+    // Week 2: reduce to totals
+    const total = this.teas.reduce(
+      (sum, t) => sum + t.priceFor(100), 0
+    );
+  }
+}</code></pre>
+          </section>
+        </section>
+
+        <!-- Summary -->
+        <section>
+          <section>
+            <h2>Summary</h2>
+          </section>
+
+          <section>
+            <h3>Key Concepts</h3>
+            <p><span class="highlight">class</span> - blueprint for objects</p>
+            <p><span class="highlight">constructor</span> - initializes instances</p>
+            <p><span class="highlight">this</span> - the current object</p>
+            <p><span class="highlight">new</span> - creates an instance</p>
+            <p><span class="highlight">static</span> - method on the class</p>
+            <p><span class="highlight">extends</span> - inherit from another class</p>
+          </section>
+
+          <section>
+            <h3>Questions to Ask</h3>
+            <p>Does this data need behavior? <span class="dim">&rarr; class</span></p>
+            <p>Does this method need instance data? <span class="dim">&rarr; instance method</span></p>
+            <p>Does it operate on the class? <span class="dim">&rarr; static method</span></p>
+            <p>Is it a specialized version? <span class="dim">&rarr; extends</span></p>
+          </section>
+
+          <section>
+            <h2>Time to Practice</h2>
+            <p class="emoji">🍵</p>
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        plugins: [RevealHighlight, RevealNotes],
+        width: 1280,
+        height: 720,
+        margin: 0.1,
+        transition: "slide",
+        controls: true,
+        progress: true,
+        center: true,
+      });
+    </script>
+  </body>
+</html>
