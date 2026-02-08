@@ -3,7 +3,7 @@
 Build a Tea Shop CLI tool that interacts with the Tea Shop API.
 
 ```js
-const API_BASE = "https://tea-api-hyf.fly.dev/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 ```
 
 ---
@@ -20,18 +20,19 @@ async function searchTeas(query) {
 }
 
 // Test it:
-searchTeas("green").then(teas => {
-  console.log("Search results for 'green':");
+searchTeas("pearl").then(teas => {
+  console.log("Search results for 'pearl':");
   teas.forEach(tea => console.log(`- ${tea.name}`));
 });
 ```
 
 Expected output:
 ```
-Search results for 'green':
-- Dragon Well
-- Gyokuro
-- Genmaicha
+Search results for 'pearl':
+- Jasmine Pearl
+- Royal Kenya Pearl
+- Imperial China Pearl
+- Mountain Sri Lanka Pearl
 ```
 
 ---
@@ -170,17 +171,31 @@ processOrder(myOrder)
 
 ## Exercise 6: Authenticated Orders ⭐⭐
 
-Create functions to work with the authenticated orders endpoint:
+Create functions to work with the authenticated orders endpoint.
+
+First, sign up for an account, then use login to get a token:
 
 ```js
+// Helper: sign up (only needed once)
+async function signup(email, password) {
+  const response = await fetch(`${API_BASE}/auth/signup`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password })
+  });
+
+  if (!response.ok) throw new Error("Signup failed");
+  return response.json();
+}
+
 // Helper: login and get token
 async function getAuthToken() {
   const response = await fetch(`${API_BASE}/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      username: "trainee",
-      password: "hyf2024"
+      email: "yourname@example.com",
+      password: "mypassword"
     })
   });
 
@@ -208,8 +223,10 @@ async function getMyOrders() {
   // Return array of orders
 }
 
-// Test:
-createOrder([{ teaId: 1, grams: 100 }])
+// Test (sign up first, then create and list orders):
+signup("yourname@example.com", "mypassword")
+  .catch(() => {}) // ignore if already signed up
+  .then(() => createOrder([{ teaId: 1, grams: 100 }]))
   .then(order => console.log("Created order:", order.id))
   .then(() => getMyOrders())
   .then(orders => console.log("All orders:", orders.length));
@@ -231,14 +248,14 @@ Each file should be runnable with `node exerciseN.js`.
 
 ```js
 // Example structure for exercise1.js
-const API_BASE = "https://tea-api-hyf.fly.dev/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 
 async function searchTeas(query) {
   // ...
 }
 
 // Run the function
-searchTeas("green").then(results => {
+searchTeas("pearl").then(results => {
   console.log("Found:", results.length, "teas");
   results.forEach(tea => console.log(`- ${tea.name}`));
 });

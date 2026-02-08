@@ -32,7 +32,7 @@ By the end of this session, trainees should:
 
 ## Session Outline
 
-### 1. Introduction (15 min)
+### 1. Introduction
 
 - Recall Week 1: forEach, map, filter all take functions as arguments
 - "Those functions are callbacks - but they run immediately"
@@ -41,7 +41,7 @@ By the end of this session, trainees should:
 
 **Use:** [Slides](./slides/index.html) (introduction sections)
 
-### 2. Functions as Values (25 min)
+### 2. Functions as Values
 
 - Functions are "first-class citizens" - treated like any other value
 - Live code: assign function to variable, call via variable
@@ -53,7 +53,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 1](./session-materials/exercises.md#part-1-functions-as-values) (exercises 1-4)
 
-### 3. reduce Method (30 min)
+### 3. reduce Method
 
 - Connect to Week 1: map transforms, filter selects, forEach does side effects
 - reduce: the "build up" pattern
@@ -65,9 +65,9 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 2](./session-materials/exercises.md#part-2-reduce) (exercises 5-8)
 
-### Break (10 min)
+### Break
 
-### 4. Callbacks - Synchronous (30 min)
+### 4. Callbacks - Synchronous
 
 - Key insight: the function you pass to map IS a callback
 - "Let's build our own forEach to see how callbacks work under the hood"
@@ -78,7 +78,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 3](./session-materials/exercises.md#part-3-building-higher-order-functions) (exercises 9-11)
 
-### 5. setTimeout & Delayed Callbacks (30 min)
+### 5. setTimeout & Delayed Callbacks
 
 - Now the twist: what if the callback runs *later*?
 - Show code with surprising output order - let students predict first
@@ -90,9 +90,9 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 4](./session-materials/exercises.md#part-4-settimeout--delayed-callbacks) (exercises 12-15)
 
-### Break (10 min)
+### Break
 
-### 6. File System Callbacks (20 min)
+### 6. File System Callbacks
 
 - Real backend example: reading files
 - Introduce error-first pattern: `(error, data)`
@@ -103,7 +103,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 5](./session-materials/exercises.md#part-5-file-system) (exercises 16-17)
 
-### 7. Wrap-up (10 min)
+### 7. Wrap-up
 
 - Recap: functions as values, reduce, callbacks, delayed callbacks
 - Preview Week 3: "Callback nesting gets ugly. Promises solve this."

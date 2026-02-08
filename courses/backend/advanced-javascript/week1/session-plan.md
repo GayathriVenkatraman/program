@@ -17,8 +17,6 @@ By the end of this session, trainees should:
 
 ## Glossary Goals
 
-We intentionally introduce CS terminology to prepare trainees for professional environments. Here's what we introduce and why:
-
 | Term | Why we introduce it |
 |------|---------------------|
 | **Declarative vs Imperative** | Frames the shift from for-loops to array methods. Helps them understand *why* this style is preferred. |

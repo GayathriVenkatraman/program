@@ -60,7 +60,7 @@ orderTicket
 When you have a Promise, you can attach callbacks using `.then()` and `.catch()`:
 
 ```js
-const API_BASE = "https://tea-api-hyf.fly.dev/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 
 fetch(`${API_BASE}/teas`)
   .then(response => response.json())
@@ -85,7 +85,7 @@ fetch(`${API_BASE}/teas`)
 The magic of Promises: `.then()` returns a new Promise, so you can chain them:
 
 ```js
-const API_BASE = "https://tea-api-hyf.fly.dev/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 
 fetch(`${API_BASE}/teas/1`)
   .then(response => response.json())
@@ -152,7 +152,7 @@ function findTeaById(id) {
 `async`/`await` is syntactic sugar over Promises - it makes async code look synchronous:
 
 ```js
-const API_BASE = "https://tea-api-hyf.fly.dev/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 
 async function getTea(id) {
   const response = await fetch(`${API_BASE}/teas/${id}`);
@@ -175,7 +175,7 @@ async function getTea(id) {
 With async/await, you handle errors using `try`/`catch`:
 
 ```js
-const API_BASE = "https://tea-api-hyf.fly.dev/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 
 async function getTea(id) {
   try {
@@ -201,7 +201,7 @@ This is the same pattern as synchronous error handling - familiar and readable.
 Sometimes you want to run multiple operations at once:
 
 ```js
-const API_BASE = "https://tea-api-hyf.fly.dev/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 
 // Sequential - slow (3 requests, one after another)
 const tea1 = await fetch(`${API_BASE}/teas/1`).then(r => r.json());
@@ -225,7 +225,7 @@ const [tea1, tea2, tea3] = await Promise.all([
 
 ## Summary
 
-| Concept | Description |
+| Term | Meaning |
 |---------|-------------|
 | Promise | Object representing future completion/failure |
 | resolve | Promise succeeded, pass result to .then() |
@@ -238,12 +238,23 @@ const [tea1, tea2, tea3] = await Promise.all([
 
 ---
 
+## Pre-Reading (Optional)
+
+If you want to go deeper, read these MDN pages:
+
+- [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
+- [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+
+---
+
 ## The Tea Shop API
 
 During class you'll work with a real API:
 
 ```
-Base URL: https://tea-api-hyf.fly.dev/api/v1
+Base URL: https://tea-api-787553294298.europe-west1.run.app/api/v1
 
 Endpoints:
 GET  /teas           - List all teas
@@ -256,7 +267,7 @@ POST /orders         - Create order (requires auth)
 
 Example:
 ```js
-const API_BASE = "https://tea-api-hyf.fly.dev/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 
 const response = await fetch(`${API_BASE}/teas`);
 const teas = await response.json();

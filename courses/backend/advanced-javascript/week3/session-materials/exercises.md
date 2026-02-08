@@ -3,7 +3,7 @@
 All exercises use the Tea Shop API:
 
 ```js
-const API_BASE = "https://tea-api-hyf.fly.dev/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 ```
 
 ---
@@ -32,7 +32,9 @@ fetch(`${API_BASE}/teas`)
   });
 ```
 
-Expected output: `Found 20 teas`
+Expected output: `Found 50 teas`
+
+> 💡 Notice: `response.json()` itself returns a Promise - that's why you need a second `.then()` to get the actual data.
 
 ### Exercise 2
 
@@ -76,11 +78,13 @@ fetch(`${API_BASE}/inventory`)
   // your code
 ```
 
-Expected output:
+Expected output (will vary):
 ```
 Low stock:
-- Silver Needle: 25
-- Matcha: 30
+- Sencha: 0
+- Chamomile: 0
+- Darjeeling: 33
+- ...
 ```
 
 ---
@@ -156,6 +160,8 @@ function wait(ms) {
 console.log("Starting...");
 wait(2000).then(() => console.log("2 seconds passed!"));
 ```
+
+> 💡 Wrapping `setTimeout` in a Promise is a common pattern. You're converting callback-based code to Promise-based code - this is called "promisifying."
 
 ### Exercise 8 ⭐
 
@@ -327,6 +333,8 @@ getThreeTeas();
 
 **Bonus:** Modify it to also log how long the operation took using `Date.now()`.
 
+> 💡 All three fetches run at the same time. `Promise.all` only waits as long as the slowest one - much faster than fetching one after another.
+
 ### Exercise 15 ⭐
 
 Create a function that fetches ALL teas and ALL inventory data in parallel, then combines them into a single report:
@@ -358,19 +366,29 @@ Work with protected endpoints using authentication tokens.
 
 ### Exercise 16
 
-The `/orders` endpoint requires authentication. Create a login function that:
-1. POSTs to `/auth/login` with username and password
-2. Returns the token from the response
+The `/orders` endpoint requires authentication. First sign up, then log in:
+
+1. POST to `/auth/signup` with your email and a password to create an account
+2. POST to `/auth/login` with the same email and password to get a token
 
 ```js
-async function login(username, password) {
-  // POST to ${API_BASE}/auth/login
-  // Body: { username, password }
+// Step 1: Sign up (only needed once)
+async function signup(email, password) {
+  // POST to ${API_BASE}/auth/signup
+  // Body: { email, password }
   // Return: data.token
 }
 
-// Test credentials: username "trainee", password "hyf2024"
-login("trainee", "hyf2024")
+// Step 2: Log in
+async function login(email, password) {
+  // POST to ${API_BASE}/auth/login
+  // Body: { email, password }
+  // Return: data.token
+}
+
+// Sign up first, then log in
+await signup("yourname@example.com", "mypassword");
+login("yourname@example.com", "mypassword")
   .then(token => console.log("Got token:", token))
   .catch(err => console.error(err.message));
 ```

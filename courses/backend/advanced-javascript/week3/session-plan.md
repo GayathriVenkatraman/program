@@ -1,6 +1,6 @@
 # Session Plan (Week 3: Promises & async/await)
 
-> This guide is for mentors. It outlines how to run the session, what to emphasize, and why we introduce certain concepts.
+> This guide is for mentors. It outlines how to run the session, what to emphasize, and why we introduce certain terminology.
 
 ---
 
@@ -32,7 +32,7 @@ By the end of this session, trainees should:
 
 ## Session Outline
 
-### 1. Introduction (15 min)
+### 1. Introduction
 
 - Recall Week 2: callback hell example
 - "There has to be a better way" - introduce Promises
@@ -40,7 +40,7 @@ By the end of this session, trainees should:
 
 **Use:** [Slides](./slides/index.html) (introduction sections)
 
-### 2. Promise Consumption (30 min)
+### 2. Promise Consumption
 
 - Start with consuming, NOT creating Promises
 - Use `fetch()` - a real function that returns a Promise
@@ -52,7 +52,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 1](./session-materials/exercises.md#part-1-consuming-promises) (exercises 1-4)
 
-### 3. Chaining Promises (20 min)
+### 3. Chaining Promises
 
 - Show chaining: one `.then()` after another
 - The return value becomes the next `.then()`'s input
@@ -63,9 +63,9 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 2](./session-materials/exercises.md#part-2-chaining-promises) (exercises 5-6)
 
-### Break (10 min)
+### Break
 
-### 4. Creating Promises (25 min)
+### 4. Creating Promises
 
 - Now show how to CREATE Promises
 - `new Promise((resolve, reject) => { ... })`
@@ -77,7 +77,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 3](./session-materials/exercises.md#part-3-creating-promises) (exercises 7-9)
 
-### 5. async/await (30 min)
+### 5. async/await
 
 - "Promises are great, but there's even cleaner syntax"
 - `async` makes a function return a Promise
@@ -89,9 +89,9 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 4](./session-materials/exercises.md#part-4-asyncawait) (exercises 10-13)
 
-### Break (10 min)
+### Break
 
-### 6. Promise.all (20 min)
+### 6. Promise.all
 
 - Problem: sequential requests are slow
 - Solution: run them in parallel with `Promise.all()`
@@ -102,7 +102,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 5](./session-materials/exercises.md#part-5-promiseall) (exercises 14-15)
 
-### 7. Wrap-up (10 min)
+### 7. Wrap-up
 
 - Recap: Promises → .then/.catch → async/await → Promise.all
 - Mention Part 6 (Authentication) as optional stretch for fast learners
@@ -152,4 +152,4 @@ The Tea Shop API makes exercises concrete. Students see real network delays, rea
 - [Slides](./slides/index.html) - Reveal.js presentation
 - [Exercises](./session-materials/exercises.md) - In-class exercises
 - [Assignment](./assignment.md) - Take-home work
-- [Tea Shop API](https://tea-api-hyf.fly.dev/api/v1) - Live API for exercises
+- [Tea Shop API](https://tea-api-787553294298.europe-west1.run.app/api/v1) - Live API for exercises

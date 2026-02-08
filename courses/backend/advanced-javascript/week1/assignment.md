@@ -161,40 +161,24 @@ console.log(countByType);
 
 ## Submission
 
-Create a file called `assignment.js` with your solutions. Each exercise should be a function that can be called and tested.
+Create a folder `week1-assignment/` with:
+- `exercise1.js` - Rewrite with array methods
+- `exercise2.js` - Inventory report
+- `exercise3.js` - Low stock alert
+- `exercise4.js` - Teas by origin
+- `exercise5.js` - Search function
+- `exercise6.js` - Total inventory value (optional)
+- `exercise7.js` - Count by type (optional)
+
+Each file should be runnable with `node exerciseN.js`.
 
 ```js
+// Example structure for exercise1.js
 import { teas } from "../data/teas.js";
 
-// Exercise 1
-const rewrittenResult = teas
+const result = teas
   .filter(/* ... */)
   .map(/* ... */);
 
-// Exercise 2
-function inventoryReport(teas) {
-  // ...
-}
-
-// Exercise 3
-function lowStockAlert(teas) {
-  // ...
-}
-
-// Exercise 4
-function teasByOrigin(teas) {
-  // ...
-}
-
-// Exercise 5
-function searchTeas(teas, query) {
-  // ...
-}
-
-// Test your functions
-console.log("Exercise 1:", rewrittenResult);
-console.log("Exercise 2:", inventoryReport(teas));
-console.log("Exercise 3:", lowStockAlert(teas));
-console.log("Exercise 4:", teasByOrigin(teas));
-console.log("Exercise 5:", searchTeas(teas, "green"));
+console.log(result);
 ```
