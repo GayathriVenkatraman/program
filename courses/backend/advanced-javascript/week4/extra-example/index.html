@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Foxes & Rabbits</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #0e0e0e;
+        color: #bbb;
+        font-family: "Courier New", monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px;
+        gap: 12px;
+      }
+      h1 {
+        color: #ddd;
+        font-size: 1.1rem;
+        letter-spacing: 0.05em;
+      }
+      canvas {
+        border: 1px solid #2a2a2a;
+      }
+
+      /* Playback bar */
+      #playback {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      button {
+        background: #1a1a1a;
+        color: #ccc;
+        border: 1px solid #333;
+        padding: 6px 16px;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 0.8rem;
+        border-radius: 3px;
+        transition: background 0.15s;
+      }
+      button:hover {
+        background: #2a2a2a;
+      }
+      #stats {
+        font-size: 0.8rem;
+        display: flex;
+        gap: 18px;
+      }
+      .r {
+        color: #d0d0d0;
+      }
+      .f {
+        color: #e07030;
+      }
+      label {
+        font-size: 0.8rem;
+      }
+      input[type="range"] {
+        width: 60px;
+        vertical-align: middle;
+      }
+
+      /* Settings panel */
+      #settings {
+        width: 1014px;
+        background: #151515;
+        border: 1px solid #2a2a2a;
+        border-radius: 4px;
+        padding: 14px 20px;
+      }
+      #settings h2 {
+        font-size: 0.75rem;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 12px;
+      }
+      #settings-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px 24px;
+      }
+      .setting {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .setting span {
+        font-size: 0.8rem;
+        color: #888;
+      }
+      input[type="number"] {
+        width: 54px;
+        background: #1a1a1a;
+        color: #ccc;
+        border: 1px solid #333;
+        padding: 4px 6px;
+        font-family: inherit;
+        font-size: 0.8rem;
+        text-align: center;
+        border-radius: 3px;
+      }
+      input[type="number"]:focus {
+        outline: none;
+        border-color: #555;
+      }
+
+      /* Main layout */
+      #main {
+        display: flex;
+        gap: 14px;
+        align-items: stretch;
+      }
+
+      /* Rules panel */
+      #rules {
+        width: 200px;
+        flex-shrink: 0;
+        background: #151515;
+        border: 1px solid #2a2a2a;
+        border-radius: 4px;
+        padding: 14px 16px;
+        align-self: stretch;
+      }
+      #rules h2 {
+        font-size: 0.75rem;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 10px;
+      }
+      #rules ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      #rules li {
+        font-size: 0.75rem;
+        color: #ccc;
+        line-height: 1.4;
+      }
+      #rules li::before {
+        content: "- ";
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Foxes & Rabbits</h1>
+
+    <div id="main">
+      <canvas id="world" width="800" height="600"></canvas>
+      <div id="rules">
+        <h2>Rules</h2>
+        <ul>
+          <li>All animals walk randomly and wrap through edges</li>
+          <li>Rabbits reproduce when two meet close enough</li>
+          <li>Rabbits also have a small chance to reproduce on their own</li>
+          <li>A fox that touches a rabbit eats it and duplicates</li>
+          <li>A fox that doesn't eat for too long starves and dies</li>
+
+          <li>The last rabbit cannot be eaten</li>
+          <li>The last fox cannot starve</li>
+        </ul>
+      </div>
+    </div>
+    <canvas id="graph" width="1014" height="100"></canvas>
+
+    <div id="playback">
+      <button id="pause">Play</button>
+      <button id="reset">Reset</button>
+      <label>Speed <input type="range" id="speed" min="1" max="10" value="1" /></label>
+      <div id="stats">
+        <span class="r">Rabbits: <strong id="rc">0</strong></span>
+        <span class="f">Foxes: <strong id="fc">0</strong></span>
+        <span>Step <span id="sc">0</span></span>
+      </div>
+    </div>
+
+    <div id="settings">
+      <h2>Starting conditions</h2>
+      <div id="settings-grid">
+        <div class="setting">
+          <span class="r">Rabbits</span>
+          <input type="number" id="startRabbits" min="0" max="500" value="30" />
+        </div>
+        <div class="setting">
+          <span class="r">Mate cooldown</span>
+          <input type="number" id="mateCooldown" min="1" max="500" value="50" />
+        </div>
+        <div class="setting">
+          <span>Mate distance</span>
+          <input type="number" id="mateDist" min="5" max="100" value="25" />
+        </div>
+        <div class="setting">
+          <span class="f">Foxes</span>
+          <input type="number" id="startFoxes" min="0" max="100" value="4" />
+        </div>
+        <div class="setting">
+          <span class="f">Starve after</span>
+          <input type="number" id="foxHunger" min="10" max="1000" value="150" />
+        </div>
+        <div class="setting">
+          <span>Catch distance</span>
+          <input type="number" id="catchDist" min="3" max="50" value="12" />
+        </div>
+        <div class="setting">
+          <span class="r">Spontaneous %</span>
+          <input type="number" id="spontaneous" min="0" max="100" value="2" />
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { Universe } from "./simulation.js";
+
+      const world = document.getElementById("world");
+      const graph = document.getElementById("graph");
+      const wCtx = world.getContext("2d");
+      const gCtx = graph.getContext("2d");
+      const W = world.width;
+      const H = world.height;
+
+      let universe;
+      let paused = true;
+      let history = [];
+      let frameCount = 0;
+
+      function val(id, fallback) {
+        return parseInt(document.getElementById(id).value) || fallback;
+      }
+
+      function init() {
+        universe = new Universe(W, H);
+        universe.mateDistance = val("mateDist", 25);
+        universe.catchDistance = val("catchDist", 12);
+        universe.foxHunger = val("foxHunger", 150);
+        universe.mateCooldown = val("mateCooldown", 50);
+        universe.spontaneous = val("spontaneous", 2) / 100;
+        universe.populate(val("startRabbits", 30), val("startFoxes", 4));
+        history = [];
+        frameCount = 0;
+      }
+
+      function drawWorld() {
+        wCtx.fillStyle = "#141e14";
+        wCtx.fillRect(0, 0, W, H);
+
+        // Rabbits
+        wCtx.fillStyle = "#ddd";
+        for (const r of universe.rabbits) {
+          wCtx.beginPath();
+          wCtx.arc(r.x, r.y, 3, 0, Math.PI * 2);
+          wCtx.fill();
+        }
+
+        // Foxes - darken as hunger increases
+        for (const f of universe.foxes) {
+          const t = f.hungerLevel();
+          const red = 230 - t * 50;
+          const green = 130 - t * 50;
+          const blue = 30;
+          wCtx.fillStyle = `rgb(${red},${green},${blue})`;
+          wCtx.beginPath();
+          wCtx.arc(f.x, f.y, 5, 0, Math.PI * 2);
+          wCtx.fill();
+        }
+      }
+
+      function drawGraph() {
+        const GW = graph.width;
+        const GH = graph.height;
+        gCtx.fillStyle = "#111";
+        gCtx.fillRect(0, 0, GW, GH);
+
+        if (history.length < 2) return;
+
+        const visible = history.slice(-GW);
+        const maxVal = Math.max(
+          ...visible.map((h) => Math.max(h.r, h.f)),
+          10
+        );
+        const step = GW / (visible.length - 1);
+
+        function drawLine(key, color) {
+          gCtx.strokeStyle = color;
+          gCtx.lineWidth = 1.5;
+          gCtx.beginPath();
+          for (let i = 0; i < visible.length; i++) {
+            const x = i * step;
+            const y = GH - (visible[i][key] / maxVal) * (GH - 6) - 3;
+            i === 0 ? gCtx.moveTo(x, y) : gCtx.lineTo(x, y);
+          }
+          gCtx.stroke();
+        }
+
+        drawLine("r", "#ccc");
+        drawLine("f", "#e07030");
+
+        gCtx.font = "10px monospace";
+        gCtx.fillStyle = "#888";
+        gCtx.fillText("rabbits", 4, 12);
+        gCtx.fillStyle = "#e07030";
+        gCtx.fillText("foxes", 60, 12);
+        gCtx.fillStyle = "#555";
+        gCtx.fillText("max: " + maxVal, GW - 60, 12);
+      }
+
+      function updateStats() {
+        document.getElementById("rc").textContent = universe.rabbits.length;
+        document.getElementById("fc").textContent = universe.foxes.length;
+        document.getElementById("sc").textContent = universe.stepCount;
+      }
+
+      function doStep() {
+        universe.step();
+        history.push({ r: universe.rabbits.length, f: universe.foxes.length });
+      }
+
+      function loop() {
+        frameCount++;
+        if (!paused) {
+          const speed = parseInt(document.getElementById("speed").value);
+          if (speed <= 3) {
+            const skip = [0, 6, 3, 2][speed];
+            if (frameCount % skip === 0) doStep();
+          } else {
+            for (let i = 0; i < speed - 2; i++) doStep();
+          }
+          if (history.length > 2000) {
+            history = history.slice(-1500);
+          }
+        }
+        drawWorld();
+        drawGraph();
+        updateStats();
+        requestAnimationFrame(loop);
+      }
+
+      document.getElementById("pause").addEventListener("click", () => {
+        paused = !paused;
+        document.getElementById("pause").textContent = paused
+          ? "Play"
+          : "Pause";
+      });
+
+      document.getElementById("reset").addEventListener("click", init);
+
+      init();
+      requestAnimationFrame(loop);
+    </script>
+  </body>
+</html>
