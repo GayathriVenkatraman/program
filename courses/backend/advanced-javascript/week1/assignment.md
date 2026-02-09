@@ -115,11 +115,14 @@ function searchTeas(teas, query) {
   // Return just the names, sorted alphabetically
 }
 
-console.log(searchTeas(teas, "green"));
-// Might return: ["Dragon Well", "Genmaicha", "Gyokuro", ...]
-
 console.log(searchTeas(teas, "earl"));
 // Returns: ["Earl Grey"]
+
+console.log(searchTeas(teas, "dragon"));
+// Returns: ["Dragon Well"]
+
+console.log(searchTeas(teas, "ch"));
+// Returns: ["English Breakfast", "Genmaicha", "Lapsang Souchong"]
 ```
 
 Hint: Use `.toLowerCase()` and `.includes()` for case-insensitive search.
@@ -154,7 +157,7 @@ const countByType = teas.reduce((counts, tea) => {
 }, {});
 
 console.log(countByType);
-// Expected: { green: 6, black: 5, herbal: 4, oolong: 3, white: 2 }
+// Expected: { green: 6, black: 6, herbal: 4, oolong: 2, white: 2 }
 ```
 
 ---

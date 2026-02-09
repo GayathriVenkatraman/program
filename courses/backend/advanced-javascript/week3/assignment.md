@@ -3,7 +3,7 @@
 Build a Tea Shop CLI tool that interacts with the Tea Shop API.
 
 ```js
-const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api";
 ```
 
 ---
@@ -175,6 +175,8 @@ Create functions to work with the authenticated orders endpoint.
 
 First, sign up for an account, then use login to get a token:
 
+> ⚠️ Use a **dummy email and password** — not your real ones! This is a practice API with no security guarantees.
+
 ```js
 // Helper: sign up (only needed once)
 async function signup(email, password) {
@@ -248,7 +250,7 @@ Each file should be runnable with `node exerciseN.js`.
 
 ```js
 // Example structure for exercise1.js
-const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api";
 
 async function searchTeas(query) {
   // ...

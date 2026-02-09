@@ -21,7 +21,7 @@ function stockByCaffeine(teas) {
 }
 
 console.log(stockByCaffeine(teas));
-// { high: 450, medium: 320, low: 280, none: 180 }
+// { high: 745, medium: 450, low: 190, none: 635 }
 ```
 
 This tells you how much inventory you have for customers who want high-caffeine vs caffeine-free options.
@@ -58,7 +58,15 @@ Create these functions:
 - Check if each tea has enough stock for the order quantity
 - Callback receives `{ orderId: number, inStock: boolean, shortages: string[] }`
 
-Test each function individually with console.logs.
+Test each function individually with console.log as callback function to see results after delays:
+
+You an test `validateOrder` like this:
+
+```js
+validateOrder(order, result => {
+  console.log("Validation result:", result);
+});
+```
 
 ---
 

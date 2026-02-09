@@ -3,7 +3,7 @@
 All exercises use the Tea Shop API:
 
 ```js
-const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
+const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api";
 ```
 
 ---
@@ -371,6 +371,8 @@ The `/orders` endpoint requires authentication. First sign up, then log in:
 1. POST to `/auth/signup` with your email and a password to create an account
 2. POST to `/auth/login` with the same email and password to get a token
 
+> ⚠️ Use a **dummy email and password** — not your real ones! This is a practice API with no security guarantees.
+
 ```js
 // Step 1: Sign up (only needed once)
 async function signup(email, password) {
@@ -386,7 +388,7 @@ async function login(email, password) {
   // Return: data.token
 }
 
-// Sign up first, then log in
+// Sign up first, then log in (use dummy credentials!)
 await signup("yourname@example.com", "mypassword");
 login("yourname@example.com", "mypassword")
   .then(token => console.log("Got token:", token))

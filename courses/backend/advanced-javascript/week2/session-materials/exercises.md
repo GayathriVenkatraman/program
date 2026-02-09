@@ -126,7 +126,7 @@ const countByType = teas.reduce((counts, tea) => {
 }, {});
 
 console.log(countByType);
-// Expected: { green: 6, black: 5, herbal: 4, oolong: 3, white: 2 }
+// Expected: { green: 6, black: 6, herbal: 4, oolong: 2, white: 2 }
 ```
 
 ### Exercise 8 ⭐
@@ -323,12 +323,17 @@ Then write code that reads the file and logs how many orders there are:
 ```js
 import fs from "fs";
 
-fs.readFile(/* path */, /* encoding */, function(error, data) {
-  // 1. Handle error first (error-first pattern!)
-  // 2. Parse the JSON string into an array
-  // 3. Log the number of orders
+fs.readFile('./orders.json', {encoding: 'utf8'}, function(error, data) {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  // 1. Parse the JSON string into an array
+  // 2. Log the number of orders
 });
 ```
+
+Try to point to a non-existent file to see how the error handling works.
 
 Expected output: `Number of orders: 3`
 
@@ -342,8 +347,8 @@ Building on Exercise 16, after reading the orders:
 ```js
 // Expected output:
 // Order 1: 12.00 DKK (1 item)
-// Order 2: 18.50 DKK (2 items)
-// Order 3: 45.00 DKK (1 item)
+// Order 2: 26.00 DKK (2 items)
+// Order 3: 36.00 DKK (1 item)
 ```
 
 > 💡 You'll need to find each tea by ID, then multiply pricePerGram by grams.

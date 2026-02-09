@@ -29,7 +29,7 @@ By the end of this week, you'll write it even shorter:
 const names = teas.map(tea => tea.name);
 ```
 
-That's called an **arrow function**. We'll get there - but first, let's understand what's happening with the regular function syntax.
+That's called an **arrow function**. We'll get there - but first, let's take things step by step, and understand what's happening with the regular function syntax.
 
 > 📚 **Glossary: Declarative vs Imperative**
 > **Imperative** code describes *how* to do something (step by step).
