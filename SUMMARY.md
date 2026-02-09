@@ -81,6 +81,7 @@
       - [Session Plan](courses/foundation/career-training/week2/session-plan.md)
   - [Foundation Project](courses/foundation/final-project/README.md)
     - [Project Brief](courses/foundation/final-project/project-brief.md)
+      - [Initial Card Assets](courses/foundation/final-project/assets/card/README.md)
     - [Session Plan](courses/foundation/final-project/session-plan.md)
 
 - [Frontend](courses/frontend/README.md)
