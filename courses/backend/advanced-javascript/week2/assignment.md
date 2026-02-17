@@ -111,7 +111,7 @@ processOrder(order);
 
 Create a file `inventory-updates.json`:
 
-```json
+```jsonl
 [
   { "teaId": 1, "change": -20, "reason": "sale" },
   { "teaId": 1, "change": 50, "reason": "restock" },

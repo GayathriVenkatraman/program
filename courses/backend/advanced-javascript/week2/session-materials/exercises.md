@@ -310,7 +310,7 @@ Node.js convention: callbacks receive `(error, result)`. If error exists, someth
 
 First, create a file called `orders.json` in the same folder with this content:
 
-```json
+```jsonl
 [
   { "id": 1, "customerId": 101, "items": [{ "teaId": 1, "grams": 100 }] },
   { "id": 2, "customerId": 102, "items": [{ "teaId": 3, "grams": 50 }, { "teaId": 8, "grams": 30 }] },
