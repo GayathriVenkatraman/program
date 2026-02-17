@@ -11,6 +11,7 @@ For some context on how we ordered the milestones in the old meal sharing projec
  -->
 
 ## Week 1 Sprint
+
 - [ ] (e.g. start with some planning tasks)
 
 ## Week 2 Sprint
@@ -20,4 +21,5 @@ For some context on how we ordered the milestones in the old meal sharing projec
 ## Week 4 Sprint
 
 ## Week 5 Sprint
+
 - [ ] (e.g. end with some deploying tasks)

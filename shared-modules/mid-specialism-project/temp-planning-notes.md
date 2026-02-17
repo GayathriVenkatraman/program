@@ -1,4 +1,4 @@
-## Temp Planning Notes
+# Temp Planning Notes
 
 <!-- TODO: These are planning notes to be removed or moved before going live -->
 

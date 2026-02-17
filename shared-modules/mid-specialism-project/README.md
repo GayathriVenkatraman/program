@@ -32,9 +32,8 @@ Some of the requirements below are already working in the current version of the
 
 1. [Product Requirements Document (PRD)](./product-requirements-document.md)
 1. Technical Specification (spec)
-    1. [Frontend Course Spec](./frontend/technical-specification.md)
-    1. [Backend Course Spec](./backend/technical-specification.md)
-
+   1. [Frontend Course Spec](./frontend/technical-specification.md)
+   1. [Backend Course Spec](./backend/technical-specification.md)
 
 ## How to organise your project
 
@@ -55,6 +54,7 @@ These are the final deliverables that you should submit by the end-of-project de
 ### Frontend
 
 Links to the following:
+
 - [ ] Trello board
 - [ ] Initial design sketches
 - [ ] GitHub repo
@@ -63,6 +63,7 @@ Links to the following:
 ### Backend
 
 Links to the following:
+
 - [ ] Trello board
 - [ ] GitHub repo
 - [ ] Database schema with ERD
