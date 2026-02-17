@@ -18,9 +18,10 @@ This can feel abstract at first. But here's the thing: **terminals existed befor
 
 ### What Does a Backend Actually Do?
 
-Think about scrolling Instagram. You don't download all 500 million posts when you open the app. Instead, your app asks: *"Give me the next 10 posts for this user."*
+Think about scrolling Instagram. You don't download all 500 million posts when you open the app. Instead, your app asks: _"Give me the next 10 posts for this user."_
 
 That's a backend call. The backend:
+
 1. Receives the request
 2. Checks if you're allowed to see those posts
 3. Queries the database for the right 10 posts
@@ -39,11 +40,11 @@ Here are 3 teas from our tea shop:
 
 ### As a Table
 
-| id | name | origin | pricePerGram | organic |
-|----|------|--------|--------------|---------|
-| 1 | Sencha | Japan | 0.12 | true |
-| 2 | Earl Grey | India | 0.08 | false |
-| 3 | Dragon Well | China | 0.25 | true |
+| id  | name        | origin | pricePerGram | organic |
+| --- | ----------- | ------ | ------------ | ------- |
+| 1   | Sencha      | Japan  | 0.12         | true    |
+| 2   | Earl Grey   | India  | 0.08         | false   |
+| 3   | Dragon Well | China  | 0.25         | true    |
 
 ### As CSV (Comma-Separated Values)
 
@@ -55,6 +56,7 @@ id,name,origin,pricePerGram,organic
 ```
 
 ### As JSON (JavaScript Object Notation)
+
 <!-- prettier-ignore -->
 ```jsonl
 [
@@ -65,6 +67,7 @@ id,name,origin,pricePerGram,organic
 ```
 
 ### As JSONL (JSON Lines - one object per line)
+
 <!-- prettier-ignore -->
 ```jsonl
 {"id":1,"name":"Sencha","origin":"Japan","pricePerGram":0.12,"organic":true}
@@ -104,12 +107,12 @@ The backend sits in the middle, orchestrating the flow between stored data and u
 
 ## Course Overview
 
-| Week | Topic | Backend Connection |
-|------|-------|-------------------|
-| 1 | Array Methods | Transforming data between "as stored" and "as served" |
-| 2 | Callbacks & Async | Why backends can't run top-to-bottom |
-| 3 | Promises & APIs | Speaking to databases and external services |
-| 4 | Classes | Modeling your business domain |
+| Week | Topic             | Backend Connection                                    |
+| ---- | ----------------- | ----------------------------------------------------- |
+| 1    | Array Methods     | Transforming data between "as stored" and "as served" |
+| 2    | Callbacks & Async | Why backends can't run top-to-bottom                  |
+| 3    | Promises & APIs   | Speaking to databases and external services           |
+| 4    | Classes           | Modeling your business domain                         |
 
 Each week builds on the previous. By the end, you'll have the JavaScript fundamentals needed to build real backend systems.
 
@@ -155,6 +158,7 @@ This consistent context means you're not learning abstract concepts in isolation
 ## Getting Started
 
 Each week has:
+
 - `README.md` - Overview and learning goals
 - `preparation.md` - What to do before class
 - `session-plan.md` - What happens during class (for teachers)

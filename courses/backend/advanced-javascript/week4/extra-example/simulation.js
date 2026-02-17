@@ -14,7 +14,8 @@ export class Animal {
     this.y += Math.sin(this.angle) * this.speed;
     // Walk through edges to the other side
     this.x = ((this.x % this.worldWidth) + this.worldWidth) % this.worldWidth;
-    this.y = ((this.y % this.worldHeight) + this.worldHeight) % this.worldHeight;
+    this.y =
+      ((this.y % this.worldHeight) + this.worldHeight) % this.worldHeight;
   }
 }
 
@@ -82,12 +83,24 @@ export class Universe {
   populate(rabbitCount, foxCount) {
     for (let i = 0; i < rabbitCount; i++) {
       this.rabbits.push(
-        new Rabbit(Math.random() * this.width, Math.random() * this.height, this.mateCooldown, this.width, this.height)
+        new Rabbit(
+          Math.random() * this.width,
+          Math.random() * this.height,
+          this.mateCooldown,
+          this.width,
+          this.height,
+        ),
       );
     }
     for (let i = 0; i < foxCount; i++) {
       this.foxes.push(
-        new Fox(Math.random() * this.width, Math.random() * this.height, this.foxHunger, this.width, this.height)
+        new Fox(
+          Math.random() * this.width,
+          Math.random() * this.height,
+          this.foxHunger,
+          this.width,
+          this.height,
+        ),
       );
     }
   }
@@ -113,13 +126,20 @@ export class Universe {
 
       const prey = this.rabbits.find(
         (r) =>
-          !eatenRabbits.includes(r) && this.distance(fox, r) < this.catchDistance
+          !eatenRabbits.includes(r) &&
+          this.distance(fox, r) < this.catchDistance,
       );
       if (!prey) return;
 
       eatenRabbits.push(prey);
       fox.eat();
-      const child = new Fox(fox.x, fox.y, this.foxHunger, this.width, this.height);
+      const child = new Fox(
+        fox.x,
+        fox.y,
+        this.foxHunger,
+        this.width,
+        this.height,
+      );
       child.angle = fox.angle + Math.PI;
       newFoxes.push(child);
     });
@@ -142,7 +162,9 @@ export class Universe {
       if (!a.canReproduce()) return;
       const mate = this.rabbits.find(
         (b) =>
-          b !== a && b.canReproduce() && this.distance(a, b) < this.mateDistance
+          b !== a &&
+          b.canReproduce() &&
+          this.distance(a, b) < this.mateDistance,
       );
       if (!mate) return;
 
@@ -151,15 +173,35 @@ export class Universe {
       mate.angle = awayAngle;
       a.reproduce();
       mate.reproduce();
-      babies.push(new Rabbit((a.x + mate.x) / 2, (a.y + mate.y) / 2, this.mateCooldown, this.width, this.height));
+      babies.push(
+        new Rabbit(
+          (a.x + mate.x) / 2,
+          (a.y + mate.y) / 2,
+          this.mateCooldown,
+          this.width,
+          this.height,
+        ),
+      );
     });
 
     this.rabbits.push(...babies);
 
     // Spontaneous reproduction: small random chance per step
-    if (this.rabbits.length < this.maxRabbits && Math.random() < this.spontaneous) {
-      const parent = this.rabbits[Math.floor(Math.random() * this.rabbits.length)];
-      this.rabbits.push(new Rabbit(parent.x, parent.y, this.mateCooldown, this.width, this.height));
+    if (
+      this.rabbits.length < this.maxRabbits &&
+      Math.random() < this.spontaneous
+    ) {
+      const parent =
+        this.rabbits[Math.floor(Math.random() * this.rabbits.length)];
+      this.rabbits.push(
+        new Rabbit(
+          parent.x,
+          parent.y,
+          this.mateCooldown,
+          this.width,
+          this.height,
+        ),
+      );
     }
   }
 

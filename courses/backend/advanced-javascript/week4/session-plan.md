@@ -20,13 +20,13 @@ By the end of this session, trainees should:
 
 ## Glossary Goals
 
-| Term | Why we introduce it |
-|------|---------------------|
-| **class** | Fundamental concept in every backend framework. They'll see classes in Express, database ORMs, everywhere. |
-| **constructor** | Understanding initialization is essential for creating properly structured objects. |
-| **instance** | Distinguishing blueprint from object is crucial for understanding how classes work. |
-| **this** | Required for writing any class method. Keep it simple: "this = the current object." |
-| **encapsulation** | Core OOP principle. Helps them understand why methods live inside classes. |
+| Term              | Why we introduce it                                                                                        |
+| ----------------- | ---------------------------------------------------------------------------------------------------------- |
+| **class**         | Fundamental concept in every backend framework. They'll see classes in Express, database ORMs, everywhere. |
+| **constructor**   | Understanding initialization is essential for creating properly structured objects.                        |
+| **instance**      | Distinguishing blueprint from object is crucial for understanding how classes work.                        |
+| **this**          | Required for writing any class method. Keep it simple: "this = the current object."                        |
+| **encapsulation** | Core OOP principle. Helps them understand why methods live inside classes.                                 |
 
 ---
 
@@ -56,8 +56,8 @@ By the end of this session, trainees should:
 ### 3. Methods
 
 - Add `priceFor(grams)` and `describe()` methods to Tea
-- Emphasize: the method lives *with* the data (encapsulation)
-- Introduce `OrderItem`: a class that *uses* a Tea instance (composition)
+- Emphasize: the method lives _with_ the data (encapsulation)
+- Introduce `OrderItem`: a class that _uses_ a Tea instance (composition)
 - Live code: `OrderItem` with `lineTotal()`
 
 **Key point:** "Methods live inside the class, right next to the data they work with. The object knows how to do things with its own data."
@@ -68,7 +68,7 @@ By the end of this session, trainees should:
 
 ### 4. this and State
 
-- Show how methods can *modify* instance state, not just read it
+- Show how methods can _modify_ instance state, not just read it
 - Live code: `Inventory` with `sell()` and `restock()`
 - Live code: `Order` with status transitions
 - Emphasize: `this` is how you read AND write state
@@ -135,6 +135,7 @@ Spend most of the time on classes working together (composition). Inheritance is
 ### Connect to previous weeks
 
 This is the last week - tie it all together:
+
 - "Remember `.filter()` and `.map()` from Week 1? You'll use them inside class methods"
 - "Remember `.reduce()` from Week 2? Perfect for calculating totals in an Order"
 - "The Tea Shop API from Week 3? Its backend uses classes just like these"

@@ -20,13 +20,13 @@ By the end of this session, trainees should:
 
 ## Glossary Goals
 
-| Term | Why we introduce it |
-|------|---------------------|
-| **Promise** | Core concept for modern async JavaScript. They'll use this everywhere. |
+| Term                 | Why we introduce it                                                    |
+| -------------------- | ---------------------------------------------------------------------- |
+| **Promise**          | Core concept for modern async JavaScript. They'll use this everywhere. |
 | **resolve / reject** | Understanding Promise outcomes is essential for proper error handling. |
-| **then / catch** | The foundational API for working with Promises. |
-| **async / await** | Modern syntax they'll use daily. Built on Promises. |
-| **Promise.all** | Essential for performance - parallel operations. |
+| **then / catch**     | The foundational API for working with Promises.                        |
+| **async / await**    | Modern syntax they'll use daily. Built on Promises.                    |
+| **Promise.all**      | Essential for performance - parallel operations.                       |
 
 ---
 
@@ -127,6 +127,7 @@ Exercises marked with ⭐ are optional stretch goals. If your fastest students f
 ### Teach consumption before creation
 
 Students often get confused when Promise creation and consumption are mixed. Teach them separately:
+
 1. First: "Here's a Promise (from fetch). How do we USE it?"
 2. Later: "How do we CREATE our own Promises?"
 

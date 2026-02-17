@@ -99,16 +99,26 @@
 
           <section>
             <h3>Frontend vs Backend</h3>
-            <p><span class="highlight">Frontend:</span> Write code, refresh browser, see buttons and colors</p>
-            <p><span class="highlight">Backend:</span> Write code, run it... see text in a terminal</p>
-            <p class=" dim">Where did my pixels go?</p>
+            <p>
+              <span class="highlight">Frontend:</span> Write code, refresh
+              browser, see buttons and colors
+            </p>
+            <p>
+              <span class="highlight">Backend:</span> Write code, run it... see
+              text in a terminal
+            </p>
+            <p class="dim">Where did my pixels go?</p>
           </section>
 
           <section>
             <h3>Here's the thing...</h3>
             <p>Terminals existed <em>before</em> graphical interfaces</p>
             <p>The command line isn't a step backward</p>
-            <p><span class="highlight">It's where serious computing has always happened</span></p>
+            <p>
+              <span class="highlight"
+                >It's where serious computing has always happened</span
+              >
+            </p>
           </section>
 
           <section>
@@ -132,14 +142,12 @@ POST /api/orders - 201 Created (45ms)</code></pre>
             <h3>Think about Instagram</h3>
             <p>You open the app...</p>
             <p>Do you download all 500 million posts?</p>
-            <p class=" highlight">Of course not.</p>
+            <p class="highlight">Of course not.</p>
           </section>
 
           <section>
             <h3>Instead, your app asks:</h3>
-            <blockquote>
-              "Give me the next 10 posts for this user"
-            </blockquote>
+            <blockquote>"Give me the next 10 posts for this user"</blockquote>
             <p>That's a backend call.</p>
           </section>
 
@@ -156,8 +164,9 @@ POST /api/orders - 201 Created (45ms)</code></pre>
 
           <section>
             <h3>Backend Output</h3>
-            <p style="font-size: 1.3em;">
-              <span class="highlight">Consumable slices</span> of data<br />in a <span class="highlight">structured manner</span>
+            <p style="font-size: 1.3em">
+              <span class="highlight">Consumable slices</span> of data<br />in a
+              <span class="highlight">structured manner</span>
             </p>
           </section>
         </section>
@@ -211,7 +220,9 @@ POST /api/orders - 201 Created (45ms)</code></pre>
                 </tr>
               </tbody>
             </table>
-            <p class=" small">Familiar. Easy to read. Not great for computers.</p>
+            <p class="small">
+              Familiar. Easy to read. Not great for computers.
+            </p>
           </section>
 
           <section>
@@ -220,7 +231,7 @@ POST /api/orders - 201 Created (45ms)</code></pre>
 1,Sencha,Japan,0.12,true
 2,Earl Grey,India,0.08,false
 3,Dragon Well,China,0.25,true</code></pre>
-            <p class=" small">Compact. Good for spreadsheets and imports.</p>
+            <p class="small">Compact. Good for spreadsheets and imports.</p>
           </section>
 
           <section>
@@ -230,7 +241,9 @@ POST /api/orders - 201 Created (45ms)</code></pre>
   { "id": 2, "name": "Earl Grey", "origin": "India", "pricePerGram": 0.08, "organic": false },
   { "id": 3, "name": "Dragon Well", "origin": "China", "pricePerGram": 0.25, "organic": true }
 ]</code></pre>
-            <p class=" small">JavaScript's native format. This is what we'll use.</p>
+            <p class="small">
+              JavaScript's native format. This is what we'll use.
+            </p>
           </section>
 
           <section>
@@ -238,14 +251,18 @@ POST /api/orders - 201 Created (45ms)</code></pre>
             <pre><code class="language-json">{"id":1,"name":"Sencha","origin":"Japan","pricePerGram":0.12,"organic":true}
 {"id":2,"name":"Earl Grey","origin":"India","pricePerGram":0.08,"organic":false}
 {"id":3,"name":"Dragon Well","origin":"China","pricePerGram":0.25,"organic":true}</code></pre>
-            <p class=" small">One object per line. Great for streaming large datasets.</p>
+            <p class="small">
+              One object per line. Great for streaming large datasets.
+            </p>
           </section>
 
           <section>
             <h3>Same Data, Different Formats</h3>
             <p>The information is identical</p>
-            <p>Only the <span class="highlight">representation</span> changes</p>
-            <p class=" dim">We'll primarily work with JSON</p>
+            <p>
+              Only the <span class="highlight">representation</span> changes
+            </p>
+            <p class="dim">We'll primarily work with JSON</p>
           </section>
         </section>
 
@@ -287,7 +304,7 @@ POST /api/orders - 201 Created (45ms)</code></pre>
             </div>
             <p>The <span class="highlight">brain</span></p>
             <p class="dim">What to fetch, who's allowed, how to transform</p>
-            <p style="font-size: 1.3em;">This is where backends live.</p>
+            <p style="font-size: 1.3em">This is where backends live.</p>
           </section>
 
           <section>
@@ -315,7 +332,9 @@ POST /api/orders - 201 Created (45ms)</code></pre>
               <li><strong>Rendering</strong> sends filter choice to server</li>
               <li><strong>Logic</strong> receives request, queries database</li>
               <li><strong>Data</strong> returns matching teas</li>
-              <li><strong>Logic</strong> transforms to the shape frontend expects</li>
+              <li>
+                <strong>Logic</strong> transforms to the shape frontend expects
+              </li>
               <li><strong>Rendering</strong> displays tea cards</li>
             </ol>
           </section>
@@ -323,7 +342,9 @@ POST /api/orders - 201 Created (45ms)</code></pre>
           <section>
             <h3>The Backend's Role</h3>
             <p>Sits in the middle</p>
-            <p class="highlight">Orchestrating the flow between stored data and user-facing output</p>
+            <p class="highlight">
+              Orchestrating the flow between stored data and user-facing output
+            </p>
           </section>
         </section>
 
@@ -342,7 +363,10 @@ POST /api/orders - 201 Created (45ms)</code></pre>
           <section>
             <h3>Our Data</h3>
             <ul>
-              <li><strong>Teas</strong> - varieties, origins, prices, brewing instructions</li>
+              <li>
+                <strong>Teas</strong> - varieties, origins, prices, brewing
+                instructions
+              </li>
               <li><strong>Equipment</strong> - teapots, cups, infusers</li>
               <li><strong>Orders</strong> - customer purchases</li>
               <li><strong>Customers</strong> - people who buy</li>
@@ -372,9 +396,14 @@ POST /api/orders - 201 Created (45ms)</code></pre>
           <section>
             <h3>Week 1: Real Example</h3>
             <blockquote>
-              You search for "green tea". Database returns 200 matches. But you only want organic ones, sorted by price, showing just name and price.
+              You search for "green tea". Database returns 200 matches. But you
+              only want organic ones, sorted by price, showing just name and
+              price.
             </blockquote>
-            <p><code>filter</code> &rarr; <code>sort</code> &rarr; <code>map</code></p>
+            <p>
+              <code>filter</code> &rarr; <code>sort</code> &rarr;
+              <code>map</code>
+            </p>
             <p class="dim">Three lines of code. Happens on every request.</p>
           </section>
 
@@ -382,13 +411,17 @@ POST /api/orders - 201 Created (45ms)</code></pre>
             <h3>Week 2: Callbacks & Async</h3>
             <p class="dim">Why backends can't run top-to-bottom</p>
             <p>Databases are slow. Networks are slow.</p>
-            <p class="highlight">"Do this slow thing, here's what to do when you're done"</p>
+            <p class="highlight">
+              "Do this slow thing, here's what to do when you're done"
+            </p>
           </section>
 
           <section>
             <h3>Week 2: Real Example</h3>
             <blockquote>
-              A cafe orders 50 teas. Check inventory, calculate shipping, charge card, send email. If each step takes 500ms and you wait frozen... that's 2 seconds. Meanwhile 100 other customers can't browse.
+              A cafe orders 50 teas. Check inventory, calculate shipping, charge
+              card, send email. If each step takes 500ms and you wait frozen...
+              that's 2 seconds. Meanwhile 100 other customers can't browse.
             </blockquote>
             <p>Callbacks let you handle other requests while waiting</p>
           </section>
@@ -397,13 +430,17 @@ POST /api/orders - 201 Created (45ms)</code></pre>
             <h3>Week 3: Promises & APIs</h3>
             <p class="dim">Speaking to other services</p>
             <p>Backends rarely work alone</p>
-            <p class="highlight">Payment providers, email services, external APIs</p>
+            <p class="highlight">
+              Payment providers, email services, external APIs
+            </p>
           </section>
 
           <section>
             <h3>Week 3: Real Example</h3>
             <blockquote>
-              Customer checks out. Call Stripe for payment, PostNord for shipping, inventory service to reserve stock. Three external calls, any could fail.
+              Customer checks out. Call Stripe for payment, PostNord for
+              shipping, inventory service to reserve stock. Three external
+              calls, any could fail.
             </blockquote>
             <p>"Do all three, if any fails, handle it gracefully"</p>
             <p class="dim">Try writing that with nested callbacks...</p>
@@ -413,13 +450,17 @@ POST /api/orders - 201 Created (45ms)</code></pre>
             <h3>Week 4: Classes</h3>
             <p class="dim">Modeling your domain</p>
             <p>A tea isn't just a floating object</p>
-            <p class="highlight">It has behaviors: validate itself, calculate weight, check stock</p>
+            <p class="highlight">
+              It has behaviors: validate itself, calculate weight, check stock
+            </p>
           </section>
 
           <section>
             <h3>Week 4: Real Example</h3>
             <blockquote>
-              Every time you handle a tea: Is price valid? Stock above zero? Steep time reasonable? You write these checks 50 times across your codebase.
+              Every time you handle a tea: Is price valid? Stock above zero?
+              Steep time reasonable? You write these checks 50 times across your
+              codebase.
             </blockquote>
             <p>With a <code>Tea</code> class, you write them once</p>
             <p class="dim">The logic lives with the data it protects</p>

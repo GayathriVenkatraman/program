@@ -45,6 +45,7 @@ console.log(inventoryReport(teas));
 ```
 
 Expected output structure:
+
 ```js
 {
   totalTeas: 20,
@@ -71,12 +72,13 @@ console.log(lowStockAlert(teas));
 ```
 
 Expected output format:
+
 ```js
 [
   { name: "Silver Needle", stockCount: 25 },
   { name: "Matcha", stockCount: 30 },
   // ...
-]
+];
 ```
 
 ---
@@ -94,6 +96,7 @@ console.log(teasByOrigin(teas));
 ```
 
 Expected output format:
+
 ```js
 {
   Japan: ["Sencha", "Matcha", "Gyokuro", "Genmaicha"],
@@ -165,6 +168,7 @@ console.log(countByType);
 ## Submission
 
 Create a folder `week1-assignment/` with:
+
 - `exercise1.js` - Rewrite with array methods
 - `exercise2.js` - Inventory report
 - `exercise3.js` - Low stock alert
@@ -179,9 +183,7 @@ Each file should be runnable with `node exerciseN.js`.
 // Example structure for exercise1.js
 import { teas } from "../data/teas.js";
 
-const result = teas
-  .filter(/* ... */)
-  .map(/* ... */);
+const result = teas.filter(/* ... */).map(/* ... */);
 
 console.log(result);
 ```

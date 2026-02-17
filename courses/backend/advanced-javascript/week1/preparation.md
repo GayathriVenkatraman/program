@@ -16,7 +16,7 @@ for (let i = 0; i < teas.length; i++) {
 }
 
 // Declarative: you describe WHAT you want
-const names = teas.map(function(tea) {
+const names = teas.map(function (tea) {
   return tea.name;
 });
 ```
@@ -26,14 +26,14 @@ Both produce the same result. But the second version is **declarative** - you're
 By the end of this week, you'll write it even shorter:
 
 ```js
-const names = teas.map(tea => tea.name);
+const names = teas.map((tea) => tea.name);
 ```
 
 That's called an **arrow function**. We'll get there - but first, let's take things step by step, and understand what's happening with the regular function syntax.
 
 > 📚 **Glossary: Declarative vs Imperative**
-> **Imperative** code describes *how* to do something (step by step).
-> **Declarative** code describes *what* you want (the result).
+> **Imperative** code describes _how_ to do something (step by step).
+> **Declarative** code describes _what_ you want (the result).
 > Array methods are declarative - you say "give me the names" not "create empty array, loop, push each name."
 
 ---
@@ -43,7 +43,7 @@ That's called an **arrow function**. We'll get there - but first, let's take thi
 `map`, `filter`, and `forEach` are all **higher-order functions**. This sounds fancy, but it just means: they're functions that take another function as an argument.
 
 ```js
-teas.map(function(tea) {
+teas.map(function (tea) {
   return tea.name;
 });
 //       ^^^^^^^^^^^^^^^^^^^^
@@ -62,24 +62,25 @@ Here's an important concept. Look at this code:
 
 ```js
 let count = 0;
-teas.forEach(function(tea) {
-  count = count + 1;  // modifies something OUTSIDE the function
+teas.forEach(function (tea) {
+  count = count + 1; // modifies something OUTSIDE the function
 });
 ```
 
 This modifies `count` - a variable that exists outside the function. That's a **side effect**: the function reaches out and changes something in the world.
 
 Other examples of side effects:
+
 - Logging to console (`console.log`)
 - Updating the DOM
 - Writing to a database
 - Sending an HTTP request
 
-`forEach` is designed for side effects. That's why it doesn't return anything - its job is to *do* something for each item, not to produce a new array.
+`forEach` is designed for side effects. That's why it doesn't return anything - its job is to _do_ something for each item, not to produce a new array.
 
 > 📚 **Glossary: Side Effect**
 > When a function modifies something outside its own scope: changing a variable, logging to console, updating the DOM, writing to a database.
-> `forEach` is typically used *for* its side effects (like logging).
+> `forEach` is typically used _for_ its side effects (like logging).
 
 ---
 
@@ -94,7 +95,7 @@ Here's what each method does at a high level:
 - **Purpose:** Side effects - logging, rendering, sending data
 
 ```js
-teas.forEach(function(tea) {
+teas.forEach(function (tea) {
   console.log(tea.name);
 });
 ```
@@ -106,7 +107,7 @@ teas.forEach(function(tea) {
 - **Purpose:** Convert data from one shape to another
 
 ```js
-const names = teas.map(function(tea) {
+const names = teas.map(function (tea) {
   return tea.name;
 });
 // 20 teas in → 20 names out
@@ -121,7 +122,7 @@ const names = teas.map(function(tea) {
 The function you pass to `filter` is called a **predicate** - a function that returns `true` or `false`.
 
 ```js
-const organic = teas.filter(function(tea) {
+const organic = teas.filter(function (tea) {
   return tea.organic;
 });
 // Keep only items where predicate returns true
@@ -139,9 +140,15 @@ Because each method returns a new array, you can chain them together:
 
 ```js
 const result = teas
-  .filter(function(tea) { return tea.organic; })
-  .filter(function(tea) { return tea.inStock; })
-  .map(function(tea) { return tea.name; })
+  .filter(function (tea) {
+    return tea.organic;
+  })
+  .filter(function (tea) {
+    return tea.inStock;
+  })
+  .map(function (tea) {
+    return tea.name;
+  })
   .sort();
 ```
 
@@ -151,9 +158,9 @@ Once you learn arrow functions, this becomes much cleaner:
 
 ```js
 const result = teas
-  .filter(tea => tea.organic)
-  .filter(tea => tea.inStock)
-  .map(tea => tea.name)
+  .filter((tea) => tea.organic)
+  .filter((tea) => tea.inStock)
+  .map((tea) => tea.name)
   .sort();
 ```
 
@@ -167,13 +174,13 @@ Same logic, less noise. That's why arrow functions are popular for array methods
 
 ## Summary
 
-| Term | Meaning |
-|------|---------|
-| Declarative | Describe *what* you want, not *how* |
+| Term                  | Meaning                                      |
+| --------------------- | -------------------------------------------- |
+| Declarative           | Describe _what_ you want, not _how_          |
 | Higher-order function | A function that takes a function as argument |
-| Side effect | Modifying something outside the function |
-| Predicate | A function returning true/false |
-| Pipeline | Chained operations, output → input |
+| Side effect           | Modifying something outside the function     |
+| Predicate             | A function returning true/false              |
+| Pipeline              | Chained operations, output → input           |
 
 ---
 
@@ -185,4 +192,3 @@ If you want to go deeper, read these MDN pages:
 - [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 - [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 - [Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-

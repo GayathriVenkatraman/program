@@ -29,12 +29,12 @@ By the end of this session, you will be able to:
 // Example: Simulated database lookup
 function findTeaById(id, callback) {
   setTimeout(() => {
-    const tea = teas.find(t => t.id === id);
+    const tea = teas.find((t) => t.id === id);
     callback(tea);
   }, 500);
 }
 
-findTeaById(3, tea => {
+findTeaById(3, (tea) => {
   console.log("Found:", tea.name);
 });
 ```

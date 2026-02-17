@@ -7,11 +7,12 @@ Read this introduction before class. It explains the concepts we'll practice dur
 ## Why Backends Need Async
 
 Imagine a tea shop that gets 50 online orders at once. Each order requires:
+
 1. Looking up the tea in the database (10ms)
 2. Checking inventory (10ms)
 3. Processing payment (200ms)
 
-If the server waited for each step to complete before moving on, one order takes 220ms. Fifty orders? 11 seconds. The 50th customer waits 11 seconds just for their order to *start* processing.
+If the server waited for each step to complete before moving on, one order takes 220ms. Fifty orders? 11 seconds. The 50th customer waits 11 seconds just for their order to _start_ processing.
 
 Real backends don't work this way. Instead of waiting, they say: "Start this operation, and call me back when you're done." While waiting for one database query, they can start processing other requests.
 
@@ -30,12 +31,12 @@ Before we get to async, we need to understand something fundamental: in JavaScri
 
 ```js
 // Assign a function to a variable
-const greet = function(name) {
+const greet = function (name) {
   return `Hello, ${name}!`;
 };
 
 // Call it through the variable
-console.log(greet("Alice"));  // "Hello, Alice!"
+console.log(greet("Alice")); // "Hello, Alice!"
 
 // Pass it to another function
 function runTwice(fn, value) {
@@ -62,12 +63,12 @@ A **callback** is a function you pass to another function, to be called later.
 You've already used callbacks! Every time you write `.map()`, `.filter()`, or `.forEach()`, you pass a callback:
 
 ```js
-teas.map(tea => tea.name);
+teas.map((tea) => tea.name);
 //       ^^^^^^^^^^^^^^^^
 //       This is a callback. map calls it for each item.
 ```
 
-The difference between these callbacks and async callbacks is *when* they're called:
+The difference between these callbacks and async callbacks is _when_ they're called:
 
 - **Synchronous callbacks**: Called immediately, during the function's execution (like in `map`)
 - **Asynchronous callbacks**: Called later, after some operation completes (like after a file loads)
@@ -126,11 +127,11 @@ function simulatedDbLookup(id, callback) {
   setTimeout(() => {
     const result = { id, name: "Found item" };
     callback(result);
-  }, 500);  // Simulates 500ms database delay
+  }, 500); // Simulates 500ms database delay
 }
 
 console.log("Starting lookup...");
-simulatedDbLookup(42, result => {
+simulatedDbLookup(42, (result) => {
   console.log("Got result:", result);
 });
 console.log("Lookup started, doing other work...");
@@ -177,7 +178,7 @@ We deferred `reduce` from Week 1 because it's the most complex array method. Now
 const numbers = [1, 2, 3, 4, 5];
 const total = numbers.reduce((accumulator, current) => {
   return accumulator + current;
-}, 0);  // 0 is the initial value
+}, 0); // 0 is the initial value
 // total = 15
 ```
 
@@ -188,7 +189,7 @@ The **accumulator** is the value being built up. It starts as your initial value
 const countByType = teas.reduce((acc, tea) => {
   acc[tea.type] = (acc[tea.type] || 0) + 1;
   return acc;
-}, {});  // Start with empty object
+}, {}); // Start with empty object
 
 // { green: 6, black: 5, herbal: 4, oolong: 3, white: 2 }
 ```
@@ -213,7 +214,7 @@ function double(x) {
 // Impure - modifies external state
 let total = 0;
 function addToTotal(x) {
-  total += x;  // side effect!
+  total += x; // side effect!
   return total;
 }
 ```
@@ -222,10 +223,10 @@ function addToTotal(x) {
 
 ```js
 // Mutable - modifies original
-teas.push(newTea);  // Changes the teas array
+teas.push(newTea); // Changes the teas array
 
 // Immutable - creates new array
-const newTeas = [...teas, newTea];  // Original unchanged
+const newTeas = [...teas, newTea]; // Original unchanged
 ```
 
 Why do these matter? In async code, operations can overlap. If two callbacks modify the same data, bugs happen. Pure functions and immutability make async code predictable.
@@ -240,16 +241,16 @@ Why do these matter? In async code, operations can overlap. If two callbacks mod
 
 ## Summary
 
-| Term | Meaning |
-|------|---------|
-| First-class functions | Functions treated as values |
-| Callback | Function passed to another function, called later |
-| Synchronous | Code runs in sequence, blocking |
-| Asynchronous | Code continues while waiting, uses callbacks |
-| Error-first callback | Node pattern: `(error, result)` |
-| Accumulator | The building-up value in reduce |
-| Pure function | Same input = same output, no side effects |
-| Immutability | Create new data, don't modify existing |
+| Term                  | Meaning                                           |
+| --------------------- | ------------------------------------------------- |
+| First-class functions | Functions treated as values                       |
+| Callback              | Function passed to another function, called later |
+| Synchronous           | Code runs in sequence, blocking                   |
+| Asynchronous          | Code continues while waiting, uses callbacks      |
+| Error-first callback  | Node pattern: `(error, result)`                   |
+| Accumulator           | The building-up value in reduce                   |
+| Pure function         | Same input = same output, no side effects         |
+| Immutability          | Create new data, don't modify existing            |
 
 ---
 

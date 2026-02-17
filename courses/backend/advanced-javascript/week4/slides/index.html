@@ -4,10 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week 4 - Classes & OOP</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css"
+    />
     <style>
       :root {
         --r-background-color: #1a1a2e;
@@ -15,11 +27,24 @@
         --r-heading-color: #16c79a;
         --r-link-color: #16c79a;
       }
-      .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
-      .reveal pre { font-size: 0.55em; width: 100%; }
-      .reveal .highlight { color: #16c79a; }
-      .reveal .dim { color: #888; }
-      .reveal .red { color: #e74c3c; }
+      .reveal h1,
+      .reveal h2,
+      .reveal h3 {
+        text-transform: none;
+      }
+      .reveal pre {
+        font-size: 0.55em;
+        width: 100%;
+      }
+      .reveal .highlight {
+        color: #16c79a;
+      }
+      .reveal .dim {
+        color: #888;
+      }
+      .reveal .red {
+        color: #e74c3c;
+      }
       .reveal blockquote {
         background: rgba(22, 199, 154, 0.1);
         border-left: 4px solid #16c79a;
@@ -27,8 +52,12 @@
         font-style: normal;
         width: 90%;
       }
-      .reveal .emoji { font-size: 3em; }
-      .reveal .small { font-size: 0.6em; }
+      .reveal .emoji {
+        font-size: 3em;
+      }
+      .reveal .small {
+        font-size: 0.6em;
+      }
       .comparison {
         display: flex;
         gap: 1em;
@@ -59,7 +88,6 @@
   <body>
     <div class="reveal">
       <div class="slides">
-
         <!-- Title -->
         <section>
           <h1>Classes & OOP</h1>
@@ -103,8 +131,8 @@ function describeTea(tea) {
           <section>
             <h3>What If...</h3>
             <blockquote>
-              What if the object could validate itself?<br><br>
-              What if the object could calculate its own price?<br><br>
+              What if the object could validate itself?<br /><br />
+              What if the object could calculate its own price?<br /><br />
               What if the object could describe itself?
             </blockquote>
           </section>
@@ -127,8 +155,13 @@ function describeTea(tea) {
   }
 }</code></pre>
             <p><span class="highlight">class</span> - declares a blueprint</p>
-            <p><span class="highlight">constructor</span> - initializes each object</p>
-            <p><span class="highlight">this</span> - the object being created</p>
+            <p>
+              <span class="highlight">constructor</span> - initializes each
+              object
+            </p>
+            <p>
+              <span class="highlight">this</span> - the object being created
+            </p>
           </section>
 
           <section>
@@ -138,13 +171,19 @@ const earl = new Tea("Earl Grey", 0.08, "India");
 
 console.log(sencha.name);  // "Sencha"
 console.log(earl.origin);   // "India"</code></pre>
-            <p>One <span class="highlight">class</span> (blueprint) &rarr; many <span class="highlight">instances</span> (objects)</p>
+            <p>
+              One <span class="highlight">class</span> (blueprint) &rarr; many
+              <span class="highlight">instances</span> (objects)
+            </p>
           </section>
 
           <section>
             <h3>Blueprint vs Building</h3>
             <p class="emoji">📐 &rarr; 🏠 🏠 🏠</p>
-            <p><span class="dim">One blueprint</span> &rarr; <span class="highlight">Many buildings</span></p>
+            <p>
+              <span class="dim">One blueprint</span> &rarr;
+              <span class="highlight">Many buildings</span>
+            </p>
             <p class="small dim">Same structure, different details</p>
           </section>
         </section>
@@ -308,8 +347,12 @@ console.log(matchaStock.stockCount); // 30 (unchanged)</code></pre>
 
           <section>
             <h3>Each Class Has a Job</h3>
-            <p><span class="method-box">Tea</span> knows its name, price, origin</p>
-            <p><span class="method-box">OrderItem</span> knows tea + quantity</p>
+            <p>
+              <span class="method-box">Tea</span> knows its name, price, origin
+            </p>
+            <p>
+              <span class="method-box">OrderItem</span> knows tea + quantity
+            </p>
             <p><span class="method-box">Order</span> manages a list of items</p>
             <p><span class="method-box">Customer</span> tracks orders</p>
           </section>
@@ -344,7 +387,9 @@ class TeaCatalog {
     );
   }
 }</code></pre>
-            <p class="dim">.filter() and .map() from Week 1 &mdash; inside classes!</p>
+            <p class="dim">
+              .filter() and .map() from Week 1 &mdash; inside classes!
+            </p>
           </section>
         </section>
 
@@ -357,9 +402,14 @@ class TeaCatalog {
 
           <section>
             <h3>Instance vs Static</h3>
-            <p><span class="highlight">Instance method:</span> called on an object</p>
+            <p>
+              <span class="highlight">Instance method:</span> called on an
+              object
+            </p>
             <pre><code class="language-javascript">sencha.priceFor(100);  // on the instance</code></pre>
-            <p><span class="highlight">Static method:</span> called on the class</p>
+            <p>
+              <span class="highlight">Static method:</span> called on the class
+            </p>
             <pre><code class="language-javascript">Tea.fromObject(data);  // on the class</code></pre>
           </section>
 
@@ -424,8 +474,13 @@ gyokuro.priceFor(100); // 84</code></pre>
           <section>
             <h3>When to Use</h3>
             <p>"Is-a" relationship: PremiumTea <em>is a</em> Tea</p>
-            <p class="dim" style="margin-top: 1em;">But most of the time, prefer <span class="highlight">composition</span></p>
-            <p class="dim">An Order <em>has</em> OrderItems (not "is an" OrderItem)</p>
+            <p class="dim" style="margin-top: 1em">
+              But most of the time, prefer
+              <span class="highlight">composition</span>
+            </p>
+            <p class="dim">
+              An Order <em>has</em> OrderItems (not "is an" OrderItem)
+            </p>
           </section>
         </section>
 
@@ -445,7 +500,10 @@ gyokuro.priceFor(100); // 84</code></pre>
               <span class="journey-step">W3: Promises</span>
               <span class="journey-step active">W4: Classes</span>
             </p>
-            <p class="dim" style="margin-top: 1em;">Transform data &rarr; Handle timing &rarr; Fetch from APIs &rarr; Organize code</p>
+            <p class="dim" style="margin-top: 1em">
+              Transform data &rarr; Handle timing &rarr; Fetch from APIs &rarr;
+              Organize code
+            </p>
           </section>
 
           <section>
@@ -482,19 +540,36 @@ gyokuro.priceFor(100); // 84</code></pre>
           <section>
             <h3>Key Concepts</h3>
             <p><span class="highlight">class</span> - blueprint for objects</p>
-            <p><span class="highlight">constructor</span> - initializes instances</p>
+            <p>
+              <span class="highlight">constructor</span> - initializes instances
+            </p>
             <p><span class="highlight">this</span> - the current object</p>
             <p><span class="highlight">new</span> - creates an instance</p>
             <p><span class="highlight">static</span> - method on the class</p>
-            <p><span class="highlight">extends</span> - inherit from another class</p>
+            <p>
+              <span class="highlight">extends</span> - inherit from another
+              class
+            </p>
           </section>
 
           <section>
             <h3>Questions to Ask</h3>
-            <p>Does this data need behavior? <span class="dim">&rarr; class</span></p>
-            <p>Does this method need instance data? <span class="dim">&rarr; instance method</span></p>
-            <p>Does it operate on the class? <span class="dim">&rarr; static method</span></p>
-            <p>Is it a specialized version? <span class="dim">&rarr; extends</span></p>
+            <p>
+              Does this data need behavior?
+              <span class="dim">&rarr; class</span>
+            </p>
+            <p>
+              Does this method need instance data?
+              <span class="dim">&rarr; instance method</span>
+            </p>
+            <p>
+              Does it operate on the class?
+              <span class="dim">&rarr; static method</span>
+            </p>
+            <p>
+              Is it a specialized version?
+              <span class="dim">&rarr; extends</span>
+            </p>
           </section>
 
           <section>
@@ -502,7 +577,6 @@ gyokuro.priceFor(100); // 84</code></pre>
             <p class="emoji">🍵</p>
           </section>
         </section>
-
       </div>
     </div>
 

@@ -27,8 +27,8 @@ By the end of this session, you will be able to:
 ```js
 // Example: Get names of organic Japanese teas
 const result = teas
-  .filter(tea => tea.origin === "Japan")
-  .filter(tea => tea.organic)
-  .map(tea => tea.name);
+  .filter((tea) => tea.origin === "Japan")
+  .filter((tea) => tea.organic)
+  .map((tea) => tea.name);
 // ["Sencha", "Matcha"]
 ```

@@ -37,11 +37,17 @@ class Tea {
 }
 
 // Test validation:
-try { new Tea("", "green", "Japan", 0.12, true); }
-catch (e) { console.log(e.message); } // "Name is required"
+try {
+  new Tea("", "green", "Japan", 0.12, true);
+} catch (e) {
+  console.log(e.message);
+} // "Name is required"
 
-try { new Tea("Test", "purple", "Japan", 0.12, true); }
-catch (e) { console.log(e.message); } // "Invalid type: purple"
+try {
+  new Tea("Test", "purple", "Japan", 0.12, true);
+} catch (e) {
+  console.log(e.message);
+} // "Invalid type: purple"
 
 // Test factory method:
 const teaInstances = teas.map(Tea.fromObject);
@@ -100,7 +106,7 @@ class Order {
 const teaInstances = teas.map(Tea.fromObject);
 const order = new Order();
 order.addItem(new OrderItem(teaInstances[0], 200)); // Sencha
-order.addItem(new OrderItem(teaInstances[7], 50));   // Matcha
+order.addItem(new OrderItem(teaInstances[7], 50)); // Matcha
 
 console.log(order.getSummary());
 console.log("Total:", order.getTotal().toFixed(2), "DKK");
@@ -149,8 +155,8 @@ class Inventory {
 const teaInstances = teas.map(Tea.fromObject);
 const inventory = new Inventory();
 
-teaInstances.forEach(tea => {
-  const data = teas.find(t => t.name === tea.name);
+teaInstances.forEach((tea) => {
+  const data = teas.find((t) => t.name === tea.name);
   inventory.add(tea, data.stockCount);
 });
 
@@ -160,11 +166,15 @@ inventory.sell("Sencha", 50);
 console.log("After selling 50g:", inventory.getStock("Sencha")); // 100
 
 console.log("Low stock (< 50):");
-inventory.getLowStock(50).forEach(item => {
+inventory.getLowStock(50).forEach((item) => {
   console.log(`- ${item.tea.name}: ${item.stockCount}g`);
 });
 
-console.log("Total inventory value:", inventory.getTotalValue().toFixed(2), "DKK");
+console.log(
+  "Total inventory value:",
+  inventory.getTotalValue().toFixed(2),
+  "DKK",
+);
 ```
 
 ---
@@ -265,13 +275,11 @@ const maria = shop.registerCustomer("Maria", "maria@example.com");
 
 const order1 = shop.createOrder(alex, [
   { teaName: "Sencha", grams: 100 },
-  { teaName: "Matcha", grams: 50 }
+  { teaName: "Matcha", grams: 50 },
 ]);
 console.log(order1.getSummary());
 
-const order2 = shop.createOrder(maria, [
-  { teaName: "Earl Grey", grams: 200 }
-]);
+const order2 = shop.createOrder(maria, [{ teaName: "Earl Grey", grams: 200 }]);
 console.log(order2.getSummary());
 
 console.log(shop.getReport());
@@ -341,6 +349,7 @@ console.log(express.getTotal()); // 84 + 25 = 109
 ## Submission
 
 Create a folder `week4-assignment/` with:
+
 - `exercise1.js` - Tea class with validation
 - `exercise2.js` - Order system
 - `exercise3.js` - Inventory manager
@@ -360,5 +369,5 @@ class Tea {
 
 // Test your class
 const teaInstances = teas.map(Tea.fromObject);
-teaInstances.forEach(t => console.log(t.describe()));
+teaInstances.forEach((t) => console.log(t.describe()));
 ```

@@ -46,8 +46,8 @@ const orderTicket = placeOrder("latte");
 // orderTicket is a Promise - the coffee isn't ready yet
 
 orderTicket
-  .then(coffee => console.log("Got my", coffee))
-  .catch(error => console.log("No coffee:", error));
+  .then((coffee) => console.log("Got my", coffee))
+  .catch((error) => console.log("No coffee:", error));
 ```
 
 > 📚 **Glossary: Promise**
@@ -63,11 +63,11 @@ When you have a Promise, you can attach callbacks using `.then()` and `.catch()`
 const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 
 fetch(`${API_BASE}/teas`)
-  .then(response => response.json())
-  .then(teas => {
+  .then((response) => response.json())
+  .then((teas) => {
     console.log("Got", teas.length, "teas");
   })
-  .catch(error => {
+  .catch((error) => {
     console.error("Failed:", error.message);
   });
 ```
@@ -88,16 +88,16 @@ The magic of Promises: `.then()` returns a new Promise, so you can chain them:
 const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 
 fetch(`${API_BASE}/teas/1`)
-  .then(response => response.json())
-  .then(tea => {
+  .then((response) => response.json())
+  .then((tea) => {
     console.log("Tea:", tea.name);
     return fetch(`${API_BASE}/inventory/${tea.id}`);
   })
-  .then(response => response.json())
-  .then(inventory => {
+  .then((response) => response.json())
+  .then((inventory) => {
     console.log("Stock:", inventory.stockCount);
   })
-  .catch(error => {
+  .catch((error) => {
     // Catches errors from ANY step above
     console.error("Something failed:", error.message);
   });
@@ -127,6 +127,7 @@ wait(2000).then(() => console.log("2 seconds passed!"));
 ```
 
 The Promise constructor takes a function with two parameters:
+
 - `resolve` - call this when the operation succeeds
 - `reject` - call this when the operation fails
 
@@ -134,7 +135,7 @@ The Promise constructor takes a function with two parameters:
 function findTeaById(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const tea = teas.find(t => t.id === id);
+      const tea = teas.find((t) => t.id === id);
       if (tea) {
         resolve(tea);
       } else {
@@ -204,15 +205,15 @@ Sometimes you want to run multiple operations at once:
 const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 
 // Sequential - slow (3 requests, one after another)
-const tea1 = await fetch(`${API_BASE}/teas/1`).then(r => r.json());
-const tea2 = await fetch(`${API_BASE}/teas/2`).then(r => r.json());
-const tea3 = await fetch(`${API_BASE}/teas/3`).then(r => r.json());
+const tea1 = await fetch(`${API_BASE}/teas/1`).then((r) => r.json());
+const tea2 = await fetch(`${API_BASE}/teas/2`).then((r) => r.json());
+const tea3 = await fetch(`${API_BASE}/teas/3`).then((r) => r.json());
 
 // Parallel - fast (3 requests at the same time)
 const [tea1, tea2, tea3] = await Promise.all([
-  fetch(`${API_BASE}/teas/1`).then(r => r.json()),
-  fetch(`${API_BASE}/teas/2`).then(r => r.json()),
-  fetch(`${API_BASE}/teas/3`).then(r => r.json()),
+  fetch(`${API_BASE}/teas/1`).then((r) => r.json()),
+  fetch(`${API_BASE}/teas/2`).then((r) => r.json()),
+  fetch(`${API_BASE}/teas/3`).then((r) => r.json()),
 ]);
 ```
 
@@ -225,16 +226,16 @@ const [tea1, tea2, tea3] = await Promise.all([
 
 ## Summary
 
-| Term | Meaning |
-|---------|-------------|
-| Promise | Object representing future completion/failure |
-| resolve | Promise succeeded, pass result to .then() |
-| reject | Promise failed, pass error to .catch() |
-| .then() | Handle successful result |
-| .catch() | Handle error |
-| async | Makes function return a Promise |
-| await | Pause until Promise resolves |
-| Promise.all | Run multiple Promises in parallel |
+| Term        | Meaning                                       |
+| ----------- | --------------------------------------------- |
+| Promise     | Object representing future completion/failure |
+| resolve     | Promise succeeded, pass result to .then()     |
+| reject      | Promise failed, pass error to .catch()        |
+| .then()     | Handle successful result                      |
+| .catch()    | Handle error                                  |
+| async       | Makes function return a Promise               |
+| await       | Pause until Promise resolves                  |
+| Promise.all | Run multiple Promises in parallel             |
 
 ---
 
@@ -266,6 +267,7 @@ POST /orders         - Create order (requires auth)
 ```
 
 Example:
+
 ```js
 const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api/v1";
 

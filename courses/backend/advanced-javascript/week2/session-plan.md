@@ -19,14 +19,14 @@ By the end of this session, trainees should:
 
 ## Glossary Goals
 
-| Term | Why we introduce it |
-|------|---------------------|
-| **Callback** | Central concept. Week 1 used them implicitly; now we name them explicitly. |
-| **Accumulator** | Essential for understanding `reduce`. Common in documentation. |
-| **Pure function** | Foundation for understanding why bugs with delayed code happen. |
-| **Immutability** | Connects to state management and safety with delayed code. |
-| **Error-first callback** | Node.js convention. They'll see this pattern constantly. |
-| **Delayed execution** | Fundamental concept for backend development. |
+| Term                     | Why we introduce it                                                        |
+| ------------------------ | -------------------------------------------------------------------------- |
+| **Callback**             | Central concept. Week 1 used them implicitly; now we name them explicitly. |
+| **Accumulator**          | Essential for understanding `reduce`. Common in documentation.             |
+| **Pure function**        | Foundation for understanding why bugs with delayed code happen.            |
+| **Immutability**         | Connects to state management and safety with delayed code.                 |
+| **Error-first callback** | Node.js convention. They'll see this pattern constantly.                   |
+| **Delayed execution**    | Fundamental concept for backend development.                               |
 
 ---
 
@@ -36,7 +36,7 @@ By the end of this session, trainees should:
 
 - Recall Week 1: forEach, map, filter all take functions as arguments
 - "Those functions are callbacks - but they run immediately"
-- This week: callbacks that run *later*
+- This week: callbacks that run _later_
 - The cafe metaphor: a waiter doesn't stand at the kitchen waiting for one order
 
 **Use:** [Slides](./slides/index.html) (introduction sections)
@@ -80,7 +80,7 @@ By the end of this session, trainees should:
 
 ### 5. setTimeout & Delayed Callbacks
 
-- Now the twist: what if the callback runs *later*?
+- Now the twist: what if the callback runs _later_?
 - Show code with surprising output order - let students predict first
 - Explain: JavaScript continues running, callback runs when timer fires
 - Live code: `runAfterDelay(delay, callback)` utility
@@ -130,7 +130,7 @@ Many trainees have used map/filter without realizing they're passing callbacks. 
 
 ### Show the surprising output order
 
-For setTimeout, always ask trainees to predict the console.log order *before* running. The surprise helps the concept stick.
+For setTimeout, always ask trainees to predict the console.log order _before_ running. The surprise helps the concept stick.
 
 ### Use the tea data
 

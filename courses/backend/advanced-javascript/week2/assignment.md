@@ -39,22 +39,25 @@ const order = {
   items: [
     { teaId: 1, grams: 100 },
     { teaId: 8, grams: 50 },
-    { teaId: 3, grams: 200 }
-  ]
+    { teaId: 3, grams: 200 },
+  ],
 };
 ```
 
 Create these functions:
 
 **1. `validateOrder(order, callback)`** - 200ms delay
+
 - Check all teaIds exist in the teas array
 - Callback receives `{ valid: boolean, errors: string[] }`
 
 **2. `calculateTotal(order, callback)`** - 300ms delay
+
 - Sum up `pricePerGram * grams` for each item
 - Callback receives `{ orderId: number, total: number }`
 
 **3. `checkStock(order, callback)`** - 400ms delay
+
 - Check if each tea has enough stock for the order quantity
 - Callback receives `{ orderId: number, inStock: boolean, shortages: string[] }`
 
@@ -63,7 +66,7 @@ Test each function individually with console.log as callback function to see res
 You an test `validateOrder` like this:
 
 ```js
-validateOrder(order, result => {
+validateOrder(order, (result) => {
   console.log("Validation result:", result);
 });
 ```
@@ -72,7 +75,7 @@ validateOrder(order, result => {
 
 ## Exercise 3: Sequential Processing
 
-Using the functions from Exercise 2, process an order through all three steps *in sequence*:
+Using the functions from Exercise 2, process an order through all three steps _in sequence_:
 
 1. First validate
 2. If valid, calculate total
@@ -85,14 +88,14 @@ This requires "callback nesting" - calling the next function inside the previous
 function processOrder(order) {
   console.log("Processing order", order.id);
 
-  validateOrder(order, validation => {
+  validateOrder(order, (validation) => {
     if (!validation.valid) {
       console.log("Validation failed:", validation.errors);
       return;
     }
     console.log("Validation passed");
 
-    calculateTotal(order, pricing => {
+    calculateTotal(order, (pricing) => {
       console.log("Total:", pricing.total, "DKK");
 
       // Continue with checkStock...
@@ -110,6 +113,7 @@ processOrder(order);
 ## Exercise 4: Inventory Aggregation from File
 
 Create a file `inventory-updates.json`:
+
 <!-- prettier-ignore -->
 ```jsonl
 [
@@ -122,6 +126,7 @@ Create a file `inventory-updates.json`:
 ```
 
 Write a function that:
+
 1. Reads this file using a callback
 2. Uses `reduce` to calculate net change per tea
 3. Combines with original tea data to show new stock levels
@@ -150,6 +155,7 @@ generateInventoryReport((error, report) => {
 ```
 
 Expected output format:
+
 ```plaintext
 Inventory Report:
 - Sencha: was 150, change +30, now 180
@@ -176,9 +182,21 @@ Test it:
 
 ```js
 const tasks = [
-  done => setTimeout(() => { console.log("Task 1"); done(); }, 300),
-  done => setTimeout(() => { console.log("Task 2"); done(); }, 200),
-  done => setTimeout(() => { console.log("Task 3"); done(); }, 100)
+  (done) =>
+    setTimeout(() => {
+      console.log("Task 1");
+      done();
+    }, 300),
+  (done) =>
+    setTimeout(() => {
+      console.log("Task 2");
+      done();
+    }, 200),
+  (done) =>
+    setTimeout(() => {
+      console.log("Task 3");
+      done();
+    }, 100),
 ];
 
 runSequentially(tasks, () => {
@@ -187,6 +205,7 @@ runSequentially(tasks, () => {
 ```
 
 Expected output (in order, despite different delays):
+
 ```plaintext
 Task 1
 Task 2
@@ -201,6 +220,7 @@ All tasks complete!
 ## Submission
 
 Create a folder `week2-assignment/` with:
+
 - `exercise1.js`
 - `exercise2.js`
 - `exercise3.js`

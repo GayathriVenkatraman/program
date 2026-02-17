@@ -20,13 +20,14 @@ async function searchTeas(query) {
 }
 
 // Test it:
-searchTeas("pearl").then(teas => {
+searchTeas("pearl").then((teas) => {
   console.log("Search results for 'pearl':");
-  teas.forEach(tea => console.log(`- ${tea.name}`));
+  teas.forEach((tea) => console.log(`- ${tea.name}`));
 });
 ```
 
 Expected output:
+
 ```plaintext
 Search results for 'pearl':
 - Jasmine Pearl
@@ -48,7 +49,7 @@ async function getTeaDetails(id) {
 }
 
 // Test it:
-getTeaDetails(1).then(tea => {
+getTeaDetails(1).then((tea) => {
   console.log(`${tea.name} (${tea.origin})`);
   console.log(`Price: ${tea.pricePerGram} DKK/gram`);
   console.log(`Stock: ${tea.stock} grams`);
@@ -68,19 +69,18 @@ async function calculateOrderTotal(items) {
   // 1. Fetch all teas from API
   // 2. For each item, find the tea and calculate price
   // 3. Return total price
-
   // Bonus: throw an error if a teaId doesn't exist
 }
 
 const order = [
   { teaId: 1, grams: 100 },
   { teaId: 3, grams: 50 },
-  { teaId: 8, grams: 200 }
+  { teaId: 8, grams: 200 },
 ];
 
 calculateOrderTotal(order)
-  .then(total => console.log(`Order total: ${total.toFixed(2)} DKK`))
-  .catch(err => console.error("Error:", err.message));
+  .then((total) => console.log(`Order total: ${total.toFixed(2)} DKK`))
+  .catch((err) => console.error("Error:", err.message));
 ```
 
 ---
@@ -99,16 +99,16 @@ async function checkOrderStock(items) {
 
 const largeOrder = [
   { teaId: 1, grams: 100 },
-  { teaId: 2, grams: 500 },  // might be out of stock
-  { teaId: 3, grams: 9999 }  // definitely out of stock
+  { teaId: 2, grams: 500 }, // might be out of stock
+  { teaId: 3, grams: 9999 }, // definitely out of stock
 ];
 
-checkOrderStock(largeOrder).then(result => {
+checkOrderStock(largeOrder).then((result) => {
   if (result.inStock) {
     console.log("All items in stock!");
   } else {
     console.log("Shortages:");
-    result.shortages.forEach(s => {
+    result.shortages.forEach((s) => {
       console.log(`- ${s.name}: need ${s.needed}, have ${s.available}`);
     });
   }
@@ -147,22 +147,22 @@ async function processOrder(items) {
   return {
     items: items.length,
     total,
-    status: "ready"
+    status: "ready",
   };
 }
 
 const myOrder = [
   { teaId: 1, grams: 50 },
-  { teaId: 5, grams: 100 }
+  { teaId: 5, grams: 100 },
 ];
 
 processOrder(myOrder)
-  .then(result => {
+  .then((result) => {
     console.log("Order ready!");
     console.log(`Items: ${result.items}`);
     console.log(`Total: ${result.total.toFixed(2)} DKK`);
   })
-  .catch(err => {
+  .catch((err) => {
     console.error("Order failed:", err.message);
   });
 ```
@@ -183,7 +183,7 @@ async function signup(email, password) {
   const response = await fetch(`${API_BASE}/auth/signup`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ email, password }),
   });
 
   if (!response.ok) throw new Error("Signup failed");
@@ -197,8 +197,8 @@ async function getAuthToken() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       email: "yourname@example.com",
-      password: "mypassword"
-    })
+      password: "mypassword",
+    }),
   });
 
   if (!response.ok) throw new Error("Login failed");
@@ -229,9 +229,9 @@ async function getMyOrders() {
 signup("yourname@example.com", "mypassword")
   .catch(() => {}) // ignore if already signed up
   .then(() => createOrder([{ teaId: 1, grams: 100 }]))
-  .then(order => console.log("Created order:", order.id))
+  .then((order) => console.log("Created order:", order.id))
   .then(() => getMyOrders())
-  .then(orders => console.log("All orders:", orders.length));
+  .then((orders) => console.log("All orders:", orders.length));
 ```
 
 ---
@@ -239,6 +239,7 @@ signup("yourname@example.com", "mypassword")
 ## Submission
 
 Create a folder `week3-assignment/` with:
+
 - `exercise1.js` - Tea search
 - `exercise2.js` - Tea details
 - `exercise3.js` - Order calculator
@@ -257,8 +258,8 @@ async function searchTeas(query) {
 }
 
 // Run the function
-searchTeas("pearl").then(results => {
+searchTeas("pearl").then((results) => {
   console.log("Found:", results.length, "teas");
-  results.forEach(tea => console.log(`- ${tea.name}`));
+  results.forEach((tea) => console.log(`- ${tea.name}`));
 });
 ```

@@ -16,6 +16,7 @@ const API_BASE = "https://tea-api-787553294298.europe-west1.run.app/api";
 <summary>📚 Recall: Promise</summary>
 
 A Promise represents a future value. It's either pending (waiting), fulfilled (success), or rejected (error). Use `.then()` for success, `.catch()` for errors.
+
 </details>
 
 ### Exercise 1
@@ -24,10 +25,10 @@ Fetch all teas from the API and log how many there are.
 
 ```js
 fetch(`${API_BASE}/teas`)
-  .then(response => {
+  .then((response) => {
     // response.json() also returns a Promise!
   })
-  .then(teas => {
+  .then((teas) => {
     // log the count
   });
 ```
@@ -41,8 +42,8 @@ Expected output: `Found 50 teas`
 Fetch a single tea by ID and log its name and origin.
 
 ```js
-fetch(`${API_BASE}/teas/3`)
-  // your code
+fetch(`${API_BASE}/teas/3`);
+// your code
 ```
 
 Expected output: `Dragon Well from China`
@@ -53,16 +54,16 @@ Try fetching a tea that doesn't exist (ID 999). Handle the error with `.catch()`
 
 ```js
 fetch(`${API_BASE}/teas/999`)
-  .then(response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.json();
   })
-  .then(tea => {
+  .then((tea) => {
     console.log(tea.name);
   })
-  .catch(error => {
+  .catch((error) => {
     // handle the error
   });
 ```
@@ -74,11 +75,12 @@ Expected output: `Error: HTTP error: 404` (or similar)
 Fetch the inventory endpoint and log which teas are low on stock (less than 50).
 
 ```js
-fetch(`${API_BASE}/inventory`)
-  // your code
+fetch(`${API_BASE}/inventory`);
+// your code
 ```
 
 Expected output (will vary):
+
 ```plaintext
 Low stock:
 - Sencha: 0
@@ -97,6 +99,7 @@ Chain `.then()` calls to perform sequential operations.
 <summary>📚 Recall: Chaining</summary>
 
 `.then()` returns a new Promise. The return value of your callback becomes the input to the next `.then()`. This lets you chain operations without nesting.
+
 </details>
 
 ### Exercise 5
@@ -105,18 +108,18 @@ Fetch a tea, then fetch its inventory status. Log both pieces of information.
 
 ```js
 fetch(`${API_BASE}/teas/1`)
-  .then(response => response.json())
-  .then(tea => {
+  .then((response) => response.json())
+  .then((tea) => {
     console.log("Tea:", tea.name);
     // Return a new fetch to chain it
     return fetch(`${API_BASE}/inventory`);
   })
-  .then(response => response.json())
-  .then(inventory => {
+  .then((response) => response.json())
+  .then((inventory) => {
     // Find this tea's stock in the inventory
     // Log the stock count
   })
-  .catch(error => console.error("Error:", error.message));
+  .catch((error) => console.error("Error:", error.message));
 ```
 
 ### Exercise 6 ⭐
@@ -125,12 +128,12 @@ Fetch all teas, filter to only Japanese teas, then for each one log its name and
 
 ```js
 fetch(`${API_BASE}/teas`)
-  .then(response => response.json())
-  .then(teas => {
+  .then((response) => response.json())
+  .then((teas) => {
     // Filter to Japanese teas
     // Log each one's name and price
   })
-  .catch(error => console.error(error));
+  .catch((error) => console.error(error));
 ```
 
 ---
@@ -143,6 +146,7 @@ Build your own Promises with `new Promise()`.
 <summary>📚 Recall: resolve / reject</summary>
 
 When creating a Promise, call `resolve(value)` for success or `reject(error)` for failure. The value/error is passed to `.then()` or `.catch()`.
+
 </details>
 
 ### Exercise 7
@@ -166,10 +170,12 @@ wait(2000).then(() => console.log("2 seconds passed!"));
 ### Exercise 8 ⭐
 
 Create a `fetchTeaWithTimeout(id, timeoutMs)` function. It should:
+
 - Fetch the tea from the API
 - Reject if it takes longer than `timeoutMs`
 
 Hints:
+
 - Use `setTimeout` to create a timeout that calls `reject`
 - Use `clearTimeout` to cancel the timeout if fetch succeeds
 - Remember to handle fetch errors too
@@ -183,13 +189,13 @@ function fetchTeaWithTimeout(id, timeoutMs) {
 
 // Test with a generous timeout (should work)
 fetchTeaWithTimeout(1, 5000)
-  .then(tea => console.log("Got:", tea.name))
-  .catch(err => console.log("Failed:", err.message));
+  .then((tea) => console.log("Got:", tea.name))
+  .catch((err) => console.log("Failed:", err.message));
 
 // Test with a tiny timeout (should fail)
 fetchTeaWithTimeout(1, 1)
-  .then(tea => console.log("Got:", tea.name))
-  .catch(err => console.log("Failed:", err.message));
+  .then((tea) => console.log("Got:", tea.name))
+  .catch((err) => console.log("Failed:", err.message));
 ```
 
 ### Exercise 9 ⭐
@@ -224,8 +230,8 @@ function readJsonFilePromise(path) {
 
 // Test it:
 readJsonFilePromise("./test.json")
-  .then(data => console.log(data))
-  .catch(error => console.error(error.message));
+  .then((data) => console.log(data))
+  .catch((error) => console.error(error.message));
 ```
 
 ---
@@ -238,6 +244,7 @@ Rewrite Promise chains with cleaner async/await syntax.
 <summary>📚 Recall: async/await</summary>
 
 `async` before a function makes it return a Promise. `await` pauses execution until a Promise resolves. Together they make async code read like sync code.
+
 </details>
 
 ### Exercise 10
@@ -288,6 +295,7 @@ getTeaWithStock(999);
 ### Exercise 13 ⭐
 
 Create an async function that:
+
 1. Fetches all teas
 2. Filters to organic teas
 3. Gets inventory for each
@@ -298,7 +306,7 @@ async function getWellStockedOrganicTeas() {
   // your code
 }
 
-getWellStockedOrganicTeas().then(teas => {
+getWellStockedOrganicTeas().then((teas) => {
   console.log("Well-stocked organic teas:", teas);
 });
 ```
@@ -313,6 +321,7 @@ Run multiple Promises in parallel for better performance.
 <summary>📚 Recall: Promise.all</summary>
 
 `Promise.all([p1, p2, p3])` runs all Promises simultaneously and resolves when ALL complete. Returns an array of results in the same order.
+
 </details>
 
 ### Exercise 14
@@ -350,9 +359,9 @@ async function getFullInventoryReport() {
   // Return array of { name, origin, stock }
 }
 
-getFullInventoryReport().then(report => {
+getFullInventoryReport().then((report) => {
   console.log("Inventory Report:");
-  report.forEach(item => {
+  report.forEach((item) => {
     console.log(`- ${item.name} (${item.origin}): ${item.stock} in stock`);
   });
 });
@@ -391,8 +400,8 @@ async function login(email, password) {
 // Sign up first, then log in (use dummy credentials!)
 await signup("yourname@example.com", "mypassword");
 login("yourname@example.com", "mypassword")
-  .then(token => console.log("Got token:", token))
-  .catch(err => console.error(err.message));
+  .then((token) => console.log("Got token:", token))
+  .catch((err) => console.error(err.message));
 ```
 
 Hint: Use `method: "POST"` and `headers: { "Content-Type": "application/json" }` in your fetch options.
@@ -409,8 +418,8 @@ async function getOrders() {
 }
 
 getOrders()
-  .then(orders => console.log("Orders:", orders))
-  .catch(err => console.error(err.message));
+  .then((orders) => console.log("Orders:", orders))
+  .catch((err) => console.error(err.message));
 ```
 
 Hint: The Authorization header format is `Bearer ${token}`

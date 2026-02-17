@@ -13,7 +13,7 @@ const tea1 = { name: "Sencha", pricePerGram: 0.12, origin: "Japan" };
 const tea2 = { name: "Earl Grey", pricePerGram: 0.08, origin: "India" };
 ```
 
-That works fine for reading data. But what happens when you need to *do things* with it?
+That works fine for reading data. But what happens when you need to _do things_ with it?
 
 ```js
 // Calculate price for 100 grams
@@ -82,6 +82,7 @@ const sencha = new Tea("Sencha", 0.12, "Japan");
 ```
 
 Here's what `new` does:
+
 1. Creates a fresh, empty object
 2. Calls the constructor, with `this` set to the new object
 3. Returns the object
@@ -90,7 +91,9 @@ The class is a **blueprint**. The instance is a **building**. One blueprint can 
 
 ```js
 // One class (blueprint)
-class Tea { /* ... */ }
+class Tea {
+  /* ... */
+}
 
 // Many instances (buildings)
 const tea1 = new Tea("Sencha", 0.12, "Japan");
@@ -125,18 +128,20 @@ class Tea {
 }
 
 const sencha = new Tea("Sencha", 0.12, "Japan");
-console.log(sencha.priceFor(100));  // 12
-console.log(sencha.describe());     // "Sencha from Japan"
+console.log(sencha.priceFor(100)); // 12
+console.log(sencha.describe()); // "Sencha from Japan"
 ```
 
-Notice: the price formula lives *with* the Tea data. You don't pass the tea to an external function - the tea knows how to calculate its own price. That's **encapsulation**: bundling data and the operations that work on it together.
+Notice: the price formula lives _with_ the Tea data. You don't pass the tea to an external function - the tea knows how to calculate its own price. That's **encapsulation**: bundling data and the operations that work on it together.
 
 Now compare:
 
 ```js
 // Without classes: data and behavior are separate
 const tea = { name: "Sencha", pricePerGram: 0.12 };
-function priceFor(tea, grams) { return tea.pricePerGram * grams; }
+function priceFor(tea, grams) {
+  return tea.pricePerGram * grams;
+}
 priceFor(tea, 100);
 
 // With classes: data and behavior live together
@@ -175,7 +180,7 @@ class Tea {
 
   static findCheapest(teas) {
     return teas.reduce((cheapest, tea) =>
-      tea.pricePerGram < cheapest.pricePerGram ? tea : cheapest
+      tea.pricePerGram < cheapest.pricePerGram ? tea : cheapest,
     );
   }
 }
@@ -185,7 +190,11 @@ You call static methods on the class, not on instances:
 
 ```js
 // Static methods: called on Tea (the class)
-const sencha = Tea.fromObject({ name: "Sencha", pricePerGram: 0.12, origin: "Japan" });
+const sencha = Tea.fromObject({
+  name: "Sencha",
+  pricePerGram: 0.12,
+  origin: "Japan",
+});
 const cheapest = Tea.findCheapest(teas);
 
 // Instance methods: called on sencha (an instance)
@@ -216,13 +225,13 @@ class Tea {
 
 class PremiumTea extends Tea {
   constructor(name, pricePerGram, origin, grade) {
-    super(name, pricePerGram, origin);  // Call parent constructor
+    super(name, pricePerGram, origin); // Call parent constructor
     this.grade = grade;
   }
 
   priceFor(grams) {
-    const base = super.priceFor(grams);  // Call parent method
-    return base * 1.2;  // 20% premium markup
+    const base = super.priceFor(grams); // Call parent method
+    return base * 1.2; // 20% premium markup
   }
 }
 ```
@@ -234,10 +243,10 @@ class PremiumTea extends Tea {
 ```js
 const gyokuro = new PremiumTea("Gyokuro", 0.56, "Japan", "A");
 console.log(gyokuro.priceFor(100)); // 67.2 (56 * 1.2)
-console.log(gyokuro.grade);         // "A"
+console.log(gyokuro.grade); // "A"
 ```
 
-Inheritance is useful when you have an "is-a" relationship: a PremiumTea *is a* Tea with extra features. But don't overuse it - most of the time, composition (classes using other classes) is more flexible.
+Inheritance is useful when you have an "is-a" relationship: a PremiumTea _is a_ Tea with extra features. But don't overuse it - most of the time, composition (classes using other classes) is more flexible.
 
 ---
 
@@ -245,26 +254,30 @@ Inheritance is useful when you have an "is-a" relationship: a PremiumTea *is a* 
 
 This distinction is fundamental:
 
-| | Class | Instance |
-|--|-------|----------|
-| What | Blueprint / template | Specific object |
-| How many | One per type | Many per class |
-| Created with | `class` keyword | `new` keyword |
-| Example | `Tea` | `sencha`, `earlGrey` |
-| Analogy | Cookie cutter | Cookies |
+|              | Class                | Instance             |
+| ------------ | -------------------- | -------------------- |
+| What         | Blueprint / template | Specific object      |
+| How many     | One per type         | Many per class       |
+| Created with | `class` keyword      | `new` keyword        |
+| Example      | `Tea`                | `sencha`, `earlGrey` |
+| Analogy      | Cookie cutter        | Cookies              |
 
 ```js
 // Tea is a class - it describes what teas look like
 class Tea {
-  constructor(name, pricePerGram, origin) { /* ... */ }
-  priceFor(grams) { /* ... */ }
+  constructor(name, pricePerGram, origin) {
+    /* ... */
+  }
+  priceFor(grams) {
+    /* ... */
+  }
 }
 
 // sencha is an instance - it IS a specific tea
 const sencha = new Tea("Sencha", 0.12, "Japan");
 
 // You can check:
-console.log(sencha instanceof Tea);  // true
+console.log(sencha instanceof Tea); // true
 ```
 
 > 📚 **Glossary: class**
@@ -274,16 +287,16 @@ console.log(sencha instanceof Tea);  // true
 
 ## Summary
 
-| Term | Meaning |
-|------|---------|
-| class | Blueprint for creating objects with shared structure |
-| constructor | Method that initializes a new instance |
-| instance | A specific object created from a class |
-| this | Refers to the current instance inside a class |
-| encapsulation | Bundling data and operations together |
-| static method | Method on the class itself, not on instances |
-| extends | Create a specialized version of another class |
-| super() | Call the parent class's constructor or method |
+| Term          | Meaning                                              |
+| ------------- | ---------------------------------------------------- |
+| class         | Blueprint for creating objects with shared structure |
+| constructor   | Method that initializes a new instance               |
+| instance      | A specific object created from a class               |
+| this          | Refers to the current instance inside a class        |
+| encapsulation | Bundling data and operations together                |
+| static method | Method on the class itself, not on instances         |
+| extends       | Create a specialized version of another class        |
+| super()       | Call the parent class's constructor or method        |
 
 ---
 

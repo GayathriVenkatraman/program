@@ -16,6 +16,7 @@ Functions in JavaScript are "first-class citizens" - they can be assigned to var
 <summary>📚 Recall: First-Class Functions</summary>
 
 A first-class function can be: assigned to a variable, passed as an argument, returned from a function, stored in data structures. JavaScript treats functions like any other value.
+
 </details>
 
 ### Exercise 1
@@ -23,11 +24,11 @@ A first-class function can be: assigned to a variable, passed as an argument, re
 Create a function that logs a tea's name and origin in the format `"Sencha (Japan)"`. Assign it to a variable called `logTea`. Call it with the first tea in the array.
 
 ```js
-const logTea = function(tea) {
+const logTea = function (tea) {
   // your code
 };
 
-logTea(teas[0]);  // should log: "Sencha (Japan)"
+logTea(teas[0]); // should log: "Sencha (Japan)"
 ```
 
 ### Exercise 2
@@ -40,12 +41,12 @@ function functionRunner(fn) {
 }
 
 // Test it:
-functionRunner(function() {
+functionRunner(function () {
   console.log("I was called!");
 });
 
 // Also test with a function variable:
-const sayHello = function() {
+const sayHello = function () {
   console.log("Hello!");
 };
 functionRunner(sayHello);
@@ -59,12 +60,14 @@ Create an array containing three different functions. Each function should log s
 
 ```js
 const functions = [
-  function() { console.log("First"); },
+  function () {
+    console.log("First");
+  },
   // add two more
 ];
 
 for (let i = 0; i < functions.length; i++) {
-  functions[i]();  // call each function
+  functions[i](); // call each function
 }
 ```
 
@@ -76,8 +79,8 @@ Create a function `createGreeter(greeting)` that returns a new function. The ret
 const sayHello = createGreeter("Hello");
 const sayHi = createGreeter("Hi");
 
-sayHello("Alice");  // "Hello, Alice!"
-sayHi("Bob");       // "Hi, Bob!"
+sayHello("Alice"); // "Hello, Alice!"
+sayHi("Bob"); // "Hi, Bob!"
 ```
 
 > 💡 This pattern is called a "function factory" - a function that creates and returns other functions.
@@ -92,6 +95,7 @@ sayHi("Bob");       // "Hi, Bob!"
 <summary>📚 Recall: Accumulator</summary>
 
 The accumulator is the value being "built up" through each iteration. It starts as your initial value (the second argument to reduce) and ends as your final result.
+
 </details>
 
 ### Exercise 5
@@ -103,7 +107,7 @@ const totalStock = teas.reduce((sum, tea) => {
   // return the new sum
 }, 0);
 
-console.log(totalStock);  // sum of all stockCount values
+console.log(totalStock); // sum of all stockCount values
 ```
 
 ### Exercise 6
@@ -151,6 +155,7 @@ Let's build our own versions of array methods to understand how callbacks work u
 <summary>📚 Recall: Callback</summary>
 
 A callback is a function you pass to another function, to be called at some point. In `teas.map(tea => tea.name)`, the arrow function IS the callback - map calls it for each item.
+
 </details>
 
 ### Exercise 9
@@ -164,7 +169,7 @@ function myForEach(array, callback) {
 }
 
 // Test it:
-myForEach(teas, function(tea) {
+myForEach(teas, function (tea) {
   console.log(tea.name);
 });
 ```
@@ -183,10 +188,10 @@ function myMap(array, callback) {
 }
 
 // Test it:
-const names = myMap(teas, function(tea) {
+const names = myMap(teas, function (tea) {
   return tea.name;
 });
-console.log(names);  // ["Sencha", "Earl Grey", ...]
+console.log(names); // ["Sencha", "Earl Grey", ...]
 ```
 
 ### Exercise 11 ⭐
@@ -199,10 +204,10 @@ function myFilter(array, callback) {
 }
 
 // Test it:
-const organic = myFilter(teas, function(tea) {
+const organic = myFilter(teas, function (tea) {
   return tea.organic;
 });
-console.log(organic.length);  // number of organic teas
+console.log(organic.length); // number of organic teas
 ```
 
 > 💡 Building these yourself demystifies array methods. They're just functions that call your callback at the right time.
@@ -211,12 +216,13 @@ console.log(organic.length);  // number of organic teas
 
 ## Part 4: setTimeout & Delayed Callbacks
 
-Now the twist: what if the callback runs *later*? `setTimeout` is the simplest example - it waits, then calls your callback.
+Now the twist: what if the callback runs _later_? `setTimeout` is the simplest example - it waits, then calls your callback.
 
 <details>
 <summary>📚 Recall: Delayed Execution</summary>
 
 With delayed execution, the code doesn't wait. "Start this operation, continue running other code, call the callback when done." Unlike regular code which runs line-by-line and blocks.
+
 </details>
 
 ### Exercise 12
@@ -226,7 +232,7 @@ What order will these console.logs appear? Write your prediction first, then run
 ```js
 console.log("1. Starting");
 
-setTimeout(function() {
+setTimeout(function () {
   console.log("2. Timeout done");
 }, 1000);
 
@@ -243,11 +249,11 @@ function runAfterDelay(delay, callback) {
 }
 
 // Test it:
-runAfterDelay(2000, function() {
+runAfterDelay(2000, function () {
   console.log("This runs after 2 seconds");
 });
 
-runAfterDelay(1000, function() {
+runAfterDelay(1000, function () {
   console.log("This runs after 1 second");
 });
 
@@ -268,7 +274,7 @@ function findTeaById(id, callback) {
 
 // Test it:
 console.log("Looking up tea...");
-findTeaById(3, function(tea) {
+findTeaById(3, function (tea) {
   console.log("Found:", tea.name);
 });
 console.log("Request sent, waiting...");
@@ -277,6 +283,7 @@ console.log("Request sent, waiting...");
 Before running: predict the output order. Then run it to check.
 
 Expected output order:
+
 1. "Looking up tea..."
 2. "Request sent, waiting..."
 3. (after 500ms) "Found: Dragon Well"
@@ -286,9 +293,15 @@ Expected output order:
 Call `findTeaById` three times in a row with different IDs. Notice that all three requests start at the same time - they don't wait for each other.
 
 ```js
-findTeaById(1, function(tea) { console.log("Got:", tea.name); });
-findTeaById(5, function(tea) { console.log("Got:", tea.name); });
-findTeaById(10, function(tea) { console.log("Got:", tea.name); });
+findTeaById(1, function (tea) {
+  console.log("Got:", tea.name);
+});
+findTeaById(5, function (tea) {
+  console.log("Got:", tea.name);
+});
+findTeaById(10, function (tea) {
+  console.log("Got:", tea.name);
+});
 console.log("All requests sent!");
 ```
 
@@ -304,11 +317,13 @@ Node.js file operations use callbacks. `fs.readFile` takes a callback that runs 
 <summary>📚 Recall: Error-First Callback</summary>
 
 Node.js convention: callbacks receive `(error, result)`. If error exists, something went wrong - handle it and return early. If error is null/undefined, proceed with result.
+
 </details>
 
 ### Exercise 16
 
 First, create a file called `orders.json` in the same folder with this content:
+
 <!-- prettier-ignore -->
 ```jsonl
 [
@@ -323,7 +338,7 @@ Then write code that reads the file and logs how many orders there are:
 ```js
 import fs from "fs";
 
-fs.readFile('./orders.json', {encoding: 'utf8'}, function(error, data) {
+fs.readFile("./orders.json", { encoding: "utf8" }, function (error, data) {
   if (error) {
     console.error(error);
     return;
@@ -340,6 +355,7 @@ Expected output: `Number of orders: 3`
 ### Exercise 17 ⭐⭐
 
 Building on Exercise 16, after reading the orders:
+
 1. For each order, look up the tea prices from the teas array
 2. Calculate the total value of each order (`pricePerGram * grams`)
 3. Log each order's total

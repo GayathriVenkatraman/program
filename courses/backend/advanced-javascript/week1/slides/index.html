@@ -4,10 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week 1 - Array Methods</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css"
+    />
     <style>
       :root {
         --r-background-color: #1a1a2e;
@@ -15,10 +27,21 @@
         --r-heading-color: #16c79a;
         --r-link-color: #16c79a;
       }
-      .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
-      .reveal pre { font-size: 0.55em; width: 100%; }
-      .reveal .highlight { color: #16c79a; }
-      .reveal .dim { color: #888; }
+      .reveal h1,
+      .reveal h2,
+      .reveal h3 {
+        text-transform: none;
+      }
+      .reveal pre {
+        font-size: 0.55em;
+        width: 100%;
+      }
+      .reveal .highlight {
+        color: #16c79a;
+      }
+      .reveal .dim {
+        color: #888;
+      }
       .reveal blockquote {
         background: rgba(22, 199, 154, 0.1);
         border-left: 4px solid #16c79a;
@@ -26,8 +49,12 @@
         font-style: normal;
         width: 90%;
       }
-      .reveal .emoji { font-size: 3em; }
-      .reveal .small { font-size: 0.6em; }
+      .reveal .emoji {
+        font-size: 3em;
+      }
+      .reveal .small {
+        font-size: 0.6em;
+      }
       .layers-diagram {
         display: flex;
         justify-content: center;
@@ -36,7 +63,9 @@
         font-size: 1.5em;
         margin: 1em 0;
       }
-      .layers-diagram .arrow { color: #16c79a; }
+      .layers-diagram .arrow {
+        color: #16c79a;
+      }
       .layer-box {
         padding: 0.5em 1em;
         border-radius: 8px;
@@ -63,7 +92,6 @@
   <body>
     <div class="reveal">
       <div class="slides">
-
         <!-- Title -->
         <section>
           <h1>Array Methods</h1>
@@ -87,16 +115,22 @@
           <section>
             <h3>Example: Tea Search</h3>
             <blockquote>
-              User searches "green tea". Database returns 200 matches.<br>
+              User searches "green tea". Database returns 200 matches.<br />
               But they want: organic only, sorted by price, just name and price.
             </blockquote>
-            <p><code>filter</code> &rarr; <code>sort</code> &rarr; <code>map</code></p>
+            <p>
+              <code>filter</code> &rarr; <code>sort</code> &rarr;
+              <code>map</code>
+            </p>
           </section>
 
           <section>
             <h3>Array Methods Are Your Toolkit</h3>
             <p>Transform data between:</p>
-            <p><span class="highlight">"as stored"</span> and <span class="highlight">"as served"</span></p>
+            <p>
+              <span class="highlight">"as stored"</span> and
+              <span class="highlight">"as served"</span>
+            </p>
           </section>
         </section>
 
@@ -104,7 +138,7 @@
         <section>
           <section>
             <h2>Three Methods to Learn</h2>
-            <div style="margin-top: 1em;">
+            <div style="margin-top: 1em">
               <span class="method-box">forEach</span>
               <span class="method-box">map</span>
               <span class="method-box">filter</span>
@@ -121,7 +155,10 @@
 
           <section>
             <h3>The Mental Model</h3>
-            <p><span class="highlight">N inputs</span> &rarr; <span class="highlight">no output</span></p>
+            <p>
+              <span class="highlight">N inputs</span> &rarr;
+              <span class="highlight">no output</span>
+            </p>
             <p>Side effects only: logging, rendering, sending</p>
           </section>
 
@@ -135,7 +172,9 @@ teas.forEach(function(tea) {
 // Sencha
 // Earl Grey
 // Matcha</code></pre>
-            <p class="dim">No return value. Just does something for each item.</p>
+            <p class="dim">
+              No return value. Just does something for each item.
+            </p>
           </section>
 
           <section>
@@ -145,7 +184,9 @@ teas.forEach(function(tea) {
               <li>Rendering elements to DOM</li>
               <li>Sending notifications</li>
             </ul>
-            <p class="highlight" style="margin-top: 1em;">When you don't need a result back</p>
+            <p class="highlight" style="margin-top: 1em">
+              When you don't need a result back
+            </p>
           </section>
         </section>
 
@@ -158,7 +199,10 @@ teas.forEach(function(tea) {
 
           <section>
             <h3>The Mental Model</h3>
-            <p><span class="highlight">N inputs</span> &rarr; <span class="highlight">N outputs</span></p>
+            <p>
+              <span class="highlight">N inputs</span> &rarr;
+              <span class="highlight">N outputs</span>
+            </p>
             <p>Same count, different shape</p>
           </section>
 
@@ -200,7 +244,9 @@ const names = teas.map(function(tea) {
               <li>Transform values (calculate, format)</li>
               <li>Reshape data for API response</li>
             </ul>
-            <p class="highlight" style="margin-top: 1em;">When every item needs to become something else</p>
+            <p class="highlight" style="margin-top: 1em">
+              When every item needs to become something else
+            </p>
           </section>
         </section>
 
@@ -213,7 +259,10 @@ const names = teas.map(function(tea) {
 
           <section>
             <h3>The Mental Model</h3>
-            <p><span class="highlight">N inputs</span> &rarr; <span class="highlight">M outputs</span> (M &le; N)</p>
+            <p>
+              <span class="highlight">N inputs</span> &rarr;
+              <span class="highlight">M outputs</span> (M &le; N)
+            </p>
             <p>Same shape, fewer items</p>
           </section>
 
@@ -247,7 +296,9 @@ const organic = teas.filter(function(tea) {
               <li>Remove unwanted data</li>
               <li>Search results</li>
             </ul>
-            <p class="highlight" style="margin-top: 1em;">When you need fewer items, not different items</p>
+            <p class="highlight" style="margin-top: 1em">
+              When you need fewer items, not different items
+            </p>
           </section>
         </section>
 
@@ -261,7 +312,9 @@ const organic = teas.filter(function(tea) {
           <section>
             <h3>map</h3>
             <p>Changes <em>what</em> items are</p>
-            <p class="dim">Objects &rarr; strings, numbers &rarr; formatted, etc.</p>
+            <p class="dim">
+              Objects &rarr; strings, numbers &rarr; formatted, etc.
+            </p>
             <p class="highlight">Count stays the same</p>
           </section>
 
@@ -299,16 +352,23 @@ const organicNames = teas
 
           <section>
             <h3>In the Logic Layer</h3>
-            <p><span class="highlight">map</span> - transform data for output</p>
+            <p>
+              <span class="highlight">map</span> - transform data for output
+            </p>
             <p><span class="highlight">filter</span> - select relevant data</p>
-            <p class="dim" style="margin-top: 1em;">These prepare data between storage and display</p>
+            <p class="dim" style="margin-top: 1em">
+              These prepare data between storage and display
+            </p>
           </section>
 
           <section>
             <h3>forEach is Different</h3>
-            <p>Often appears in the <span class="highlight">Rendering</span> layer</p>
+            <p>
+              Often appears in the
+              <span class="highlight">Rendering</span> layer
+            </p>
             <p class="dim">Logging, DOM updates, side effects</p>
-            <p style="margin-top: 1em;">No output = end of the pipeline</p>
+            <p style="margin-top: 1em">No output = end of the pipeline</p>
           </section>
         </section>
 
@@ -392,7 +452,10 @@ teas.map(tea => {
 
           <section>
             <h3>The Mental Model</h3>
-            <p><span class="highlight">N inputs</span> &rarr; <span class="highlight">1 output</span></p>
+            <p>
+              <span class="highlight">N inputs</span> &rarr;
+              <span class="highlight">1 output</span>
+            </p>
             <p>Many items become one value</p>
           </section>
 
@@ -423,7 +486,9 @@ const totalStock = teas.reduce((sum, tea) => {
             <h3>We'll Learn This in Week 2</h3>
             <p><code>reduce</code> is the most powerful array method</p>
             <p class="dim">It needs a solid foundation in map/filter first</p>
-            <p class="highlight" style="margin-top: 1em;">Optional exercises in this week's assignment!</p>
+            <p class="highlight" style="margin-top: 1em">
+              Optional exercises in this week's assignment!
+            </p>
           </section>
         </section>
 
@@ -435,16 +500,25 @@ const totalStock = teas.reduce((sum, tea) => {
 
           <section>
             <h3>The Three Methods</h3>
-            <p><span class="highlight">forEach</span> - N &rarr; nothing (side effects)</p>
+            <p>
+              <span class="highlight">forEach</span> - N &rarr; nothing (side
+              effects)
+            </p>
             <p><span class="highlight">map</span> - N &rarr; N (transform)</p>
             <p><span class="highlight">filter</span> - N &rarr; M (select)</p>
           </section>
 
           <section>
             <h3>Questions to Ask</h3>
-            <p>Do I need a result? <span class="dim">&rarr; not forEach</span></p>
-            <p>Same count, different shape? <span class="dim">&rarr; map</span></p>
-            <p>Fewer items, same shape? <span class="dim">&rarr; filter</span></p>
+            <p>
+              Do I need a result? <span class="dim">&rarr; not forEach</span>
+            </p>
+            <p>
+              Same count, different shape? <span class="dim">&rarr; map</span>
+            </p>
+            <p>
+              Fewer items, same shape? <span class="dim">&rarr; filter</span>
+            </p>
           </section>
 
           <section>
@@ -452,7 +526,6 @@ const totalStock = teas.reduce((sum, tea) => {
             <p class="emoji">🍵</p>
           </section>
         </section>
-
       </div>
     </div>
 

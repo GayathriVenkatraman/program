@@ -4,10 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week 2 - Callbacks & Delayed Execution</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css"
+    />
     <style>
       :root {
         --r-background-color: #1a1a2e;
@@ -15,10 +27,21 @@
         --r-heading-color: #16c79a;
         --r-link-color: #16c79a;
       }
-      .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
-      .reveal pre { font-size: 0.55em; width: 100%; }
-      .reveal .highlight { color: #16c79a; }
-      .reveal .dim { color: #888; }
+      .reveal h1,
+      .reveal h2,
+      .reveal h3 {
+        text-transform: none;
+      }
+      .reveal pre {
+        font-size: 0.55em;
+        width: 100%;
+      }
+      .reveal .highlight {
+        color: #16c79a;
+      }
+      .reveal .dim {
+        color: #888;
+      }
       .reveal blockquote {
         background: rgba(22, 199, 154, 0.1);
         border-left: 4px solid #16c79a;
@@ -26,8 +49,12 @@
         font-style: normal;
         width: 90%;
       }
-      .reveal .emoji { font-size: 3em; }
-      .reveal .small { font-size: 0.6em; }
+      .reveal .emoji {
+        font-size: 3em;
+      }
+      .reveal .small {
+        font-size: 0.6em;
+      }
       .method-box {
         background: rgba(22, 199, 154, 0.15);
         border-radius: 8px;
@@ -45,20 +72,21 @@
       }
       .timeline-item {
         padding: 0.3em 0.6em;
-        background: rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.1);
         border-radius: 4px;
       }
       .timeline-item.active {
         background: rgba(22, 199, 154, 0.3);
         border: 1px solid #16c79a;
       }
-      .timeline-arrow { color: #16c79a; }
+      .timeline-arrow {
+        color: #16c79a;
+      }
     </style>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-
         <!-- Title -->
         <section>
           <h1>Callbacks & Delayed Execution</h1>
@@ -77,14 +105,17 @@
             <p>Database queries take time</p>
             <p>File reads take time</p>
             <p>Network calls take time</p>
-            <p class="highlight" style="margin-top: 1em;">If we waited, we'd serve one request at a time</p>
+            <p class="highlight" style="margin-top: 1em">
+              If we waited, we'd serve one request at a time
+            </p>
           </section>
 
           <section>
             <h3>The Cafe Analogy</h3>
             <blockquote>
-              A waiter doesn't stand at the kitchen waiting for one order.<br><br>
-              They take the order, give it to the kitchen, and serve other tables while waiting.
+              A waiter doesn't stand at the kitchen waiting for one order.<br /><br />
+              They take the order, give it to the kitchen, and serve other
+              tables while waiting.
             </blockquote>
           </section>
 
@@ -92,7 +123,7 @@
             <h3>The Solution</h3>
             <p>"Start this operation..."</p>
             <p>"...call me back when you're done"</p>
-            <p class="highlight" style="margin-top: 1em;">That's a callback</p>
+            <p class="highlight" style="margin-top: 1em">That's a callback</p>
           </section>
         </section>
 
@@ -185,7 +216,10 @@ sayHi("Bob");       // "Hi, Bob!"</code></pre>
 
           <section>
             <h3>The Mental Model</h3>
-            <p><span class="highlight">N items</span> &rarr; <span class="highlight">1 value</span></p>
+            <p>
+              <span class="highlight">N items</span> &rarr;
+              <span class="highlight">1 value</span>
+            </p>
             <p>Sum, count, group, aggregate</p>
           </section>
 
@@ -337,10 +371,19 @@ myMap(teas, tea => tea.name);  // ["Sencha", ...]</code></pre>
 
           <section>
             <h3>Key Concepts</h3>
-            <p><span class="highlight">Functions as values</span> - pass them around</p>
-            <p><span class="highlight">Callbacks</span> - functions called later</p>
-            <p><span class="highlight">reduce</span> - build up a single value</p>
-            <p><span class="highlight">Async</span> - don't wait, use callbacks</p>
+            <p>
+              <span class="highlight">Functions as values</span> - pass them
+              around
+            </p>
+            <p>
+              <span class="highlight">Callbacks</span> - functions called later
+            </p>
+            <p>
+              <span class="highlight">reduce</span> - build up a single value
+            </p>
+            <p>
+              <span class="highlight">Async</span> - don't wait, use callbacks
+            </p>
           </section>
 
           <section>
@@ -361,7 +404,6 @@ myMap(teas, tea => tea.name);  // ["Sencha", ...]</code></pre>
             <p class="emoji">🍵</p>
           </section>
         </section>
-
       </div>
     </div>
 

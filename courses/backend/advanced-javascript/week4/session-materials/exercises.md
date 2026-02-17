@@ -16,6 +16,7 @@ A class is a blueprint for creating objects. The constructor initializes each in
 <summary>📚 Recall: constructor and this</summary>
 
 The `constructor` method runs when you create an instance with `new`. Inside it, `this` refers to the new object being created. `this.name = name` stores the parameter on the instance.
+
 </details>
 
 ### Exercise 1
@@ -30,8 +31,8 @@ class Tea {
 const sencha = new Tea("Sencha", "green", "Japan");
 const earlGrey = new Tea("Earl Grey", "black", "India");
 
-console.log(sencha.name);    // "Sencha"
-console.log(sencha.type);    // "green"
+console.log(sencha.name); // "Sencha"
+console.log(sencha.type); // "green"
 console.log(earlGrey.origin); // "India"
 ```
 
@@ -41,7 +42,13 @@ Extend your `Tea` class to also accept `pricePerGram` and `organic` (boolean). C
 
 ```js
 const firstTea = teas[0];
-const tea = new Tea(firstTea.name, firstTea.type, firstTea.origin, firstTea.pricePerGram, firstTea.organic);
+const tea = new Tea(
+  firstTea.name,
+  firstTea.type,
+  firstTea.origin,
+  firstTea.pricePerGram,
+  firstTea.organic,
+);
 console.log(tea);
 ```
 
@@ -50,7 +57,9 @@ console.log(tea);
 Create the Tea instances using `.map()` and your class:
 
 ```js
-const teaInstances = teas.map(t => new Tea(t.name, t.type, t.origin, t.pricePerGram, t.organic));
+const teaInstances = teas.map(
+  (t) => new Tea(t.name, t.type, t.origin, t.pricePerGram, t.organic),
+);
 console.log(teaInstances.length); // 20
 console.log(teaInstances[0].name); // "Sencha"
 ```
@@ -58,6 +67,7 @@ console.log(teaInstances[0].name); // "Sencha"
 ### Exercise 4 ⭐
 
 Add validation to your constructor. Throw an error if:
+
 - `name` is empty or missing
 - `pricePerGram` is negative
 - `type` is not one of: "green", "black", "herbal", "oolong", "white"
@@ -86,7 +96,8 @@ Methods are functions that belong to a class. They use `this` to access the inst
 <details>
 <summary>📚 Recall: encapsulation</summary>
 
-Encapsulation means bundling data and the operations that work on it together. Instead of separate functions that take a tea object as a parameter, the tea *itself* has methods.
+Encapsulation means bundling data and the operations that work on it together. Instead of separate functions that take a tea object as a parameter, the tea _itself_ has methods.
+
 </details>
 
 ### Exercise 5
@@ -96,7 +107,7 @@ Add a `priceFor(grams)` method to your Tea class that returns the price for a gi
 ```js
 const sencha = new Tea("Sencha", "green", "Japan", 0.12, true);
 console.log(sencha.priceFor(100)); // 12
-console.log(sencha.priceFor(50));  // 6
+console.log(sencha.priceFor(50)); // 6
 ```
 
 ### Exercise 6
@@ -133,12 +144,12 @@ class OrderItem {
 const sencha = new Tea("Sencha", "green", "Japan", 0.12, true);
 const item = new OrderItem(sencha, 200);
 
-console.log(item.tea.name);    // "Sencha"
-console.log(item.grams);       // 200
+console.log(item.tea.name); // "Sencha"
+console.log(item.grams); // 200
 console.log(item.lineTotal()); // 24
 ```
 
-> 💡 Notice: OrderItem *uses* a Tea instance - it doesn't extend it. This is composition: one class containing another.
+> 💡 Notice: OrderItem _uses_ a Tea instance - it doesn't extend it. This is composition: one class containing another.
 
 ### Exercise 8 ⭐
 
@@ -159,7 +170,7 @@ const items = [
   new OrderItem(teaInstances[7], 50),
 ];
 
-items.map(item => item.describe()).forEach(line => console.log(line));
+items.map((item) => item.describe()).forEach((line) => console.log(line));
 // "100g Sencha - 12.00 DKK"
 // "200g Earl Grey - 16.00 DKK"
 // "50g Matcha - 22.50 DKK"
@@ -175,6 +186,7 @@ Methods can modify instance state, not just read it. `this` is how you access an
 <summary>📚 Recall: this</summary>
 
 Inside a class, `this` refers to the current instance. `this.name` reads the instance's name. `this.stockCount -= 10` modifies it. Each instance has its own state.
+
 </details>
 
 ### Exercise 9
@@ -261,8 +273,12 @@ Add a `getTotal()` method to your Order class that uses `.reduce()` to sum all i
 
 ```js
 const order = new Order();
-order.addItem(new OrderItem(new Tea("Sencha", "green", "Japan", 0.12, true), 100));
-order.addItem(new OrderItem(new Tea("Matcha", "green", "Japan", 0.45, true), 50));
+order.addItem(
+  new OrderItem(new Tea("Sencha", "green", "Japan", 0.12, true), 100),
+);
+order.addItem(
+  new OrderItem(new Tea("Matcha", "green", "Japan", 0.45, true), 50),
+);
 
 console.log(order.getTotal()); // 34.5  (12 + 22.5)
 ```
@@ -287,6 +303,7 @@ Real applications have multiple classes that work together. Each class handles i
 <summary>📚 Recall: composition</summary>
 
 Composition means one class uses instances of another class. An Order contains OrderItems. A Catalog contains Teas. Each class handles its own job and delegates to others.
+
 </details>
 
 ### Exercise 12
@@ -309,13 +326,13 @@ class TeaCatalog {
 }
 
 const catalog = new TeaCatalog(
-  teas.map(t => new Tea(t.name, t.type, t.origin, t.pricePerGram, t.organic))
+  teas.map((t) => new Tea(t.name, t.type, t.origin, t.pricePerGram, t.organic)),
 );
 
 console.log(catalog.search("earl"));
 // [Tea { name: "Earl Grey", ... }]
 
-console.log(catalog.filterByType("green").map(t => t.name));
+console.log(catalog.filterByType("green").map((t) => t.name));
 // ["Sencha", "Dragon Well", "Matcha", "Genmaicha", "Jasmine Pearl", ...]
 ```
 
@@ -345,15 +362,19 @@ class Customer {
 const customer = new Customer("Alex", "alex@example.com");
 
 const order1 = new Order();
-order1.addItem(new OrderItem(new Tea("Sencha", "green", "Japan", 0.12, true), 100));
+order1.addItem(
+  new OrderItem(new Tea("Sencha", "green", "Japan", 0.12, true), 100),
+);
 customer.placeOrder(order1);
 
 const order2 = new Order();
-order2.addItem(new OrderItem(new Tea("Matcha", "green", "Japan", 0.45, true), 50));
+order2.addItem(
+  new OrderItem(new Tea("Matcha", "green", "Japan", 0.45, true), 50),
+);
 customer.placeOrder(order2);
 
 console.log(customer.orders.length); // 2
-console.log(customer.totalSpent());  // 34.5
+console.log(customer.totalSpent()); // 34.5
 ```
 
 ### Exercise 14 ⭐
@@ -363,15 +384,15 @@ Bring it together: create a catalog, find teas, create an order, and assign it t
 ```js
 // 1. Create a TeaCatalog from the tea data
 const catalog = new TeaCatalog(
-  teas.map(t => new Tea(t.name, t.type, t.origin, t.pricePerGram, t.organic))
+  teas.map((t) => new Tea(t.name, t.type, t.origin, t.pricePerGram, t.organic)),
 );
 
 // 2. Find all Japanese teas
-const japaneseTeas = catalog.search("").filter(t => t.origin === "Japan");
+const japaneseTeas = catalog.search("").filter((t) => t.origin === "Japan");
 
 // 3. Create an order with 100g of each Japanese tea
 const order = new Order();
-japaneseTeas.forEach(tea => {
+japaneseTeas.forEach((tea) => {
   order.addItem(new OrderItem(tea, 100));
 });
 
@@ -394,6 +415,7 @@ Static methods belong to the class itself, not to instances. Use them for factor
 <summary>📚 Recall: static methods</summary>
 
 A static method is called on the class: `Tea.fromObject(data)`. An instance method is called on an object: `sencha.priceFor(100)`. Static methods don't have access to `this` as an instance.
+
 </details>
 
 ### Exercise 15
@@ -465,6 +487,7 @@ Inheritance lets one class build on another. The child class gets all parent met
 <summary>📚 Recall: extends and super()</summary>
 
 `extends` creates a child class from a parent. `super()` in the constructor calls the parent's constructor. `super.method()` calls the parent's version of an overridden method.
+
 </details>
 
 ### Exercise 17 ⭐⭐
@@ -497,14 +520,21 @@ console.log(gyokuro.priceFor(100));
 // 84  (56 * 1.5)
 
 // It's still a Tea:
-console.log(gyokuro instanceof Tea);        // true
-console.log(gyokuro instanceof PremiumTea);  // true
+console.log(gyokuro instanceof Tea); // true
+console.log(gyokuro instanceof PremiumTea); // true
 ```
 
 Test with different grades:
 
 ```js
-const gradeB = new PremiumTea("Silver Needle", "white", "China", 0.50, true, "B");
+const gradeB = new PremiumTea(
+  "Silver Needle",
+  "white",
+  "China",
+  0.5,
+  true,
+  "B",
+);
 console.log(gradeB.priceFor(100)); // 62.5  (50 * 1.25)
 
 const gradeC = new PremiumTea("Darjeeling", "black", "India", 0.18, false, "C");

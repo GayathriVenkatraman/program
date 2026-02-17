@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -177,7 +177,9 @@
     <div id="playback">
       <button id="pause">Play</button>
       <button id="reset">Reset</button>
-      <label>Speed <input type="range" id="speed" min="1" max="10" value="1" /></label>
+      <label
+        >Speed <input type="range" id="speed" min="1" max="10" value="1"
+      /></label>
       <div id="stats">
         <span class="r">Rabbits: <strong id="rc">0</strong></span>
         <span class="f">Foxes: <strong id="fc">0</strong></span>
@@ -284,10 +286,7 @@
         if (history.length < 2) return;
 
         const visible = history.slice(-GW);
-        const maxVal = Math.max(
-          ...visible.map((h) => Math.max(h.r, h.f)),
-          10
-        );
+        const maxVal = Math.max(...visible.map((h) => Math.max(h.r, h.f)), 10);
         const step = GW / (visible.length - 1);
 
         function drawLine(key, color) {
