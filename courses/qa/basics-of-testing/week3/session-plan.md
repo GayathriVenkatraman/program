@@ -1,28 +1,20 @@
 # Session Plan
 
-> [!TIP]
-> The session plan is written to guide the mentor to prepare and run the session. Of course, trainees may come across and read this material. But it should be written as if you're speaking to a mentor.
+- Welcome & Session Overview (10 minutes)
+  - Brief introduction to QA and defect management
+- Defect vs Bug (25 minutes)
+  - Concept Explanation (15 minutes)
+  - Activity (10 minutes)
+- Defect Life Cycle & Statuses (45 minutes)
+  - Concept Explanation (25 minutes)
+  - Activity (20 minutes)
+- Severity vs Priority (30 minutes)
+  - Concept Explanation (20 minutes)
+  - Activity (10 minutes)
+- Writing Clear & Reproducible Bug Reports (40 minutes)
+- Introduction to JIRA (35 minutes)
+- Wrap-up + Q&A (15 minutes)
 
 ## Session Materials
 
-> [!TIP]
-> Previously used slides, docs or any other materials that future mentors could get value from should be listed here. If we don't have any (yet), this section can be removed.
-
-These are some examples of previously created materials by mentors that you can use yourself, or for inspiration.
-
-- [`Resource Name`, `@author`, `Team X`](https://example.com/)
-
-## Session Outline
-
-> [!TIP]
-> Write a plan for the order of topics, points to cover, examples, timings, exercises and any other useful info to guide the session.
-
-## Exercises
-
-> [!TIP]
-> Exercises might appear inside the Session Outline section if they are tightly integrated into the flow of the session. If you have more like a library of exercises that should be worked through in order, then you could also list them in a separate section here.
-
-## Optional Exercises
-
-> [!TIP]
-> If you have some extra exercises that trainees can complete if they finish the rest, or want to push themselves, include them in this optional section.
+In this session, we will learn how defects are managed throughout their life cycle and how to report them effectively. We will cover the difference between a defect and a bug, explore defect statuses, and understand severity vs priority. This week also introduces best practices for writing clear, reproducible bug reports and provides hands-on experience with JIRA.
