@@ -2,8 +2,8 @@
 
 ## Session Materials
 
-- [Database Diagram](assets/database-diagram.jpg) - The diagram of the database to be created in this session
-- [Sample Tasks database](assets/tasks.sqlite3) - Pre-created SQLite database with the contents of [this SQL file](assets/session-data.sql)
+- [Database Diagram](session-materials/database-diagram.jpg) - The diagram of the database to be created in this session
+- [Sample Tasks database](session-materials/tasks.sqlite3) - Pre-created SQLite database with the contents of [this SQL file](session-materials/session-data.sql)
 
 ## Session Outline
 
@@ -132,6 +132,8 @@ The next step is creating a database to have a playground for learning SQL. Also
 6. Click **Test Connection** to verify everything works
 7. Click **Finish**
 
+[Guide with screenshot and additional DBeaver information](./session-materials/dbeaver-ui.md).
+
 You can find more information in the [DBeaver documentation for Sqlite](https://dbeaver.com/docs/dbeaver/Database-driver-SQLite/).
 
 ### Step 2: Understanding Database Structure
@@ -158,7 +160,7 @@ So we just created our database. Before we create tables, let's understand the k
 
 After executing the SQL file, you should see a database like the diagram this one.
 
-![Database Diagram](assets/database-diagram.jpg)
+![Database Diagram](session-materials/database-diagram.jpg)
 
 #### Exercise 1
 
@@ -297,6 +299,25 @@ Now that your database is set up, you're ready to practice SQL queries. Below ar
 > [!NOTE] Interested in more options?
 > Refer back to [intro to sql cheatsheet](../pre-read/intro-sql.md) and practice some more complex queries!
 
+### JOIN
+
+JOIN allows to combine data from multiple tables. To join tables, you can use **foreign keys**!
+
+**Example:**
+
+```sql
+-- Find task and it's status name
+SELECT task.title, status.name
+FROM task
+JOIN status
+ON task.status_id = status.id;
+```
+
+#### Exercise 3
+
+1. Select all tasks which have status `In progress`.
+2. Display list of tasks with the user names of the users attached to the tasks.
+
 ### INSERT - Adding Data
 
 The INSERT statement is used to add new records to a table.
@@ -402,7 +423,7 @@ Now, let's practice these operations together:
    SELECT * FROM task WHERE title = 'Prepare presentation';
    ```
 
-#### Exercise 3
+#### Exercise 4
 
 Combine all the queries you learned!
 

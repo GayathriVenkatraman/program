@@ -30,7 +30,7 @@ Welcome to your final project! Here you can learn more about the goals and requi
 - [ ] Design a data schema to store data for your app
 - [ ] Create a database table with usable data
 
-## Organisation Requirements
+## Organisational Requirements
 
 - [ ] Work as a pair (two trainees) to complete the project together
 - [ ] Use Trello to organise your project and visualise your progress

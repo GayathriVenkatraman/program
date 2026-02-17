@@ -22,3 +22,29 @@ Note: Trainees will work in pairs to compelete the project. These pairs will hav
 - Teaching moment: If there were any significant issues or confusions that came up, spend some time diving into them in detail.
 - Introduce the next milestone: Talk through the next requirements in detail, and answer any questions.
 - Pairing time: Allow space for the trainees to continue working on their project, answering any questions as they come up with the whole team.
+
+### The final session
+
+The final session acts as a showcase for the projects. Here is an outline that can be shared with trainees:
+
+```plaintext
+🎮 Final Project Presentation Guidelines
+When: 3rd week of the Foundation project
+Duration: 7–10 minutes per team
+
+Presentation structure:
+
+1. Start with your Trello board → Explain your workflow, task organization, and process.
+
+2. Show your project → Demonstrate the working game/application.
+
+3. Talk about contributions → Each team member should briefly explain what they worked on.
+
+Requirements before presentation day:
+✅ Project must be fully deployed and live.
+✅ Prepare a QR code linking to your live project.
+
+During the session:
+
+Share the QR code so other teams can test your game on their devices.
+```

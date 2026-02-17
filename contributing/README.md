@@ -2,7 +2,7 @@
 
 Everyone is welcome to fork/clone the repo and contribute to improving the program.
 
-If you would like to take a more active role in contributing to this program as a volunteer of HYF Denmark, drop an introduction in #mentorroom and a staff member will help onboard you. If you're not already a mentor, sign up your interest at [hackyourfuture.dk/volunteer](https://hackyourfuture.dk/volunteer).
+If you would like to take a more active role in contributing to this program as a volunteer of HYF Denmark, drop an introduction in #mentorroom and a staff member will help onboard you. If you're not already a mentor, sign up your interest at [www.hackyourfuture.dk/volunteer](https://www.hackyourfuture.dk/volunteer).
 
 ## How to contribute
 
@@ -13,6 +13,8 @@ After taking part in a Sunday session, we strongly encourage mentors to evaluate
 ### 2. Suggestions and improvements
 
 If you come across issues or ideas for improvements along the way, please create a pull request (or a [GitHub issue](https://github.com/HackYourFuture-CPH/program/issues), if you're not sure how to implement it) and share in #mentorroom for visibility and feedback.
+
+[Here is a good example](https://github.com/HackYourFuture-CPH/program/pull/253) of a PR made by a mentor after running a Sunday session.
 
 You are welcome to browse the list of [open issues](https://github.com/HackYourFuture-CPH/program/issues) as well, and pick any up that you think you can contribute to. All help is appreciated!
 
