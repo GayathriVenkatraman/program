@@ -22,4 +22,4 @@
 
 ## Session Materials
 
-> In this session, we will learn the core principles of software testing and its role in ensuring product quality. We will explore different types of testing, levels of testing, and approaches to executing tests effectively. This week emphasizes understanding functional vs non-functional testing, manual vs automated testing, and how to analyze requirements to define test scenarios.
+In this session, we will learn the core principles of software testing and its role in ensuring product quality. We will explore different types of testing, levels of testing, and approaches to executing tests effectively. This week emphasizes understanding functional vs non-functional testing, manual vs automated testing, and how to analyze requirements to define test scenarios.
