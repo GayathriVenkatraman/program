@@ -63,7 +63,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 2](./session-materials/exercises.md#part-2-chaining-promises) (exercises 5-6)
 
-### Break
+### Break 1
 
 ### 4. Creating Promises
 
@@ -89,7 +89,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 4](./session-materials/exercises.md#part-4-asyncawait) (exercises 10-13)
 
-### Break
+### Break 2
 
 ### 6. Promise.all
 

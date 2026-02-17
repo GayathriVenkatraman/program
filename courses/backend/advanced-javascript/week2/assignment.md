@@ -150,7 +150,7 @@ generateInventoryReport((error, report) => {
 ```
 
 Expected output format:
-```
+```plaintext
 Inventory Report:
 - Sencha: was 150, change +30, now 180
 - Matcha: was 30, change +20, now 50
@@ -187,7 +187,7 @@ runSequentially(tasks, () => {
 ```
 
 Expected output (in order, despite different delays):
-```
+```plaintext
 Task 1
 Task 2
 Task 3

@@ -79,7 +79,7 @@ fetch(`${API_BASE}/inventory`)
 ```
 
 Expected output (will vary):
-```
+```plaintext
 Low stock:
 - Sencha: 0
 - Chamomile: 0

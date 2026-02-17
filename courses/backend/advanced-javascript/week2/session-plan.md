@@ -65,7 +65,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 2](./session-materials/exercises.md#part-2-reduce) (exercises 5-8)
 
-### Break
+### Break 1
 
 ### 4. Callbacks - Synchronous
 
@@ -90,7 +90,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 4](./session-materials/exercises.md#part-4-settimeout--delayed-callbacks) (exercises 12-15)
 
-### Break
+### Break 2
 
 ### 6. File System Callbacks
 

@@ -27,7 +27,7 @@ searchTeas("pearl").then(teas => {
 ```
 
 Expected output:
-```
+```plaintext
 Search results for 'pearl':
 - Jasmine Pearl
 - Royal Kenya Pearl

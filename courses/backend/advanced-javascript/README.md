@@ -47,7 +47,7 @@ Here are 3 teas from our tea shop:
 
 ### As CSV (Comma-Separated Values)
 
-```
+```csv
 id,name,origin,pricePerGram,organic
 1,Sencha,Japan,0.12,true
 2,Earl Grey,India,0.08,false
@@ -66,7 +66,7 @@ id,name,origin,pricePerGram,organic
 
 ### As JSONL (JSON Lines - one object per line)
 
-```
+```json
 {"id":1,"name":"Sencha","origin":"Japan","pricePerGram":0.12,"organic":true}
 {"id":2,"name":"Earl Grey","origin":"India","pricePerGram":0.08,"organic":false}
 {"id":3,"name":"Dragon Well","origin":"China","pricePerGram":0.25,"organic":true}
@@ -80,7 +80,7 @@ Same data, different formats. In this course, we'll primarily work with JSON sin
 
 Every application, from a simple website to a complex enterprise system, follows this pattern:
 
-```
+```plaintext
 Data → Logic → Rendering
 ```
 

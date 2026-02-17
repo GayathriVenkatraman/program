@@ -64,7 +64,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 2](./session-materials/exercises.md#part-2-methods) (exercises 5-8)
 
-### Break
+### Break 1
 
 ### 4. this and State
 
@@ -88,7 +88,7 @@ By the end of this session, trainees should:
 
 **Exercises:** [Part 4](./session-materials/exercises.md#part-4-classes-working-together) (exercises 12-14)
 
-### Break
+### Break 2
 
 ### 6. Static Methods
 
