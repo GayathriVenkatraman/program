@@ -55,7 +55,7 @@ id,name,origin,pricePerGram,organic
 ```
 
 ### As JSON (JavaScript Object Notation)
-
+<!-- prettier-ignore -->
 ```jsonl
 [
   { "id": 1, "name": "Sencha", "origin": "Japan", "pricePerGram": 0.12, "organic": true },
@@ -65,7 +65,7 @@ id,name,origin,pricePerGram,organic
 ```
 
 ### As JSONL (JSON Lines - one object per line)
-
+<!-- prettier-ignore -->
 ```jsonl
 {"id":1,"name":"Sencha","origin":"Japan","pricePerGram":0.12,"organic":true}
 {"id":2,"name":"Earl Grey","origin":"India","pricePerGram":0.08,"organic":false}

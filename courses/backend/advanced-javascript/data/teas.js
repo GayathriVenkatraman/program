@@ -1,3 +1,4 @@
+// prettier-ignore
 export const teas = [
   { id: 1, name: "Sencha", type: "green", origin: "Japan", pricePerGram: 0.12, caffeineLevel: "medium", organic: true, inStock: true, stockCount: 150 },
   { id: 2, name: "Earl Grey", type: "black", origin: "India", pricePerGram: 0.08, caffeineLevel: "high", organic: false, inStock: true, stockCount: 200 },

@@ -110,7 +110,7 @@ processOrder(order);
 ## Exercise 4: Inventory Aggregation from File
 
 Create a file `inventory-updates.json`:
-
+<!-- prettier-ignore -->
 ```jsonl
 [
   { "teaId": 1, "change": -20, "reason": "sale" },

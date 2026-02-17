@@ -309,7 +309,7 @@ Node.js convention: callbacks receive `(error, result)`. If error exists, someth
 ### Exercise 16
 
 First, create a file called `orders.json` in the same folder with this content:
-
+<!-- prettier-ignore -->
 ```jsonl
 [
   { "id": 1, "customerId": 101, "items": [{ "teaId": 1, "grams": 100 }] },
