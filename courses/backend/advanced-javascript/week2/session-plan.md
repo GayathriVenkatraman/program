@@ -39,7 +39,7 @@ By the end of this session, trainees should:
 - This week: callbacks that run _later_
 - The cafe metaphor: a waiter doesn't stand at the kitchen waiting for one order
 
-**Use:** [Slides](./slides/index.html) (introduction sections)
+**Use:** [Slides](./session-materials/slides/index.html) (introduction sections)
 
 ### 2. Functions as Values
 
@@ -144,7 +144,7 @@ Regularly remind them: "This is why servers don't freeze when handling multiple 
 
 ## Materials
 
-- [Slides](./slides/index.html) - Reveal.js presentation
+- [Slides](./session-materials/slides/index.html) - Reveal.js presentation
 - [Exercises](./session-materials/exercises.md) - In-class exercises
 - [Assignment](./assignment.md) - Take-home work
 - [Tea Data](../data/teas.js) - Shared dataset

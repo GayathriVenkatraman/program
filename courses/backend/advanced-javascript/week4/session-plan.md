@@ -39,7 +39,7 @@ By the end of this session, trainees should:
 - "What if the tea object could validate itself and calculate its own prices?"
 - Introduce the class concept
 
-**Use:** [Slides](./slides/index.html) (introduction sections)
+**Use:** [Slides](./session-materials/slides/index.html) (introduction sections)
 
 ### 2. Classes, Constructor, this, new
 
@@ -151,7 +151,7 @@ This is the last week - tie it all together:
 
 ## Materials
 
-- [Slides](./slides/index.html) - Reveal.js presentation
+- [Slides](./session-materials/slides/index.html) - Reveal.js presentation
 - [Exercises](./session-materials/exercises.md) - In-class exercises
 - [Assignment](./assignment.md) - Take-home work
 - [Tea Data](../data/teas.js) - Shared dataset

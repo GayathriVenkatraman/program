@@ -7,7 +7,7 @@ This week you'll learn the three essential methods: `forEach`, `map`, and `filte
 ## Contents
 
 - [Preparation](./preparation.md)
-- [Slides](./slides/index.html)
+- [Slides](./session-materials/slides/index.html)
 - [Session Plan](./session-plan.md) (for mentors)
 - [Session Materials](./session-materials/)
 - [Assignment](./assignment.md)
@@ -23,6 +23,8 @@ By the end of this session, you will be able to:
 - [ ] Use arrow function syntax with implicit and explicit returns
 - [ ] Recognize which methods belong in the Logic layer vs Rendering layer
 - [ ] Know how to find and learn about other array methods such as `.find()`, `.some()`, `.reduce()`
+
+### After this session you will understand code like this
 
 ```js
 // Example: Get names of organic Japanese teas

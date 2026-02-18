@@ -1,6 +1,116 @@
 # Week 1 Preparation
 
-Read this introduction before class. It explains the concepts we'll practice during the session.
+Read this before class. It introduces the backend context for the course and explains the concepts we'll practice during the session.
+
+---
+
+## Welcome to Backend Development
+
+Frontend development is visual. You write code, refresh the browser, and see buttons, colors, and layouts. The feedback loop is immediate and satisfying.
+
+Backend development is different. There's no visual output. Your code runs on a server somewhere, processing requests, querying databases, and returning data. The output isn't pixels on a screen - it's structured data sent over a network.
+
+This can feel abstract at first. But here's the thing: **terminals existed before graphical interfaces**. The command line isn't a step backward - it's where serious computing has always happened. Get comfortable with it.
+
+### What Does a Backend Actually Do?
+
+Think about scrolling Instagram. You don't download all 500 million posts when you open the app. Instead, your app asks: _"Give me the next 10 posts for this user."_
+
+That's a backend call. The backend:
+
+1. Receives the request
+2. Checks if you're allowed to see those posts
+3. Queries the database for the right 10 posts
+4. Formats them in a way the app can use
+5. Sends back just that slice of data
+
+Backend output = **consumable slices of data in a structured manner**.
+
+---
+
+## What is Data?
+
+Before we manipulate data, let's understand what it is. Data is just structured information. The same information can be represented in different formats.
+
+Here are 3 teas from our tea shop:
+
+### As a Table
+
+| id  | name        | origin | pricePerGram | organic |
+| --- | ----------- | ------ | ------------ | ------- |
+| 1   | Sencha      | Japan  | 0.12         | true    |
+| 2   | Earl Grey   | India  | 0.08         | false   |
+| 3   | Dragon Well | China  | 0.25         | true    |
+
+### As CSV (Comma-Separated Values)
+
+```csv
+id,name,origin,pricePerGram,organic
+1,Sencha,Japan,0.12,true
+2,Earl Grey,India,0.08,false
+3,Dragon Well,China,0.25,true
+```
+
+### As JSON (JavaScript Object Notation)
+
+<!-- prettier-ignore -->
+```jsonl
+[
+  { "id": 1, "name": "Sencha", "origin": "Japan", "pricePerGram": 0.12, "organic": true },
+  { "id": 2, "name": "Earl Grey", "origin": "India", "pricePerGram": 0.08, "organic": false },
+  { "id": 3, "name": "Dragon Well", "origin": "China", "pricePerGram": 0.25, "organic": true }
+]
+```
+
+### As JSONL (JSON Lines - one object per line)
+
+<!-- prettier-ignore -->
+```jsonl
+{"id":1,"name":"Sencha","origin":"Japan","pricePerGram":0.12,"organic":true}
+{"id":2,"name":"Earl Grey","origin":"India","pricePerGram":0.08,"organic":false}
+{"id":3,"name":"Dragon Well","origin":"China","pricePerGram":0.25,"organic":true}
+```
+
+Same data, different formats. In this course, we'll primarily work with JSON since that's what JavaScript handles natively.
+
+---
+
+## The Three Layers: Data → Logic → Rendering
+
+Every application, from a simple website to a complex enterprise system, follows this pattern:
+
+```plaintext
+Data → Logic → Rendering
+```
+
+- **Data Layer:** The raw truth. Databases, files, external services. This is where information lives.
+- **Logic Layer:** The brain. What to fetch, who's allowed, how to transform. **This is where backends live.**
+- **Rendering Layer:** The face. HTML, mobile UI, PDF - whatever users actually see.
+
+### Example: Filtering Teas
+
+You browse a tea shop website and click "Organic only."
+
+1. **Rendering** (frontend): Sends your filter choice to the server
+2. **Logic** (backend): Receives the request, queries the database, applies your filter, formats the response
+3. **Data** (database): Returns all teas matching the query
+4. **Logic** (backend): Transforms the raw data into the shape the frontend expects
+5. **Rendering** (frontend): Displays the filtered teas as cards with images and prices
+
+The backend sits in the middle, orchestrating the flow between stored data and user-facing output.
+
+---
+
+## The Tea Shop
+
+Throughout this course, we'll work with data from a fictional tea shop. You'll encounter:
+
+- **Teas**: Different varieties with origins, prices, brewing instructions
+- **Equipment**: Teapots, cups, infusers
+- **Orders**: Customer purchases with items and totals
+- **Customers**: People who buy from the shop
+
+This consistent context means you're not learning abstract concepts in isolation - you're solving real problems a real backend would need to solve.
 
 ---
 

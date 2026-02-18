@@ -7,7 +7,7 @@ This week you'll work with a real API: the Tea Shop backend. You'll fetch data, 
 ## Contents
 
 - [Preparation](./preparation.md)
-- [Slides](./slides/index.html)
+- [Slides](./session-materials/slides/index.html)
 - [Session Plan](./session-plan.md) (for mentors)
 - [Session Materials](./session-materials/)
 - [Assignment](./assignment.md)
@@ -24,6 +24,8 @@ By the end of this session, you will be able to:
 - [ ] Handle errors with `try`/`catch` in async functions
 - [ ] Run multiple Promises in parallel with `Promise.all()`
 - [ ] Fetch data from APIs using `fetch()`
+
+### After this session you will understand code like this
 
 ```js
 // From callback hell...

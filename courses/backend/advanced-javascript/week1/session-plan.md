@@ -35,7 +35,7 @@ By the end of this session, trainees should:
 - Array methods live in the **Logic layer** - transforming data between storage and display
 - Show the tea shop context they'll work with
 
-**Use:** [Slides](./slides/index.html) (first few sections)
+**Use:** [Slides](./session-materials/slides/index.html) (first few sections)
 
 ### 2. forEach
 
@@ -119,7 +119,7 @@ Regularly remind them: "This is what happens on every API request. Data comes in
 
 ## Materials
 
-- [Slides](./slides/index.html) - Reveal.js presentation
+- [Slides](./session-materials/slides/index.html) - Reveal.js presentation
 - [Exercises](./session-materials/exercises.md) - In-class exercises
 - [Assignment](./assignment.md) - Take-home work
 - [Tea Data](../data/teas.js) - Shared dataset

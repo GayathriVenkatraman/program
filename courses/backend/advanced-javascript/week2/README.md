@@ -7,7 +7,7 @@ This week you'll learn how JavaScript handles operations that take time. You'll 
 ## Contents
 
 - [Preparation](./preparation.md)
-- [Slides](./slides/index.html)
+- [Slides](./session-materials/slides/index.html)
 - [Session Plan](./session-plan.md) (for mentors)
 - [Session Materials](./session-materials/)
 - [Assignment](./assignment.md)
@@ -24,6 +24,8 @@ By the end of this session, you will be able to:
 - [ ] Use `setTimeout()` to schedule delayed execution
 - [ ] Use Node.js `fs.readFile()` with callbacks
 - [ ] Understand the error-first callback pattern
+
+### After this session you will understand code like this
 
 ```js
 // Example: Simulated database lookup

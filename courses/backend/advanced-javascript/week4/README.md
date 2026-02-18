@@ -7,7 +7,7 @@ This week you'll learn classes: blueprints for creating objects with consistent 
 ## Contents
 
 - [Preparation](./preparation.md)
-- [Slides](./slides/index.html)
+- [Slides](./session-materials/slides/index.html)
 - [Session Plan](./session-plan.md) (for mentors)
 - [Session Materials](./session-materials/)
 - [Assignment](./assignment.md)
@@ -24,6 +24,8 @@ By the end of this session, you will be able to:
 - [ ] Use static methods for utility operations on a class
 - [ ] Use inheritance with `extends` and `super()`
 - [ ] Understand the difference between a class (blueprint) and an object (instance)
+
+### After this session you will understand code like this
 
 ```js
 // From scattered plain objects...

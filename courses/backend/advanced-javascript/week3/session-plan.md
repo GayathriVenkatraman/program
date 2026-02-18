@@ -38,7 +38,7 @@ By the end of this session, trainees should:
 - "There has to be a better way" - introduce Promises
 - Show the transformation: nested callbacks → chained Promises → async/await
 
-**Use:** [Slides](./slides/index.html) (introduction sections)
+**Use:** [Slides](./session-materials/slides/index.html) (introduction sections)
 
 ### 2. Promise Consumption
 
@@ -150,7 +150,7 @@ The Tea Shop API makes exercises concrete. Students see real network delays, rea
 
 ## Materials
 
-- [Slides](./slides/index.html) - Reveal.js presentation
+- [Slides](./session-materials/slides/index.html) - Reveal.js presentation
 - [Exercises](./session-materials/exercises.md) - In-class exercises
 - [Assignment](./assignment.md) - Take-home work
 - [Tea Shop API](https://tea-api-787553294298.europe-west1.run.app/api/v1) - Live API for exercises
