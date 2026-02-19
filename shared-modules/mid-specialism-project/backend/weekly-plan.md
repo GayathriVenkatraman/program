@@ -26,7 +26,7 @@ Design and implement the foundational database schema for users and catalog enti
   - At least 1 test user
   - Multiple catalog items
 - [ ] Implement and test basic SQL queries:
-  - List items
+  - Get all items
   - Get item by ID
 - [ ] Document ERD in the repository
 
