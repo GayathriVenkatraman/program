@@ -16,8 +16,8 @@ Design and implement the foundational database schema for users and catalog enti
 
 - [ ] Review the Product Requirements Document (PRD)
 - [ ] Design ERD (v1) including:
-  - `users`
-  - `{domain}_items` (e.g. `events`)
+  - `user`
+  - `{domain}_item` (e.g. `event`)
 - [ ] Implement PostgreSQL schema with:
   - Primary keys
   - Foreign keys (where applicable)
@@ -47,10 +47,10 @@ Finalize database structure to support cart, checkout, and order flows.
 ### Tasks
 
 - [ ] Extend ERD to include:
-  - `carts`
-  - `cart_items`
-  - `orders`
-  - `order_items`
+  - `cart`
+  - `cart_item`
+  - `order`
+  - `order_item`
 - [ ] Implement all foreign key relationships
 - [ ] Enforce “one active cart per user” rule
 - [ ] Implement SQL queries for:
@@ -93,6 +93,7 @@ Expose public catalog endpoints and implement initial API documentation.
       "totalPages": 13
     }
   }
+```
 
 - [ ] Implement standardized error format
 - [ ] Add Swagger/OpenAPI documentation for public endpoints
@@ -123,7 +124,7 @@ Implement authentication and protected cart functionality.
 - [ ] Implement cart endpoints:
   - `GET /api/cart`
   - `POST /api/cart/items`
-  - `PATCH /api/cart/items/{itemId}`
+  - `PUT /api/cart/items/{itemId}`
 - [ ] Validate request payloads
 - [ ] Ensure consistent error responses
 - [ ] Update Swagger documentation
