@@ -102,7 +102,7 @@ Expose public catalog endpoints and implement initial API documentation.
 - [ ] Add Swagger/OpenAPI documentation for public endpoints
 - [ ] Start Postman collection (public endpoints)
 
-### Week 4 Outcome
+### Week 3 Outcome
 
 - Public catalog API functional
 - Pagination working
@@ -180,7 +180,7 @@ Complete private API, implement checkout transaction, and deploy.
 
 ---
 
-# Final Deliverables
+## Final Deliverables
 
 By the end of Week 5, you must provide:
 
