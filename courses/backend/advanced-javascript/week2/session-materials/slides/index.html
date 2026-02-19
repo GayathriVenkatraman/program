@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2 - Callbacks & Delayed Execution</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css"
+    />
+    <style>
+      :root {
+        --r-background-color: #1a1a2e;
+        --r-main-color: #eee;
+        --r-heading-color: #16c79a;
+        --r-link-color: #16c79a;
+      }
+      .reveal h1,
+      .reveal h2,
+      .reveal h3 {
+        text-transform: none;
+      }
+      .reveal pre {
+        font-size: 0.55em;
+        width: 100%;
+      }
+      .reveal .highlight {
+        color: #16c79a;
+      }
+      .reveal .dim {
+        color: #888;
+      }
+      .reveal blockquote {
+        background: rgba(22, 199, 154, 0.1);
+        border-left: 4px solid #16c79a;
+        padding: 1em;
+        font-style: normal;
+        width: 90%;
+      }
+      .reveal .emoji {
+        font-size: 3em;
+      }
+      .reveal .small {
+        font-size: 0.6em;
+      }
+      .method-box {
+        background: rgba(22, 199, 154, 0.15);
+        border-radius: 8px;
+        padding: 0.5em 1em;
+        margin: 0.5em;
+        display: inline-block;
+      }
+      .timeline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        font-size: 0.9em;
+        margin: 1em 0;
+      }
+      .timeline-item {
+        padding: 0.3em 0.6em;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+      .timeline-item.active {
+        background: rgba(22, 199, 154, 0.3);
+        border: 1px solid #16c79a;
+      }
+      .timeline-arrow {
+        color: #16c79a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Title -->
+        <section>
+          <h1>Callbacks & Delayed Execution</h1>
+          <p>Why backends can't run top-to-bottom</p>
+          <p class="dim small">Week 2</p>
+        </section>
+
+        <!-- Section: Why Async -->
+        <section>
+          <section>
+            <h2>Why Async?</h2>
+          </section>
+
+          <section>
+            <h3>The Problem</h3>
+            <p>Database queries take time</p>
+            <p>File reads take time</p>
+            <p>Network calls take time</p>
+            <p class="highlight" style="margin-top: 1em">
+              If we waited, we'd serve one request at a time
+            </p>
+          </section>
+
+          <section>
+            <h3>The Cafe Analogy</h3>
+            <blockquote>
+              A waiter doesn't stand at the kitchen waiting for one order.<br /><br />
+              They take the order, give it to the kitchen, and serve other
+              tables while waiting.
+            </blockquote>
+          </section>
+
+          <section>
+            <h3>The Solution</h3>
+            <p>"Start this operation..."</p>
+            <p>"...call me back when you're done"</p>
+            <p class="highlight" style="margin-top: 1em">That's a callback</p>
+          </section>
+        </section>
+
+        <!-- Section: Functions as Values -->
+        <section>
+          <section>
+            <h2>Functions as Values</h2>
+            <p>First, we need to understand this</p>
+          </section>
+
+          <section>
+            <h3>Functions Are Just Values</h3>
+            <pre><code class="language-javascript">// Assign a function to a variable
+const greet = function(name) {
+  return `Hello, ${name}!`;
+};
+
+// Call it through the variable
+greet("Alice");  // "Hello, Alice!"</code></pre>
+          </section>
+
+          <section>
+            <h3>Pass Functions to Functions</h3>
+            <pre><code class="language-javascript">function runTwice(fn, value) {
+  console.log(fn(value));
+  console.log(fn(value));
+}
+
+runTwice(greet, "Bob");
+// "Hello, Bob!"
+// "Hello, Bob!"</code></pre>
+            <p class="dim">This is what makes callbacks possible</p>
+          </section>
+
+          <section>
+            <h3>You Already Do This!</h3>
+            <pre><code class="language-javascript">teas.map(tea => tea.name);
+//       ^^^^^^^^^^^^^^^^
+//       This IS a function passed to map</code></pre>
+            <p>map, filter, forEach all take functions as arguments</p>
+          </section>
+
+          <section>
+            <h3>Function Factories</h3>
+            <p>A function that returns a function</p>
+            <pre><code class="language-javascript">function createGreeter(greeting) {
+  return function(name) {
+    console.log(`${greeting}, ${name}!`);
+  };
+}
+
+const sayHello = createGreeter("Hello");
+const sayHi = createGreeter("Hi");
+
+sayHello("Alice");  // "Hello, Alice!"
+sayHi("Bob");       // "Hi, Bob!"</code></pre>
+          </section>
+        </section>
+
+        <!-- Section: Callbacks -->
+        <section>
+          <section>
+            <h2>Callbacks</h2>
+            <p>A function you pass, to be called later</p>
+          </section>
+
+          <section>
+            <h3>Synchronous Callbacks</h3>
+            <p>Called immediately, during execution</p>
+            <pre><code class="language-javascript">teas.map(tea => tea.name);
+// callback runs NOW, for each item</code></pre>
+          </section>
+
+          <section>
+            <h3>Asynchronous Callbacks</h3>
+            <p>Called later, after something completes</p>
+            <pre><code class="language-javascript">setTimeout(() => {
+  console.log("Done!");
+}, 1000);
+// callback runs LATER, after 1000ms</code></pre>
+          </section>
+        </section>
+
+        <!-- Section: reduce -->
+        <section>
+          <section>
+            <h2>reduce</h2>
+            <p>The "build up" method</p>
+          </section>
+
+          <section>
+            <h3>The Mental Model</h3>
+            <p>
+              <span class="highlight">N items</span> &rarr;
+              <span class="highlight">1 value</span>
+            </p>
+            <p>Sum, count, group, aggregate</p>
+          </section>
+
+          <section>
+            <h3>The Accumulator</h3>
+            <pre><code class="language-javascript">const total = numbers.reduce((accumulator, current) => {
+  return accumulator + current;
+}, 0);
+// ^-- initial value</code></pre>
+            <p class="dim">The accumulator builds up through each iteration</p>
+          </section>
+
+          <section>
+            <h3>Sum Example</h3>
+            <pre><code class="language-javascript">const total = teas.reduce((sum, tea) => {
+  return sum + tea.stockCount;
+}, 0);
+// Total stock across all teas</code></pre>
+          </section>
+
+          <section>
+            <h3>Grouping Example</h3>
+            <pre><code class="language-javascript">const byOrigin = teas.reduce((groups, tea) => {
+  if (!groups[tea.origin]) {
+    groups[tea.origin] = [];
+  }
+  groups[tea.origin].push(tea.name);
+  return groups;
+}, {});
+// { Japan: ["Sencha", ...], China: [...] }</code></pre>
+          </section>
+        </section>
+
+        <!-- Section: setTimeout -->
+        <section>
+          <section>
+            <h2>setTimeout</h2>
+            <p>The simplest async function</p>
+          </section>
+
+          <section>
+            <h3>Surprising Output</h3>
+            <pre><code class="language-javascript">console.log("1. First");
+
+setTimeout(() => {
+  console.log("2. Second");
+}, 1000);
+
+console.log("3. Third");</code></pre>
+            <p>What order do these print?</p>
+          </section>
+
+          <section>
+            <h3>The Answer</h3>
+            <pre><code class="language-javascript">// Output:
+// 1. First
+// 3. Third
+// 2. Second  (after 1 second)</code></pre>
+            <p class="highlight">JavaScript doesn't wait. It keeps going.</p>
+          </section>
+
+          <section>
+            <h3>Simulating Database Delay</h3>
+            <pre><code class="language-javascript">function findTeaById(id, callback) {
+  setTimeout(() => {
+    const tea = teas.find(t => t.id === id);
+    callback(tea);
+  }, 500);  // 500ms "database" delay
+}
+
+findTeaById(3, tea => {
+  console.log("Found:", tea.name);
+});</code></pre>
+          </section>
+        </section>
+
+        <!-- Section: File System -->
+        <section>
+          <section>
+            <h2>File System</h2>
+            <p>Real backend async</p>
+          </section>
+
+          <section>
+            <h3>Reading Files</h3>
+            <pre><code class="language-javascript">import fs from "fs";
+
+fs.readFile("./data.json", "utf8", (error, data) => {
+  if (error) {
+    console.error("Failed:", error.message);
+    return;
+  }
+  console.log("Got data:", data);
+});</code></pre>
+          </section>
+
+          <section>
+            <h3>Error-First Pattern</h3>
+            <p>Node.js convention: <code>(error, result)</code></p>
+            <pre><code class="language-javascript">fs.readFile(path, (error, data) => {
+  if (error) {
+    // Handle error FIRST
+    return;
+  }
+  // Then use data
+});</code></pre>
+            <p class="highlight">Always check error before using result</p>
+          </section>
+        </section>
+
+        <!-- Section: Building Understanding -->
+        <section>
+          <section>
+            <h2>Build Your Own</h2>
+            <p>Understanding how it works</p>
+          </section>
+
+          <section>
+            <h3>Build myForEach</h3>
+            <pre><code class="language-javascript">function myForEach(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i], i, array);
+  }
+}
+
+myForEach(teas, tea => console.log(tea.name));</code></pre>
+            <p class="dim">That's all forEach is!</p>
+          </section>
+
+          <section>
+            <h3>Build myMap</h3>
+            <pre><code class="language-javascript">function myMap(array, callback) {
+  const result = [];
+  for (let i = 0; i < array.length; i++) {
+    result.push(callback(array[i], i, array));
+  }
+  return result;
+}
+
+myMap(teas, tea => tea.name);  // ["Sencha", ...]</code></pre>
+          </section>
+        </section>
+
+        <!-- Summary -->
+        <section>
+          <section>
+            <h2>Summary</h2>
+          </section>
+
+          <section>
+            <h3>Key Concepts</h3>
+            <p>
+              <span class="highlight">Functions as values</span> - pass them
+              around
+            </p>
+            <p>
+              <span class="highlight">Callbacks</span> - functions called later
+            </p>
+            <p>
+              <span class="highlight">reduce</span> - build up a single value
+            </p>
+            <p>
+              <span class="highlight">Async</span> - don't wait, use callbacks
+            </p>
+          </section>
+
+          <section>
+            <h3>Next Week</h3>
+            <p>Callback nesting gets messy...</p>
+            <pre><code class="language-javascript">doFirst(result1 => {
+  doSecond(result1, result2 => {
+    doThird(result2, result3 => {
+      // "Callback hell"
+    });
+  });
+});</code></pre>
+            <p class="highlight">Promises solve this!</p>
+          </section>
+
+          <section>
+            <h2>Time to Practice</h2>
+            <p class="emoji">🍵</p>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        plugins: [RevealHighlight, RevealNotes],
+        width: 1280,
+        height: 720,
+        margin: 0.1,
+        transition: "slide",
+        controls: true,
+        progress: true,
+        center: true,
+      });
+    </script>
+  </body>
+</html>
