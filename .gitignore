@@ -6,3 +6,6 @@ support/dist/
 
 # Ignore JetBrains IDE settings
 .idea
+
+# AI generated files
+CLAUDE.md

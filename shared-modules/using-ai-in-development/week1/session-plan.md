@@ -90,87 +90,227 @@ That is the moment where learning happens, so don't miss out by skipping ahead!
 
 While preparing ideas for a particular solution in the Design phase, you'll likely come across the challenge of needing to understand existing code.
 
-TODO add some prompting examples here, as well as good follow up prompts
+#### 1. "Code explanation" prompt
+
+When you encounter unfamiliar code, start by asking for a high-level explanation.
+
+```prompt
+Explain what this code does at a high level:
+
+<paste code here>
+
+Focus on:
+1. The overall purpose
+2. The main components and how they interact
+3. Any important patterns or techniques being used
+```
+
+#### 2. "Dig deeper" follow-up prompt
+
+Once you understand the big picture, ask targeted follow-up questions to clarify specifics.
+
+```prompt
+In the code above, I don't understand <specific part>. Can you explain:
+1. What this specific section is doing step by step
+2. Why it's written this way instead of <alternative approach>
+3. What would happen if this part was removed or changed
+```
 
 #### Exercise 2
 
-Use AI to help explain the code in [Exercise 2](TODO create and insert link here). Ask follow up questions until you have a good grasp of what every function and line of code is achieving.
-
-TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/01-code-explanation.py)
+Use AI to help explain the code in [Exercise 2](session-materials/exercise2.js). Ask follow up questions until you have a good grasp of what every function and line of code is achieving.
 
 ### Implementation - Learning new approaches
 
 While writing code, you may come across a roadblock where you're not entirely sure how to implement something.
 
-TODO add some prompting examples here
+#### 1. "Explore approaches" prompt
+
+When you're stuck on how to implement something, ask for multiple options to consider.
+
+```prompt
+I need to implement <describe what you're trying to achieve>.
+
+<optional: paste relevant code snippet for context>
+
+What are 2-3 different approaches I could take? For each approach:
+1. Briefly explain how it works
+2. List the pros and cons
+3. When would this approach be the best choice
+4. Highlight any common mistakes to avoid
+```
 
 #### Exercise 3
 
-Use AI to give you some suggestions on possible solutions to [Exercise 3](TODO create and insert link here).
-
-TODO write the exercise and supporting code
+Use AI to give you some suggestions on possible solutions to [Exercise 3](session-materials/exercise3.js).
 
 ### Implementation - Code refactoring
 
 After you write a solution, you may wonder if there's a neater or better way to structure the code.
 
-TODO add some prompting examples here
+#### 1. "Refactor my code" prompt
+
+Refactoring can mean different things depending on what you want to improve. Some common goals include:
+
+- Improved readability
+- Better naming
+- Extracting reusable functions
+- Reducing duplication
+- Simplifying complex logic
+- Following a specific pattern or convention
+
+```prompt
+Refactor this code to <specific goal>:
+
+<paste code here>
+
+For each change you suggest:
+1. Explain what you changed
+2. Explain why it's an improvement
+```
 
 #### Exercise 4
 
-Use AI to help you refactor the code in [Exercise 4](TODO create and insert link here).
-
-TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/03-code-refactoring.ts)
+Use AI to help you refactor the code to be more readable in [Exercise 4](session-materials/exercise4.js).
 
 ### Implementation - Bug fixing
 
 Before your solution is finished, you'll need to make sure it's bug free.
 
-TODO add some prompting examples here
+#### 1. "Find and fix the bug" prompt
+
+When your code isn't working as expected, ask AI to help identify, explain, and fix the issue.
+
+```prompt
+This code is producing unexpected results:
+
+<paste code here>
+
+Expected output: <what you expected>
+Actual output: <what you got>
+
+1. What is the bug?
+2. Why is this happening?
+3. What options do I have for fixing it?
+```
 
 #### Exercise 5
 
-Use AI to help you uncover the bug in the [Exercise 5](TODO create and insert link here) code, understand why it's happening, and fix it.
-
-TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/04-bug-fixing.py)
+Use AI to help you uncover the bug in the [Exercise 5](session-materials/exercise5.js) code, understand why it's happening, and fix it.
 
 ### Implementation - Documentation generation
 
-AI is not only useful in generating code, but also documentation.
+AI is not only useful in generating code, but also documentation. There are many types of documentation AI can help you generate, for example:
 
-TODO add some prompting examples here
+- Function and code comments
+- README files
+- API documentation
+- Architecture diagrams
+- User guides
+
+#### 1. "Add a code comment" prompt
+
+```prompt
+Generate a clear, concise comment to this function explaining what it does, its parameters, and what it returns:
+
+<paste code here>
+```
+
+#### 2. "Generate a diagram" prompt
+
+```prompt
+Create an ASCII diagram that visualises how this code works:
+
+<paste code here>
+
+Show the flow of data and the key steps.
+```
 
 #### Exercise 6
 
-Use AI to draw a diagram to explain how the code in [Exercise 6](TODO create and insert link here) works. Confirm that it is correct, and fix any mistakes.
-
-TODO write the exercise code, inspired by [exercise](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/05-document-generation.py)
+Use AI to draw a diagram to explain how the code in [Exercise 6](session-materials/exercise6.js) works. This code should look familiar to you, since it implements the same functionality as you saw in Exercise 2, but this code has been refactored to be easier to read. Confirm that the diagrams are correct and match your understanding of the code - do you spot any mistakes?
 
 ### Code review - Feedback assistance
 
 When your code is ready, it will be time for getting feedback from other developers. Before you do that, save some time and get some initial feedback from AI on improving your code.
 
-TODO add some prompting examples here
+#### 1. "First pass review" prompt
+
+Get a quick, structured overview of potential improvements before asking colleagues for a full review.
+
+```prompt
+Review this code and give me concise feedback organised by category:
+
+<paste code here/path to files>
+
+Categories to cover:
+- Readability
+- Performance
+- Security
+- Best practices
+- Potential bugs
+
+For each issue, give a brief pointer (one sentence max) rather than a detailed explanation.
+```
 
 #### Exercise 7
 
-Use AI to get some structured feedback on improving the code in [Exercise 7](TODO create and insert link here), and make the changes.
+Getting feedback is useful before you submit your assignments, but to check out how it can look, choose a previous assignment you've submitted and ask AI for feedback on it.
 
-TODO write the exercise and supporting code
+Review the suggestions - which ones are useful, and which ones would you ignore?
 
 ### Agent mode
 
-TODO explain a little what agent mode is and how it differs to "edit" mode. Maybe warn that it will use up a lot more of your usage credits. Reminder of our [AI usage guidelines](https://program.hackyourfuture.dk/guidelines/ai-usage), and for HYF assignments and projects
+So far we've been using AI in "chat" or "edit" mode - you ask a question or request a change, and AI responds. Agent mode is different: you give AI a goal, and it autonomously plans and executes multiple steps to achieve it, including running commands, creating files, talking with external systems and making decisions along the way.
+
+**Chat/Edit mode**: You control each step, AI assists one task at a time.
+
+**Agent mode**: AI takes control, executing multiple steps autonomously to reach a goal.
+
+GitHub Copilot has an agent mode you can try - instead of asking for a single edit, you can ask it to complete a larger task and it will work through the steps itself.
+
+{% hint style="warning" %}
+**Before using agent mode:**
+
+- Agent mode uses significantly more of your AI usage credits than chat mode.
+- Remember our [AI usage guidelines](https://program.hackyourfuture.dk/guidelines/ai-usage) - for HYF assignments and projects, you must understand and be able to explain any code you submit. Therefore, Agent mode is something more suitable to practice using outside of your HYF work.
+  {% endhint %}
 
 #### Exercise 8
 
-TODO this should be a small exercise to show how the agent flow works. Could be something similar to [this](https://github.com/hosseinzahed/github-copilot-use-cases/blob/main/19-copilot-agent.md). Suggest instead that trainees explore using agent mode further on their own personal projects we do not allow generating full coding solutions.
+Try this small task in both modes to see the difference:
+
+**Task**: Add a `titleCase` function to [Exercise 8](session-materials/exercise8.js) that converts a sentence to title case (e.g., "hello world" → "Hello World").
+
+1. **Chat mode**: Ask Copilot "How would I add a titleCase function to this file?" - notice it explains what to do, but you have to make the changes yourself.
+
+2. **Agent mode**: Ask Copilot "Add a titleCase function to exercise8.js that converts sentences to title case, and add an example in main()" - watch as it reads the file, adds the function, updates the exports, and modifies main() autonomously.
+
+Notice how agent mode takes multiple steps without asking for permission at each stage. This is powerful but means you need to carefully review everything it produces.
 
 ## AI in the workplace
 
 ### Ethics, legal and risk considerations
 
-TODO these follow on from the foundation content, but should be give more software dev specific examples, like the risk of pasting protected IP code or customer data into third party AI tools.
+Building on what you learned in the foundation module, here are some specific risks to consider as a developer:
+
+**Confidential code and data**
+Never paste proprietary code, API keys, or customer data into AI tools - it may be stored or used for training. Example: pasting a database query containing real user emails.
+
+**Intellectual property**
+Code you paste into AI tools may belong to your employer. Check your company's policy before sharing any work code with external AI services.
+
+**License compliance**
+AI may generate code copied from open source projects with licenses that are incompatible with your project. Always verify you have the right to use generated code.
+
+**Security vulnerabilities**
+AI-generated code can contain security flaws like SQL injection or missing input validation. Review all generated code with the same scrutiny as code from any other source.
+
+**Accuracy and hallucinations**
+AI can confidently produce incorrect code, non-existent APIs, or outdated syntax. Always test and verify - don't assume it works because it looks right.
+
+**Company policies**
+Many employers have specific rules about which AI tools are approved for use with work code. Check before using any AI tool on company projects.
 
 ### The future of AI in development
 
@@ -184,7 +324,7 @@ We don't know the future for sure, that's what makes it exciting. There are some
 4. Understanding the "why"
 5. Super fast industry shifts
 
-#### Tips
+#### Tips and final takeaways
 
 1. Stay in the loop of AI developments
    - Follow key organisations in the space (OpenAI, Anthropic, Microsoft/Github, Google/Gemini)
