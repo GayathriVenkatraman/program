@@ -122,4 +122,4 @@ Regularly remind them: "This is what happens on every API request. Data comes in
 - [Slides](./session-materials/slides/index.html) - Reveal.js presentation
 - [Exercises](./session-materials/exercises.md) - In-session exercises
 - [Assignment](./assignment.md) - Take-home work
-- [Tea Data](../data/teas.js) - Shared dataset
+- Tea Data - Shared dataset that you can find in your assignment repo
