@@ -85,12 +85,14 @@ Expose public catalog endpoints and implement initial API documentation.
 
 ```json
 {
-  "page": 1,
-  "limit": 20,
-  "total": 123,
-  "items": []
-}
-```
+    "data": [],
+    "meta": {
+      "page": 1,
+      "pageSize": 20,
+      "totalItems": 245,
+      "totalPages": 13
+    }
+  }
 
 - [ ] Implement standardized error format
 - [ ] Add Swagger/OpenAPI documentation for public endpoints
