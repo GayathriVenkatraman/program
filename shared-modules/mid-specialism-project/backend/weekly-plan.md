@@ -10,6 +10,7 @@ The goal is to progressively implement a fully functional, contract-compliant AP
 ## Week 1 Sprint – Core Data Modeling (DB week 1)
 
 ### Goal
+
 Design and implement the foundational database schema for users and catalog entities.
 
 ### Tasks
@@ -42,6 +43,7 @@ Design and implement the foundational database schema for users and catalog enti
 ## Week 2 Sprint – Complete Database Structure (DB week 2)
 
 ### Goal
+
 Finalize database structure to support cart, checkout, and order flows.
 
 ### Tasks
@@ -71,6 +73,7 @@ Finalize database structure to support cart, checkout, and order flows.
 ## Week 3 Sprint – Public API (NODE week 1: GET Only)
 
 ### Goal
+
 Expose public catalog endpoints and implement initial API documentation.
 
 ### Tasks
@@ -85,14 +88,14 @@ Expose public catalog endpoints and implement initial API documentation.
 
 ```json
 {
-    "data": [],
-    "meta": {
-      "page": 1,
-      "pageSize": 20,
-      "totalItems": 245,
-      "totalPages": 13
-    }
+  "data": [],
+  "meta": {
+    "page": 1,
+    "pageSize": 20,
+    "totalItems": 245,
+    "totalPages": 13
   }
+}
 ```
 
 - [ ] Implement standardized error format
@@ -111,6 +114,7 @@ Expose public catalog endpoints and implement initial API documentation.
 ## Week 4 Sprint – Authentication & Cart (NODE week 2: POST + Middleware)
 
 ### Goal
+
 Implement authentication and protected cart functionality.
 
 ### Tasks
@@ -142,6 +146,7 @@ Implement authentication and protected cart functionality.
 ## Week 5 Sprint – Checkout, Orders & Deployment (NODE week 3: PUT/DELETE + Transactions)
 
 ### Goal
+
 Complete private API, implement checkout transaction, and deploy.
 
 ### Tasks
