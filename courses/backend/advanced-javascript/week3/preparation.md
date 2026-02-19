@@ -1,6 +1,6 @@
 # Week 3 Preparation
 
-Read this introduction before class. It explains the concepts we'll practice during the session.
+Read this introduction before the session. It explains the concepts we'll practice during the session.
 
 ---
 
@@ -252,7 +252,7 @@ If you want to go deeper, read these MDN pages:
 
 ## The Tea Shop API
 
-During class you'll work with a real API:
+During the session you'll work with a real API:
 
 ```plaintext
 Base URL: https://tea-api-787553294298.europe-west1.run.app/api/v1

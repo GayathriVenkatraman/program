@@ -115,18 +115,18 @@ By the end of this session, trainees should:
 
 ### Managing exercises with mixed skill levels
 
-The exercises are intentionally numerous - students progress at different speeds. Here's how to manage this:
+The exercises are intentionally numerous - trainees progress at different speeds. Here's how to manage this:
 
-1. **Let students work on Part 1** - observe how far each gets individually
-2. **Solve one exercise in plenum** - pick one that weaker students struggled with but stronger students just finished. This way everyone benefits
-3. **Move on to Part 2** - weaker students skip remaining Part 1 exercises (they can revisit later)
+1. **Let trainees work on Part 1** - observe how far each gets individually
+2. **Solve one exercise in plenum** - pick one that weaker trainees struggled with but stronger trainees just finished. This way everyone benefits
+3. **Move on to Part 2** - weaker trainees skip remaining Part 1 exercises (they can revisit later)
 4. **Repeat** for each part
 
-Exercises marked with ⭐ are optional stretch goals. If your fastest students finish all exercises while others haven't solved the first one, that part needs an additional challenge - let us know, or create a PR with a creative challenging exercise!
+Exercises marked with ⭐ are optional stretch goals. If your fastest trainees finish all exercises while others haven't solved the first one, that part needs an additional challenge - let us know, or create a PR with a creative challenging exercise!
 
 ### Teach consumption before creation
 
-Students often get confused when Promise creation and consumption are mixed. Teach them separately:
+trainees often get confused when Promise creation and consumption are mixed. Teach them separately:
 
 1. First: "Here's a Promise (from fetch). How do we USE it?"
 2. Later: "How do we CREATE our own Promises?"
@@ -137,7 +137,7 @@ Don't explain async/await until they understand .then/.catch. async/await is sug
 
 ### Use real API calls
 
-The Tea Shop API makes exercises concrete. Students see real network delays, real errors, real data. Much more engaging than setTimeout simulations.
+The Tea Shop API makes exercises concrete. trainees see real network delays, real errors, real data. Much more engaging than setTimeout simulations.
 
 ### Common mistakes to watch for
 
@@ -151,6 +151,6 @@ The Tea Shop API makes exercises concrete. Students see real network delays, rea
 ## Materials
 
 - [Slides](./session-materials/slides/index.html) - Reveal.js presentation
-- [Exercises](./session-materials/exercises.md) - In-class exercises
+- [Exercises](./session-materials/exercises.md) - In-session exercises
 - [Assignment](./assignment.md) - Take-home work
 - [Tea Shop API](https://tea-api-787553294298.europe-west1.run.app/api/v1) - Live API for exercises

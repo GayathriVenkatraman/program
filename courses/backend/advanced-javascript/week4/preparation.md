@@ -1,6 +1,6 @@
 # Week 4 Preparation
 
-Read this introduction before class. It explains the concepts we'll practice during the session.
+Read this introduction before the session. It explains the concepts we'll practice during the session.
 
 ---
 

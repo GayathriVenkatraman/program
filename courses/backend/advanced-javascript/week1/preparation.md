@@ -1,6 +1,6 @@
 # Week 1 Preparation
 
-Read this before class. It introduces the backend context for the course and explains the concepts we'll practice during the session.
+Read this before the session. It introduces the backend context for the course and explains the concepts we'll practice during the session.
 
 ---
 
