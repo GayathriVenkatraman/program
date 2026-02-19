@@ -9,11 +9,11 @@ The goal is to progressively implement a fully functional, contract-compliant AP
 
 ## Week 1 Sprint – Core Data Modeling (DB week 1)
 
-### Goal
+### Week 1 Goal
 
 Design and implement the foundational database schema for users and catalog entities.
 
-### Tasks
+### Week 1 Tasks
 
 - [ ] Review the Product Requirements Document (PRD)
 - [ ] Design ERD (v1) including:
@@ -31,7 +31,7 @@ Design and implement the foundational database schema for users and catalog enti
   - Get item by ID
 - [ ] Document ERD in the repository
 
-### Outcome
+### Week 1 Outcome
 
 - Working PostgreSQL database
 - ERD v1 committed
@@ -42,11 +42,11 @@ Design and implement the foundational database schema for users and catalog enti
 
 ## Week 2 Sprint – Complete Database Structure (DB week 2)
 
-### Goal
+### Week 2 Goal
 
 Finalize database structure to support cart, checkout, and order flows.
 
-### Tasks
+### Week 2 Tasks
 
 - [ ] Extend ERD to include:
   - `cart`
@@ -62,7 +62,7 @@ Finalize database structure to support cart, checkout, and order flows.
 - [ ] Update ERD (v2)
 - [ ] Add seed updates if needed
 
-### Outcome
+### Week 2 Outcome
 
 - Complete database schema supporting full PRD flow
 - ERD v2 finalized
@@ -72,11 +72,11 @@ Finalize database structure to support cart, checkout, and order flows.
 
 ## Week 3 Sprint – Public API (NODE week 1: GET Only)
 
-### Goal
+### Week 3 Goal
 
 Expose public catalog endpoints and implement initial API documentation.
 
-### Tasks
+### Week 3 Tasks
 
 - [ ] Set up Express application structure
 - [ ] Connect application to PostgreSQL
@@ -102,7 +102,7 @@ Expose public catalog endpoints and implement initial API documentation.
 - [ ] Add Swagger/OpenAPI documentation for public endpoints
 - [ ] Start Postman collection (public endpoints)
 
-### Outcome
+### Week 4 Outcome
 
 - Public catalog API functional
 - Pagination working
@@ -113,11 +113,11 @@ Expose public catalog endpoints and implement initial API documentation.
 
 ## Week 4 Sprint – Authentication & Cart (NODE week 2: POST + Middleware)
 
-### Goal
+### Week 4 Goal
 
 Implement authentication and protected cart functionality.
 
-### Tasks
+### Week 4 Tasks
 
 - [ ] Implement authentication endpoints:
   - `POST /api/auth/signup`
@@ -134,7 +134,7 @@ Implement authentication and protected cart functionality.
 - [ ] Update Swagger documentation
 - [ ] Extend Postman collection with auth + cart flows
 
-### Outcome
+### Week 4 Outcome
 
 - JWT authentication functional
 - Protected routes working
@@ -145,11 +145,11 @@ Implement authentication and protected cart functionality.
 
 ## Week 5 Sprint – Checkout, Orders & Deployment (NODE week 3: PUT/DELETE + Transactions)
 
-### Goal
+### Week 5 Goal
 
 Complete private API, implement checkout transaction, and deploy.
 
-### Tasks
+### Week 5 Tasks
 
 - [ ] Implement remaining cart endpoints:
   - `DELETE /api/cart/items/{itemId}`
@@ -169,7 +169,7 @@ Complete private API, implement checkout transaction, and deploy.
   - API service
   - Swagger documentation
 
-### Outcome
+### Week 5 Outcome
 
 - Fully functional contract-compliant backend
 - Checkout flow transactional and stable
